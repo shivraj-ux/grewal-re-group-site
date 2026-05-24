@@ -1,0 +1,54 @@
+{
+  "date": "2026-05-24",
+  "source": "Austin Board of Realtors, Redfin, Team Price market briefing",
+  "note": "All figures sourced from publicly available market data. Neighborhood medians represent 30-day rolling figures unless otherwise noted.",
+  "austin_metro": {
+    "medianSoldPrice": 466150,
+    "medianSoldPriceYoYChange": "+5.2%",
+    "activeListings": "16000+",
+    "monthsOfInventory": 6.5,
+    "avgDaysOnMarket": "85-106",
+    "listingsWithPriceReductions": "46%",
+    "listToSaleRatio": "90-95%"
+  },
+  "luxury_segment": {
+    "threshold": 1000000,
+    "medianPrice": 1450000,
+    "monthsOfSupply": 2.4,
+    "cashTransactionPercent": "38%"
+  },
+  "neighborhoods": {
+    "westlake_hills": {
+      "zip": "78746",
+      "medianSoldPrice30Day": 2800000,
+      "medianSoldPrice12Month": 2816410,
+      "avgDaysOnMarket": "71-81",
+      "schoolDistrict": "Eanes ISD",
+      "dataSource": "Redfin, Orchard",
+      "note": "30-day median up 34.6% YoY; 12-month median across 34 closings"
+    },
+    "barton_creek": {
+      "zip": "78735",
+      "medianListingPrice": 2350000,
+      "medianSoldPrice": 2800000,
+      "schoolDistrict": "Eanes ISD",
+      "dataSource": "Redfin, Realtor.com",
+      "note": "Redfin shows $2.8M median sold last month; Realtor.com listing median $2.35M as of March 2026"
+    },
+    "steiner_ranch": {
+      "zip": "78732",
+      "medianSoldPriceQ1_2026": 755000,
+      "avgDaysOnMarket": "63-87",
+      "schoolDistrict": "Leander ISD",
+      "dataSource": "Steiner Life Real Estate Team Q1 2026 report",
+      "note": "Q1 2026 data; market shifting to balanced with more buyer leverage"
+    },
+    "tarrytown": {
+      "zip": "78703",
+      "schoolDistrict": "Austin ISD",
+      "note": "Low inventory market; most sales occur off-market. Data unavailable as of 2026-05-24. Will update when sourced."
+    }
+  },
+  "lastUpdated": "2026-05-24",
+  "nextUpdateDue": "2026-05-25"
+}

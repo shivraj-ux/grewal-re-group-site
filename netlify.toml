@@ -1,0 +1,61 @@
+# Netlify config — Grewal RE Group landing page
+# Brotli + auto-image-optimization + global edge CDN included on free tier.
+
+[build]
+  publish = "."
+
+# ── Cache headers ────────────────────────────────────────────
+# HTML: never cache long (must reflect new edits instantly)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static assets: cache for a year (immutable — change filename to bust)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# AI crawler files: short cache so updates propagate fast
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/xml; charset=utf-8"
+
+# SOURCES.md: serve as plain text so browsers render it
+[[headers]]
+  for = "/SOURCES.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+# ── Security headers (good defaults) ─────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# ── Redirects ────────────────────────────────────────────────
+# Pretty URLs for the relocation guide
+[[redirects]]
+  from = "/relocation-guide"
+  to = "/assets/guides/the-relocation-edition.pdf"
+  status = 302

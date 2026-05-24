@@ -1,0 +1,31 @@
+# Cloudflare Pages / Netlify _headers file (works on both hosts)
+# Same intent as netlify.toml — kept here for portability.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+/SOURCES.md
+  Cache-Control: public, max-age=3600
+  Content-Type: text/markdown; charset=utf-8

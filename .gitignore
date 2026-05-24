@@ -1,0 +1,20 @@
+.DS_Store
+*.log
+node_modules/
+.netlify/
+.cache/
+.vscode/
+.idea/
+assets-original-backup/
+
+# Large binary assets — exceed GitHub's 100MB limit
+# Serve via Netlify manual upload or Large Media add-on
+assets/guides/the-relocation-edition.pdf
+assets/guides/*.bak
+
+# Python agent dependencies
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/

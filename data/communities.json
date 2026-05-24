@@ -1,0 +1,282 @@
+{
+  "lastUpdated": "2026-05-13",
+  "dataSource": "Compiled by Grewal RE Group from Unlock MLS data and on-the-ground experience.",
+  "communities": {
+    "barton-creek": {
+      "name": "Barton Creek",
+      "zip": "78735",
+      "description": "Gated, amenity-rich Hill Country community with championship golf, tennis, and 25+ miles of private trails. Eanes ISD schools and direct Barton Creek Greenbelt access make this the benchmark for West Austin family luxury.",
+      "metaDescription": "Barton Creek Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Barton Creek email report from Grewal RE Group.",
+      "commentary": "The gates, the golf, the trails. Buyers here value privacy and amenity-rich community over raw downtown access. Inventory is the binding constraint, so plan to wait for the right listing rather than force a fit.",
+      "related": [
+        "west-lake-hills",
+        "tarrytown",
+        "circle-c-ranch"
+      ]
+    },
+    "barton-hills": {
+      "name": "Barton Hills",
+      "zip": "78704",
+      "description": "South Austin character with direct Greenbelt access, central, walkable, and quietly luxury. The 78704 zip code where mid-century cottages sit alongside contemporary rebuilds.",
+      "metaDescription": "Barton Hills Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Barton Hills email report from Grewal RE Group.",
+      "commentary": "South Austin character with central access. Buyers trade lot size for Greenbelt walks, food culture, and a 10-minute downtown commute. Smaller homes, but the lifestyle premium is real.",
+      "related": [
+        "zilker",
+        "travis-heights",
+        "barton-creek"
+      ]
+    },
+    "buda": {
+      "name": "Buda",
+      "zip": "78610",
+      "description": "South of Austin on I-35, established neighborhoods alongside new master-planned communities. A practical alternative for buyers who work in south or central Austin and want more home for the money.",
+      "metaDescription": "Buda Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Buda email report from Grewal RE Group.",
+      "commentary": "South suburb growth. Good schools, growing infrastructure, accessible commutes. Buyers here choose space and value over central proximity.",
+      "related": [
+        "kyle",
+        "dripping-springs",
+        "circle-c-ranch"
+      ]
+    },
+    "central-austin": {
+      "name": "Central Austin",
+      "zip": "78705 / 78751",
+      "description": "The university-adjacent corridor, Hyde Park, North Loop, Tarrytown's east edge, UT-area. A mix of historic homes, mid-density condos, and walkable neighborhood cores.",
+      "metaDescription": "Central Austin Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Central Austin email report from Grewal RE Group.",
+      "commentary": "The broad central corridor: walkability, food, Mueller-adjacent. Tighter lots, character homes, strong investor interest. Pricing varies meaningfully by exact pocket, so the comp set matters.",
+      "related": [
+        "north-central-austin",
+        "tarrytown",
+        "mueller"
+      ]
+    },
+    "circle-c-ranch": {
+      "name": "Circle C Ranch",
+      "zip": "78739",
+      "description": "Family-friendly southwest Austin master-planned community with strong amenities, pools, golf, parks, top-rated AISD schools. Predictable inventory and a wide spread of price points.",
+      "metaDescription": "Circle C Ranch Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Circle C Ranch email report from Grewal RE Group.",
+      "commentary": "Family-focused, master-planned, pools and trails. Less luxury price tag, more lifestyle value. Best for buyers prioritizing schools, amenities, and community over downtown adjacency.",
+      "related": [
+        "barton-creek",
+        "dripping-springs",
+        "buda"
+      ]
+    },
+    "downtown": {
+      "name": "Downtown Austin",
+      "zip": "78701",
+      "description": "High-rise condo living in the urban core, Rainey, 2nd Street District, Seaholm, the Northshore. Walkable to Lady Bird Lake, the Capitol corridor, and the entertainment district.",
+      "metaDescription": "Downtown Austin Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Downtown Austin email report from Grewal RE Group.",
+      "commentary": "Downtown is condos. Verticality buys you skyline views and walkability to everything. Best for buyers who value lock-and-leave living over backyard space.",
+      "related": [
+        "central-austin",
+        "east-austin",
+        "zilker"
+      ]
+    },
+    "dripping-springs": {
+      "name": "Dripping Springs",
+      "zip": "78620",
+      "description": "\"Gateway to the Hill Country\", wineries, distilleries, and sprawling acreage west of Austin. Strong DSISD schools and bigger lots for buyers willing to trade commute time for elbow room.",
+      "metaDescription": "Dripping Springs Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Dripping Springs email report from Grewal RE Group.",
+      "commentary": "Texas Hill Country with proximity to Austin. Acreage, master-planned communities (Belterra, Caliterra, Headwaters), excellent schools. A 30-minute commute, but the lifestyle trade is real.",
+      "related": [
+        "lake-travis",
+        "fredericksburg",
+        "circle-c-ranch"
+      ]
+    },
+    "east-austin": {
+      "name": "East Austin",
+      "zip": "78702 / 78721 / 78722 / 78723",
+      "description": "Austin's fastest-evolving submarket, Plaza Saltillo, Holly, East Cesar Chavez, Govalle. Median pricing currently down YoY, with the Green Line approval reshaping long-term value.",
+      "metaDescription": "East Austin Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly East Austin email report from Grewal RE Group.",
+      "commentary": "East Austin keeps reinventing itself. Mueller, Holly, French Place, Govalle, each pocket has its own pace. Strong for buyers betting on long-term appreciation.",
+      "related": [
+        "travis-heights",
+        "mueller",
+        "central-austin"
+      ]
+    },
+    "fredericksburg": {
+      "name": "Fredericksburg",
+      "zip": "78624",
+      "description": "Texas Hill Country wine country, about 80 miles west of Austin. A growing second-home and weekend-getaway market with stone homes, vineyard estates, and a thriving downtown.",
+      "metaDescription": "Fredericksburg Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Fredericksburg email report from Grewal RE Group.",
+      "commentary": "Hill Country wine country. Buyers here are usually second-home or relocation, drawn by Main Street, wineries, and ranchette acreage. Different rhythm than Austin proper.",
+      "related": [
+        "dripping-springs",
+        "lake-travis",
+        "austin-communities"
+      ]
+    },
+    "georgetown": {
+      "name": "Georgetown",
+      "zip": "78626 / 78628 / 78633",
+      "description": "The historic county seat 30 minutes north of Austin, the iconic courthouse square, Lake Georgetown, and Sun City for active-adult buyers. Strong GISD schools and Hill Country topography on the west side.",
+      "metaDescription": "Georgetown Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Georgetown email report from Grewal RE Group.",
+      "commentary": "North-corridor anchor city. Historic downtown, Sun City retirement community, Southwestern University. Family-friendly with strong long-term appreciation.",
+      "related": [
+        "round-rock",
+        "leander-cedar-park",
+        "pflugerville"
+      ]
+    },
+    "kyle": {
+      "name": "Kyle",
+      "zip": "78640",
+      "description": "Fast-growing southern suburb on I-35, Plum Creek, 6 Creeks, Bunton Creek. New construction inventory at price points well below central Austin.",
+      "metaDescription": "Kyle Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Kyle email report from Grewal RE Group.",
+      "commentary": "Hays County growth corridor. Strong appreciation, new construction, increasingly diverse amenities. Watch the school district and master-planned community choices carefully.",
+      "related": [
+        "buda",
+        "dripping-springs",
+        "pflugerville"
+      ]
+    },
+    "lake-travis": {
+      "name": "Lake Travis",
+      "zip": "78732 / 78734 / 78738",
+      "description": "Waterfront and Hill Country living, Steiner Ranch, Lakeway, Bee Cave, The Hollows. Lake access, top-rated Lake Travis ISD, and a meaningful price-per-square-foot advantage over 78746.",
+      "metaDescription": "Lake Travis Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Lake Travis email report from Grewal RE Group.",
+      "commentary": "Waterfront premium, lake-access premium, and pure-view premium are three different markets. Inventory varies by sub-area (Hudson Bend, Point Venture, Lago Vista). Patience pays off.",
+      "related": [
+        "dripping-springs",
+        "west-lake-hills",
+        "leander-cedar-park"
+      ]
+    },
+    "leander-cedar-park": {
+      "name": "Leander / Cedar Park",
+      "zip": "78641 / 78613",
+      "description": "Fast-growing northwest suburbs, top-rated Leander ISD, predictable new construction, and a meaningful price advantage over the urban core.",
+      "metaDescription": "Leander / Cedar Park Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Leander / Cedar Park email report from Grewal RE Group.",
+      "commentary": "North-corridor suburbia with strong family schools (Leander ISD) and accelerating tech-corridor growth. Newer construction dominates. Predictable buyer demographics, predictable pricing.",
+      "related": [
+        "round-rock",
+        "lake-travis",
+        "georgetown"
+      ]
+    },
+    "mueller": {
+      "name": "Mueller",
+      "zip": "78723",
+      "description": "Austin's benchmark new-urbanism community, walkable streets, the farmers market, Dell Seton Medical Center, and the Thinkery. Strong rental demand makes it equally compelling for families and investors.",
+      "metaDescription": "Mueller Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Mueller email report from Grewal RE Group.",
+      "commentary": "Mueller is the master-planned anomaly: New Urbanism in the heart of Austin. Walkable, strong schools, amenities, mixed-use. Predictable inventory cycles, premium pricing.",
+      "related": [
+        "central-austin",
+        "east-austin",
+        "north-central-austin"
+      ]
+    },
+    "north-central-austin": {
+      "name": "North Central Austin",
+      "zip": "78757 / 78758",
+      "description": "The Burnet Road / Anderson Lane corridor, Allandale, Crestview, Brentwood, Wooten. Solid inventory of mid-century ranches and bungalows at a measurable discount to West Austin.",
+      "metaDescription": "North Central Austin Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly North Central Austin email report from Grewal RE Group.",
+      "commentary": "The bridge between downtown and the suburbs. Allandale, Crestview, Brentwood. Affordable entry into central Austin, strong school options, and quick redevelopment activity.",
+      "related": [
+        "northwest-hills",
+        "central-austin",
+        "mueller"
+      ]
+    },
+    "northwest-hills": {
+      "name": "Northwest Hills",
+      "zip": "78731",
+      "description": "Hills, canyons, and quiet streets just inside Loop 360. Established homes on larger lots with quick access to MoPac and downtown, popular with relocating families who want space without leaving central Austin.",
+      "metaDescription": "Northwest Hills Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Northwest Hills email report from Grewal RE Group.",
+      "commentary": "Northwest Hills offers hill country views without leaving the central core. Older inventory, larger lots, and Anderson High School. Buyers seeking established neighborhood feel.",
+      "related": [
+        "north-central-austin",
+        "west-lake-hills",
+        "central-austin"
+      ]
+    },
+    "steiner-ranch": {
+      "name": "Steiner Ranch",
+      "zip": "78732",
+      "description": "Northwest Austin's largest master-planned community along Lake Travis. Leander ISD schools, 20 miles of trails, two amenity centers, and room-sized homes at a fraction of Westlake pricing. A balanced market in 2026 with strong long-term fundamentals.",
+      "metaDescription": "Steiner Ranch Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Steiner Ranch email report from Grewal RE Group.",
+      "commentary": "Steiner Ranch has normalized. Pricing discipline separates homes that close in 45 days from homes that sit for 120. Buyers have leverage right now.",
+      "related": [
+        "lake-travis",
+        "northwest-hills",
+        "leander-cedar-park"
+      ]
+    },
+    "pflugerville": {
+      "name": "Pflugerville",
+      "zip": "78660",
+      "description": "A quieter northeast suburb between Austin and Round Rock, newer construction, larger lots, family-friendly amenities, and easy access to SH-130 and the Domain corridor.",
+      "metaDescription": "Pflugerville Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Pflugerville email report from Grewal RE Group.",
+      "commentary": "Affordable entry into the Austin metro with growing amenities. Strong demand from first-time buyers and investors. Inventory turns reliably, so deals move quickly when priced right.",
+      "related": [
+        "round-rock",
+        "mueller",
+        "georgetown"
+      ]
+    },
+    "round-rock": {
+      "name": "Round Rock",
+      "zip": "78664 / 78665 / 78681",
+      "description": "Austin's largest northern suburb, established neighborhoods, Round Rock ISD, Dell's headquarters corridor. Affordability and commute access continue to draw buyers priced out of central Austin.",
+      "metaDescription": "Round Rock Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Round Rock email report from Grewal RE Group.",
+      "commentary": "Strong corporate base (Dell) and Round Rock ISD. Suburb life with good amenities. Buyer pool is wide; sellers move quickly when priced right.",
+      "related": [
+        "pflugerville",
+        "georgetown",
+        "leander-cedar-park"
+      ]
+    },
+    "tarrytown": {
+      "name": "Tarrytown",
+      "zip": "78703",
+      "description": "Historic 78703 estates with mature oaks, downtown adjacency, and famously tight inventory. Buyers here trade square footage for character, walkability, and Austin's most established address.",
+      "metaDescription": "Tarrytown Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Tarrytown email report from Grewal RE Group.",
+      "commentary": "Tarrytown's defining feature is supply. Lots are limited, character is irreplaceable, and most sellers prefer a quiet, pre-marketed process over a public listing. Buying here means patience plus access.",
+      "related": [
+        "west-lake-hills",
+        "zilker",
+        "central-austin"
+      ]
+    },
+    "travis-heights": {
+      "name": "Travis Heights",
+      "zip": "78704",
+      "description": "South Congress's quiet residential side, tree-lined streets, mid-century homes, and a 5-minute walk to SoCo's restaurants and shops.",
+      "metaDescription": "Travis Heights Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Travis Heights email report from Grewal RE Group.",
+      "commentary": "Travis Heights is the most charming pocket of South Austin. Walkable to South Congress, Continental Club, downtown over the bridge. Tight inventory, fierce buyer competition.",
+      "related": [
+        "barton-hills",
+        "zilker",
+        "east-austin"
+      ]
+    },
+    "west-lake-hills": {
+      "name": "West Lake Hills",
+      "zip": "78746",
+      "description": "Top-rated Eanes ISD, mature tree canopy, and Hill Country topography just 10\u201315 minutes from downtown. Estate values typically range from $1.2M to $8M+, with the upper tier driven by school zone and limited buildable land.",
+      "metaDescription": "West Lake Hills Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly West Lake Hills email report from Grewal RE Group.",
+      "commentary": "West Lake Hills sells on schools and trees, not square footage. Eanes ISD is the magnet. Smart buyers focus on the lot, the canopy, and walkability to downtown, not granite countertops.",
+      "related": [
+        "tarrytown",
+        "barton-creek",
+        "barton-hills"
+      ]
+    },
+    "zilker": {
+      "name": "Zilker",
+      "zip": "78704",
+      "description": "Walkable to Barton Springs Pool, the Hike-and-Bike Trail, and South Lamar's restaurant corridor. Smaller lots, big neighborhood character, and one of Austin's most coveted central-west addresses.",
+      "metaDescription": "Zilker Austin TX real estate market insights, monthly market data, recent listings, and local intel. Get the monthly Zilker email report from Grewal RE Group.",
+      "commentary": "Zilker sits at the intersection of Barton Springs, downtown, and South Lamar. Walkable, central, and impossible to expand. Buyers here pay for location and lifestyle, not square footage.",
+      "related": [
+        "barton-hills",
+        "tarrytown",
+        "downtown"
+      ]
+    }
+  }
+}

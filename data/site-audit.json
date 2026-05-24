@@ -1,0 +1,77 @@
+{
+  "auditDate": "2026-05-24",
+  "summary": {
+    "totalPages": 22,
+    "communityPages": 22,
+    "blogPosts": 348,
+    "brokenLinks": 0,
+    "missingPriorityPages": ["steiner-ranch", "rollingwood", "davenport-ranch", "lost-creek"],
+    "fixesAppliedThisRun": [
+      "FIX 3: Replaced 8 fake hardcoded MLS listings in search.html with IDX placeholder",
+      "FIX 4: Blog count verified as accurate (348 actual posts)",
+      "Market data: Updated austin-market-report-may-2026.html with May 2026 figures ($466,150 median)",
+      "New page: communities/steiner-ranch.html (Priority 1)"
+    ]
+  },
+  "pages": {
+    "index.html": {
+      "metaTitle": "Shivraj Grewal | Luxury Real Estate Agent Austin TX | Grewal RE Group",
+      "metaTitleLength": 66,
+      "metaTitleFlag": "Over 60 characters — trim slightly",
+      "metaDescription": "Shivraj Grewal at Grewal RE Group. Luxury real estate in Westlake Hills, Barton Creek, and Austin TX. Straight answers, strong results. Call 512.617.0001.",
+      "metaDescriptionLength": 154,
+      "schema": "RealEstateAgent + BreadcrumbList",
+      "reviewCount": 117,
+      "status": "good"
+    },
+    "search.html": {
+      "metaTitle": "Search Austin MLS Listings | Grewal RE Group",
+      "status": "fixed",
+      "fix": "Removed 8 fake hardcoded listings. IDX placeholder installed. Awaiting Showcase IDX key."
+    },
+    "blog/austin-market-report-may-2026.html": {
+      "status": "updated",
+      "fix": "Updated median sold price from $426K to $466,150. Added Barton Creek and Steiner Ranch data rows. Updated FAQ schema answers."
+    },
+    "communities/steiner-ranch.html": {
+      "status": "new",
+      "note": "Priority 1 community page created May 24 2026. Includes market snapshot, AEO answer blocks, FAQ schema, email signup, and commentary."
+    }
+  },
+  "seoFlags": [
+    {
+      "page": "index.html",
+      "issue": "Meta title is 66 characters (recommended max 60)",
+      "severity": "low",
+      "action": "Trim 'Shivraj Grewal | ' prefix on next content update"
+    }
+  ],
+  "missingCommunityPages": [
+    {
+      "slug": "rollingwood",
+      "priority": 1,
+      "zip": "78746",
+      "schoolDistrict": "Eanes ISD",
+      "status": "Not yet created"
+    },
+    {
+      "slug": "davenport-ranch",
+      "priority": 1,
+      "zip": "78746",
+      "schoolDistrict": "Eanes ISD",
+      "status": "Not yet created"
+    },
+    {
+      "slug": "lost-creek",
+      "priority": 1,
+      "zip": "78746",
+      "schoolDistrict": "Eanes ISD",
+      "status": "Not yet created"
+    },
+    {
+      "slug": "lake-austin",
+      "priority": 2,
+      "note": "Kumara Wilcoxon covers this neighborhood. Blog posts exist but no community hub page."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+name: Daily Site Agent
+
+on:
+  schedule:
+    # 6:00 AM CDT = 11:00 UTC (May–Nov, Austin daylight time)
+    # 6:00 AM CST = 12:00 UTC (Nov–Mar, Austin standard time)
+    # Running at 11:00 UTC covers the CDT window; update to 12:00 UTC in winter
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no PR created)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  daily-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic requests python-dateutil
+
+      - name: Run daily agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: python scripts/daily_agent.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git status --porcelain > /tmp/changes.txt
+          if [ -s /tmp/changes.txt ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changes detected:"
+            cat /tmp/changes.txt
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to commit."
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true' && env.DRY_RUN != 'true'
+        env:
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          DATE=$(date -u +"%Y-%m-%d")
+          BRANCH="agent/daily-run-${DATE}"
+          git config user.name "Grewal RE Group Site Agent"
+          git config user.email "agent@grewalregroup.com"
+          git checkout -b "$BRANCH"
+          git add -A
+          git commit -m "Daily agent run — ${DATE}
+
+          Automated daily audit and content update.
+          Market data, competitor log, content rotation, and fixes.
+
+          See PR description for full change log."
+          git push origin "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: Create pull request
+        if: steps.changes.outputs.has_changes == 'true' && env.DRY_RUN != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          DATE=$(date -u +"%Y-%m-%d")
+          PR_BODY=$(cat /tmp/agent-pr-body.md 2>/dev/null || echo "Daily agent run — ${DATE}. See logs for details.")
+          gh pr create \
+            --title "Daily agent run — ${DATE}" \
+            --body "$PR_BODY" \
+            --base main \
+            --head "$BRANCH" \
+            --label "agent" || true
+
+      - name: Upload agent log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-log-${{ github.run_number }}
+          path: |
+            logs/agent-errors.json
+            data/site-audit.json
+            /tmp/agent-pr-body.md
+          retention-days: 30

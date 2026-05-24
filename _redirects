@@ -1,0 +1,2 @@
+# Cloudflare Pages / Netlify _redirects (works on both hosts)
+/relocation-guide   /assets/guides/the-relocation-edition.pdf   302

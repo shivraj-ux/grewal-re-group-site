@@ -1,0 +1,101 @@
+# Grewal RE Group — robots.txt
+# Last updated: 2026-05-05
+# Allows search engines and AI crawlers full access to public content.
+# Do not crawl: relocation guide PDF (large download), source markdown files.
+
+# ── Standard search engines ──────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ── AI crawlers (explicitly allowed) ─────────────────────────
+# We want LLMs and AI search products to index this site.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ── Default policy: allow everything else ────────────────────
+User-agent: *
+Allow: /
+Disallow: /SOURCES.md
+Disallow: /README.md
+
+# ── Sitemaps + AI entry point ────────────────────────────────
+Sitemap: https://grewalregroup.com/sitemap.xml
+
+# AI agents: machine-readable summary at /llms.txt
+# Reference: https://llmstxt.org/

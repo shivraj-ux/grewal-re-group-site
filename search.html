@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Austin MLS Listings | Grewal RE Group</title>
+  <meta name="description" content="Search live Austin MLS listings, Westlake Hills, Barton Creek, Tarrytown and all of Greater Austin. Filter by price, beds, school district and more. Grewal RE Group.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://grewalregroup.com/search.html">
+  <link rel="icon" type="image/png" href="assets/logos/logo-mark.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/logos/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+       Brand: Gold #B8963E · Cream #FAF7F2 · Ink #171717
+       Type: Cormorant Garamond + Inter
+       ═══════════════════════════════════════════════════ */
+    :root {
+      --gold: #B8963E;
+      --gold-light: #d4b366;
+      --gold-dark: #9a7c33;
+      --cream: #FAF7F2;
+      --cream-2: #F4F0E9;
+      --black: #0a0a0a;
+      --ink: #171717;
+      --muted: #6b6b6b;
+      --muted-2: #9a9a9a;
+      --line: #e8e3d8;
+      --line-2: #ede9e0;
+      --sidebar-w: 340px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+    p { line-height: 1.65; margin: 0 0 1rem; }
+
+    /* ─── HEADER ─── */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.85rem 2.5rem;
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+      transition: padding 0.3s;
+    }
+    .brand--logo { display: inline-flex; align-items: center; }
+    .brand-logo { height: 40px; width: auto; display: block; }
+    .brand-logo--white { display: none; }
+
+    .nav { display: flex; align-items: center; gap: 2rem; }
+    .nav a {
+      color: var(--ink); text-decoration: none; font-size: 0.85rem;
+      font-weight: 500; letter-spacing: 0.05em;
+      transition: color 0.2s; position: relative;
+    }
+    .nav a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px; background: var(--gold); transition: width 0.3s;
+    }
+    .nav a:hover::after, .nav a.active::after { width: 100%; }
+    .nav a:hover { color: var(--gold); }
+    .nav a.active { color: var(--gold); }
+    .header-cta {
+      padding: 0.6rem 1.25rem;
+      background: var(--gold); color: #fff !important;
+      border-radius: 2px; letter-spacing: 0.08em;
+      text-transform: uppercase; font-size: 0.7rem;
+    }
+    .header-cta:hover { background: var(--gold-dark) !important; }
+    .header-cta::after { display: none !important; }
+
+    .menu-toggle {
+      display: none; background: transparent; border: 0; cursor: pointer;
+      width: 32px; height: 32px; flex-direction: column;
+      align-items: center; justify-content: center; gap: 5px;
+    }
+    .menu-toggle span { width: 22px; height: 1.5px; background: var(--ink); }
+
+    .mobile-nav {
+      position: fixed; top: 0; right: -100%; height: 100vh; width: 80%; max-width: 360px;
+      background: #fff; z-index: 200;
+      display: flex; flex-direction: column; padding: 5rem 2rem 2rem; gap: 1.5rem;
+      transition: right 0.3s ease;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    }
+    .mobile-nav.open { right: 0; }
+    .mobile-nav a { color: var(--ink); font-size: 1rem; font-weight: 500; }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav .mn-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: 0; font-size: 1.75rem; cursor: pointer; color: var(--ink);
+    }
+
+    @media (max-width: 900px) {
+      .nav { display: none; }
+      .menu-toggle { display: flex; }
+      .site-header { padding: 0.75rem 1.25rem; }
+    }
+
+    /* ─── SEARCH HERO ─── */
+    .search-hero {
+      padding-top: 72px;
+      background: var(--black);
+      padding-bottom: 0;
+    }
+    .search-hero-inner {
+      max-width: 1280px; margin: 0 auto; padding: 3rem 2rem 0;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .eyebrow {
+      color: var(--gold); font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      font-size: 0.72rem; margin: 0 0 0.75rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .search-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #fff; margin-bottom: 0.75rem; line-height: 1.05;
+    }
+    .search-hero .lede {
+      color: rgba(255,255,255,0.65); font-size: 0.95rem;
+      margin-bottom: 2rem; letter-spacing: 0.02em;
+    }
+
+    /* Quick search bar */
+    .quick-search-bar {
+      width: 100%; max-width: 720px;
+      display: grid; grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 0; background: #fff; border-radius: 3px;
+      overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      margin-bottom: -1px;
+    }
+    .qs-field {
+      display: flex; flex-direction: column;
+      padding: 0.85rem 1.1rem;
+      border-right: 1px solid var(--line);
+    }
+    .qs-field:last-of-type { border-right: none; }
+    .qs-label {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem;
+    }
+    .qs-input {
+      border: 0; outline: 0; font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; color: var(--ink); background: transparent;
+      padding: 0; width: 100%;
+    }
+    .qs-input::placeholder { color: var(--muted-2); }
+    .qs-select {
+      border: 0; outline: 0; font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; color: var(--ink); background: transparent;
+      padding: 0; appearance: none; width: 100%; cursor: pointer;
+    }
+    .qs-btn {
+      padding: 0 2rem; background: var(--gold); color: #fff;
+      border: 0; cursor: pointer; font-family: 'Inter', sans-serif;
+      font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em;
+      text-transform: uppercase; transition: background 0.2s; white-space: nowrap;
+    }
+    .qs-btn:hover { background: var(--gold-dark); }
+    .qs-btn svg { width: 16px; height: 16px; }
+    @media (max-width: 700px) {
+      .quick-search-bar { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+      .qs-field:nth-child(2) { border-right: none; }
+      .qs-btn { grid-column: 1/-1; padding: 1rem; }
+    }
+
+    /* Status pills */
+    .status-pills {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      justify-content: center; padding: 1.5rem 0 1.75rem;
+    }
+    .status-pill {
+      padding: 0.35rem 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px; color: rgba(255,255,255,0.7);
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.05em;
+      cursor: pointer; transition: all 0.2s; user-select: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .status-pill.active {
+      background: var(--gold); border-color: var(--gold); color: #fff;
+    }
+    .status-pill:hover { border-color: var(--gold); color: #fff; }
+
+    /* ─── SEARCH LAYOUT ─── */
+    .search-layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      min-height: calc(100vh - 72px);
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .search-sidebar {
+      position: sticky; top: 72px;
+      height: calc(100vh - 72px);
+      overflow-y: auto;
+      background: var(--cream);
+      border-right: 1px solid var(--line);
+      padding: 0;
+    }
+    .search-sidebar::-webkit-scrollbar { width: 4px; }
+    .search-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .search-sidebar::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
+
+    .sidebar-header {
+      padding: 1.25rem 1.25rem 1rem;
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .sidebar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 700; color: var(--ink);
+    }
+    .sidebar-reset {
+      font-size: 0.72rem; color: var(--gold); font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      background: none; border: 0; cursor: pointer; transition: color 0.2s;
+    }
+    .sidebar-reset:hover { color: var(--gold-dark); }
+
+    /* Private Exclusives Toggle */
+    .exclusives-toggle {
+      padding: 1rem 1.25rem;
+      background: linear-gradient(135deg, rgba(184,150,62,0.08), rgba(184,150,62,0.04));
+      border-bottom: 1px solid var(--line);
+    }
+    .toggle-row {
+      display: flex; align-items: center; gap: 0.65rem; cursor: pointer;
+    }
+    .toggle-switch {
+      position: relative; width: 36px; height: 20px; flex-shrink: 0;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; background: #ccc; border-radius: 20px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .toggle-slider::before {
+      content: ''; position: absolute;
+      height: 14px; width: 14px; left: 3px; bottom: 3px;
+      background: #fff; border-radius: 50%; transition: 0.3s;
+    }
+    .toggle-switch input:checked + .toggle-slider { background: var(--gold); }
+    .toggle-switch input:checked + .toggle-slider::before { transform: translateX(16px); }
+    .toggle-label {
+      font-size: 0.78rem; font-weight: 600; color: var(--ink); line-height: 1.3;
+    }
+    .toggle-sub { font-size: 0.68rem; color: var(--muted); font-weight: 400; }
+
+    /* Filter Groups */
+    .filter-section {
+      border-bottom: 1px solid var(--line);
+    }
+    .filter-section-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.9rem 1.25rem; cursor: pointer;
+      user-select: none; transition: background 0.15s;
+    }
+    .filter-section-head:hover { background: var(--cream-2); }
+    .filter-section-title {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink);
+    }
+    .filter-section-chevron {
+      color: var(--muted); transition: transform 0.25s; font-size: 0.75rem;
+    }
+    .filter-section.open .filter-section-chevron { transform: rotate(180deg); }
+    .filter-body {
+      padding: 0 1.25rem 1.1rem; display: none;
+    }
+    .filter-section.open .filter-body { display: block; }
+
+    /* Filter inputs */
+    .filter-label {
+      display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; margin-top: 0.85rem;
+    }
+    .filter-label:first-child { margin-top: 0; }
+
+    .filter-input, .filter-select {
+      width: 100%; padding: 0.55rem 0.75rem;
+      border: 1px solid var(--line); border-radius: 2px;
+      font-family: 'Inter', sans-serif; font-size: 0.82rem;
+      color: var(--ink); background: #fff; outline: 0;
+      transition: border-color 0.2s;
+    }
+    .filter-input:focus, .filter-select:focus { border-color: var(--gold); }
+
+    .range-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .range-row .filter-input { padding: 0.5rem 0.6rem; }
+
+    /* Checkbox grid */
+    .cb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem 0.5rem; }
+    .cb-item {
+      display: flex; align-items: center; gap: 0.45rem;
+      font-size: 0.78rem; color: var(--ink); cursor: pointer;
+      padding: 0.2rem 0;
+    }
+    .cb-item input[type="checkbox"] {
+      width: 14px; height: 14px; accent-color: var(--gold); cursor: pointer; flex-shrink: 0;
+    }
+    .cb-grid-1 { grid-template-columns: 1fr; }
+    .cb-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    /* Logic toggle (And / Or / Not) */
+    .logic-row {
+      display: flex; gap: 0; margin-top: 0.4rem; overflow: hidden; border-radius: 2px;
+      border: 1px solid var(--line); width: fit-content;
+    }
+    .logic-btn {
+      padding: 0.25rem 0.65rem; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: #fff; color: var(--muted); border: 0; cursor: pointer;
+      border-right: 1px solid var(--line); transition: all 0.15s;
+    }
+    .logic-btn:last-child { border-right: 0; }
+    .logic-btn.active { background: var(--gold); color: #fff; }
+    .logic-btn:hover:not(.active) { background: var(--cream-2); }
+
+    /* Stepper (beds, baths) */
+    .stepper-row { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+    .stepper-btn {
+      min-width: 38px; height: 34px;
+      border: 1px solid var(--line); border-radius: 2px;
+      background: #fff; color: var(--ink); font-size: 0.82rem; font-weight: 500;
+      cursor: pointer; transition: all 0.15s; font-family: 'Inter', sans-serif;
+    }
+    .stepper-btn.active { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .stepper-btn:hover:not(.active) { border-color: var(--gold); color: var(--gold); }
+
+    /* Tag multi-select */
+    .tag-search-wrap { position: relative; }
+    .tag-search-input {
+      width: 100%; padding: 0.5rem 0.75rem;
+      border: 1px solid var(--line); border-radius: 2px;
+      font-family: 'Inter', sans-serif; font-size: 0.82rem;
+      color: var(--ink); background: #fff; outline: 0;
+      transition: border-color 0.2s;
+    }
+    .tag-search-input:focus { border-color: var(--gold); }
+    .selected-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      padding: 0.2rem 0.55rem; background: rgba(184,150,62,0.12);
+      color: var(--gold-dark); border-radius: 999px;
+      font-size: 0.7rem; font-weight: 600;
+    }
+    .tag-remove {
+      background: none; border: 0; color: var(--gold); cursor: pointer;
+      padding: 0; font-size: 0.9rem; line-height: 1; display: flex;
+    }
+
+    /* Bool checkboxes (Private Pool, Waterfront, etc.) */
+    .bool-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .bool-chip {
+      display: flex; align-items: center; gap: 0.35rem;
+      padding: 0.35rem 0.75rem; border: 1px solid var(--line);
+      border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+      cursor: pointer; transition: all 0.15s; user-select: none;
+      color: var(--ink);
+    }
+    .bool-chip input { display: none; }
+    .bool-chip.checked, .bool-chip:has(input:checked) {
+      background: rgba(184,150,62,0.12); border-color: var(--gold); color: var(--gold-dark);
+    }
+
+    /* Address row */
+    .addr-grid {
+      display: grid; grid-template-columns: 3rem 4rem 1fr 3.5rem 4rem 3rem;
+      gap: 0.35rem; align-items: end;
+    }
+    .addr-label { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+
+    /* Apply button */
+    .sidebar-apply {
+      padding: 1rem 1.25rem; border-top: 1px solid var(--line);
+      background: var(--cream); position: sticky; bottom: 0;
+    }
+    .btn-apply {
+      width: 100%; padding: 0.9rem;
+      background: var(--gold); color: #fff; border: 0; border-radius: 2px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.82rem;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+      transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .btn-apply:hover { background: var(--gold-dark); }
+
+    /* ─── RESULTS ─── */
+    .search-results { padding: 0; min-height: calc(100vh - 72px); }
+
+    .results-topbar {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+      background: #fff; position: sticky; top: 72px; z-index: 10;
+    }
+    .results-count { font-size: 0.85rem; color: var(--muted); }
+    .results-count strong { color: var(--ink); font-weight: 700; }
+    .results-controls { display: flex; align-items: center; gap: 0.75rem; }
+    .view-btn {
+      width: 32px; height: 32px; background: transparent; border: 1px solid var(--line);
+      border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: var(--muted); transition: all 0.15s;
+    }
+    .view-btn.active { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .view-btn:hover:not(.active) { border-color: var(--gold); color: var(--gold); }
+    .view-btn svg { width: 15px; height: 15px; }
+    .sort-select {
+      padding: 0.45rem 0.75rem; border: 1px solid var(--line); border-radius: 2px;
+      font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--ink);
+      background: #fff; outline: 0; cursor: pointer;
+    }
+    .sort-select:focus { border-color: var(--gold); }
+    .filter-mobile-btn {
+      display: none; padding: 0.45rem 0.85rem;
+      border: 1px solid var(--gold); border-radius: 2px;
+      background: transparent; color: var(--gold); font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      cursor: pointer; align-items: center; gap: 0.4rem;
+    }
+    .filter-mobile-btn svg { width: 14px; height: 14px; }
+
+    /* Listing grid */
+    .listings-grid {
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .listings-grid.list-view { grid-template-columns: 1fr; }
+
+    /* Listing card */
+    .listing-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 3px;
+      overflow: hidden; transition: box-shadow 0.25s, transform 0.25s;
+      cursor: pointer;
+    }
+    .listing-card:hover { box-shadow: 0 12px 40px -8px rgba(0,0,0,0.14); transform: translateY(-2px); }
+
+    .card-photo {
+      position: relative; aspect-ratio: 4/3;
+      background: var(--cream-2);
+      overflow: hidden;
+    }
+    .card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .listing-card:hover .card-photo img { transform: scale(1.04); }
+    .card-photo-placeholder {
+      width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--cream-2) 0%, var(--line) 100%);
+      color: var(--muted-2);
+    }
+    .card-photo-placeholder svg { width: 40px; height: 40px; opacity: 0.4; }
+
+    .status-badge {
+      position: absolute; top: 0.75rem; left: 0.75rem;
+      padding: 0.25rem 0.65rem; border-radius: 999px;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .badge-coming-soon { background: #0f4; color: #000; background: #1a1a1a; color: #fff; }
+    .badge-active { background: #166534; color: #fff; }
+    .badge-active-uc { background: #92400e; color: #fff; }
+    .badge-pending { background: #1e40af; color: #fff; }
+    .badge-closed { background: #374151; color: #fff; }
+    .badge-coming { background: var(--gold); color: #fff; }
+
+    .card-save {
+      position: absolute; top: 0.75rem; right: 0.75rem;
+      width: 32px; height: 32px; background: rgba(255,255,255,0.9);
+      border-radius: 50%; border: 0; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; backdrop-filter: blur(4px);
+    }
+    .card-save:hover { background: #fff; }
+    .card-save svg { width: 14px; height: 14px; color: var(--muted); transition: color 0.2s; }
+    .card-save.saved svg { color: #e11d48; fill: #e11d48; }
+
+    .card-body { padding: 1rem; }
+    .card-price {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
+      color: var(--ink); line-height: 1; margin-bottom: 0.35rem;
+    }
+    .card-price span { font-size: 1rem; }
+    .card-address { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.65rem; line-height: 1.4; }
+    .card-address strong { color: var(--ink); font-weight: 600; }
+
+    .card-stats {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      padding-top: 0.65rem; border-top: 1px solid var(--line-2);
+    }
+    .card-stat { font-size: 0.75rem; color: var(--ink); display: flex; align-items: center; gap: 0.3rem; }
+    .card-stat strong { font-weight: 700; }
+    .card-stat span { color: var(--muted); }
+
+    .card-footer {
+      padding: 0.6rem 1rem;
+      border-top: 1px solid var(--line-2);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.68rem; color: var(--muted);
+    }
+    .card-mls { font-weight: 500; }
+    .card-days { display: flex; align-items: center; gap: 0.3rem; }
+
+    /* List view card */
+    .listings-grid.list-view .listing-card { display: grid; grid-template-columns: 260px 1fr; }
+    .listings-grid.list-view .card-photo { aspect-ratio: auto; min-height: 180px; }
+    .listings-grid.list-view .card-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1/-1; text-align: center;
+      padding: 5rem 2rem;
+    }
+    .empty-state svg { width: 56px; height: 56px; color: var(--line); margin: 0 auto 1.5rem; }
+    .empty-state h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--ink); }
+    .empty-state p { color: var(--muted); font-size: 0.9rem; }
+
+    /* ─── FOOTER ─── */
+    .site-footer { background: var(--black); color: rgba(255,255,255,0.7); padding: 4rem 0 2rem; }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand-logo { height: 48px; width: auto; }
+    .footer-tagline { color: var(--gold); font-style: italic; font-size: 0.95rem; margin: 0; }
+    .footer-about { font-size: 0.85rem; line-height: 1.7; margin: 1rem 0; max-width: 28rem; }
+    .footer-socials { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+    .footer-socials a {
+      width: 30px; height: 30px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15); display: flex;
+      align-items: center; justify-content: center; color: rgba(255,255,255,0.6);
+      transition: all 0.2s;
+    }
+    .footer-socials a:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+    .footer-socials svg { width: 13px; height: 13px; }
+    .footer-col h4 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #fff;
+      margin: 0 0 1rem; font-weight: 700;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .65rem; }
+    .footer-col a { color: rgba(255,255,255,0.7); font-size: 0.85rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-nap { font-style: normal; font-size: 0.85rem; line-height: 1.7; }
+    .footer-nap a { color: rgba(255,255,255,0.7); }
+    .footer-nap a:hover { color: var(--gold); }
+    .footer-legal {
+      max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 0;
+      font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.7;
+    }
+    .footer-brokerage {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 4px; padding: 1rem 1.25rem; margin-bottom: 1rem;
+      font-size: 0.78rem; color: rgba(255,255,255,0.5);
+    }
+    .footer-legal-row { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; margin: .85rem 0; }
+    .footer-legal-row a { color: rgba(255,255,255,0.5); }
+    .footer-legal-row a:hover { color: var(--gold); }
+    .footer-legal-row span { color: rgba(255,255,255,0.25); }
+    .eho-row { display: flex; align-items: center; gap: .65rem; font-size: 0.75rem; color: rgba(255,255,255,0.35); padding-top: .5rem; }
+
+    /* ─── MOBILE OVERLAY ─── */
+    .sidebar-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 150;
+    }
+    .sidebar-overlay.open { display: block; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      :root { --sidebar-w: 300px; }
+    }
+    @media (max-width: 768px) {
+      .search-layout { grid-template-columns: 1fr; }
+      .search-sidebar {
+        position: fixed; left: -100%; top: 0; bottom: 0; z-index: 160;
+        width: 88%; max-width: 360px; height: 100vh;
+        transition: left 0.3s ease;
+      }
+      .search-sidebar.mobile-open { left: 0; }
+      .filter-mobile-btn { display: inline-flex; }
+      .results-topbar { top: 64px; }
+      .quick-search-bar { grid-template-columns: 1fr 1fr; }
+      .listings-grid.list-view .listing-card { grid-template-columns: 1fr; }
+      .listings-grid.list-view .card-photo { min-height: 200px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .listings-grid { padding: 1rem; gap: 1rem; }
+      .results-topbar { padding: 0.75rem 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header" id="site-header">
+  <a href="index.html" class="brand brand--logo" aria-label="Grewal RE Group home">
+    <img src="assets/logos/logo-black.png" alt="Grewal RE Group" class="brand-logo" />
+  </a>
+  <nav class="nav">
+    <a href="index.html#about">About</a>
+    <a href="index.html#team">Team</a>
+    <a href="communities/index.html">Communities</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#relocate">Relocate</a>
+    <a href="search.html" class="active">Search</a>
+    <a href="blog/index.html">Insights</a>
+    <a href="index.html#contact" class="header-cta">Schedule a Call</a>
+  </nav>
+  <button class="menu-toggle" aria-label="Open menu" id="menu-open">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mn-close" aria-label="Close menu" id="menu-close">×</button>
+  <a href="index.html#about">About</a>
+  <a href="index.html#team">Team</a>
+  <a href="communities/index.html">Communities</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#relocate">Relocate</a>
+  <a href="search.html">Search Listings</a>
+  <a href="blog/index.html">Insights</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<!-- ═══ SEARCH HERO ═══ -->
+<div class="search-hero">
+  <div class="search-hero-inner">
+    <p class="eyebrow">Grewal RE Group · Austin MLS</p>
+    <h1>Search Austin Properties</h1>
+    <p class="lede">Westlake Hills · Barton Creek · Tarrytown · Rollingwood · and all of Greater Austin</p>
+
+    <div class="quick-search-bar">
+      <div class="qs-field">
+        <span class="qs-label">Location</span>
+        <input class="qs-input" id="qs-location" type="text" placeholder="City, zip, neighborhood…" autocomplete="off">
+      </div>
+      <div class="qs-field">
+        <span class="qs-label">Price Max</span>
+        <select class="qs-select" id="qs-price">
+          <option value="">Any</option>
+          <option value="500000">$500K</option>
+          <option value="750000">$750K</option>
+          <option value="1000000">$1M</option>
+          <option value="1500000">$1.5M</option>
+          <option value="2000000">$2M</option>
+          <option value="3000000">$3M</option>
+          <option value="5000000">$5M</option>
+          <option value="999999999">$5M+</option>
+        </select>
+      </div>
+      <div class="qs-field">
+        <span class="qs-label">Beds Min</span>
+        <select class="qs-select" id="qs-beds">
+          <option value="">Any</option>
+          <option value="1">1+</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+      <button class="qs-btn" id="qs-search-btn" onclick="runSearch()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Search
+      </button>
+    </div>
+
+    <div class="status-pills" id="status-pills">
+      <span class="status-pill active" data-status="coming-soon">Coming Soon</span>
+      <span class="status-pill active" data-status="active">Active</span>
+      <span class="status-pill" data-status="active-uc">Active Under Contract</span>
+      <span class="status-pill" data-status="pending">Pending</span>
+      <span class="status-pill" data-status="closed">Closed</span>
+      <span class="status-pill" data-status="hold">Hold</span>
+      <span class="status-pill" data-status="withdrawn">Withdrawn</span>
+      <span class="status-pill" data-status="expired">Expired</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SEARCH LAYOUT ═══ -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="search-layout">
+
+  <!-- ── SIDEBAR FILTERS ── -->
+  <aside class="search-sidebar" id="search-sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Filters</span>
+      <button class="sidebar-reset" onclick="resetFilters()">Clear All</button>
+    </div>
+
+    <!-- Private Exclusives Toggle -->
+    <div class="exclusives-toggle">
+      <label class="toggle-row">
+        <span class="toggle-switch">
+          <input type="checkbox" id="private-exclusives">
+          <span class="toggle-slider"></span>
+        </span>
+        <span class="toggle-label">
+          Private Exclusives &amp; Coming Soons
+          <span class="toggle-sub">Compass-only off-market listings</span>
+        </span>
+      </label>
+    </div>
+
+    <!-- PROPERTY TYPE -->
+    <div class="filter-section open" id="fs-type">
+      <div class="filter-section-head" onclick="toggleSection('fs-type')">
+        <span class="filter-section-title">Property Type</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox" value="single-family" checked> Single Family</label>
+          <label class="cb-item"><input type="checkbox" value="condo"> Condo</label>
+          <label class="cb-item"><input type="checkbox" value="townhouse"> Townhouse</label>
+          <label class="cb-item"><input type="checkbox" value="land"> Land</label>
+          <label class="cb-item"><input type="checkbox" value="multi-family"> Multi-Family</label>
+          <label class="cb-item"><input type="checkbox" value="farm-ranch"> Farm &amp; Ranch</label>
+        </div>
+        <span class="filter-label" style="margin-top:.75rem;">Ownership Type</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox" value="fee-simple" checked> Fee Simple</label>
+          <label class="cb-item"><input type="checkbox" value="condo-ownership"> Condo Ownership</label>
+          <label class="cb-item"><input type="checkbox" value="cooperative"> Cooperative</label>
+        </div>
+        <div class="logic-row" style="margin-top:.5rem;">
+          <button class="logic-btn active" onclick="setLogic(this,'ownership')">Or</button>
+          <button class="logic-btn" onclick="setLogic(this,'ownership')">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICE -->
+    <div class="filter-section open" id="fs-price">
+      <div class="filter-section-head" onclick="toggleSection('fs-price')">
+        <span class="filter-section-title">Price</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Price Range (000s)</span>
+        <div class="range-row">
+          <input class="filter-input" type="number" placeholder="Min $" id="price-min" min="0" step="50">
+          <input class="filter-input" type="number" placeholder="Max $" id="price-max" min="0" step="50">
+        </div>
+        <span class="filter-label" style="margin-top:.75rem;">Listing ID</span>
+        <input class="filter-input" type="text" id="listing-id" placeholder="MLS #">
+      </div>
+    </div>
+
+    <!-- BEDS & BATHS -->
+    <div class="filter-section open" id="fs-beds">
+      <div class="filter-section-head" onclick="toggleSection('fs-beds')">
+        <span class="filter-section-title">Beds &amp; Baths</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Total Bedrooms (min)</span>
+        <div class="stepper-row" id="beds-stepper">
+          <button class="stepper-btn" onclick="setStepper('beds',0)">Any</button>
+          <button class="stepper-btn" onclick="setStepper('beds',1)">1+</button>
+          <button class="stepper-btn active" onclick="setStepper('beds',2)">2+</button>
+          <button class="stepper-btn" onclick="setStepper('beds',3)">3+</button>
+          <button class="stepper-btn" onclick="setStepper('beds',4)">4+</button>
+          <button class="stepper-btn" onclick="setStepper('beds',5)">5+</button>
+        </div>
+        <label class="cb-item" style="margin-top:.6rem;"><input type="checkbox" id="primary-main"> Primary bed on main level</label>
+        <span class="filter-label">Total Baths (min)</span>
+        <div class="stepper-row" id="baths-stepper">
+          <button class="stepper-btn" onclick="setStepper('baths',0)">Any</button>
+          <button class="stepper-btn" onclick="setStepper('baths',1)">1+</button>
+          <button class="stepper-btn active" onclick="setStepper('baths',2)">2+</button>
+          <button class="stepper-btn" onclick="setStepper('baths',3)">3+</button>
+          <button class="stepper-btn" onclick="setStepper('baths',4)">4+</button>
+        </div>
+        <div class="range-row" style="margin-top:.65rem;">
+          <div>
+            <span class="filter-label">Full Baths</span>
+            <input class="filter-input" type="number" placeholder="Min" min="0">
+          </div>
+          <div>
+            <span class="filter-label">Half Baths</span>
+            <input class="filter-input" type="number" placeholder="Min" min="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="filter-section open" id="fs-location">
+      <div class="filter-section-head" onclick="toggleSection('fs-location')">
+        <span class="filter-section-title">Location</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">City</span>
+        <div class="tag-search-wrap">
+          <input class="tag-search-input" type="text" placeholder="Search cities…" oninput="tagSearch(this,'cities')" id="city-search">
+          <div class="selected-tags" id="cities-tags"></div>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active" onclick="setLogic(this,'city')">Or</button>
+          <button class="logic-btn" onclick="setLogic(this,'city')">Not</button>
+        </div>
+
+        <span class="filter-label">Zip Code</span>
+        <input class="filter-input" type="text" placeholder="e.g. 78746, 78703" id="zip-input">
+
+        <span class="filter-label">County</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox" value="travis" checked> Travis</label>
+          <label class="cb-item"><input type="checkbox" value="williamson"> Williamson</label>
+          <label class="cb-item"><input type="checkbox" value="hays"> Hays</label>
+          <label class="cb-item"><input type="checkbox" value="bastrop"> Bastrop</label>
+        </div>
+
+        <span class="filter-label">Area</span>
+        <select class="filter-select" id="area-select">
+          <option value="">Any Area</option>
+          <option>West Austin</option>
+          <option>Central Austin</option>
+          <option>East Austin</option>
+          <option>North Austin</option>
+          <option>South Austin</option>
+          <option>Round Rock / Georgetown</option>
+          <option>Lake Travis</option>
+          <option>Dripping Springs</option>
+        </select>
+
+        <span class="filter-label">Subdivision</span>
+        <input class="filter-input" type="text" placeholder="e.g. Barton Creek" id="subdivision-input">
+
+        <span class="filter-label" style="margin-top:.75rem;">Map Search</span>
+        <div style="background:var(--cream-2);border:1px solid var(--line);border-radius:2px;padding:2rem 1rem;text-align:center;color:var(--muted);font-size:0.78rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto .5rem;display:block;color:var(--muted-2)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Draw on map to search within a radius or custom area
+        </div>
+        <div class="range-row" style="margin-top:.5rem;">
+          <div>
+            <span class="filter-label">Within (miles)</span>
+            <input class="filter-input" type="number" placeholder="e.g. 5" min="0" max="100">
+          </div>
+          <div>
+            <span class="filter-label">of Address</span>
+            <input class="filter-input" type="text" placeholder="Street address">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHOOLS -->
+    <div class="filter-section" id="fs-schools">
+      <div class="filter-section-head" onclick="toggleSection('fs-schools')">
+        <span class="filter-section-title">Schools</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">School District</span>
+        <div class="tag-search-wrap">
+          <input class="tag-search-input" type="text" placeholder="Search districts…">
+          <div class="selected-tags" id="district-tags"></div>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active" onclick="setLogic(this,'district')">Or</button>
+          <button class="logic-btn" onclick="setLogic(this,'district')">Not</button>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem;">
+          <span class="tag" style="cursor:pointer;" onclick="addTag('district-tags','Eanes ISD')">+ Eanes ISD</span>
+          <span class="tag" style="cursor:pointer;" onclick="addTag('district-tags','Austin ISD')">+ Austin ISD</span>
+          <span class="tag" style="cursor:pointer;" onclick="addTag('district-tags','Lake Travis ISD')">+ Lake Travis ISD</span>
+          <span class="tag" style="cursor:pointer;" onclick="addTag('district-tags','Dripping Springs ISD')">+ DSISD</span>
+          <span class="tag" style="cursor:pointer;" onclick="addTag('district-tags','Round Rock ISD')">+ Round Rock ISD</span>
+        </div>
+
+        <span class="filter-label">Elementary School</span>
+        <input class="filter-input" type="text" placeholder="Search elementary schools…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+
+        <span class="filter-label">Middle / Junior School</span>
+        <input class="filter-input" type="text" placeholder="Search middle schools…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+
+        <span class="filter-label">High School</span>
+        <input class="filter-input" type="text" placeholder="Search high schools…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPERTY DETAILS -->
+    <div class="filter-section" id="fs-details">
+      <div class="filter-section-head" onclick="toggleSection('fs-details')">
+        <span class="filter-section-title">Property Details</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Total Sqft</span>
+        <div class="range-row">
+          <input class="filter-input" type="number" placeholder="Min" id="sqft-min" min="0" step="100">
+          <input class="filter-input" type="number" placeholder="Max" id="sqft-max" min="0" step="100">
+        </div>
+        <span class="filter-label">Acres</span>
+        <div class="range-row">
+          <input class="filter-input" type="number" placeholder="Min" step="0.1" min="0">
+          <input class="filter-input" type="number" placeholder="Max" step="0.1" min="0">
+        </div>
+        <span class="filter-label">Year Built</span>
+        <div class="range-row">
+          <input class="filter-input" type="number" placeholder="From" min="1800" max="2030">
+          <input class="filter-input" type="number" placeholder="To" min="1800" max="2030">
+        </div>
+        <span class="filter-label">Garage Spaces (min)</span>
+        <div class="stepper-row" id="garage-stepper">
+          <button class="stepper-btn active" onclick="setStepper('garage',0)">Any</button>
+          <button class="stepper-btn" onclick="setStepper('garage',1)">1+</button>
+          <button class="stepper-btn" onclick="setStepper('garage',2)">2+</button>
+          <button class="stepper-btn" onclick="setStepper('garage',3)">3+</button>
+        </div>
+        <span class="filter-label">Total Parking Spaces</span>
+        <input class="filter-input" type="number" placeholder="Min" min="0">
+        <span class="filter-label">Main Level Bedrooms</span>
+        <input class="filter-input" type="number" placeholder="Min" min="0">
+        <span class="filter-label"># of Stories</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox" value="1"> 1 Story</label>
+          <label class="cb-item"><input type="checkbox" value="2"> 2 Stories</label>
+          <label class="cb-item"><input type="checkbox" value="3"> 3+ Stories</label>
+        </div>
+        <span class="filter-label">Property Condition</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox" value="updated"> Updated / Remodeled</label>
+          <label class="cb-item"><input type="checkbox" value="fixer"> Fixer</label>
+          <label class="cb-item"><input type="checkbox" value="new"> New Construction</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+
+        <span class="filter-label" style="margin-top:.85rem;">Features</span>
+        <div class="bool-row">
+          <label class="bool-chip" id="chip-pool" onclick="toggleChip(this)">
+            <input type="checkbox" value="pool"> 🏊 Private Pool
+          </label>
+          <label class="bool-chip" id="chip-waterfront" onclick="toggleChip(this)">
+            <input type="checkbox" value="waterfront"> 💧 Waterfront
+          </label>
+          <label class="bool-chip" id="chip-hoa" onclick="toggleChip(this)">
+            <input type="checkbox" value="hoa"> 🏘 HOA
+          </label>
+          <label class="bool-chip" id="chip-gated" onclick="toggleChip(this)">
+            <input type="checkbox" value="gated"> 🔒 Gated
+          </label>
+          <label class="bool-chip" id="chip-horses" onclick="toggleChip(this)">
+            <input type="checkbox" value="horses"> 🐴 Horses OK
+          </label>
+          <label class="bool-chip" id="chip-guest" onclick="toggleChip(this)">
+            <input type="checkbox" value="guest"> 🏠 Guest House
+          </label>
+        </div>
+
+        <span class="filter-label" style="margin-top:.85rem;">DOM / CDOM</span>
+        <div class="range-row">
+          <input class="filter-input" type="number" placeholder="DOM min">
+          <input class="filter-input" type="number" placeholder="DOM max">
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERIOR -->
+    <div class="filter-section" id="fs-interior">
+      <div class="filter-section-head" onclick="toggleSection('fs-interior')">
+        <span class="filter-section-title">Interior</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Interior Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. High ceilings, Quartz…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Foundation</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Slab</label>
+          <label class="cb-item"><input type="checkbox"> Pier &amp; Beam</label>
+          <label class="cb-item"><input type="checkbox"> Combination</label>
+          <label class="cb-item"><input type="checkbox"> Basement</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Flooring</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Hardwood</label>
+          <label class="cb-item"><input type="checkbox"> Tile</label>
+          <label class="cb-item"><input type="checkbox"> Carpet</label>
+          <label class="cb-item"><input type="checkbox"> Concrete</label>
+          <label class="cb-item"><input type="checkbox"> Marble</label>
+          <label class="cb-item"><input type="checkbox"> Vinyl Plank</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Fireplace Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Gas, Wood Burning…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Security Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Camera, Alarm…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Accessibility Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Wheelchair, Grab bars…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTERIOR -->
+    <div class="filter-section" id="fs-exterior">
+      <div class="filter-section-head" onclick="toggleSection('fs-exterior')">
+        <span class="filter-section-title">Exterior</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Exterior Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Outdoor kitchen, Balcony…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Pool Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Heated, Infinity, Lap…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Lot Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Cul-de-sac, Corner lot…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Patio &amp; Porch Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Covered, Deck, Screened…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Fencing</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Wood</label>
+          <label class="cb-item"><input type="checkbox"> Iron / Metal</label>
+          <label class="cb-item"><input type="checkbox"> Stone / Masonry</label>
+          <label class="cb-item"><input type="checkbox"> Privacy</label>
+          <label class="cb-item"><input type="checkbox"> Full Perimeter</label>
+          <label class="cb-item"><input type="checkbox"> None</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Waterfront Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Lake, River, Creek…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Water Body Name</span>
+        <input class="filter-input" type="text" placeholder="e.g. Lake Travis, Lake Austin…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">View</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Hill Country</label>
+          <label class="cb-item"><input type="checkbox"> Lake</label>
+          <label class="cb-item"><input type="checkbox"> City Lights</label>
+          <label class="cb-item"><input type="checkbox"> Greenbelt</label>
+          <label class="cb-item"><input type="checkbox"> Creek</label>
+          <label class="cb-item"><input type="checkbox"> Trees</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- UTILITIES -->
+    <div class="filter-section" id="fs-utilities">
+      <div class="filter-section-head" onclick="toggleSection('fs-utilities')">
+        <span class="filter-section-title">Utilities</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Heating</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Central</label>
+          <label class="cb-item"><input type="checkbox"> Forced Air</label>
+          <label class="cb-item"><input type="checkbox"> Radiant</label>
+          <label class="cb-item"><input type="checkbox"> Heat Pump</label>
+          <label class="cb-item"><input type="checkbox"> Gas</label>
+          <label class="cb-item"><input type="checkbox"> Electric</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Cooling</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Central Air</label>
+          <label class="cb-item"><input type="checkbox"> Dual</label>
+          <label class="cb-item"><input type="checkbox"> Zoned</label>
+          <label class="cb-item"><input type="checkbox"> Mini-Split</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Water Source</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Municipal / Public</label>
+          <label class="cb-item"><input type="checkbox"> Well</label>
+          <label class="cb-item"><input type="checkbox"> Shared Well</label>
+          <label class="cb-item"><input type="checkbox"> Rainwater Collect.</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Sewer</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Public Sewer</label>
+          <label class="cb-item"><input type="checkbox"> Septic Tank</label>
+          <label class="cb-item"><input type="checkbox"> Aerobic Septic</label>
+          <label class="cb-item"><input type="checkbox"> MUD</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Utilities</span>
+        <input class="filter-input" type="text" placeholder="e.g. Solar, Generator…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCIAL & TERMS -->
+    <div class="filter-section" id="fs-financial">
+      <div class="filter-section-head" onclick="toggleSection('fs-financial')">
+        <span class="filter-section-title">Financial &amp; Terms</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">HOA / Association Fee (max/yr)</span>
+        <input class="filter-input" type="number" placeholder="e.g. 5000" min="0">
+        <span class="filter-label">Tax Rate (max %)</span>
+        <input class="filter-input" type="number" placeholder="e.g. 2.1" step="0.01" min="0">
+        <span class="filter-label">Tax Exemptions</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> Homestead</label>
+          <label class="cb-item"><input type="checkbox"> Senior / Over-65</label>
+          <label class="cb-item"><input type="checkbox"> Disabled Veteran</label>
+          <label class="cb-item"><input type="checkbox"> Agriculture</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Acceptable Financing</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Conventional</label>
+          <label class="cb-item"><input type="checkbox"> Cash</label>
+          <label class="cb-item"><input type="checkbox"> FHA</label>
+          <label class="cb-item"><input type="checkbox"> VA</label>
+          <label class="cb-item"><input type="checkbox"> USDA</label>
+          <label class="cb-item"><input type="checkbox"> Owner Finance</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Special Listing Conditions</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> Standard</label>
+          <label class="cb-item"><input type="checkbox"> Short Sale</label>
+          <label class="cb-item"><input type="checkbox"> Foreclosure / REO</label>
+          <label class="cb-item"><input type="checkbox"> Probate</label>
+          <label class="cb-item"><input type="checkbox"> Auction</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWING & OCCUPANCY -->
+    <div class="filter-section" id="fs-showing">
+      <div class="filter-section-head" onclick="toggleSection('fs-showing')">
+        <span class="filter-section-title">Showing &amp; Occupancy</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Occupant Type</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> Owner</label>
+          <label class="cb-item"><input type="checkbox"> Tenant</label>
+          <label class="cb-item"><input type="checkbox"> Vacant</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Possession</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> Close of Escrow</label>
+          <label class="cb-item"><input type="checkbox"> Immediate</label>
+          <label class="cb-item"><input type="checkbox"> Negotiable</label>
+          <label class="cb-item"><input type="checkbox"> Seller Rent Back</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Showing Instructions</span>
+        <input class="filter-input" type="text" placeholder="e.g. ShowingTime, Lockbox…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSTRUCTION & COMMUNITY -->
+    <div class="filter-section" id="fs-construction">
+      <div class="filter-section-head" onclick="toggleSection('fs-construction')">
+        <span class="filter-section-title">Construction &amp; Community</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Construction Materials</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Brick</label>
+          <label class="cb-item"><input type="checkbox"> Stone</label>
+          <label class="cb-item"><input type="checkbox"> Stucco</label>
+          <label class="cb-item"><input type="checkbox"> Frame / Wood</label>
+          <label class="cb-item"><input type="checkbox"> HardiePlank</label>
+          <label class="cb-item"><input type="checkbox"> ICF</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Roof</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Composition</label>
+          <label class="cb-item"><input type="checkbox"> Metal</label>
+          <label class="cb-item"><input type="checkbox"> Tile</label>
+          <label class="cb-item"><input type="checkbox"> Slate</label>
+          <label class="cb-item"><input type="checkbox"> Shingle</label>
+          <label class="cb-item"><input type="checkbox"> Flat</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Parking Features</span>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Attached Garage</label>
+          <label class="cb-item"><input type="checkbox"> Detached Garage</label>
+          <label class="cb-item"><input type="checkbox"> Carport</label>
+          <label class="cb-item"><input type="checkbox"> Circular Drive</label>
+          <label class="cb-item"><input type="checkbox"> Off Street</label>
+          <label class="cb-item"><input type="checkbox"> Gated</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Community Features</span>
+        <input class="filter-input" type="text" placeholder="e.g. Pool, Tennis, Trail…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+        <span class="filter-label">Green Building Verification</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> LEED</label>
+          <label class="cb-item"><input type="checkbox"> Energy Star</label>
+          <label class="cb-item"><input type="checkbox"> Austin Energy Green Building</label>
+          <label class="cb-item"><input type="checkbox"> Pearl</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOOD & ENVIRONMENTAL -->
+    <div class="filter-section" id="fs-flood">
+      <div class="filter-section-head" onclick="toggleSection('fs-flood')">
+        <span class="filter-section-title">Flood &amp; Environmental</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">FEMA Flood Plain</span>
+        <div class="cb-grid cb-grid-1">
+          <label class="cb-item"><input type="checkbox"> Yes</label>
+          <label class="cb-item"><input type="checkbox"> No</label>
+          <label class="cb-item"><input type="checkbox"> Unknown</label>
+          <label class="cb-item"><input type="checkbox"> Partial</label>
+        </div>
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- REMARKS -->
+    <div class="filter-section" id="fs-remarks">
+      <div class="filter-section-head" onclick="toggleSection('fs-remarks')">
+        <span class="filter-section-title">Remarks Search</span>
+        <span class="filter-section-chevron">▼</span>
+      </div>
+      <div class="filter-body">
+        <span class="filter-label">Public Remarks</span>
+        <input class="filter-input" type="text" id="remarks-public" placeholder="Search listing remarks…">
+        <span class="filter-label">Private Remarks</span>
+        <input class="filter-input" type="text" id="remarks-private" placeholder="Search private remarks…">
+        <span class="filter-label">Rooms</span>
+        <input class="filter-input" type="text" placeholder="e.g. Office, Media Room…">
+        <div class="logic-row" style="margin-top:.4rem;">
+          <button class="logic-btn active">And</button>
+          <button class="logic-btn">Or</button>
+          <button class="logic-btn">Not</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply CTA -->
+    <div class="sidebar-apply">
+      <button class="btn-apply" onclick="runSearch()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Apply Filters
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── RESULTS ── -->
+  <main class="search-results" id="search-results">
+
+    <!-- IDX Placeholder — remove when Showcase IDX is connected -->
+    <div style="
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:5rem 2rem; text-align:center; background:var(--cream); border-radius:4px;
+      margin:2rem;
+    ">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#B8963E" stroke-width="1.2" style="margin-bottom:1.5rem; opacity:0.7">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;margin-bottom:0.75rem;color:#171717;">Live MLS Search Coming Soon</h2>
+      <p style="max-width:480px;color:#6b6b6b;margin-bottom:0.5rem;line-height:1.7;">
+        Full MLS search with live Austin Board of Realtors data is being connected now and will be available within the next few days.
+      </p>
+      <p style="max-width:480px;color:#6b6b6b;margin-bottom:2rem;line-height:1.7;">
+        In the meantime, Raj can send you a custom property search with live MLS data, filtered to your exact criteria, directly to your inbox.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a href="index.html#contact" style="
+          display:inline-block;padding:0.8rem 1.75rem;background:#B8963E;color:#fff;
+          font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+          border-radius:2px;text-decoration:none;
+        ">Request a Custom Search</a>
+        <a href="tel:+15126170001" style="
+          display:inline-block;padding:0.8rem 1.75rem;background:transparent;color:#171717;
+          font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+          border-radius:2px;text-decoration:none;border:1px solid #e8e3d8;
+        ">Call 512.617.0001</a>
+      </div>
+      <p style="margin-top:2rem;font-size:0.75rem;color:#9a9a9a;max-width:480px;line-height:1.6;">
+        Listing data provided by Austin Board of Realtors MLS. IDX integration by Showcase IDX. Coming soon.
+      </p>
+    </div>
+
+  </main>
+
+</div><!-- end .search-layout -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="container" style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logos/logo-white.png" alt="Grewal RE Group" class="footer-brand-logo" />
+        <p class="footer-tagline" style="margin-top:.75rem;">People First. Straight Answers. Strong Results.</p>
+        <p class="footer-about">Austin's luxury real estate team, Shivraj Grewal at Compass. Specializing in Westlake Hills, Barton Creek, and Davenport Ranch.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/grewalregroup/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/grewal-re-group/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm12.5 10.3h-3v-4.5c0-1.07-.02-2.45-1.5-2.45s-1.73 1.17-1.73 2.37v4.58h-3v-9h2.88v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v4.73z"/></svg></a>
+          <a href="https://x.com/ShivrajGrewal1" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@GrewalREGroup" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.27-1-1.07-1.8-2.07-2.07C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.43.53c-1 .27-1.8 1.07-2.07 2.07C0 8.04 0 12 0 12s0 3.96.5 5.8c.27 1 1.07 1.8 2.07 2.07 1.83.53 9.43.53 9.43.53s7.6 0 9.43-.53c1-.27 1.8-1.07 2.07-2.07.5-1.84.5-5.8.5-5.8s0-3.96-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="search.html">Search Listings</a></li>
+          <li><a href="communities/index.html">Communities</a></li>
+          <li><a href="blog/index.html">Insights</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Buying</a></li>
+          <li><a href="index.html#services">Selling</a></li>
+          <li><a href="index.html#relocate">Relocation</a></li>
+          <li><a href="index.html#services">Advisory</a></li>
+          <li><a href="index.html#services">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address class="footer-nap">
+          Grewal RE Group<br/>
+          2500 Bee Cave Rd<br/>
+          Building 3, Suite 200<br/>
+          Austin, TX 78746<br/>
+          <a href="tel:+15126170001">(512) 617-0001</a><br/>
+          <a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div class="footer-brokerage">
+        <strong>Grewal RE Group</strong> is a team of real estate licensees affiliated with Compass, a licensed real estate broker in Texas. All listing data is sourced from the Austin Board of REALTORS® MLS and is deemed reliable but not guaranteed.
+      </div>
+      <div style="margin-bottom:.5rem;">
+        © 2026 Grewal RE Group · All Rights Reserved &nbsp;·&nbsp;
+        Shivraj Grewal · TREC License #736060 · Compass · TREC Broker License #9006927
+      </div>
+      <div class="footer-legal-row">
+        <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0.pdf" target="_blank" rel="noopener">IABS</a>
+        <span>·</span>
+        <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener">TREC Consumer Protection</a>
+        <span>·</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="eho-row">⌂ Equal Housing Opportunity · All information deemed reliable but not guaranteed.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── Collapsible filter sections (kept for when IDX is connected) ──
+  window.toggleSection = (id) => {
+    document.getElementById(id).classList.toggle('open');
+  };
+
+  // ── Mobile sidebar ──
+  window.openMobileSidebar = () => {
+    document.getElementById('search-sidebar').classList.add('mobile-open');
+    document.getElementById('sidebar-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const overlay = document.getElementById('sidebar-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      document.getElementById('search-sidebar').classList.remove('mobile-open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // ── Mobile nav ──
+  const mobileNav = document.getElementById('mobile-nav');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+  if (mobileNav && openBtn && closeBtn) {
+    openBtn.addEventListener('click', () => mobileNav.classList.add('open'));
+    closeBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+  }
+
+})();
+</script>
+</body>
+</html>
