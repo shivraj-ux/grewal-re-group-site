@@ -54,8 +54,3 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
 # ── Redirects ────────────────────────────────────────────────
-# Pretty URLs for the relocation guide
-[[redirects]]
-  from = "/relocation-guide"
-  to = "/assets/guides/the-relocation-edition.pdf"
-  status = 302
