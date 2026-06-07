@@ -825,104 +825,15 @@
     @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
     @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
 
-    /* ─── RELOCATION FLIPBOOK (custom, page-flip animation) ─── */
-    .relocate-flipbook { background: var(--cream-2); }
-    .flipbook-shell { max-width: 1100px; margin: 0 auto; }
-    .flipbook-stage {
-      width: 100%;
-      margin: 0 auto;
-      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.18));
-      min-height: 480px;
+    /* ─── RELOCATION GUIDE CTA ─── */
+    .relocate-cta { background: var(--cream-2); }
+    .relocate-cta-inner {
+      max-width: 680px; margin: 0 auto; text-align: center;
     }
-    .flipbook-stage .stf__parent { margin: 0 auto; }
-    .flipbook-stage .stf__block { background: var(--ink-2); }
-    .flipbook-stage .page {
-      background: #fff center/contain no-repeat;
-      background-color: var(--cream);
-    }
-    .flipbook-stage .page-loading {
-      display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 0.85rem;
-      letter-spacing: 0.16em; text-transform: uppercase;
-    }
-    /* Static cover preview shown until library + pages load */
-    .flipbook-fallback {
-      position: relative; max-width: 480px; margin: 0 auto;
-      background: var(--ink); border-radius: 4px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.18);
-      overflow: hidden;
-    }
-    .flipbook-fallback img { display: block; width: 100%; height: auto; }
-    .flipbook-fallback-overlay {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: flex-end;
-      padding: 1.5rem;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.65) 100%);
-      pointer-events: none;
-    }
-    .flipbook-fallback-status {
-      color: #fff; font-size: 0.75rem;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      margin: 0 0 .5rem; opacity: 0.85;
-    }
-    .flipbook-fallback-status::before {
-      content: ''; display: inline-block;
-      width: 10px; height: 10px; margin-right: .5rem;
-      border: 2px solid var(--gold); border-top-color: transparent;
-      border-radius: 50%; vertical-align: middle;
-      animation: fb-spin 0.9s linear infinite;
-    }
-    @keyframes fb-spin { to { transform: rotate(360deg); } }
-    .flipbook-fallback.is-error .flipbook-fallback-status { color: #ffb4b4; }
-    .flipbook-fallback.is-error .flipbook-fallback-status::before { display: none; }
-    .flipbook-fallback.is-error .flipbook-fallback-overlay { pointer-events: auto; }
-    .flipbook-controls {
-      display: flex; align-items: center; justify-content: center; gap: 1.25rem;
-      margin: 1.75rem auto 0;
-      padding: .65rem 1rem;
-      background: #fff; border: 1px solid var(--line);
-      border-radius: 999px;
-      width: fit-content;
-    }
-    .flipbook-btn {
-      width: 36px; height: 36px;
-      border: 1px solid var(--line); background: #fff;
-      border-radius: 50%; cursor: pointer;
-      display: inline-flex; align-items: center; justify-content: center;
-      color: var(--ink); transition: all 0.2s;
-    }
-    .flipbook-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
-    .flipbook-btn--fs { margin-left: .5rem; }
-    .flipbook-meta {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem; color: var(--ink); min-width: 80px; text-align: center;
-      font-variant-numeric: tabular-nums;
-    }
-    .flipbook-meta-sep { color: var(--gold); margin: 0 .25rem; }
-    .flipbook-hint {
-      text-align: center; font-size: 0.75rem;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--muted); margin: 1rem 0 0;
-    }
-    .flipbook-cta { text-align: center; margin-top: 3rem; }
-    .flipbook-cta p:first-child { font-size: 1.05rem; margin-bottom: 1rem; color: var(--ink); }
-    .flipbook-cta .teaser-trust { font-size: 0.78rem; color: var(--muted); margin: 1rem 0 0; }
-
-    /* Fullscreen mode */
-    .flipbook-shell:fullscreen {
-      background: var(--ink); display: flex;
-      flex-direction: column; align-items: center; justify-content: center;
-      padding: 2rem;
-    }
-    .flipbook-shell:fullscreen .flipbook-stage { max-width: 90vw; max-height: 80vh; }
-    .flipbook-shell:fullscreen .flipbook-controls { background: #fff; }
-    .flipbook-shell:fullscreen .flipbook-hint { color: rgba(255,255,255,0.6); }
-
-    @media (max-width: 720px) {
-      .flipbook-stage { min-height: 360px; }
-      .flipbook-controls { gap: 0.75rem; padding: .5rem .75rem; }
-    }
+    .relocate-cta-inner .eyebrow { display: block; margin-bottom: 0.75rem; }
+    .relocate-cta-inner h2 { margin-bottom: 1rem; }
+    .relocate-cta-inner p { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .relocate-cta-inner .btn-row { justify-content: center; }
 
     /* ─── FEATURED LISTINGS ─── */
     .listings { background: #fff; }
@@ -1280,7 +1191,7 @@
     <a href="#team">Team</a>
     <a href="communities/index.html">Communities</a>
     <a href="#services">Services</a>
-    <a href="#relocate">Relocate</a>
+    <a href="relocation-guide.html">Relocate</a>
     <a href="search.html">Search</a>
     <a href="#listings">Properties</a>
     <a href="blog/index.html">Blog</a>
@@ -1297,7 +1208,7 @@
   <a href="#team">Team</a>
   <a href="communities/index.html">Communities</a>
   <a href="#services">Services</a>
-  <a href="#relocate">Relocate</a>
+  <a href="relocation-guide.html">Relocate</a>
   <a href="search.html">Search</a>
   <a href="#listings">Properties</a>
   <a href="blog/index.html">Blog</a>
@@ -1663,58 +1574,17 @@
 </section>
 
 
-<!-- ═══ RELOCATION FLIPBOOK ═══ -->
-<section class="section relocate-flipbook" id="relocate">
+<!-- ═══ RELOCATION GUIDE CTA ═══ -->
+<section class="section relocate-cta" id="relocate">
   <div class="container">
-    <div class="section-head">
+    <div class="relocate-cta-inner">
       <p class="eyebrow ink-gold">Free Resource</p>
       <h2>Austin Relocation Guide</h2>
-      <p class="section-sub">Flip through our comprehensive guide, neighborhoods, schools, cost of living, and everything you need to know about moving to Austin.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="flipbook-shell">
-      <!-- Always-visible cover preview so the section is never empty.
-           When the StPageFlip library initializes, it replaces this with the
-           interactive flipbook. If the CDN ever fails, this stays as a graceful
-           fallback that links to the PDF. -->
-      <div class="flipbook-stage" id="flipbook-stage" aria-label="Austin Relocation Guide flipbook">
-        <div class="flipbook-fallback" id="fb-fallback">
-          <picture>
-            <source srcset="assets/guides/flipbook-pages/page-001.avif" type="image/avif">
-            <img src="assets/guides/flipbook-pages/page-001.jpg" alt="Austin Relocation Guide cover" width="480" height="624" loading="lazy" decoding="async">
-          </picture>
-          <div class="flipbook-fallback-overlay">
-            <p class="flipbook-fallback-status">Loading interactive flipbook…</p>
-            <noscript><a href="assets/guides/the-relocation-edition.pdf" target="_blank" rel="noopener" class="btn btn-gold">Open as PDF</a></noscript>
-          </div>
-        </div>
-      </div>
-      <div class="flipbook-controls">
-        <button class="flipbook-btn" id="fb-prev" aria-label="Previous page" disabled>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <div class="flipbook-meta">
-          <span id="fb-current">1</span> <span class="flipbook-meta-sep">/</span> <span id="fb-total">144</span>
-        </div>
-        <button class="flipbook-btn" id="fb-next" aria-label="Next page" disabled>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </button>
-        <button class="flipbook-btn flipbook-btn--fs" id="fb-fullscreen" aria-label="Toggle fullscreen" disabled>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4h4M20 8V4h-4M4 16v4h4m12-4v4h-4"/></svg>
-        </button>
-      </div>
-      <p class="flipbook-hint">Use ← → keys, click the page edges, or drag to flip.</p>
-    </div>
-    <div class="flipbook-cta">
-      <p>Want the full guide? Download the complete 144-page <em>Relocation Edition</em>, neighborhoods, schools, cost-of-living, and Austin market data.</p>
+      <p>Neighborhoods, schools, cost of living, and everything you need to know about moving to Austin. All in one place.</p>
       <div class="btn-row" style="justify-content:center;">
-        <a href="assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-Relocation-Edition.pdf" class="btn btn-gold">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-          Download the Relocation Guide (PDF)
-        </a>
+        <a href="relocation-guide.html" class="btn btn-gold">Austin Relocation Guide</a>
         <a href="#contact" class="btn btn-ghost-gold">Schedule a Consultation</a>
       </div>
-      <p class="teaser-trust">144 pages · Trusted by Austin relocation clients since 2017.</p>
     </div>
   </div>
 </section>
@@ -2442,130 +2312,6 @@
         alert('Something went wrong. Please call us at (512) 617-0001.');
       });
     });
-  }
-
-  // ─── Relocation Guide flipbook (StPageFlip) ───
-  // The static cover preview always renders. This block tries to upgrade it
-  // to an interactive flipbook. If anything fails (CDN, parse, runtime) the
-  // fallback gracefully shows a "Read Online (PDF)" link instead.
-  const fbStage = document.getElementById('flipbook-stage');
-  const fbFallback = document.getElementById('fb-fallback');
-  const fbStatus = fbFallback ? fbFallback.querySelector('.flipbook-fallback-status') : null;
-  const fbPrev = document.getElementById('fb-prev');
-  const fbNext = document.getElementById('fb-next');
-  const fbFs   = document.getElementById('fb-fullscreen');
-  const fbCur  = document.getElementById('fb-current');
-  const fbTotalEl = document.getElementById('fb-total');
-  const TOTAL_PAGES = 144;
-
-  const setFlipbookError = (msg) => {
-    if (!fbFallback) return;
-    fbFallback.classList.add('is-error');
-    if (fbStatus) fbStatus.textContent = msg || 'Flipbook unavailable.';
-    // Inject a clickable PDF link inside the overlay
-    const overlay = fbFallback.querySelector('.flipbook-fallback-overlay');
-    if (overlay && !overlay.querySelector('a.btn')) {
-      const link = document.createElement('a');
-      link.href = 'assets/guides/the-relocation-edition.pdf';
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.className = 'btn btn-gold';
-      link.textContent = 'Open Guide as PDF';
-      overlay.appendChild(link);
-    }
-  };
-
-  const buildFlipbook = (ext) => {
-    if (!fbStage || !window.St || !window.St.PageFlip) {
-      setFlipbookError('Could not load flipbook engine.');
-      return;
-    }
-    try {
-      // Remove the static cover so StPageFlip can take over the stage
-      if (fbFallback && fbFallback.parentNode) fbFallback.parentNode.removeChild(fbFallback);
-
-      const pad = n => String(n).padStart(3, '0');
-      const pageUrl = i => `assets/guides/flipbook-pages/page-${pad(i)}.${ext}`;
-
-      // Build the page DOM elements StPageFlip needs
-      const pages = [];
-      for (let i = 1; i <= TOTAL_PAGES; i++) {
-        const div = document.createElement('div');
-        div.className = 'page';
-        div.style.backgroundImage = `url('${pageUrl(i)}')`;
-        fbStage.appendChild(div);
-        pages.push(div);
-      }
-
-      const isMobile = window.innerWidth < 720;
-      const pageFlip = new St.PageFlip(fbStage, {
-        width: 480, height: 624,
-        size: 'stretch',
-        minWidth: 280, maxWidth: 600,
-        minHeight: 360, maxHeight: 800,
-        showCover: true,
-        flippingTime: 650,
-        usePortrait: isMobile,
-        autoSize: true,
-        maxShadowOpacity: 0.5,
-        mobileScrollSupport: false
-      });
-      pageFlip.loadFromHTML(pages);
-
-      if (fbTotalEl) fbTotalEl.textContent = TOTAL_PAGES;
-      pageFlip.on('flip', (e) => { if (fbCur) fbCur.textContent = e.data + 1; });
-
-      // Activate the controls (they were disabled until ready)
-      [fbPrev, fbNext, fbFs].forEach(b => { if (b) b.disabled = false; });
-      if (fbPrev) fbPrev.addEventListener('click', () => pageFlip.flipPrev());
-      if (fbNext) fbNext.addEventListener('click', () => pageFlip.flipNext());
-      if (fbFs)   fbFs.addEventListener('click', () => {
-        const shell = fbStage.closest('.flipbook-shell');
-        if (!document.fullscreenElement) shell && shell.requestFullscreen && shell.requestFullscreen();
-        else document.exitFullscreen && document.exitFullscreen();
-      });
-
-      // Keyboard: ← → only when the flipbook is in view
-      document.addEventListener('keydown', (e) => {
-        const r = fbStage.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > window.innerHeight) return;
-        if (e.key === 'ArrowLeft')  pageFlip.flipPrev();
-        if (e.key === 'ArrowRight') pageFlip.flipNext();
-      });
-    } catch (err) {
-      console.error('Flipbook init failed:', err);
-      setFlipbookError('Flipbook engine error.');
-    }
-  };
-
-  // AVIF support probe → choose extension
-  const detectAndBuild = () => {
-    const probe = new Image();
-    let resolved = false;
-    const finish = () => {
-      if (resolved) return;
-      resolved = true;
-      const ext = probe.naturalWidth > 0 ? 'avif' : 'jpg';
-      buildFlipbook(ext);
-    };
-    probe.onload = finish;
-    probe.onerror = finish;  // fall back to JPG on any failure
-    probe.src = 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQAMAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgABogQEDQgMgkQAAAAB8dSLfI=';
-    setTimeout(finish, 400);  // last-resort timeout
-  };
-
-  // Eagerly load the library script. ~30KB.
-  if (fbStage) {
-    if (window.St && window.St.PageFlip) {
-      detectAndBuild();
-    } else {
-      const s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js';
-      s.async = true;
-      s.onload  = detectAndBuild;
-      s.onerror = () => setFlipbookError('Could not reach flipbook engine.');
-      document.head.appendChild(s);
-    }
   }
 
   // Newsletter form
