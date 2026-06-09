@@ -264,6 +264,34 @@ const TOOLS = {
 
 const SERVER_INFO = { name: "grewal-re-group", version: "1.0.0" };
 
+// MCP discovery card, built with absolute URLs resolved against the serving
+// host so the transport endpoint is verifiable on any domain (the test host
+// now, grewalregroup.com at launch). Served at /.well-known/mcp-server-card.
+function buildCard(site) {
+  return {
+    schemaVersion: "2025-06-18",
+    name: "grewal-re-group",
+    title: "Grewal RE Group MCP Server",
+    version: "1.0.0",
+    description:
+      "Verb-first MCP tools for Grewal RE Group, an Austin luxury real estate team led by Shivraj Grewal at Compass. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
+    vendor: { name: "Grewal RE Group", url: site, contact: "shivraj.grewal@compass.com" },
+    transport: { type: "http", protocol: "json-rpc-2.0", url: `${site}/mcp` },
+    authentication: {
+      type: "none",
+      note: "Read tools are public. request_consultation requires the prospect's explicit consent to be contacted.",
+    },
+    capabilities: { tools: true, resources: false, prompts: false },
+    tools: Object.entries(TOOLS).map(([name, t]) => ({ name, description: t.description })),
+    documentation: {
+      agents: `${site}/AGENTS.md`,
+      openapi: `${site}/openapi.json`,
+      llms: `${site}/llms.txt`,
+      sources: `${site}/SOURCES.md`,
+    },
+  };
+}
+
 function toolList() {
   return Object.entries(TOOLS).map(([name, t]) => ({
     name,
@@ -341,6 +369,17 @@ export default async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
   const site = originFromReq(req);
+
+  // Serve the MCP discovery card (rewritten here from /.well-known/mcp-server-card).
+  let pathname = "";
+  try {
+    pathname = new URL(req.url).pathname;
+  } catch {}
+  if (pathname.includes("mcp-server-card")) {
+    return Response.json(buildCard(site), {
+      headers: { ...cors, "Cache-Control": "public, max-age=300" },
+    });
+  }
 
   // A plain GET returns a small human/agent-readable descriptor.
   if (req.method === "GET") {

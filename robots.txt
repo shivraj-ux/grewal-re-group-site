@@ -95,12 +95,11 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# ── Default policy: allow everything else ────────────────────
+# ── Default policy: allow everything (no blanket Disallow) ───
+# SOURCES.md and AGENTS.md are intentionally crawlable: they are agent resources.
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
-Disallow: /SOURCES.md
-Disallow: /README.md
 
 # ── Sitemaps + AI entry point ────────────────────────────────
 Sitemap: https://grewalregroup.com/sitemap.xml
