@@ -230,12 +230,23 @@ const TOOLS = {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: body.toString(),
         });
+        if (res.ok) {
+          return {
+            submitted: true,
+            status: res.status,
+            confirmation: `Thanks ${name.split(" ")[0]} — your request reached Grewal RE Group. Shivraj follows up the same day at ${email}.`,
+            bookingFallback: `${site}/#contact`,
+          };
+        }
+        // Form capture not active on this deploy yet. Never leave the agent
+        // without a way to reach the team.
         return {
-          submitted: res.ok,
+          submitted: false,
           status: res.status,
-          confirmation: res.ok
-            ? `Thanks ${name.split(" ")[0]} — your request reached Grewal RE Group. Shivraj follows up the same day at ${email}.`
-            : "The request could not be submitted automatically. Please call (512) 617-0001 or email shivraj.grewal@compass.com.",
+          confirmation:
+            "Automatic submission is not active on this deploy yet. To reach Grewal RE Group directly:",
+          phone: AGENT.phone,
+          email: AGENT.email,
           bookingFallback: `${site}/#contact`,
         };
       } catch (e) {
