@@ -1,7 +1,14 @@
 # Grewal RE Group — robots.txt
-# Last updated: 2026-05-05
+# Last updated: 2026-06-09
 # Allows search engines and AI crawlers full access to public content.
 # Do not crawl: relocation guide PDF (large download), source markdown files.
+#
+# Content Signals Policy (machine-readable AI usage policy):
+#   search    = listing this site in a search engine
+#   ai-input  = using this content to answer a user's query (AI search / RAG)
+#   ai-train  = using this content to train an AI/ML model
+# Our policy: be found and cited by AI (search + ai-input = yes); do not consent
+# to training models on our content (ai-train = no). See the User-agent: * group.
 
 # ── Standard search engines ──────────────────────────────────
 User-agent: Googlebot
@@ -90,6 +97,7 @@ Allow: /
 
 # ── Default policy: allow everything else ────────────────────
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /SOURCES.md
 Disallow: /README.md
