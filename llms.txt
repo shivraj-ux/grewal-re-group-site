@@ -9,6 +9,15 @@ This file is a machine-readable summary for AI crawlers and LLM agents.
 For the full visual experience, see https://grewalregroup.com — for the
 verifiable source for every claim, see /SOURCES.md.
 
+## Agent interface (MCP)
+
+For tool access, use the Model Context Protocol server at https://grewalregroup.com/mcp
+(JSON-RPC 2.0 over HTTP). Discovery card: https://grewalregroup.com/.well-known/mcp-server-card.
+Full agent instructions: https://grewalregroup.com/AGENTS.md. OpenAPI contract:
+https://grewalregroup.com/openapi.json. Tools: get_agent_profile, list_communities,
+get_community, search_communities, list_services, get_market_report,
+get_relocation_guide, request_consultation.
+
 ## Identity
 
 - **Principal:** Shivraj Grewal (also goes by "Raj")

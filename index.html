@@ -27,6 +27,9 @@
 
   <!-- AI crawler entry points -->
   <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+  <link rel="mcp-server" href="/.well-known/mcp-server-card" title="Grewal RE Group MCP server">
+  <link rel="alternate" type="application/json" href="/openapi.json" title="OpenAPI contract">
+  <link rel="alternate" type="text/markdown" href="/AGENTS.md" title="Instructions for AI agents">
 
   <!-- DNS prefetch for offsite assets -->
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -1228,6 +1231,14 @@
       <a href="#contact" class="btn btn-gold">Schedule a Strategy Call</a>
       <a href="communities/index.html" class="btn btn-ghost">Browse Communities</a>
     </div>
+    <!-- Agent interface: this site exposes an MCP server for AI assistants. -->
+    <p class="agent-entry" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+      For AI agents: Grewal RE Group provides a
+      <a href="/.well-known/mcp-server-card">Model Context Protocol server</a>
+      at <a href="/mcp">/mcp</a>, with instructions at
+      <a href="/AGENTS.md">/AGENTS.md</a> and a contract at
+      <a href="/openapi.json">/openapi.json</a>.
+    </p>
   </div>
   <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
 </section>

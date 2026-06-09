@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "2025-06-18",
+  "name": "grewal-re-group",
+  "title": "Grewal RE Group MCP Server",
+  "version": "1.0.0",
+  "description": "Verb-first MCP tools for Grewal RE Group, an Austin luxury real estate team led by Shivraj Grewal at Compass. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
+  "vendor": {
+    "name": "Grewal RE Group",
+    "url": "https://grewalregroup.com",
+    "contact": "shivraj.grewal@compass.com"
+  },
+  "transport": {
+    "type": "http",
+    "protocol": "json-rpc-2.0",
+    "url": "https://grewalregroup.com/mcp"
+  },
+  "authentication": {
+    "type": "none",
+    "note": "Read tools are public. request_consultation requires the prospect's explicit consent to be contacted."
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "tools": [
+    { "name": "get_agent_profile", "description": "Profile, credentials, licenses, contact, and track record." },
+    { "name": "list_communities", "description": "All covered Austin communities; optional region filter." },
+    { "name": "get_community", "description": "Full detail for one community by slug." },
+    { "name": "search_communities", "description": "Free-text search across name, zip, and description." },
+    { "name": "list_services", "description": "Buying, selling, relocation, advisory, new construction." },
+    { "name": "get_market_report", "description": "Live monthly market-report links for a community." },
+    { "name": "get_relocation_guide", "description": "Free 144-page Austin Relocation Guide." },
+    { "name": "request_consultation", "description": "Submit a consultation request into the lead inbox (consent required)." }
+  ],
+  "documentation": {
+    "agents": "https://grewalregroup.com/AGENTS.md",
+    "openapi": "https://grewalregroup.com/openapi.json",
+    "llms": "https://grewalregroup.com/llms.txt",
+    "sources": "https://grewalregroup.com/SOURCES.md"
+  }
+}
