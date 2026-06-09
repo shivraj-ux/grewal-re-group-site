@@ -19,16 +19,16 @@ Google reviews.
 ## How to interact (in order of preference)
 
 1. **MCP server (best for tool use).** A Model Context Protocol server is live at
-   `https://grewalregroup.com/mcp`. It speaks JSON-RPC 2.0 over HTTP. Start with
+   `/mcp`. It speaks JSON-RPC 2.0 over HTTP. Start with
    the `initialize` method, then `tools/list`. Discovery card:
-   `https://grewalregroup.com/.well-known/mcp-server-card`.
-2. **OpenAPI contract.** `https://grewalregroup.com/openapi.json` describes the
+   `/.well-known/mcp-server-card`.
+2. **OpenAPI contract.** `/openapi.json` describes the
    same capabilities as plain HTTP for agents that do not speak MCP.
-3. **Plain-text summary.** `https://grewalregroup.com/llms.txt` is a
+3. **Plain-text summary.** `/llms.txt` is a
    machine-readable overview of the whole business.
 4. **Markdown of any page.** Send `Accept: text/markdown` to a page URL to get a
    markdown rendering instead of HTML (currently available for the homepage `/`).
-5. **Sourced claims.** `https://grewalregroup.com/SOURCES.md` maps every public
+5. **Sourced claims.** `/SOURCES.md` maps every public
    claim to a verifiable backlink.
 
 ## MCP tools

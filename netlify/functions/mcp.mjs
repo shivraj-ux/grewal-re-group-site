@@ -12,9 +12,24 @@ import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import communitiesFile from "../../data/communities.json" with { type: "json" };
 
-const SITE = "https://grewalregroup.com";
+// Canonical brand domain (used only as a fallback when no request origin is
+// available). All live links are resolved against the actual serving origin so
+// the server works correctly on the netlify.app test host now and on
+// grewalregroup.com after launch.
+const FALLBACK_SITE = "https://grewalregroup.com";
 const COMPASS_REPORTS =
   "https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group";
+
+function originFromReq(req) {
+  const host = req.headers.get("x-forwarded-host") || req.headers.get("host");
+  const proto = req.headers.get("x-forwarded-proto") || "https";
+  if (host) return `${proto}://${host}`;
+  try {
+    return new URL(req.url).origin;
+  } catch {
+    return FALLBACK_SITE;
+  }
+}
 
 const COMMUNITIES = communitiesFile.communities;
 
@@ -38,7 +53,6 @@ const AGENT = {
     googleReviews: "117 five-star",
   },
   counties: ["Travis", "Hays", "Williamson", "Bastrop"],
-  website: SITE,
 };
 
 const SERVICES = [
@@ -63,7 +77,7 @@ const REGION = {
   "kyle": "Surrounding Metro", "buda": "Surrounding Metro",
 };
 
-function communityView(slug) {
+function communityView(slug, site) {
   const c = COMMUNITIES[slug];
   if (!c) return null;
   return {
@@ -74,8 +88,8 @@ function communityView(slug) {
     description: c.description,
     commentary: c.commentary,
     related: c.related || [],
-    pageUrl: `${SITE}/communities/${slug}.html`,
-    marketReportUrl: `${SITE}/communities/${slug}.html`,
+    pageUrl: `${site}/communities/${slug}.html`,
+    marketReportUrl: `${site}/communities/${slug}.html`,
   };
 }
 
@@ -85,7 +99,7 @@ const TOOLS = {
     description:
       "Get the profile, credentials, licenses, contact details, and track record for Shivraj Grewal and Grewal RE Group. Call this when an agent needs to know who runs the business or how to reach them.",
     input: z.object({}),
-    handler: async () => AGENT,
+    handler: async (_args, site) => ({ ...AGENT, website: site }),
   },
 
   list_communities: {
@@ -94,13 +108,13 @@ const TOOLS = {
     input: z.object({
       region: z.string().optional().describe("Optional region filter, matched case-insensitively."),
     }),
-    handler: async ({ region }) => {
+    handler: async ({ region }, site) => {
       let slugs = Object.keys(COMMUNITIES);
       if (region) {
         const r = region.toLowerCase();
         slugs = slugs.filter((s) => (REGION[s] || "").toLowerCase().includes(r));
       }
-      return { count: slugs.length, communities: slugs.map(communityView) };
+      return { count: slugs.length, communities: slugs.map((s) => communityView(s, site)) };
     },
   },
 
@@ -110,8 +124,8 @@ const TOOLS = {
     input: z.object({
       slug: z.string().describe("Community slug, e.g. 'west-lake-hills', 'barton-creek', 'mueller'."),
     }),
-    handler: async ({ slug }) => {
-      const v = communityView(slug);
+    handler: async ({ slug }, site) => {
+      const v = communityView(slug, site);
       if (!v) {
         return {
           error: `Unknown community '${slug}'.`,
@@ -128,10 +142,10 @@ const TOOLS = {
     input: z.object({
       query: z.string().min(1).describe("Search text, e.g. 'Eanes ISD', '78746', 'greenbelt', 'gated golf'."),
     }),
-    handler: async ({ query }) => {
+    handler: async ({ query }, site) => {
       const q = query.toLowerCase();
       const matches = Object.keys(COMMUNITIES)
-        .map(communityView)
+        .map((s) => communityView(s, site))
         .filter(
           (c) =>
             c.name.toLowerCase().includes(q) ||
@@ -156,8 +170,8 @@ const TOOLS = {
     input: z.object({
       slug: z.string().describe("Community slug to get the market report for."),
     }),
-    handler: async ({ slug }) => {
-      const v = communityView(slug);
+    handler: async ({ slug }, site) => {
+      const v = communityView(slug, site);
       if (!v) {
         return { error: `Unknown community '${slug}'.`, validSlugs: Object.keys(COMMUNITIES) };
       }
@@ -175,11 +189,11 @@ const TOOLS = {
     description:
       "Get the free Austin Relocation Guide: a 144-page PDF covering neighborhoods, schools, cost of living, and the market. Returns the guide URL and a summary.",
     input: z.object({}),
-    handler: async () => ({
+    handler: async (_args, site) => ({
       title: "Austin Relocation Guide (The Relocation Edition)",
       pages: 144,
-      url: `${SITE}/assets/guides/the-relocation-edition.pdf`,
-      landingUrl: `${SITE}/relocation-guide`,
+      url: `${site}/assets/guides/the-relocation-edition.pdf`,
+      landingUrl: `${site}/relocation-guide`,
       covers: ["Neighborhoods", "Schools & districts", "Cost of living", "Market context", "Commute & lifestyle"],
     }),
   },
@@ -196,8 +210,10 @@ const TOOLS = {
         .describe("What they need help with."),
       message: z.string().optional().describe("Free-text detail about their plans."),
     }),
-    handler: async ({ name, email, phone, interest, message }) => {
+    handler: async ({ name, email, phone, interest, message }, site) => {
       // Netlify Forms ingests urlencoded POSTs that carry a registered form-name.
+      // Post to the same origin the server runs on so the lead lands in this
+      // deploy's Netlify Forms inbox (test host now, grewalregroup.com later).
       const body = new URLSearchParams({
         "form-name": "contact-section",
         name,
@@ -209,7 +225,7 @@ const TOOLS = {
         source: "mcp-server",
       });
       try {
-        const res = await fetch(`${SITE}/`, {
+        const res = await fetch(`${site}/`, {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: body.toString(),
@@ -220,13 +236,13 @@ const TOOLS = {
           confirmation: res.ok
             ? `Thanks ${name.split(" ")[0]} — your request reached Grewal RE Group. Shivraj follows up the same day at ${email}.`
             : "The request could not be submitted automatically. Please call (512) 617-0001 or email shivraj.grewal@compass.com.",
-          bookingFallback: `${SITE}/#contact`,
+          bookingFallback: `${site}/#contact`,
         };
       } catch (e) {
         return {
           submitted: false,
           error: String(e),
-          bookingFallback: `${SITE}/#contact`,
+          bookingFallback: `${site}/#contact`,
           phone: AGENT.phone,
           email: AGENT.email,
         };
@@ -252,7 +268,7 @@ function rpcError(id, code, message) {
   return { jsonrpc: "2.0", id, error: { code, message } };
 }
 
-async function handleRpc(msg) {
+async function handleRpc(msg, site) {
   const { id, method, params } = msg;
 
   if (method === "initialize") {
@@ -288,7 +304,7 @@ async function handleRpc(msg) {
       });
     }
     try {
-      const data = await tool.handler(parsed.data);
+      const data = await tool.handler(parsed.data, site);
       return rpcResult(id, {
         content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
         structuredContent: data,
@@ -313,6 +329,8 @@ export default async (req) => {
 
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
 
+  const site = originFromReq(req);
+
   // A plain GET returns a small human/agent-readable descriptor.
   if (req.method === "GET") {
     return Response.json(
@@ -321,7 +339,7 @@ export default async (req) => {
         transport: "http (json-rpc 2.0)",
         usage: "POST a JSON-RPC 2.0 message. Start with the 'initialize' method, then 'tools/list'.",
         tools: Object.keys(TOOLS),
-        card: `${SITE}/.well-known/mcp-server-card`,
+        card: `${site}/.well-known/mcp-server-card`,
       },
       { headers: cors }
     );
@@ -342,13 +360,13 @@ export default async (req) => {
   if (Array.isArray(payload)) {
     const out = [];
     for (const m of payload) {
-      const r = await handleRpc(m);
+      const r = await handleRpc(m, site);
       if (r) out.push(r);
     }
     return Response.json(out, { headers: cors });
   }
 
-  const result = await handleRpc(payload);
+  const result = await handleRpc(payload, site);
   if (result === null) return new Response(null, { status: 202, headers: cors });
   return Response.json(result, { headers: cors });
 };

@@ -6,9 +6,9 @@
 
 This is the markdown rendering of the homepage, served when you request
 `Accept: text/markdown`. For tool access, use the MCP server at
-[`/mcp`](https://grewalregroup.com/mcp) (card at
-[`/.well-known/mcp-server-card`](https://grewalregroup.com/.well-known/mcp-server-card)).
-Agent instructions: [`/AGENTS.md`](https://grewalregroup.com/AGENTS.md).
+[`/mcp`](/mcp) (card at
+[`/.well-known/mcp-server-card`](/.well-known/mcp-server-card)).
+Agent instructions: [`/AGENTS.md`](/AGENTS.md).
 
 ## About
 
@@ -50,13 +50,13 @@ Fredericksburg · Steiner Ranch · Leander/Cedar Park · Round Rock · Pflugervi
 · Georgetown · Kyle · Buda.
 
 Each community page embeds a live Compass market report refreshed monthly. See
-[`/communities/`](https://grewalregroup.com/communities/).
+[`/communities/`](/communities/).
 
 ## Contact
 
 - Phone: (512) 617-0001
 - Email: shivraj.grewal@compass.com
 - Office: 2500 Bee Cave Rd, Building 3 Suite 200, Austin, TX 78746
-- Schedule: [`/#contact`](https://grewalregroup.com/#contact)
+- Schedule: [`/#contact`](/#contact)
 
 Equal Housing Opportunity. Information deemed reliable but not guaranteed.

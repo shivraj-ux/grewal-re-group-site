@@ -12,7 +12,8 @@
   "transport": {
     "type": "http",
     "protocol": "json-rpc-2.0",
-    "url": "https://grewalregroup.com/mcp"
+    "url": "/mcp",
+    "note": "Relative to the host serving this card."
   },
   "authentication": {
     "type": "none",
@@ -34,9 +35,9 @@
     { "name": "request_consultation", "description": "Submit a consultation request into the lead inbox (consent required)." }
   ],
   "documentation": {
-    "agents": "https://grewalregroup.com/AGENTS.md",
-    "openapi": "https://grewalregroup.com/openapi.json",
-    "llms": "https://grewalregroup.com/llms.txt",
-    "sources": "https://grewalregroup.com/SOURCES.md"
+    "agents": "/AGENTS.md",
+    "openapi": "/openapi.json",
+    "llms": "/llms.txt",
+    "sources": "/SOURCES.md"
   }
 }

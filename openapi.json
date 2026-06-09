@@ -6,7 +6,7 @@
     "description": "Agent-facing contract for grewalregroup.com. The primary interface is the MCP server at /mcp (JSON-RPC 2.0). Read-only data files are also served directly. Discovery card: /.well-known/mcp-server-card.",
     "contact": { "name": "Grewal RE Group", "email": "shivraj.grewal@compass.com", "url": "https://grewalregroup.com" }
   },
-  "servers": [{ "url": "https://grewalregroup.com" }],
+  "servers": [{ "url": "/", "description": "Same origin as this document (test host now, grewalregroup.com at launch)." }],
   "paths": {
     "/mcp": {
       "get": {
