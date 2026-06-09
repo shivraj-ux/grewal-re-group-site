@@ -1925,22 +1925,22 @@
           <input type="hidden" name="form-name" value="contact-section">
           <p style="display:none;"><input name="bot-field"></p>
           <div class="form-field">
-            <label>Full Name *</label>
-            <input name="name" required />
+            <label for="cs-name">Full Name *</label>
+            <input id="cs-name" name="name" autocomplete="name" required />
           </div>
           <div class="form-row">
             <div class="form-field">
-              <label>Email *</label>
-              <input name="email" type="email" required />
+              <label for="cs-email">Email *</label>
+              <input id="cs-email" name="email" type="email" autocomplete="email" required />
             </div>
             <div class="form-field">
-              <label>Phone</label>
-              <input name="phone" type="tel" />
+              <label for="cs-phone">Phone</label>
+              <input id="cs-phone" name="phone" type="tel" autocomplete="tel" />
             </div>
           </div>
           <div class="form-field">
-            <label>How can we help?</label>
-            <select name="interest">
+            <label for="cs-interest">How can we help?</label>
+            <select id="cs-interest" name="interest">
               <option value="">Select…</option>
               <option>Buying</option>
               <option>Selling</option>
@@ -1950,8 +1950,8 @@
             </select>
           </div>
           <div class="form-field">
-            <label>Tell us about your plans</label>
-            <textarea name="message" rows="4"></textarea>
+            <label for="cs-message">Tell us about your plans</label>
+            <textarea id="cs-message" name="message" rows="4"></textarea>
           </div>
           <label class="cmodal-consent-label" style="margin-bottom:.75rem;">
             <input type="checkbox" name="consent" value="agreed" required>
@@ -2360,12 +2360,12 @@
     <form class="cmodal-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact">
       <p style="display:none;"><input name="bot-field"></p>
-      <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+      <input type="text" name="name" placeholder="Full Name" required autocomplete="name" aria-label="Full Name">
       <div class="cmodal-row">
-        <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
-        <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel">
+        <input type="email" name="email" placeholder="Email Address" required autocomplete="email" aria-label="Email Address">
+        <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" aria-label="Phone Number">
       </div>
-      <textarea name="message" placeholder="What are you looking for? Buying, selling, or just exploring. (optional)"></textarea>
+      <textarea name="message" placeholder="What are you looking for? Buying, selling, or just exploring. (optional)" aria-label="What are you looking for?"></textarea>
       <label class="cmodal-consent-label">
         <input type="checkbox" name="consent" value="agreed" required>
         <span class="cmodal-consent-text">By providing Grewal RE Group your contact information, you acknowledge and agree to our <a href="privacy.html" target="_blank">Privacy Policy</a> and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent is not necessary for purchasing any products or services. To opt out you can reply "STOP" at any time or click the unsubscribe link in the emails. Reply "HELP" for Help. Message frequency varies. Message and data rates may apply. <a href="privacy.html" target="_blank">Privacy Policy</a> &amp; <a href="terms.html" target="_blank">Terms of Service</a>.</span>
