@@ -1,0 +1,77 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Grewal RE Group API",
+    "version": "1.0.0",
+    "description": "Agent-facing contract for grewalregroup.com. The primary interface is the MCP server at /mcp (JSON-RPC 2.0). Read-only data files are also served directly. Discovery card: /.well-known/mcp-server-card.",
+    "contact": { "name": "Grewal RE Group", "email": "shivraj.grewal@compass.com", "url": "https://grewalregroup.com" }
+  },
+  "servers": [{ "url": "/", "description": "Same origin as this document (test host now, grewalregroup.com at launch)." }],
+  "paths": {
+    "/mcp": {
+      "get": {
+        "operationId": "describeMcpServer",
+        "summary": "Describe the MCP server (tools, transport, card link).",
+        "responses": { "200": { "description": "Server descriptor", "content": { "application/json": {} } } }
+      },
+      "post": {
+        "operationId": "callMcp",
+        "summary": "Send a JSON-RPC 2.0 message to the MCP server.",
+        "description": "Begin with method 'initialize', then 'tools/list', then 'tools/call'. Tools: get_agent_profile, list_communities, get_community, search_communities, list_services, get_market_report, get_relocation_guide, request_consultation.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["jsonrpc", "method"],
+                "properties": {
+                  "jsonrpc": { "type": "string", "const": "2.0" },
+                  "id": { "type": ["integer", "string", "null"] },
+                  "method": { "type": "string", "examples": ["initialize", "tools/list", "tools/call"] },
+                  "params": { "type": "object" }
+                }
+              },
+              "examples": {
+                "listTools": { "value": { "jsonrpc": "2.0", "id": 1, "method": "tools/list" } },
+                "getCommunity": { "value": { "jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": { "name": "get_community", "arguments": { "slug": "west-lake-hills" } } } }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "JSON-RPC response", "content": { "application/json": {} } },
+          "202": { "description": "Notification accepted (no body)" }
+        }
+      }
+    },
+    "/.well-known/mcp-server-card": {
+      "get": {
+        "operationId": "getMcpServerCard",
+        "summary": "MCP server discovery card.",
+        "responses": { "200": { "description": "Server card", "content": { "application/json": {} } } }
+      }
+    },
+    "/data/communities.json": {
+      "get": {
+        "operationId": "getCommunities",
+        "summary": "Structured data for every covered community (name, zip, description, commentary, related).",
+        "responses": { "200": { "description": "Communities dataset", "content": { "application/json": {} } } }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "operationId": "getLlmsTxt",
+        "summary": "Machine-readable plain-text summary of the whole business.",
+        "responses": { "200": { "description": "LLM summary", "content": { "text/plain": {} } } }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "operationId": "getSitemap",
+        "summary": "Full URL sitemap.",
+        "responses": { "200": { "description": "Sitemap", "content": { "application/xml": {} } } }
+      }
+    }
+  }
+}

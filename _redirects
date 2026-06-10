@@ -1,1 +1,74 @@
 # Cloudflare Pages / Netlify _redirects (works on both hosts)
+
+# ── SEO consolidation: duplicate/cannibalizing articles -> canonical winner ──
+# Forced (301!) so they fire even while the old loser files remain in the repo
+# as a content backup until the merge pass is complete. See 2-PROJECTS/SEO Consolidation Map.md.
+
+# In-town neighborhood guides
+/blog/westlake-hills-homes-for-sale.html                 /blog/westlake-hills-homes-guide-2026.html               301!
+/blog/westlake-hills-austin-2026.html                    /blog/westlake-hills-homes-guide-2026.html               301!
+/blog/barton-creek-austin-neighborhood-guide-2026.html   /blog/barton-creek-austin-2026.html                      301!
+/blog/barton-creek-austin-neighborhood-guide.html        /blog/barton-creek-austin-2026.html                      301!
+/blog/clarksville-austin-neighborhood-guide.html         /blog/clarksville-austin-neighborhood-guide-2026.html    301!
+/blog/clarksville-austin-neighborhood-2026.html          /blog/clarksville-austin-neighborhood-guide-2026.html    301!
+/blog/hyde-park-austin-2026.html                         /blog/hyde-park-austin-neighborhood-guide-2026.html      301!
+/blog/hyde-park-austin-guide.html                        /blog/hyde-park-austin-neighborhood-guide-2026.html      301!
+/blog/mueller-austin-2026.html                           /blog/mueller-austin-neighborhood-guide-2026.html        301!
+/blog/mueller-austin-neighborhood-guide.html             /blog/mueller-austin-neighborhood-guide-2026.html        301!
+/blog/travis-heights-austin-2026.html                    /blog/travis-heights-austin-neighborhood-guide-2026.html 301!
+/blog/travis-heights-austin-neighborhood-guide.html      /blog/travis-heights-austin-neighborhood-guide-2026.html 301!
+/blog/rollingwood-austin-neighborhood-guide.html         /blog/rollingwood-austin-2026.html                       301!
+/blog/rollingwood-2026-neighborhood-guide.html           /blog/rollingwood-austin-2026.html                       301!
+/blog/cherrywood-austin-2026.html                        /blog/cherrywood-austin-neighborhood-guide-2026.html     301!
+/blog/cherrywood-french-place-austin-guide.html          /blog/cherrywood-austin-neighborhood-guide-2026.html     301!
+/blog/crestview-austin-2026.html                         /blog/crestview-austin-neighborhood-guide-2026.html      301!
+/blog/allandale-austin-2026.html                         /blog/allandale-austin-neighborhood-guide-2026.html      301!
+/blog/allandale-crestview-austin-guide.html              /blog/allandale-austin-neighborhood-guide-2026.html      301!
+/blog/windsor-park-austin-2026.html                      /blog/windsor-park-austin-neighborhood-guide-2026.html   301!
+/blog/rosedale-austin-2026.html                          /blog/rosedale-austin-neighborhood-guide-2026.html       301!
+/blog/north-loop-austin-2026.html                        /blog/north-loop-austin-neighborhood-guide-2026.html     301!
+/blog/govalle-austin-2026.html                           /blog/govalle-austin-neighborhood-guide-2026.html        301!
+/blog/bouldin-creek-austin-2026.html                     /blog/bouldin-creek-austin-neighborhood-guide-2026.html  301!
+/blog/south-congress-soco-austin-guide.html              /blog/south-congress-neighborhood-guide-2026.html        301!
+/blog/south-congress-soco-austin-2026.html               /blog/south-congress-neighborhood-guide-2026.html        301!
+/blog/rainey-street-downtown-austin-guide.html           /blog/rainey-street-austin-2026.html                     301!
+/blog/rob-roy-on-the-lake-austin-2026.html               /blog/rob-roy-austin-gated-community-guide-2026.html     301!
+/blog/rob-roy-austin-2026.html                           /blog/rob-roy-austin-gated-community-guide-2026.html     301!
+/blog/rob-roy-austin-luxury-neighborhood.html            /blog/rob-roy-austin-gated-community-guide-2026.html     301!
+/blog/east-austin-neighborhood-guide-2026.html           /blog/east-austin-real-estate-guide-2026.html            301!
+/blog/east-austin-homes-for-sale-2026.html               /blog/east-austin-real-estate-guide-2026.html            301!
+/blog/tarrytown-austin-real-estate-2026.html             /blog/tarrytown-austin-neighborhood-guide-2026.html      301!
+
+# Suburb / Hill Country towns
+/blog/bastrop-tx-2026.html                /blog/bastrop-tx-real-estate-guide-2026.html           301!
+/blog/bee-cave-austin-2026.html           /blog/bee-cave-tx-real-estate-guide-2026.html          301!
+/blog/buda-tx-2026.html                   /blog/buda-tx-real-estate-guide-2026.html              301!
+/blog/cedar-park-tx-2026.html             /blog/cedar-park-tx-real-estate-guide-2026.html        301!
+/blog/del-valle-austin-2026.html          /blog/del-valle-tx-real-estate-guide-2026.html         301!
+/blog/driftwood-tx-2026.html              /blog/driftwood-tx-real-estate-guide-2026.html         301!
+/blog/elgin-tx-2026.html                  /blog/elgin-tx-real-estate-guide-2026.html             301!
+/blog/georgetown-tx-2026.html             /blog/georgetown-tx-real-estate-guide-2026.html        301!
+/blog/hutto-tx-2026.html                  /blog/hutto-tx-real-estate-guide-2026.html             301!
+/blog/kyle-tx-2026.html                   /blog/kyle-tx-real-estate-guide-2026.html              301!
+/blog/leander-tx-2026.html                /blog/leander-tx-real-estate-guide-2026.html           301!
+/blog/liberty-hill-tx-2026.html           /blog/liberty-hill-tx-real-estate-guide-2026.html      301!
+/blog/manor-tx-2026.html                  /blog/manor-tx-real-estate-guide-2026.html             301!
+/blog/pflugerville-tx-2026.html           /blog/pflugerville-tx-real-estate-guide-2026.html      301!
+/blog/round-rock-tx-2026.html             /blog/round-rock-tx-real-estate-guide-2026.html        301!
+/blog/spicewood-tx-2026.html              /blog/spicewood-tx-real-estate-guide-2026.html         301!
+/blog/taylor-tx-2026.html                 /blog/taylor-tx-real-estate-guide-2026.html            301!
+/blog/volente-tx-2026.html                /blog/volente-tx-real-estate-guide-2026.html           301!
+/blog/lago-vista-austin-2026.html         /blog/lago-vista-tx-real-estate-guide-2026.html        301!
+/blog/dripping-springs-tx-2026.html               /blog/dripping-springs-tx-real-estate-guide-2026.html  301!
+/blog/dripping-springs-tx-real-estate-guide.html  /blog/dripping-springs-tx-real-estate-guide-2026.html  301!
+/blog/lakeway-austin-2026.html            /blog/lakeway-tx-real-estate-guide-2026.html           301!
+/blog/hudson-bend-lake-travis-2026.html   /blog/hudson-bend-lake-travis-guide-2026.html          301!
+
+# Topic / market / comparison
+/blog/austin-vs-denver-real-estate.html             /blog/austin-vs-denver-real-estate-2026.html         301!
+/blog/austin-cost-of-living-2026.html               /blog/austin-cost-of-living-guide-2026.html          301!
+/blog/austin-home-inspection-guide.html             /blog/austin-home-inspection-guide-2026.html         301!
+/blog/austin-downtown-condos-guide-2026.html        /blog/downtown-austin-condos-guide-2026.html         301!
+/blog/downtown-austin-real-estate-2026.html         /blog/downtown-austin-condos-guide-2026.html         301!
+/blog/tarrytown-vs-westlake-austin.html             /blog/west-lake-hills-vs-tarrytown-austin-2026.html  301!
+/blog/westlake-hills-vs-tarrytown-2026.html         /blog/west-lake-hills-vs-tarrytown-austin-2026.html  301!
