@@ -178,6 +178,24 @@ p { line-height: 1.7; margin: 0 0 1.25rem; }
   font-weight: 600; border-radius: 2px;
 }
 
+/* Photographic hero variant — real licensed neighborhood photography.
+   Page sets: class="cm-detail-hero has-photo" style="--cm-hero:url('../assets/images/<slug>.jpg')" */
+.cm-detail-hero.has-photo {
+  position: relative; border-bottom: none;
+  padding: 7.5rem 0 3rem;
+  background-image:
+    linear-gradient(180deg, rgba(12,14,20,.45) 0%, rgba(12,14,20,.78) 100%),
+    var(--cm-hero);
+  background-size: cover; background-position: center;
+  background-repeat: no-repeat;
+}
+.cm-detail-hero.has-photo h1 { color: #fff; }
+.cm-detail-hero.has-photo p { color: rgba(255,255,255,.9); }
+.cm-detail-hero.has-photo .cm-breadcrumb,
+.cm-detail-hero.has-photo .cm-breadcrumb a { color: rgba(255,255,255,.82); }
+.cm-detail-hero.has-photo .cm-breadcrumb a:hover { color: #fff; }
+.cm-detail-hero.has-photo .cm-breadcrumb .sep { color: var(--gold-light, #d9b777); }
+
 /* Live report wrapper */
 .cm-report {
   max-width: 1200px; margin: 3rem auto;
