@@ -1,0 +1,30 @@
+{
+  "source": "Google Business Profile — Grewal RE Group",
+  "profile_url": "https://share.google/1pYwueIVdeVLAtANo",
+  "cid": "14895348687569356370",
+  "place_fid": "0x865b2d8559b35f0f:0xceb6e8b660270652",
+  "rating": "5.0",
+  "review_count": 119,
+  "last_synced": "2026-06-10",
+  "last_sync_status": "seed — first automated sync pending key (see scripts/sync_reviews.py)",
+  "featured": [
+    {
+      "author": "Neeraj Sangal",
+      "when": "Google review",
+      "location": "",
+      "text": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right."
+    },
+    {
+      "author": "Another Studio",
+      "when": "Google review",
+      "location": "",
+      "text": "Shivraj provided excellent service and exceeded our expectations from start to finish."
+    },
+    {
+      "author": "Z. A.",
+      "when": "Google review",
+      "location": "",
+      "text": "The realtor in town — knows his stuff!"
+    }
+  ]
+}

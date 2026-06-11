@@ -23,7 +23,7 @@ volume, blog data) and propagate the change to `index.html` in the same PR.
 
 | Claim | Source | Verification cadence |
 |---|---|---|
-| **117 Google Reviews · ★5.0** | https://share.google/1pYwueIVdeVLAtANo (live Google Business Profile count) | Check monthly; update `index.html` lines for `data-value="117"`, `gtext`, JSON-LD `aggregateRating.ratingCount` |
+| **119 Google Reviews · ★5.0** | https://share.google/1pYwueIVdeVLAtANo (live Google Business Profile count) | **Auto-synced** every 6h by `scripts/sync_reviews.py` via `.github/workflows/review-sync.yml` → updates count sitewide + featured reviews in `data/reviews.json` + `index.html`, then auto-deploys. Needs `FIRECRAWL_API_KEY` (or `GOOGLE_PLACES_API_KEY`) repo secret. |
 | **100+ closed transactions** | Compass internal sales record · MLS production report (Austin Board of REALTORS®) | Check quarterly |
 | **$100M+ career volume** | Compass internal sales record · MLS production report | Check quarterly |
 | **★5.0 average rating** | Google Business Profile (same Google source as review count) | Same cadence as #1 |

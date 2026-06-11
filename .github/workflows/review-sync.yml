@@ -1,0 +1,71 @@
+name: Live Google Review Sync
+
+# Keeps the site's review count + featured testimonials in lock-step with the
+# live Google Business Profile. Runs every 6 hours; commits + deploys on change.
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # 00:00, 06:00, 12:00, 18:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: review-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Sync reviews from Google
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_NOTIFY_PARENT: ${{ secrets.NOTION_NOTIFY_PARENT }}
+          SYNC_DATE: ${{ github.run_id }}
+        run: python scripts/sync_reviews.py
+
+      - name: Commit changes if any
+        id: commit
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "review-sync-bot"
+            git config user.email "bot@grewalregroup.com"
+            git add -A
+            git commit -m "chore: sync Google reviews + count [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No review changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy to Netlify
+        if: steps.commit.outputs.changed == 'true'
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: '.'
+          production-branch: main
+          production-deploy: true
+          deploy-message: "Review sync deploy"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 5
