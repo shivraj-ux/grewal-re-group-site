@@ -1,26 +1,27 @@
 {
-  "lastRun": "2026-05-24T06:00:00-06:00",
+  "lastRun": "2026-06-12T13:56:12.631368Z",
   "errors": [
     {
-      "step": "STEP 2 — Competitor Crawl",
+      "step": "STEP 2 \u2014 Competitor Crawl",
       "target": "https://www.luxehomesaustin.com",
-      "error": "HTTP 403 Forbidden — site blocked automated fetching",
-      "timestamp": "2026-05-24T06:08:00-06:00",
+      "error": "HTTP 403",
+      "timestamp": "2026-06-12T13:56:12.576689Z",
       "action": "Skipped. Will retry on next run."
     },
     {
-      "step": "STEP 4 — Google Reviews",
-      "target": "https://share.google/1pYwueIVdeVLAtANo",
-      "error": "Requires authenticated browser session — cannot fetch programmatically",
-      "timestamp": "2026-05-24T06:10:00-06:00",
-      "action": "Skipped. Reviews count in schema remains at 119 (last verified manually). Update manually when new reviews are posted."
+      "step": "STEP 3 \u2014 Market Data",
+      "target": "data/market-data/latest.json",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "timestamp": "2026-06-12T13:56:12.613711Z",
+      "action": "Skipped. Will retry on next run."
+    },
+    {
+      "step": "Daily Content",
+      "target": "blog/",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+      "timestamp": "2026-06-12T13:56:12.631169Z",
+      "action": "Skipped. Will retry on next run."
     }
   ],
-  "warnings": [
-    {
-      "step": "STEP 3 — Market Data",
-      "message": "Tarrytown active listing count and days on market unavailable from public sources. Using placeholder in market data JSON.",
-      "timestamp": "2026-05-24T06:12:00-06:00"
-    }
-  ]
+  "warnings": []
 }
