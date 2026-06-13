@@ -1,0 +1,65 @@
+name: SEO Analytics Agent
+
+on:
+  schedule:
+    # Mondays 12:00 UTC (~7 AM CST / 6 AM CDT, Austin) — weekly SEO report
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+    inputs:
+      open_pr:
+        description: 'Open a PR with the report (off = commit report to branch only)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  seo-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install requests google-api-python-client google-auth google-analytics-data
+
+      - name: Run SEO analytics agent
+        env:
+          GA_SERVICE_ACCOUNT_JSON: ${{ secrets.GA_SERVICE_ACCOUNT_JSON }}
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: python scripts/seo_agent.py
+
+      - name: Open PR with weekly report
+        if: ${{ inputs.open_pr != false }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="seo-report/${DATE}"
+          git config user.name "seo-analytics-agent"
+          git config user.email "actions@github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes produced — skipping PR."
+            exit 0
+          fi
+          git checkout -b "$BRANCH"
+          git add logs/seo data/seo
+          git commit -m "SEO weekly report — ${DATE}"
+          git push -u origin "$BRANCH"
+          gh pr create --title "SEO weekly report — ${DATE}" \
+            --body-file /tmp/seo-pr-body.md --base main --head "$BRANCH" || \
+            echo "PR may already exist for ${BRANCH}"
