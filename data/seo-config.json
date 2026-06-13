@@ -1,0 +1,40 @@
+{
+  "site_url": "https://grewalregroup.com/",
+  "_note_property": "GA4_PROPERTY_ID and GSC_SITE_URL are read from repo Variables/env at runtime; values here are fallbacks only.",
+  "ga4_property_id": "",
+  "gsc_site_url": "https://grewalregroup.com/",
+  "lookback_days": 28,
+  "page2_min_impressions": 30,
+  "priority_keywords": [
+    "tarrytown vs westlake hills",
+    "relocating to austin from california",
+    "moving to austin from seattle",
+    "austin mud tax new construction",
+    "dripping springs isd homes",
+    "austin property tax protest",
+    "rob roy austin gated community",
+    "austin short term rental license",
+    "eanes isd homes for sale",
+    "austin new construction incentives",
+    "dripping springs luxury homes",
+    "westlake hills homes for sale",
+    "tarrytown austin real estate",
+    "barton creek homes for sale",
+    "lake travis waterfront homes",
+    "georgetown tx homes for sale",
+    "steiner ranch realtor",
+    "buda tx real estate",
+    "westlake hills realtor",
+    "dripping springs realtor",
+    "austin luxury real estate agent",
+    "austin relocation realtor",
+    "realtor near me austin",
+    "grewal re group",
+    "shivraj grewal realtor"
+  ],
+  "psi_pages": [
+    "https://grewalregroup.com/",
+    "https://grewalregroup.com/communities/dripping-springs.html",
+    "https://grewalregroup.com/blog/tarrytown-austin-neighborhood-guide-2026.html"
+  ]
+}
