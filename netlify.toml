@@ -65,13 +65,8 @@
   status = 200
   force = true
 
-# Serve the MCP discovery card dynamically so its URLs are absolute and correct
-# on whatever host serves it (test host now, grewalregroup.com at launch).
-[[redirects]]
-  from = "/.well-known/mcp-server-card"
-  to = "/.netlify/functions/mcp"
-  status = 200
-  force = true
+# The MCP discovery card is served as a STATIC file at /.well-known/mcp-server-card
+# (and .json) -- no redirect, so it works even if the function is mid-deploy.
 
 # ── Agent-readiness file content types ───────────────────────
 [[headers]]
@@ -101,3 +96,16 @@
     Cache-Control = "public, max-age=3600"
 
 # ── Redirects ────────────────────────────────────────────────
+
+# Static MCP card aliases (.json + /agents.json) for agent-readiness scanners
+[[headers]]
+  for = "/.well-known/mcp-server-card.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/agents.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Access-Control-Allow-Origin = "*"
