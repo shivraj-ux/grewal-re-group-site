@@ -1,6 +1,6 @@
 # Grewal RE Group
 
-> Austin's luxury real estate team led by **Shivraj Grewal** at Compass.
+> Austin's luxury real estate team led by **Shivraj Grewal**.
 > 119 five-star Google reviews · 100+ closed transactions · $100M+ career volume.
 > Specializing in West Lake Hills, Tarrytown, Barton Creek, Davenport Ranch, and greater Austin.
 > Tagline: **People First. Straight Answers. Strong Results.**
@@ -22,7 +22,7 @@ get_relocation_guide, request_consultation.
 
 - **Principal:** Shivraj Grewal (also goes by "Raj")
 - **Title:** Founder & Principal, Luxury Real Estate Advisor
-- **Brokerage:** Compass — TREC Broker License #9006927
+- **Brokerage:** Compass, TREC Broker License #9006927
 - **Agent License:** TREC #736060
 - **Designations:** CLHMS Guild · CNE
 - **Office:** 2500 Bee Cave Rd, Building 3 Suite 200, Austin, TX 78746
@@ -32,7 +32,7 @@ get_relocation_guide, request_consultation.
 ## What we do
 
 - Buyer representation (luxury, first-time, move-up, investor)
-- Seller representation (data-driven pricing, Compass Concierge prep, marketing)
+- Seller representation (data-driven pricing, Concierge prep, marketing)
 - Relocation advisory for clients moving to or from Austin
 - Investment advisory and portfolio review
 - New construction representation
@@ -49,14 +49,14 @@ Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
 ## Key resources
 
 - [Homepage](https://grewalregroup.com/): full site with Hero, About, Team, Proof, Neighborhoods, Services, Relocation, Concierge, Listings, Market Reports, Insights, Testimonials, FAQ, Newsletter, Contact, Footer
-- [Communities Hub](https://grewalregroup.com/communities/): 23 brand-owned community pages, each embedding a live Compass market report (refreshed monthly)
+- [Communities Hub](https://grewalregroup.com/communities/): 23 brand-owned community pages, each embedding a live market report (refreshed monthly)
 - [Austin Relocation Guide PDF (144 pages)](https://grewalregroup.com/assets/guides/the-relocation-edition.pdf): comprehensive neighborhood, schools, cost-of-living, and market guide
-- [Compass Texas Market Reports](https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group): underlying live data source (also embedded inside each /communities/ page)
+- [Live Texas Market Reports](https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group): underlying live data source (also embedded inside each /communities/ page)
 - [SOURCES.md](https://grewalregroup.com/SOURCES.md): every claim on the site mapped to a verifiable backlink
 
 ## Community pages (live market reports, refreshed monthly)
 
-Each page below embeds the live Compass market report and stays current automatically:
+Each page below embeds the live market report and stays current automatically:
 
 - [All Austin Communities · master report](https://grewalregroup.com/communities/austin-communities.html)
 - **West Austin (Established + Luxury):** [West Lake Hills](https://grewalregroup.com/communities/west-lake-hills.html) · [Tarrytown](https://grewalregroup.com/communities/tarrytown.html) · [Barton Hills](https://grewalregroup.com/communities/barton-hills.html) · [Barton Creek](https://grewalregroup.com/communities/barton-creek.html) · [Zilker](https://grewalregroup.com/communities/zilker.html) · [Circle C Ranch](https://grewalregroup.com/communities/circle-c-ranch.html)
