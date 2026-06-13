@@ -58,6 +58,11 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+# Markdown content negotiation at the edge (Accept: text/markdown -> index.md)
+[[edge_functions]]
+  function = "markdown-negotiation"
+  path = "/"
+
 # Clean public endpoint for the MCP server. Rewrite (200) keeps the URL at /mcp.
 [[redirects]]
   from = "/mcp"
