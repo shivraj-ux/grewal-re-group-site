@@ -25,8 +25,10 @@ the guide.
   CNE · TREC #736060. Lead strategist and chief negotiator for buyers, sellers,
   and investors across Travis, Hays, Williamson, and Bastrop counties.
 - **Arsh Khaira** — Agent. Luxury Home Specialist · Certified Luxury Home Marketing
-  Specialist · Certified Real Estate Negotiator. Marketing-driven representation for
-  buyers and sellers, with access to off-market and Private Exclusives listings.
+  Specialist · Certified Real Estate Negotiator · TREC #736080. Marketing-driven
+  representation for buyers and sellers, with access to off-market and Private
+  Exclusives listings. Phone (512) 890-0009 · arsh.khaira@compass.com ·
+  Instagram @arsh.khaira.realtor.
 
 Brokerage: Compass RE Texas, LLC · Broker of Record Keith Newman · TREC #9006927.
 
