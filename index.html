@@ -974,6 +974,11 @@
       letter-spacing: 0.05em; margin-bottom: 1rem;
     }
     .team-mate-avatar--alt { background: var(--ink); }
+    .team-mate-photo {
+      width: 112px; height: 112px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      margin-bottom: 1rem; display: block;
+    }
     .team-mate .role {
       font-family: 'Inter', sans-serif; font-size: 0.7rem;
       letter-spacing: 0.18em; text-transform: uppercase;
@@ -1357,10 +1362,14 @@
     <!-- Teammates row -->
     <div class="team-row team-row--single">
       <article class="team-mate">
-        <div class="team-mate-avatar" aria-hidden="true">AK</div>
-        <p class="role">Team Member</p>
+        <picture>
+          <source srcset="assets/headshots/arsh-khaira.avif" type="image/avif">
+          <source srcset="assets/headshots/arsh-khaira.webp" type="image/webp">
+          <img class="team-mate-photo" src="assets/headshots/arsh-khaira.jpg" alt="Arsh Khaira, Grewal RE Group, Austin real estate" width="112" height="112" loading="lazy" decoding="async" />
+        </picture>
+        <p class="role">Luxury Home Specialist · Certified Negotiator</p>
         <h3>Arsh Khaira</h3>
-        <p class="team-mate-bio">Supports buyer and listing operations across Grewal RE Group's Austin practice, coordination, showings, and client follow-through.</p>
+        <p class="team-mate-bio">Arsh Khaira pairs a business degree with a marketing-driven approach to Austin real estate. A Certified Luxury Home Marketing Specialist and Certified Real Estate Negotiator, he helps sellers position their homes to full potential and guides buyers to the right fit — including access to off-market and Private Exclusives listings through his local network. Outside of real estate, he is Communications Director of the Hill Country Region Porsche Club and plays with the Lone Star Field Hockey Club in Austin.</p>
       </article>
     </div>
 
@@ -1393,9 +1402,9 @@
         </div>
         <div class="org-cell">
           <div class="org-node">
-            <div class="org-role">Team Member</div>
+            <div class="org-role">Agent</div>
             <div class="org-name">Arsh Khaira</div>
-            <div class="org-detail">Buyer &amp; Listing Operations</div>
+            <div class="org-detail">Luxury Specialist · Certified Negotiator</div>
           </div>
         </div>
       </div>
