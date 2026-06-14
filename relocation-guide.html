@@ -12,8 +12,15 @@
   <script defer src="/assets/js/ga-events.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Austin Relocation Guide — Grewal RE Group</title>
-<meta name="description" content="The complete Austin relocation guide from Grewal RE Group. Neighborhoods, schools, cost of living, and everything you need to know about moving to Austin.">
+<title>The Relocation Edition — Austin Relocation Guide | Grewal RE Group</title>
+<meta name="description" content="The Relocation Edition: a neighborhood-by-neighborhood guide to moving to Austin from Grewal RE Group. Flip through all 153 pages, then download the full PDF.">
+<link rel="canonical" href="https://grewalregroup.com/relocation-guide.html">
+
+<meta property="og:title" content="The Relocation Edition — Austin Relocation Guide">
+<meta property="og:description" content="Flip through the complete Austin relocation guide: 40+ neighborhoods, maps, schools, and cost of living. Download the full PDF.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://grewalregroup.com/relocation-guide.html">
+<meta property="og:image" content="https://grewalregroup.com/assets/og-image.png">
 
 <link rel="icon" type="image/png" href="assets/logos/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,125 +35,117 @@
     padding: 5rem 0 3.5rem;
     text-align: center;
   }
-  .rg-hero-inner {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
+  .rg-hero-inner { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; }
   .rg-eyebrow {
-    display: block;
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #B8963E;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    display: block; font-size: 0.78rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: #B8963E; font-weight: 600; margin-bottom: 1rem;
   }
   .rg-hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 600;
-    color: #fff;
-    margin: 0 0 1rem;
-    line-height: 1.15;
+    font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 600;
+    color: #fff; margin: 0 0 1rem; line-height: 1.15;
   }
   .rg-hero p {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.7);
-    margin: 0 0 2rem;
-    line-height: 1.7;
+    font-size: 1.05rem; color: rgba(255,255,255,0.7);
+    margin: 0 0 2rem; line-height: 1.7;
   }
-  .rg-btn-row {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  .rg-btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
   .rg-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    font-size: 0.88rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 3px;
-    border: 1.5px solid #B8963E;
-    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.75rem; font-size: 0.88rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+    border-radius: 3px; border: 1.5px solid #B8963E; transition: all 0.2s;
+    cursor: pointer; font-family: 'Inter', sans-serif;
   }
-  .rg-btn-gold {
-    background: #B8963E;
-    color: #fff;
-  }
-  .rg-btn-gold:hover {
-    background: #9a7c33;
-    border-color: #9a7c33;
-  }
-  .rg-btn-ghost {
-    background: transparent;
-    color: #B8963E;
-    border-color: #B8963E;
-  }
-  .rg-btn-ghost:hover {
-    background: #B8963E;
-    color: #fff;
-  }
+  .rg-btn-gold { background: #B8963E; color: #fff; }
+  .rg-btn-gold:hover { background: #9a7c33; border-color: #9a7c33; }
+  .rg-btn-ghost { background: transparent; color: #B8963E; border-color: #B8963E; }
+  .rg-btn-ghost:hover { background: #B8963E; color: #fff; }
 
-  .rg-viewer {
-    background: #F4F0E9;
-    padding: 2.5rem 1.5rem 4rem;
+  /* ── Flip book viewer ── */
+  .rg-viewer { background: #1a1714; padding: 0; }
+  .rg-flip-frame {
+    width: 100%; height: 86vh; min-height: 560px;
+    border: none; display: block; background: #1a1714;
   }
-  .rg-viewer-wrap {
-    max-width: 1000px;
-    margin: 0 auto;
+  .rg-viewer-note {
+    text-align: center; color: rgba(255,255,255,0.55);
+    font-size: 0.8rem; padding: 0.85rem 1rem; background: #1a1714;
+    display: flex; gap: 0.6rem; align-items: center; justify-content: center; flex-wrap: wrap;
   }
-  .rg-pdf-frame {
-    width: 100%;
-    height: 90vh;
-    min-height: 600px;
-    border: none;
-    display: block;
-    background: #fff;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    border-radius: 4px;
-  }
-  .rg-fallback {
-    display: none;
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-  }
-  .rg-fallback p {
-    color: #6b6b6b;
-    margin-bottom: 1.5rem;
-  }
+  .rg-viewer-note a, .rg-viewer-note button.linklike { color: #cdae5f; text-decoration: none; background: none; border: none; cursor: pointer; font: inherit; padding: 0; }
+  .rg-viewer-note .dot { opacity: .4; }
 
-  .rg-cta {
-    background: #0a0a0a;
-    color: #fff;
-    padding: 4rem 1.5rem;
-    text-align: center;
+  /* ── Keep-it CTA band ── */
+  .rg-keep { background: #F4F0E9; padding: 3.5rem 1.5rem; text-align: center; }
+  .rg-keep h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.3rem); color: #0a0a0a; margin: 0 0 0.6rem;
   }
+  .rg-keep p { color: #5b554c; margin: 0 auto 1.75rem; line-height: 1.7; max-width: 520px; }
+
+  .rg-cta { background: #0a0a0a; color: #fff; padding: 4rem 1.5rem; text-align: center; }
   .rg-cta h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    color: #fff;
-    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: #fff; margin: 0 0 0.75rem;
   }
-  .rg-cta p {
-    color: rgba(255,255,255,0.65);
-    max-width: 500px;
-    margin: 0 auto 2rem;
-    line-height: 1.7;
+  .rg-cta p { color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+
+  /* ── Download modal ── */
+  .rg-modal {
+    position: fixed; inset: 0; z-index: 1000;
+    display: none; align-items: center; justify-content: center;
+    padding: 1.25rem;
+    background: rgba(10,9,8,0.7); backdrop-filter: blur(3px);
+  }
+  .rg-modal.open { display: flex; }
+  .rg-modal-card {
+    background: #fff; width: 100%; max-width: 440px;
+    border-radius: 8px; padding: 2.25rem 2rem 2rem;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    position: relative; text-align: center;
+    animation: rgpop 0.22s ease;
+  }
+  @keyframes rgpop { from { transform: translateY(14px) scale(0.98); opacity: 0; } to { transform: none; opacity: 1; } }
+  .rg-modal-close {
+    position: absolute; top: 0.7rem; right: 0.85rem;
+    width: 34px; height: 34px; border: none; background: none;
+    font-size: 1.5rem; line-height: 1; color: #9a948a; cursor: pointer; border-radius: 50%;
+  }
+  .rg-modal-close:hover { background: #f1ece2; color: #1a1a1a; }
+  .rg-modal-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #B8963E; font-weight: 700; display: block; margin-bottom: 0.55rem;
+  }
+  .rg-modal h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.85rem;
+    color: #0a0a0a; margin: 0 0 0.4rem; line-height: 1.1;
+  }
+  .rg-modal .sub { color: #6b6b6b; font-size: 0.92rem; margin: 0 0 1.4rem; line-height: 1.55; }
+  .rg-form { display: grid; gap: 0.8rem; text-align: left; }
+  .rg-form label {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    font-weight: 600; color: #6b6b6b; margin-bottom: 0.25rem; display: block;
+  }
+  .rg-form input[type=text], .rg-form input[type=email], .rg-form input[type=tel] {
+    width: 100%; padding: 0.75rem 0.9rem; font-size: 1rem;
+    font-family: 'Inter', sans-serif; border: 1px solid #d8d0c2;
+    border-radius: 4px; background: #fff; color: #1a1a1a; box-sizing: border-box;
+  }
+  .rg-form input:focus { outline: none; border-color: #B8963E; box-shadow: 0 0 0 3px rgba(184,150,62,0.15); }
+  .rg-form .rg-btn { justify-content: center; width: 100%; margin-top: 0.5rem; padding: 0.9rem; }
+  .rg-form-fine { font-size: 0.7rem; color: #8a8478; margin: 0.3rem 0 0; line-height: 1.5; text-align: center; }
+  .rg-form-fine a { color: #9a7c33; }
+
+  .rg-modal-success { display: none; }
+  .rg-modal-success.show { display: block; }
+  .rg-form.hide { display: none; }
+  .rg-check {
+    width: 50px; height: 50px; border-radius: 50%; background: #B8963E; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.9rem;
   }
 
-  @media (max-width: 600px) {
-    .rg-pdf-frame { height: 75vh; min-height: 450px; }
-  }
+  @media (max-width: 600px) { .rg-flip-frame { height: 72vh; min-height: 460px; } }
 </style>
 </head>
 <body>
@@ -168,35 +167,48 @@
 
 <section class="rg-hero">
   <div class="rg-hero-inner">
-    <span class="rg-eyebrow">Free Resource</span>
-    <h1>Austin Relocation Guide</h1>
-    <p>Neighborhoods, schools, cost of living, and everything you need to know about moving to Austin. Read it below or download the full PDF.</p>
+    <span class="rg-eyebrow">The Relocation Edition · Volume 01</span>
+    <h1>Where to land in Austin</h1>
+    <p>A neighborhood-by-neighborhood guide to the greater Austin metro: 40+ neighborhoods, real maps, schools, and cost of living. Flip through the whole thing below, then grab the PDF to keep.</p>
     <div class="rg-btn-row">
-      <a href="assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-Austin-Relocation-Guide.pdf" class="rg-btn rg-btn-gold">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        Download PDF
+      <a href="#read" class="rg-btn rg-btn-gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 6h6a2 2 0 012 2v11a2 2 0 00-2-2H2zM22 6h-6a2 2 0 00-2 2v11a2 2 0 012-2h6z"/></svg>
+        Read the Guide
       </a>
-      <a href="/#contact" class="rg-btn rg-btn-ghost">Schedule a Consultation</a>
+      <button type="button" class="rg-btn rg-btn-ghost" data-download-trigger>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download the PDF
+      </button>
     </div>
   </div>
 </section>
 
-<section class="rg-viewer">
-  <div class="rg-viewer-wrap">
-    <iframe
-      class="rg-pdf-frame"
-      id="pdf-frame"
-      src="assets/guides/the-relocation-edition.pdf"
-      title="Austin Relocation Guide"
-      aria-label="Austin Relocation Guide PDF"
-    ></iframe>
-    <div class="rg-fallback" id="pdf-fallback">
-      <p>Your browser does not support inline PDF viewing.</p>
-      <a href="assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-Austin-Relocation-Guide.pdf" class="rg-btn rg-btn-gold">
-        Download the Guide (PDF)
-      </a>
-    </div>
-  </div>
+<section class="rg-viewer" id="read">
+  <iframe
+    class="rg-flip-frame"
+    src="/relocation-edition/"
+    title="The Relocation Edition — flip book"
+    aria-label="The Relocation Edition flip book viewer"
+    allow="fullscreen"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+  <p class="rg-viewer-note">
+    <span>Drag a page corner or use the arrows to flip</span>
+    <span class="dot">·</span>
+    <a href="/relocation-edition/" target="_blank" rel="noopener">Open full screen ↗</a>
+    <span class="dot">·</span>
+    <button type="button" class="linklike" data-download-trigger>Download the PDF ↓</button>
+  </p>
+</section>
+
+<section class="rg-keep">
+  <h2>Keep the whole guide</h2>
+  <p>All 153 pages as a PDF, yours to save and share. Tell us where to send it and the download starts right away.</p>
+  <button type="button" class="rg-btn rg-btn-gold" data-download-trigger>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+    Download the PDF
+  </button>
 </section>
 
 <section class="rg-cta">
@@ -239,16 +251,113 @@
   <p class="trec-compliance" style="font-size:0.72rem;opacity:.7;margin:.6rem 0 0;"><a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a> &middot; <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a></p>
 </footer>
 
+<!-- ── Download capture modal ── -->
+<div class="rg-modal" id="dl-modal" role="dialog" aria-modal="true" aria-labelledby="dl-title">
+  <div class="rg-modal-card">
+    <button type="button" class="rg-modal-close" data-modal-close aria-label="Close">&times;</button>
+
+    <form class="rg-form" id="pdf-form" name="relocation-guide-download" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+      <span class="rg-modal-eyebrow">Free Download</span>
+      <h3 id="dl-title">Get the full guide</h3>
+      <p class="sub">Tell us where to send The Relocation Edition and your download starts right away.</p>
+      <input type="hidden" name="form-name" value="relocation-guide-download">
+      <input type="hidden" name="interest" value="Buy — relocating to Austin">
+      <input type="hidden" name="page" value="/relocation-guide.html (Relocation Edition PDF)">
+      <p style="position:absolute;left:-9999px"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div>
+        <label for="rg-name">Name</label>
+        <input id="rg-name" type="text" name="name" autocomplete="name" required placeholder="Your name">
+      </div>
+      <div>
+        <label for="rg-email">Email</label>
+        <input id="rg-email" type="email" name="email" autocomplete="email" required placeholder="you@email.com">
+      </div>
+      <div>
+        <label for="rg-phone">Phone</label>
+        <input id="rg-phone" type="tel" name="phone" autocomplete="tel" required placeholder="(512) 000-0000">
+      </div>
+      <button type="submit" class="rg-btn rg-btn-gold">Download the PDF</button>
+      <p class="rg-form-fine">We use this only to send the guide and follow up. No spam. See our <a href="/privacy.html">privacy policy</a>.</p>
+    </form>
+
+    <div class="rg-modal-success" id="pdf-success">
+      <div class="rg-check">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h3>Your guide is ready</h3>
+      <p class="sub">Thanks. Your download should start automatically. If it doesn't, use the button below.</p>
+      <a href="/assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-The-Relocation-Edition.pdf" class="rg-btn rg-btn-gold" id="pdf-download" style="justify-content:center;width:100%;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download the PDF
+      </a>
+    </div>
+  </div>
+</div>
+
 <script>
-  // If the iframe fails to load the PDF, show the download fallback
-  var frame = document.getElementById('pdf-frame');
-  var fallback = document.getElementById('pdf-fallback');
-  if (frame && fallback) {
-    frame.addEventListener('error', function() {
-      frame.style.display = 'none';
-      fallback.style.display = 'block';
+  (function () {
+    var modal = document.getElementById('dl-modal');
+    var form = document.getElementById('pdf-form');
+    var success = document.getElementById('pdf-success');
+    var PDF_URL = '/assets/guides/the-relocation-edition.pdf';
+    var unlocked = false;
+    try { unlocked = localStorage.getItem('rg_pdf_unlocked') === '1'; } catch (e) {}
+
+    function triggerDownload() {
+      var a = document.createElement('a');
+      a.href = PDF_URL;
+      a.setAttribute('download', 'Grewal-RE-Group-The-Relocation-Edition.pdf');
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    }
+    function showSuccess() { form.classList.add('hide'); success.classList.add('show'); }
+    function openModal() {
+      // Already gave us their info before → straight to download.
+      if (unlocked) {
+        showSuccess();
+        modal.classList.add('open');
+        triggerDownload();
+        return;
+      }
+      form.classList.remove('hide'); success.classList.remove('show');
+      modal.classList.add('open');
+      setTimeout(function () { var n = document.getElementById('rg-name'); if (n) n.focus(); }, 60);
+    }
+    function closeModal() { modal.classList.remove('open'); }
+
+    // Wire every download trigger on the page
+    document.querySelectorAll('[data-download-trigger]').forEach(function (b) {
+      b.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
     });
-  }
+    document.querySelectorAll('[data-modal-close]').forEach(function (b) {
+      b.addEventListener('click', closeModal);
+    });
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+    form.addEventListener('submit', function (e) {
+      if (form['bot-field'] && form['bot-field'].value) return; // honeypot → let Netlify ignore
+      e.preventDefault();
+      // HTML5 required fields already block empty submits; double-check.
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var data = new URLSearchParams();
+      new FormData(form).forEach(function (v, k) { data.append(k, v); });
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data.toString()
+      }).then(function () { afterCapture(); }).catch(function () { afterCapture(); });
+
+      function afterCapture() {
+        try { localStorage.setItem('rg_pdf_unlocked', '1'); } catch (e) {}
+        unlocked = true;
+        showSuccess();
+        setTimeout(triggerDownload, 400);
+        try { if (window.gtag) gtag('event', 'generate_lead', { form: 'relocation-guide-download' }); } catch (e) {}
+      }
+    });
+  })();
 </script>
 
 </body>

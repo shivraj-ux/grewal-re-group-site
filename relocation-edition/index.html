@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>The Relocation Edition · Grewal RE Group</title>
+<meta name="description" content="A neighborhood-by-neighborhood guide to relocating in the greater Austin metro. By Shivraj Grewal, Grewal RE Group." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --ink: #14110d;
+    --gold: #B8963E;
+    --gold-soft: #cdae5f;
+    --cream: #F4F0E9;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background:
+      radial-gradient(1200px 800px at 50% -10%, #2a2520 0%, transparent 60%),
+      linear-gradient(180deg, #1a1714 0%, #100d0a 100%);
+    color: var(--cream);
+    font-family: var(--font-sans);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---- Top bar ---- */
+  header.bar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 22px;
+    border-bottom: 1px solid rgba(184,150,62,0.22);
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+  .brand { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+  .brand .mark {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: .18em;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .brand .ttl {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 19px;
+    color: var(--cream);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bar-actions { display: flex; align-items: center; gap: 8px; }
+
+  button.tool {
+    appearance: none;
+    border: 1px solid rgba(184,150,62,0.35);
+    background: rgba(184,150,62,0.06);
+    color: var(--cream);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .18s, border-color .18s, color .18s, transform .12s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  button.tool:hover { background: rgba(184,150,62,0.18); border-color: var(--gold); }
+  button.tool:active { transform: translateY(1px); }
+  button.tool svg { width: 15px; height: 15px; display: block; }
+
+  /* ---- Stage ---- */
+  .stage {
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 64px;
+    min-height: 0;
+  }
+  #flipbook {
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.55));
+  }
+  #flipbook .page-img {
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  /* StPageFlip applies its own .page styling; keep covers crisp */
+  .stf__parent { margin: 0 auto; }
+
+  /* ---- Side nav arrows ---- */
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,62,0.4);
+    background: rgba(20,17,13,0.55);
+    color: var(--gold-soft);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    z-index: 9;
+    transition: background .18s, color .18s, opacity .18s;
+    backdrop-filter: blur(4px);
+  }
+  .nav-arrow:hover { background: rgba(184,150,62,0.22); color: var(--cream); }
+  .nav-arrow.prev { left: 12px; }
+  .nav-arrow.next { right: 12px; }
+  .nav-arrow svg { width: 22px; height: 22px; }
+  .nav-arrow[disabled] { opacity: .25; pointer-events: none; }
+
+  /* ---- Bottom control bar ---- */
+  footer.controls {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 12px 22px 16px;
+    z-index: 10;
+  }
+  .pageinfo {
+    font-family: var(--font-display);
+    font-size: 16px;
+    letter-spacing: .03em;
+    color: var(--cream);
+    min-width: 130px;
+    text-align: center;
+  }
+  .pageinfo b { color: var(--gold-soft); font-weight: 600; }
+  .slider-wrap { display: flex; align-items: center; gap: 12px; width: min(46vw, 520px); }
+  input[type=range] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 3px; border-radius: 3px;
+    background: linear-gradient(90deg, var(--gold) var(--fill,0%), rgba(244,240,233,0.18) var(--fill,0%));
+    outline: none; cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--gold); border: 2px solid #1a1714; cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--gold); border: 2px solid #1a1714; cursor: pointer;
+  }
+
+  /* ---- Loading veil ---- */
+  #veil {
+    position: fixed; inset: 0;
+    background: linear-gradient(180deg, #1a1714 0%, #100d0a 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 22px; z-index: 50;
+    transition: opacity .6s ease;
+  }
+  #veil .vmark {
+    font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em;
+    font-size: 12px; text-transform: uppercase; color: var(--gold);
+  }
+  #veil .vtitle {
+    font-family: var(--font-display); font-style: italic; font-weight: 500;
+    font-size: clamp(28px, 5vw, 46px); color: var(--cream); text-align: center; line-height: 1.1;
+  }
+  .spinner {
+    width: 30px; height: 30px; border-radius: 50%;
+    border: 2px solid rgba(184,150,62,0.25); border-top-color: var(--gold);
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #veil .vprog { font-size: 12px; letter-spacing: .08em; color: rgba(244,240,233,0.6); }
+
+  @media (max-width: 760px) {
+    .stage { padding: 12px 8px; }
+    .nav-arrow { display: none; }
+    .brand .ttl { display: none; }
+    .slider-wrap { width: 56vw; }
+    footer.controls { gap: 10px; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand">
+    <span class="mark">Grewal RE Group</span>
+    <span class="ttl">The Relocation Edition</span>
+  </div>
+  <div class="bar-actions">
+    <button class="tool" id="btnCover" title="Back to cover">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18M3 12h18M3 19h18"/></svg>
+      <span>Cover</span>
+    </button>
+    <button class="tool" id="btnFull" title="Fullscreen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      <span>Fullscreen</span>
+    </button>
+  </div>
+</header>
+
+<div class="stage">
+  <div class="nav-arrow prev" id="prev" title="Previous (←)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+  </div>
+  <div id="flipbook"></div>
+  <div class="nav-arrow next" id="next" title="Next (→)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+  </div>
+</div>
+
+<footer class="controls">
+  <div class="pageinfo" id="pageinfo">— / —</div>
+  <div class="slider-wrap">
+    <input type="range" id="slider" min="1" max="152" value="1" />
+  </div>
+</footer>
+
+<div id="veil">
+  <div class="vmark">Grewal RE Group</div>
+  <div class="vtitle">The Relocation&nbsp;Edition</div>
+  <div class="spinner"></div>
+  <div class="vprog" id="vprog">Preparing pages…</div>
+</div>
+
+<script src="lib/page-flip.browser.js"></script>
+<script>
+(function () {
+  var TOTAL = 153;
+  var ASSET_V = '3';   // bump when page images change, to bust browser cache
+  var pad = function (n) { return ('000' + n).slice(-3); };
+  var images = [];
+  for (var i = 1; i <= TOTAL; i++) images.push('pages/page-' + pad(i) + '.jpg?v=' + ASSET_V);
+
+  var el = document.getElementById('flipbook');
+  var veil = document.getElementById('veil');
+  var vprog = document.getElementById('vprog');
+  var info = document.getElementById('pageinfo');
+  var slider = document.getElementById('slider');
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+
+  slider.max = TOTAL;
+
+  var pageFlip = new St.PageFlip(el, {
+    width: 550,
+    height: 712,           // matches source 1275x1650 page ratio
+    size: 'stretch',
+    minWidth: 280,
+    maxWidth: 760,
+    minHeight: 362,
+    maxHeight: 984,
+    maxShadowOpacity: 0.55,
+    showCover: true,
+    flippingTime: 750,
+    usePortrait: true,
+    autoSize: true,
+    mobileScrollSupport: false,
+    drawShadow: true,
+    swipeDistance: 30
+  });
+
+  // ---- Preload a head start, then load ----
+  var loaded = 0, target = Math.min(8, TOTAL);
+  function preload(list, cb) {
+    if (!list.length) return cb();
+    var done = 0;
+    list.forEach(function (src) {
+      var im = new Image();
+      im.onload = im.onerror = function () {
+        done++; loaded++;
+        vprog.textContent = 'Preparing pages… ' + Math.min(loaded, target) + ' / ' + target;
+        if (done === list.length) cb();
+      };
+      im.src = src;
+    });
+  }
+
+  function startPage() {
+    var m = (location.search.match(/[?&]page=(\d+)/) || [])[1];
+    var n = m ? parseInt(m, 10) : 1;
+    if (!(n >= 1 && n <= TOTAL)) n = 1;
+    return n - 1;
+  }
+
+  preload(images.slice(0, target), function () {
+    pageFlip.loadFromImages(images);
+    var start = startPage();
+    if (start > 0) { try { pageFlip.turnToPage(start); } catch (e) {} }
+    setTimeout(function () {
+      veil.style.opacity = '0';
+      setTimeout(function () { veil.style.display = 'none'; }, 600);
+    }, 250);
+    // lazily warm the rest of the deck in the background
+    var rest = images.slice(target);
+    (function warm(idx) {
+      if (idx >= rest.length) return;
+      var im = new Image();
+      im.onload = im.onerror = function () { warm(idx + 1); };
+      im.src = rest[idx];
+    })(0);
+  });
+
+  // ---- Page indicator ----
+  function spreadLabel(p) {
+    // p is 0-based current page index from StPageFlip
+    if (p === 0) return 'Cover';
+    if (p >= TOTAL - 1) return 'Page ' + TOTAL;
+    // inner spreads show as left–right
+    var left = p % 2 === 1 ? p + 1 : p;   // normalize to left page (1-based)
+    // simpler: just show the displayed leaves
+    var l = p + 1;
+    var r = l + 1 <= TOTAL ? l + 1 : null;
+    return r && !pageFlip.getSettings().usePortrait ? (l + '–' + r) : ('Page ' + l);
+  }
+
+  function update() {
+    var cur = pageFlip.getCurrentPageIndex();   // 0-based
+    var label;
+    var portrait = pageFlip.getOrientation && pageFlip.getOrientation() === 'portrait';
+    if (cur === 0) label = 'Cover';
+    else if (cur >= TOTAL - 1) label = 'Back';
+    else if (portrait) label = 'Page ' + (cur + 1);
+    else {
+      var l = cur + 1, r = (l + 1 <= TOTAL) ? l + 1 : null;
+      label = r ? (l + '–' + r) : ('Page ' + l);
+    }
+    info.innerHTML = '<b>' + label + '</b> &nbsp;/&nbsp; ' + TOTAL;
+    slider.value = cur + 1;
+    var fill = ((cur) / (TOTAL - 1)) * 100;
+    slider.style.setProperty('--fill', fill + '%');
+    prev.toggleAttribute('disabled', cur <= 0);
+    next.toggleAttribute('disabled', cur >= TOTAL - 1);
+  }
+
+  pageFlip.on('flip', update);
+  pageFlip.on('changeOrientation', update);
+  pageFlip.on('init', update);
+
+  // ---- Controls ----
+  prev.addEventListener('click', function () { pageFlip.flipPrev(); });
+  next.addEventListener('click', function () { pageFlip.flipNext(); });
+  document.getElementById('btnCover').addEventListener('click', function () { pageFlip.turnToPage(0); });
+
+  slider.addEventListener('input', function () {
+    slider.style.setProperty('--fill', (((this.value - 1) / (TOTAL - 1)) * 100) + '%');
+  });
+  slider.addEventListener('change', function () {
+    pageFlip.turnToPage(parseInt(this.value, 10) - 1);
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { pageFlip.flipNext(); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { pageFlip.flipPrev(); e.preventDefault(); }
+    else if (e.key === 'Home') { pageFlip.turnToPage(0); }
+    else if (e.key === 'End') { pageFlip.turnToPage(TOTAL - 1); }
+    else if (e.key === 'f' || e.key === 'F') { toggleFull(); }
+  });
+
+  // Fullscreen
+  function toggleFull() {
+    if (!document.fullscreenElement) {
+      (document.documentElement.requestFullscreen || function(){}).call(document.documentElement);
+    } else {
+      (document.exitFullscreen || function(){}).call(document);
+    }
+  }
+  document.getElementById('btnFull').addEventListener('click', toggleFull);
+})();
+</script>
+</body>
+</html>
