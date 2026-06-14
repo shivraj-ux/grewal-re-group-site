@@ -24,7 +24,9 @@ the guide.
 - **Shivraj Grewal** — Founder & Owner Agent. Principal Advisor · CLHMS Guild ·
   CNE · TREC #736060. Lead strategist and chief negotiator for buyers, sellers,
   and investors across Travis, Hays, Williamson, and Bastrop counties.
-- **Arsh Khaira** — Buyer and listing operations.
+- **Arsh Khaira** — Agent. Luxury Home Specialist · Certified Luxury Home Marketing
+  Specialist · Certified Real Estate Negotiator. Marketing-driven representation for
+  buyers and sellers, with access to off-market and Private Exclusives listings.
 
 Brokerage: Compass RE Texas, LLC · Broker of Record Keith Newman · TREC #9006927.
 
