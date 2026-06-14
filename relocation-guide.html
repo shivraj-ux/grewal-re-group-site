@@ -12,8 +12,15 @@
   <script defer src="/assets/js/ga-events.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Austin Relocation Guide — Grewal RE Group</title>
-<meta name="description" content="The complete Austin relocation guide from Grewal RE Group. Neighborhoods, schools, cost of living, and everything you need to know about moving to Austin.">
+<title>The Relocation Edition — Austin Relocation Guide | Grewal RE Group</title>
+<meta name="description" content="The Relocation Edition: a neighborhood-by-neighborhood guide to moving to Austin from Grewal RE Group. Flip through all 153 pages, then download the full PDF.">
+<link rel="canonical" href="https://grewalregroup.com/relocation-guide.html">
+
+<meta property="og:title" content="The Relocation Edition — Austin Relocation Guide">
+<meta property="og:description" content="Flip through the complete Austin relocation guide: 40+ neighborhoods, maps, schools, and cost of living. Download the full PDF.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://grewalregroup.com/relocation-guide.html">
+<meta property="og:image" content="https://grewalregroup.com/assets/og-image.png">
 
 <link rel="icon" type="image/png" href="assets/logos/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +82,7 @@
     border-radius: 3px;
     border: 1.5px solid #B8963E;
     transition: all 0.2s;
+    cursor: pointer;
   }
   .rg-btn-gold {
     background: #B8963E;
@@ -94,36 +102,111 @@
     color: #fff;
   }
 
+  /* ── Flip book viewer ── */
   .rg-viewer {
-    background: #F4F0E9;
-    padding: 2.5rem 1.5rem 4rem;
+    background: #1a1714;
+    padding: 0;
   }
-  .rg-viewer-wrap {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .rg-pdf-frame {
+  .rg-flip-frame {
     width: 100%;
-    height: 90vh;
-    min-height: 600px;
+    height: 86vh;
+    min-height: 560px;
     border: none;
     display: block;
-    background: #fff;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    border-radius: 4px;
+    background: #1a1714;
   }
-  .rg-fallback {
-    display: none;
+  .rg-viewer-note {
     text-align: center;
-    padding: 3rem 1rem;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    padding: 0.85rem 1rem;
+    background: #1a1714;
   }
-  .rg-fallback p {
+  .rg-viewer-note a { color: #cdae5f; text-decoration: none; }
+
+  /* ── Gated download ── */
+  .rg-gate {
+    background: #F4F0E9;
+    padding: 4rem 1.5rem;
+  }
+  .rg-gate-wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .rg-gate h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    color: #0a0a0a;
+    margin: 0 0 0.6rem;
+  }
+  .rg-gate p.sub {
+    color: #5b554c;
+    margin: 0 0 2rem;
+    line-height: 1.7;
+  }
+  .rg-form {
+    display: grid;
+    gap: 0.9rem;
+    text-align: left;
+  }
+  .rg-form label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
     color: #6b6b6b;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.3rem;
+    display: block;
   }
+  .rg-form input[type=text],
+  .rg-form input[type=email],
+  .rg-form input[type=tel] {
+    width: 100%;
+    padding: 0.8rem 0.95rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #d8d0c2;
+    border-radius: 4px;
+    background: #fff;
+    color: #1a1a1a;
+    box-sizing: border-box;
+  }
+  .rg-form input:focus {
+    outline: none;
+    border-color: #B8963E;
+    box-shadow: 0 0 0 3px rgba(184,150,62,0.15);
+  }
+  .rg-form .rg-btn { justify-content: center; width: 100%; margin-top: 0.4rem; padding: 0.95rem; }
+  .rg-form-fine {
+    font-size: 0.72rem;
+    color: #8a8478;
+    margin: 0.4rem 0 0;
+    line-height: 1.5;
+  }
+  .rg-form-fine a { color: #9a7c33; }
+
+  .rg-success {
+    display: none;
+    background: #fff;
+    border: 1px solid #e3dccd;
+    border-radius: 6px;
+    padding: 2.25rem 1.75rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  }
+  .rg-success.show { display: block; }
+  .rg-form.hide { display: none; }
+  .rg-success .check {
+    width: 46px; height: 46px; border-radius: 50%;
+    background: #B8963E; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .rg-success h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; color: #0a0a0a; margin: 0 0 0.4rem;
+  }
+  .rg-success p { color: #5b554c; margin: 0 0 1.5rem; line-height: 1.6; }
 
   .rg-cta {
     background: #0a0a0a;
@@ -145,7 +228,7 @@
   }
 
   @media (max-width: 600px) {
-    .rg-pdf-frame { height: 75vh; min-height: 450px; }
+    .rg-flip-frame { height: 72vh; min-height: 460px; }
   }
 </style>
 </head>
@@ -168,32 +251,70 @@
 
 <section class="rg-hero">
   <div class="rg-hero-inner">
-    <span class="rg-eyebrow">Free Resource</span>
-    <h1>Austin Relocation Guide</h1>
-    <p>Neighborhoods, schools, cost of living, and everything you need to know about moving to Austin. Read it below or download the full PDF.</p>
+    <span class="rg-eyebrow">The Relocation Edition · Volume 01</span>
+    <h1>Where to land in Austin</h1>
+    <p>A neighborhood-by-neighborhood guide to the greater Austin metro: 40+ neighborhoods, real maps, schools, and cost of living. Flip through the whole thing below, then grab the PDF to keep.</p>
     <div class="rg-btn-row">
-      <a href="assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-Austin-Relocation-Guide.pdf" class="rg-btn rg-btn-gold">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        Download PDF
+      <a href="#read" class="rg-btn rg-btn-gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 6h6a2 2 0 012 2v11a2 2 0 00-2-2H2zM22 6h-6a2 2 0 00-2 2v11a2 2 0 012-2h6z"/></svg>
+        Read the Guide
       </a>
-      <a href="/#contact" class="rg-btn rg-btn-ghost">Schedule a Consultation</a>
+      <a href="#get-pdf" class="rg-btn rg-btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download the PDF
+      </a>
     </div>
   </div>
 </section>
 
-<section class="rg-viewer">
-  <div class="rg-viewer-wrap">
-    <iframe
-      class="rg-pdf-frame"
-      id="pdf-frame"
-      src="assets/guides/the-relocation-edition.pdf"
-      title="Austin Relocation Guide"
-      aria-label="Austin Relocation Guide PDF"
-    ></iframe>
-    <div class="rg-fallback" id="pdf-fallback">
-      <p>Your browser does not support inline PDF viewing.</p>
-      <a href="assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-Austin-Relocation-Guide.pdf" class="rg-btn rg-btn-gold">
-        Download the Guide (PDF)
+<section class="rg-viewer" id="read">
+  <iframe
+    class="rg-flip-frame"
+    src="/relocation-edition/"
+    title="The Relocation Edition — flip book"
+    aria-label="The Relocation Edition flip book viewer"
+    allow="fullscreen"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+  <p class="rg-viewer-note">Drag a page corner or use the arrows to flip · <a href="/relocation-edition/" target="_blank" rel="noopener">Open full screen ↗</a></p>
+</section>
+
+<section class="rg-gate" id="get-pdf">
+  <div class="rg-gate-wrap">
+    <h2>Get the full guide as a PDF</h2>
+    <p class="sub">All 153 pages, yours to keep and share. Tell us where to send it and the download unlocks right here.</p>
+
+    <form class="rg-form" id="pdf-form" name="relocation-guide-download" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="relocation-guide-download">
+      <input type="hidden" name="interest" value="Buy — relocating to Austin">
+      <input type="hidden" name="page" value="/relocation-guide.html (Relocation Edition PDF)">
+      <p style="position:absolute;left:-9999px"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div>
+        <label for="rg-name">Name</label>
+        <input id="rg-name" type="text" name="name" autocomplete="name" required placeholder="Your name">
+      </div>
+      <div>
+        <label for="rg-email">Email</label>
+        <input id="rg-email" type="email" name="email" autocomplete="email" required placeholder="you@email.com">
+      </div>
+      <div>
+        <label for="rg-phone">Phone</label>
+        <input id="rg-phone" type="tel" name="phone" autocomplete="tel" placeholder="(512) 000-0000">
+      </div>
+      <button type="submit" class="rg-btn rg-btn-gold">Get the PDF</button>
+      <p class="rg-form-fine">We use this only to send the guide and follow up. No spam. See our <a href="/privacy.html">privacy policy</a>.</p>
+    </form>
+
+    <div class="rg-success" id="pdf-success">
+      <div class="check">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h3>Your guide is ready</h3>
+      <p>Thanks. Your download should start automatically. If it doesn't, use the button below.</p>
+      <a href="/assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-The-Relocation-Edition.pdf" class="rg-btn rg-btn-gold" id="pdf-download">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download the PDF
       </a>
     </div>
   </div>
@@ -240,15 +361,56 @@
 </footer>
 
 <script>
-  // If the iframe fails to load the PDF, show the download fallback
-  var frame = document.getElementById('pdf-frame');
-  var fallback = document.getElementById('pdf-fallback');
-  if (frame && fallback) {
-    frame.addEventListener('error', function() {
-      frame.style.display = 'none';
-      fallback.style.display = 'block';
-    });
-  }
+  (function () {
+    var form = document.getElementById('pdf-form');
+    var success = document.getElementById('pdf-success');
+    var dl = document.getElementById('pdf-download');
+    var PDF_URL = '/assets/guides/the-relocation-edition.pdf';
+
+    function triggerDownload() {
+      var a = document.createElement('a');
+      a.href = PDF_URL;
+      a.setAttribute('download', 'Grewal-RE-Group-The-Relocation-Edition.pdf');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function unlock(autoDownload) {
+      form.classList.add('hide');
+      success.classList.add('show');
+      if (autoDownload) setTimeout(triggerDownload, 400);
+      try { if (window.gtag) gtag('event', 'generate_lead', { form: 'relocation-guide-download' }); } catch (e) {}
+    }
+
+    // Returning visitor who already submitted: skip the gate.
+    try {
+      if (localStorage.getItem('rg_pdf_unlocked') === '1') unlock(false);
+    } catch (e) {}
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        // Honeypot tripped → let the default (Netlify) handle/ignore it.
+        if (form['bot-field'] && form['bot-field'].value) return;
+        e.preventDefault();
+
+        var data = new URLSearchParams();
+        new FormData(form).forEach(function (v, k) { data.append(k, v); });
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: data.toString()
+        }).then(function () {
+          try { localStorage.setItem('rg_pdf_unlocked', '1'); } catch (e) {}
+          unlock(true);
+        }).catch(function () {
+          // Network hiccup: still give them the guide, lead may be captured on retry.
+          unlock(true);
+        });
+      });
+    }
+  })();
 </script>
 
 </body>

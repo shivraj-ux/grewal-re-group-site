@@ -7,9 +7,7 @@ node_modules/
 .idea/
 assets-original-backup/
 
-# Large binary assets — exceed GitHub's 100MB limit
-# Serve via Netlify manual upload or Large Media add-on
-assets/guides/the-relocation-edition.pdf
+# Large binary backups (the Relocation Edition PDF is now web-sized and committed)
 assets/guides/*.bak
 
 # Python agent dependencies
