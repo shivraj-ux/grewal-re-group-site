@@ -29,3 +29,25 @@ committed; each needs a couple of credentials to go fully live.
 - **File:** `scripts/daily_agent.py`, `.github/workflows/daily-agent.yml`
 - **Fixed:** added `requirements.txt` so it stops insta-failing on the pip-cache step.
 - **Needs:** `ANTHROPIC_API_KEY` secret to actually generate content.
+
+## 4. SEO Analytics Agent (read-only monitor)
+- **What:** Weekly (Mondays) pull of **Google Search Console** (rankings, clicks, CTR,
+  page-2 opportunities, priority-keyword tracking), **GA4** (sessions, channels,
+  conversions, top landing pages), and **PageSpeed** (Core Web Vitals). Writes a report
+  and opens a PR. Does **not** modify site content — that stays with the Daily Agent.
+- **Files:** `scripts/seo_agent.py`, `.github/workflows/seo-agent.yml`, `data/seo-config.json`
+- **Outputs:** `logs/seo/report-YYYY-MM-DD.md` (+ `latest.md`), `data/seo/latest-insights.json`
+- **Needs:**
+  - Secret `GA_SERVICE_ACCOUNT_JSON` — service-account key JSON. ✅ set 2026-06-13.
+  - **The service-account email must be granted access** (the key alone is not enough):
+    - GA4 Admin → Property Access Management → add as **Viewer**
+    - Search Console → Settings → Users and permissions → add as **Restricted/Full**
+  - Repo **Variables** (Settings → Secrets and variables → Actions → *Variables*, not secrets):
+    - `GA4_PROPERTY_ID` — e.g. `123456789` (or `properties/123456789`)
+    - `GSC_SITE_URL` — e.g. `https://grewalregroup.com/` or `sc-domain:grewalregroup.com`
+  - Optional secret `PAGESPEED_API_KEY` — raises PSI rate limits.
+- **Cadence design:** daily = monitor only (no content writes); weekly = this report +
+  page refresh via PR; monthly = new content via PR. Protects the site's
+  helpful-content standing — no high-volume automated publishing.
+- **Degrades gracefully:** a missing credential / un-granted source is logged in the
+  report's *Run issues* section and skipped; a partial run still produces a report.
