@@ -1,16 +1,46 @@
 {
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-06-15",
   "competitors": [
     {
       "name": "Kumara Wilcoxon",
       "url": "https://kumarawilcoxon.com",
       "brokerage": "Sotheby's International Realty",
       "lastCrawled": "2026-05-24",
-      "neighborhoods": ["Downtown Austin", "Lake Austin", "Old West Austin", "Westlake / West Lake Hills", "Tarrytown", "Travis Heights"],
+      "neighborhoods": [
+        "Downtown Austin",
+        "Lake Austin",
+        "Old West Austin",
+        "Westlake / West Lake Hills",
+        "Tarrytown",
+        "Travis Heights"
+      ],
       "reviewsVisible": false,
-      "credentials": ["#1 Luxury REALTOR last 4 consecutive years", "#1 Luxury Real Estate Agent last 6 consecutive years", "2024 Inman Golden I Award"],
-      "pages": ["About", "Properties", "Exclusive Listings", "Notable Recent Sales", "Home Valuation", "Home Search", "New Developments", "Communities", "Video Gallery"],
-      "contentTopics": ["Market analysis and forecasts", "Luxury interior design trends", "Seasonal home maintenance", "Austin lifestyle guides", "Architectural styles", "New construction benefits", "Historic home modernization", "Property valuation"],
+      "credentials": [
+        "#1 Luxury REALTOR last 4 consecutive years",
+        "#1 Luxury Real Estate Agent last 6 consecutive years",
+        "2024 Inman Golden I Award"
+      ],
+      "pages": [
+        "About",
+        "Properties",
+        "Exclusive Listings",
+        "Notable Recent Sales",
+        "Home Valuation",
+        "Home Search",
+        "New Developments",
+        "Communities",
+        "Video Gallery"
+      ],
+      "contentTopics": [
+        "Market analysis and forecasts",
+        "Luxury interior design trends",
+        "Seasonal home maintenance",
+        "Austin lifestyle guides",
+        "Architectural styles",
+        "New construction benefits",
+        "Historic home modernization",
+        "Property valuation"
+      ],
       "gapsVsGrewal": [
         "New Developments dedicated page",
         "Notable Recent Sales page with actual sold data",
@@ -24,11 +54,42 @@
       "url": "https://merylhawk.com",
       "brokerage": "Coldwell Banker Realty",
       "lastCrawled": "2026-05-24",
-      "neighborhoods": ["Tarrytown", "Old West Austin", "Pemberton Heights", "Zilker", "Barton Creek", "Lake Austin", "Lake Travis", "Bee Cave"],
+      "neighborhoods": [
+        "Tarrytown",
+        "Old West Austin",
+        "Pemberton Heights",
+        "Zilker",
+        "Barton Creek",
+        "Lake Austin",
+        "Lake Travis",
+        "Bee Cave"
+      ],
       "reviewsVisible": false,
-      "credentials": ["Top 3% Worldwide for Coldwell Banker Realty"],
-      "pages": ["About", "Neighborhoods", "Home Valuation", "Home Search", "Properties", "Exclusive Listings", "Recent Sales", "Property Videos", "Testimonials", "Bespoke Marketing", "Blog"],
-      "contentTopics": ["Luxury home marketing strategies", "Home valuation", "Buyer and seller guides (downloadable)", "Market analysis", "Home inspection", "Financing education", "Bespoke marketing"],
+      "credentials": [
+        "Top 3% Worldwide for Coldwell Banker Realty"
+      ],
+      "pages": [
+        "About",
+        "Neighborhoods",
+        "Home Valuation",
+        "Home Search",
+        "Properties",
+        "Exclusive Listings",
+        "Recent Sales",
+        "Property Videos",
+        "Testimonials",
+        "Bespoke Marketing",
+        "Blog"
+      ],
+      "contentTopics": [
+        "Luxury home marketing strategies",
+        "Home valuation",
+        "Buyer and seller guides (downloadable)",
+        "Market analysis",
+        "Home inspection",
+        "Financing education",
+        "Bespoke marketing"
+      ],
       "gapsVsGrewal": [
         "Bespoke / luxury marketing strategy dedicated page",
         "Downloadable buyer and seller guides as lead magnets",
@@ -41,7 +102,9 @@
       "url": "https://www.luxehomesaustin.com",
       "lastCrawled": "2026-05-24",
       "status": "403 Forbidden - could not crawl",
-      "gapsVsGrewal": ["Unable to audit on this run"]
+      "gapsVsGrewal": [
+        "Unable to audit on this run"
+      ]
     }
   ],
   "actionItems": [
@@ -52,5 +115,29 @@
     "Create /communities/lost-creek.html (Priority 1, missing)",
     "Consider a dedicated luxury marketing / selling strategy page",
     "Consider a Notable Recent Sales page for social proof"
+  ],
+  "latestCrawl": [
+    {
+      "name": "Kumara Wilcoxon",
+      "url": "https://kumarawilcoxon.com",
+      "status": "crawled",
+      "httpStatus": 200,
+      "crawledAt": "2026-06-15T16:11:24.011499Z",
+      "contentLength": 613993
+    },
+    {
+      "name": "Meryl Hawk",
+      "url": "https://merylhawk.com",
+      "status": "crawled",
+      "httpStatus": 200,
+      "crawledAt": "2026-06-15T16:11:24.854272Z",
+      "contentLength": 577345
+    },
+    {
+      "name": "Luxe Homes Austin",
+      "url": "https://www.luxehomesaustin.com",
+      "status": "error",
+      "httpStatus": 403
+    }
   ]
 }
