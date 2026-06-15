@@ -50,7 +50,7 @@ Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
 
 - [Homepage](https://grewalregroup.com/): full site with Hero, About, Team, Proof, Neighborhoods, Services, Relocation, Concierge, Listings, Market Reports, Insights, Testimonials, FAQ, Newsletter, Contact, Footer
 - [Communities Hub](https://grewalregroup.com/communities/): 23 brand-owned community pages, each embedding a live market report (refreshed monthly)
-- [Austin Relocation Guide PDF (144 pages)](https://grewalregroup.com/assets/guides/the-relocation-edition.pdf): comprehensive neighborhood, schools, cost-of-living, and market guide
+- [The Relocation Edition — Austin Relocation Guide (153 pages, flip book + PDF)](https://grewalregroup.com/relocation-guide.html): comprehensive neighborhood, schools, cost-of-living, and market guide. Flip book at https://grewalregroup.com/relocation-edition/ · PDF at https://grewalregroup.com/assets/guides/the-relocation-edition.pdf
 - [Live Texas Market Reports](https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group): underlying live data source (also embedded inside each /communities/ page)
 - [SOURCES.md](https://grewalregroup.com/SOURCES.md): every claim on the site mapped to a verifiable backlink
 
@@ -59,7 +59,7 @@ Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
 Each page below embeds the live market report and stays current automatically:
 
 - [All Austin Communities · master report](https://grewalregroup.com/communities/austin-communities.html)
-- **West Austin (Established + Luxury):** [West Lake Hills](https://grewalregroup.com/communities/west-lake-hills.html) · [Tarrytown](https://grewalregroup.com/communities/tarrytown.html) · [Barton Hills](https://grewalregroup.com/communities/barton-hills.html) · [Barton Creek](https://grewalregroup.com/communities/barton-creek.html) · [Zilker](https://grewalregroup.com/communities/zilker.html) · [Circle C Ranch](https://grewalregroup.com/communities/circle-c-ranch.html)
+- **West Austin (Established + Luxury):** [West Lake Hills](https://grewalregroup.com/communities/west-lake-hills.html) · [Davenport Ranch](https://grewalregroup.com/communities/davenport-ranch.html) · [Tarrytown](https://grewalregroup.com/communities/tarrytown.html) · [Barton Hills](https://grewalregroup.com/communities/barton-hills.html) · [Barton Creek](https://grewalregroup.com/communities/barton-creek.html) · [Zilker](https://grewalregroup.com/communities/zilker.html) · [Circle C Ranch](https://grewalregroup.com/communities/circle-c-ranch.html)
 - **Central + East Austin:** [Downtown](https://grewalregroup.com/communities/downtown.html) · [Central Austin](https://grewalregroup.com/communities/central-austin.html) · [East Austin](https://grewalregroup.com/communities/east-austin.html) · [Travis Heights](https://grewalregroup.com/communities/travis-heights.html) · [Mueller](https://grewalregroup.com/communities/mueller.html)
 - **North/Northwest:** [North Central Austin](https://grewalregroup.com/communities/north-central-austin.html) · [Northwest Hills](https://grewalregroup.com/communities/northwest-hills.html)
 - **Lake & Hill Country:** [Lake Travis](https://grewalregroup.com/communities/lake-travis.html) · [Dripping Springs](https://grewalregroup.com/communities/dripping-springs.html) · [Fredericksburg](https://grewalregroup.com/communities/fredericksburg.html)
