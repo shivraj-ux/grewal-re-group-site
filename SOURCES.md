@@ -159,9 +159,26 @@ All 15 are verified live:
 
 ---
 
-## 12. Things still needing primary-source citations (action items)
+## 12. AEO FAQ Market Data — June 2026
+
+| Claim | Source | Date |
+|---|---|---|
+| Austin metro median sold price $440,000 | Unlock MLS via KXAN ("Austin housing market: Median home prices level off…") | June 11, 2026 |
+| Austin metro 61 days on market | Unlock MLS via KXAN | June 11, 2026 |
+| Austin metro 4.7 months inventory | Unlock MLS via KXAN | June 11, 2026 |
+| Austin metro 12,508 active listings | Unlock MLS via KXAN | June 11, 2026 |
+| 78746 zip median ~$1.72M | Unlock MLS via KXAN (zip-level data table) | June 11, 2026 |
+| Luxury segment $1,945,000 median sold price | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
+| Luxury segment 25 days on market | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
+| Luxury sales volume +10.3% YoY | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
+| Luxury inventory -5.8% YoY | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
+
+---
+
+## 13. Things still needing primary-source citations (action items)
 
 - [ ] Replace "100+ transactions" with exact verified count from Compass dashboard once available
 - [ ] Add a "Last verified: <date>" stamp next to the review count chip on the site
 - [ ] Add inline `<cite>` or footnote markers on each blog post page when those are built (Phase 2)
 - [ ] Add a `/sources` HTML page for visitors to view this same data publicly (currently file-only)
+- [ ] Verify ILHM June 2026 luxury report figures once full PDF is accessible (used summary data from ILHM website)

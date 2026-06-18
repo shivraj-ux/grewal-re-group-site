@@ -1,16 +1,18 @@
 {
-  "auditDate": "2026-05-24",
+  "auditDate": "2026-06-18",
   "summary": {
-    "totalPages": 22,
-    "communityPages": 22,
+    "totalPages": 24,
+    "communityPages": 24,
     "blogPosts": 348,
+    "faqCount": 10,
     "brokenLinks": 0,
-    "missingPriorityPages": ["steiner-ranch", "rollingwood", "davenport-ranch", "lost-creek"],
+    "missingPriorityPages": ["davenport-ranch"],
     "fixesAppliedThisRun": [
-      "FIX 3: Replaced 8 fake hardcoded MLS listings in search.html with IDX placeholder",
-      "FIX 4: Blog count verified as accurate (348 actual posts)",
-      "Market data: Updated austin-market-report-may-2026.html with May 2026 figures ($466,150 median)",
-      "New page: communities/steiner-ranch.html (Priority 1)"
+      "FAQ: Updated 'What are current Austin market conditions?' with May 2026 Unlock MLS data ($440K median, 61 DOM, 4.7 mo inventory)",
+      "FAQ: Added 9th entry 'How is Austin luxury real estate performing in 2026?' (ILHM June 2026: $1.945M median, +10.3% volume YoY)",
+      "FAQ: Added 10th entry visible in accordion — market conditions and luxury now both in JSON-LD and visible HTML",
+      "New page: communities/rollingwood.html (Priority 1)",
+      "New page: communities/lost-creek.html (Priority 1)"
     ]
   },
   "pages": {
@@ -52,7 +54,7 @@
       "priority": 1,
       "zip": "78746",
       "schoolDistrict": "Eanes ISD",
-      "status": "Not yet created"
+      "status": "Created 2026-06-18"
     },
     {
       "slug": "davenport-ranch",
@@ -66,7 +68,7 @@
       "priority": 1,
       "zip": "78746",
       "schoolDistrict": "Eanes ISD",
-      "status": "Not yet created"
+      "status": "Created 2026-06-18"
     },
     {
       "slug": "lake-austin",

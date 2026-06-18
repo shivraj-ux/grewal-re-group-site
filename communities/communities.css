@@ -355,3 +355,69 @@ p { line-height: 1.7; margin: 0 0 1.25rem; }
   background: #fff; border: 1px dashed var(--line);
 }
 .cm-related-empty a { color: var(--gold); text-decoration: none; font-weight: 600; }
+
+/* ─── Market Stats Grid ─── */
+.cm-stats { background: var(--cream-2); padding: 3.5rem 0 2.5rem; }
+.cm-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.cm-stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+.cm-stat-value {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: .4rem;
+}
+.cm-stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+.cm-stats-source {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ─── AEO Answer Blocks ─── */
+.cm-aeo { background: #fff; padding: 4rem 0; }
+.cm-aeo h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 2rem; }
+.cm-aeo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.cm-aeo-item {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.cm-aeo-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: .75rem;
+  color: var(--ink);
+}
+.cm-aeo-item p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+.cm-aeo-item strong { color: var(--ink); }
