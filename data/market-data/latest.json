@@ -1,21 +1,33 @@
 {
-  "date": "2026-05-24",
-  "source": "Austin Board of Realtors, Redfin, Team Price market briefing",
-  "note": "All figures sourced from publicly available market data. Neighborhood medians represent 30-day rolling figures unless otherwise noted.",
+  "date": "2026-06-18",
+  "source": "Team Price Austin Market Update (June 18 2026); prior run: Unlock MLS via KXAN (June 11 2026)",
+  "note": "All figures from publicly available market data. June 18 figures are metro-wide MLS data. Neighborhood medians represent 30-day rolling figures unless otherwise noted.",
   "austin_metro": {
-    "medianSoldPrice": 466150,
-    "medianSoldPriceYoYChange": "+5.2%",
-    "activeListings": "16000+",
-    "monthsOfInventory": 6.5,
-    "avgDaysOnMarket": "85-106",
-    "listingsWithPriceReductions": "46%",
-    "listToSaleRatio": "90-95%"
+    "medianSoldPrice": 473745,
+    "activeListings": 17317,
+    "pendingListings": 5042,
+    "monthsOfInventory": 6.0,
+    "dataDate": "2026-06-18",
+    "source": "Team Price Austin Market Update, published June 18 2026"
+  },
+  "austin_metro_prior": {
+    "medianSoldPrice": 440000,
+    "activeListings": 12508,
+    "monthsOfInventory": 4.7,
+    "avgDaysOnMarket": 61,
+    "zip78746Median": 1720000,
+    "dataDate": "2026-06-11",
+    "source": "Unlock MLS via KXAN, June 11 2026",
+    "note": "Different geographic scope than June 18 figure — retained for cross-reference"
   },
   "luxury_segment": {
     "threshold": 1000000,
-    "medianPrice": 1450000,
-    "monthsOfSupply": 2.4,
-    "cashTransactionPercent": "38%"
+    "medianSoldPrice": 1945000,
+    "avgDaysOnMarket": 25,
+    "salesVolumeYoY": "+10.3%",
+    "inventoryYoY": "-5.8%",
+    "dataDate": "2026-06",
+    "source": "Institute for Luxury Home Marketing, June 2026 Market Report"
   },
   "neighborhoods": {
     "westlake_hills": {
@@ -46,9 +58,9 @@
     "tarrytown": {
       "zip": "78703",
       "schoolDistrict": "Austin ISD",
-      "note": "Low inventory market; most sales occur off-market. Data unavailable as of 2026-05-24. Will update when sourced."
+      "note": "Low inventory market; most sales occur off-market. Data unavailable as of 2026-06-18."
     }
   },
-  "lastUpdated": "2026-05-24",
-  "nextUpdateDue": "2026-05-25"
+  "lastUpdated": "2026-06-18",
+  "nextUpdateDue": "2026-06-25"
 }

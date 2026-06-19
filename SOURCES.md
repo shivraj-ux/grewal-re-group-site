@@ -161,6 +161,15 @@ All 15 are verified live:
 
 ## 12. AEO FAQ Market Data — June 2026
 
+### June 18, 2026 (current — used in live FAQ)
+| Claim | Source | Date |
+|---|---|---|
+| Austin metro 17,317 active listings | Team Price Austin Market Update | June 18, 2026 |
+| Austin metro 5,042 pending listings | Team Price Austin Market Update | June 18, 2026 |
+| Austin metro $473,745 median sold price | Team Price Austin Market Update | June 18, 2026 |
+| Austin metro 6.0 months of inventory | Team Price Austin Market Update | June 18, 2026 |
+
+### June 11, 2026 (retained for cross-reference — different geographic scope)
 | Claim | Source | Date |
 |---|---|---|
 | Austin metro median sold price $440,000 | Unlock MLS via KXAN ("Austin housing market: Median home prices level off…") | June 11, 2026 |
@@ -168,6 +177,10 @@ All 15 are verified live:
 | Austin metro 4.7 months inventory | Unlock MLS via KXAN | June 11, 2026 |
 | Austin metro 12,508 active listings | Unlock MLS via KXAN | June 11, 2026 |
 | 78746 zip median ~$1.72M | Unlock MLS via KXAN (zip-level data table) | June 11, 2026 |
+
+### Luxury Segment (current)
+| Claim | Source | Date |
+|---|---|---|
 | Luxury segment $1,945,000 median sold price | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
 | Luxury segment 25 days on market | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |
 | Luxury sales volume +10.3% YoY | Institute for Luxury Home Marketing, June 2026 Market Report | June 2026 |

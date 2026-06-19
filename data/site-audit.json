@@ -1,18 +1,17 @@
 {
-  "auditDate": "2026-06-18",
+  "auditDate": "2026-06-19",
   "summary": {
-    "totalPages": 24,
-    "communityPages": 24,
+    "totalPages": 26,
+    "communityPages": 26,
     "blogPosts": 348,
     "faqCount": 10,
     "brokenLinks": 0,
-    "missingPriorityPages": ["davenport-ranch"],
+    "missingPriorityPages": [],
     "fixesAppliedThisRun": [
-      "FAQ: Updated 'What are current Austin market conditions?' with May 2026 Unlock MLS data ($440K median, 61 DOM, 4.7 mo inventory)",
-      "FAQ: Added 9th entry 'How is Austin luxury real estate performing in 2026?' (ILHM June 2026: $1.945M median, +10.3% volume YoY)",
-      "FAQ: Added 10th entry visible in accordion — market conditions and luxury now both in JSON-LD and visible HTML",
-      "New page: communities/rollingwood.html (Priority 1)",
-      "New page: communities/lost-creek.html (Priority 1)"
+      "FAQ: Updated 'What are current Austin market conditions?' with June 18 2026 Team Price data ($473,745 median, 17,317 active, 6.0 MOI)",
+      "data/market-data/latest.json: refreshed with June 18 2026 Team Price data; retained June 11 Unlock MLS for cross-reference",
+      "New page: communities/bee-cave.html (78738, Lake Travis ISD, FAQPage schema, AEO blocks, 4 blog post links)",
+      "New page: communities/lake-austin.html (waterfront, FAQPage schema, AEO blocks, 2 blog post links)"
     ]
   },
   "pages": {
@@ -73,7 +72,12 @@
     {
       "slug": "lake-austin",
       "priority": 2,
-      "note": "Kumara Wilcoxon covers this neighborhood. Blog posts exist but no community hub page."
+      "note": "Created 2026-06-19. Blog posts linked: lake-austin-waterfront-homes-guide-2026.html, rob-roy-on-the-lake-austin-2026.html"
+    },
+    {
+      "slug": "bee-cave",
+      "priority": 2,
+      "note": "Created 2026-06-19. Blog posts linked: bee-cave-austin-2026.html, bee-cave-tx-real-estate-guide-2026.html, lakeway-bee-cave-real-estate-guide-2026.html, west-lake-hills-vs-bee-cave-comparison.html"
     }
   ]
 }
