@@ -5,3 +5,18 @@
 /the-relocation-edition  /relocation-guide.html  301
 /relocation-edition    /relocation-edition/     301
 /relocation-guide      /relocation-guide.html   200
+
+# Duplicate-content consolidation (SEO audit 2026-06-22) — 301 losers -> canonical winner
+/blog/west-lake-hills-vs-tarrytown-austin-2026.html  /blog/tarrytown-vs-westlake-austin.html  301
+/blog/westlake-hills-vs-tarrytown-2026.html  /blog/tarrytown-vs-westlake-austin.html  301
+/blog/austin-luxury-market-2026.html  /blog/austin-luxury-market-report-2026.html  301
+/blog/travis-heights-austin-neighborhood-guide-2026.html  /blog/travis-heights-austin-neighborhood-guide.html  301
+/blog/travis-heights-austin-2026.html  /blog/travis-heights-austin-neighborhood-guide.html  301
+/blog/clarksville-austin-neighborhood-guide-2026.html  /blog/clarksville-austin-neighborhood-guide.html  301
+/blog/clarksville-austin-neighborhood-2026.html  /blog/clarksville-austin-neighborhood-guide.html  301
+/blog/austin-cost-of-living-guide-2026.html  /blog/austin-cost-of-living-2026.html  301
+/blog/austin-home-inspection-guide-2026.html  /blog/austin-home-inspection-guide.html  301
+/blog/austin-vs-denver-real-estate-2026.html  /blog/austin-vs-denver-real-estate.html  301
+/blog/barton-creek-austin-neighborhood-guide-2026.html  /blog/barton-creek-austin-neighborhood-guide.html  301
+/blog/dripping-springs-tx-real-estate-guide-2026.html  /blog/dripping-springs-tx-real-estate-guide.html  301
+/blog/hudson-bend-lake-travis-guide-2026.html  /blog/hudson-bend-lake-travis-2026.html  301
