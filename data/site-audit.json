@@ -1,17 +1,17 @@
 {
-  "auditDate": "2026-06-19",
+  "auditDate": "2026-06-22",
   "summary": {
-    "totalPages": 26,
-    "communityPages": 26,
-    "blogPosts": 348,
-    "faqCount": 10,
+    "totalPages": 30,
+    "communityPages": 30,
+    "blogPosts": 375,
+    "faqCount": 11,
     "brokenLinks": 0,
     "missingPriorityPages": [],
     "fixesAppliedThisRun": [
-      "FAQ: Updated 'What are current Austin market conditions?' with June 18 2026 Team Price data ($473,745 median, 17,317 active, 6.0 MOI)",
-      "data/market-data/latest.json: refreshed with June 18 2026 Team Price data; retained June 11 Unlock MLS for cross-reference",
-      "New page: communities/bee-cave.html (78738, Lake Travis ISD, FAQPage schema, AEO blocks, 4 blog post links)",
-      "New page: communities/lake-austin.html (waterfront, FAQPage schema, AEO blocks, 2 blog post links)"
+      "FAQ: Added 'What is the difference between Barton Creek and Westlake Hills?' to the homepage — visible accordion item plus matching FAQPage JSON-LD entry; targets a high-intent buyer comparison query competitors rank for without structured schema",
+      "llms.txt: community count 23 -> 29; added Rollingwood, Lost Creek, Lake Austin, Steiner Ranch, Lakeway, and Bee Cave to the community-pages list",
+      "AGENTS.md: corrected five-star review count 117 -> 119 (GEO accuracy fix; now consistent with llms.txt and homepage schema)",
+      "data/site-audit.json: refreshed audit date and page counts (community 26 -> 30, blog 348 -> 375, FAQ 10 -> 11)"
     ]
   },
   "pages": {
