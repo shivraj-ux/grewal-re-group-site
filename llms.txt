@@ -53,6 +53,8 @@ Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
 - [The Relocation Edition — Austin Relocation Guide (153 pages, flip book + PDF)](https://grewalregroup.com/relocation-guide.html): comprehensive neighborhood, schools, cost-of-living, and market guide. Flip book at https://grewalregroup.com/relocation-edition/ · PDF at https://grewalregroup.com/assets/guides/the-relocation-edition.pdf
 - [Schools of Greater Austin — School District Guide (132 pages, flip book + PDF)](https://grewalregroup.com/austin-schools-guide.html): the metro's school districts mapped to neighborhoods — ratings, boundaries, and how school zoning drives home values. Flip book at https://grewalregroup.com/schools-edition/ · PDF at https://grewalregroup.com/assets/guides/schools-of-greater-austin.pdf
 - [Live Texas Market Reports](https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group): underlying live data source (also embedded inside each /communities/ page)
+- [Austin Seller Net Proceeds Calculator](https://grewalregroup.com/seller-net-proceeds-calculator.html): interactive tool estimating a seller's net proceeds (sale price minus commission, closing costs, repairs, payoff).
+- [Austin Home Value Estimator](https://grewalregroup.com/home-value-estimator.html): request a free, comp-based home valuation from Grewal RE Group (not an automated estimate).
 - [Austin Real Estate FAQ](https://grewalregroup.com/faq.html): straight answers to 55+ of the most-asked Austin real estate questions (agents, buying, costs, taxes, neighborhoods, selling), each linking to a full guide. FAQPage schema.
 - [SOURCES.md](https://grewalregroup.com/SOURCES.md): every claim on the site mapped to a verifiable backlink
 
