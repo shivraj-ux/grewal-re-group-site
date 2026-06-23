@@ -1289,6 +1289,68 @@
   <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
 </section>
 
+<style>
+/* CRO additions */
+.proof-strip{background:#0a0a0a;padding:1.6rem 1rem;}
+.proof-strip-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:2.75rem;flex-wrap:wrap;text-align:center;}
+.ps-item{display:flex;flex-direction:column;gap:.25rem;}
+.ps-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:#B8963E;line-height:1;}
+.ps-lbl{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+@media(max-width:560px){.proof-strip-inner{gap:1.4rem 2rem;}.ps-num{font-size:1.5rem;}}
+.persona-section{background:#fff;padding:3.75rem 1.5rem;}
+.persona-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.persona-card{display:flex;flex-direction:column;border:1px solid var(--line,#e8e3d8);border-radius:10px;padding:1.85rem;text-decoration:none;transition:all .2s;background:#fff;}
+.persona-card:hover{border-color:#B8963E;box-shadow:0 8px 28px rgba(184,150,62,.12);transform:translateY(-2px);}
+.persona-card h3{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:var(--ink,#171717);margin:0 0 .5rem;}
+.persona-card p{color:var(--muted,#6b6b6b);line-height:1.6;font-size:.95rem;margin:0 0 1.15rem;flex:1;}
+.persona-cta{color:#9a7c33;font-weight:600;font-size:.9rem;}
+.sticky-cta{display:none;}
+@media(max-width:768px){
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:8000;align-items:center;justify-content:center;
+    background:#B8963E;color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.03em;
+    padding:.95rem 1rem;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.18);}
+  .sticky-cta:active{background:#9a7c33;}
+  body{padding-bottom:3.3rem;}
+}
+</style>
+
+<!-- ═══ SOCIAL PROOF STRIP (CRO: above-fold trust) ═══ -->
+<section class="proof-strip" aria-label="Track record">
+  <div class="proof-strip-inner">
+    <div class="ps-item"><span class="ps-num">100+</span><span class="ps-lbl">Transactions Closed</span></div>
+    <div class="ps-item"><span class="ps-num">$100M+</span><span class="ps-lbl">In Sales Volume</span></div>
+    <div class="ps-item"><span class="ps-num">119</span><span class="ps-lbl">&#9733; Google Reviews</span></div>
+    <div class="ps-item"><span class="ps-num">5.0</span><span class="ps-lbl">Average Rating</span></div>
+  </div>
+</section>
+
+<!-- ═══ PERSONA ROUTING (CRO: self-segmentation) ═══ -->
+<section class="persona-section" aria-label="How can we help you">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-bottom:2rem;">
+      <p class="eyebrow ink-gold">Where Are You Starting?</p>
+      <h2>How can we help?</h2>
+    </div>
+    <div class="persona-grid">
+      <a href="#services" class="persona-card">
+        <h3>I'm Buying</h3>
+        <p>From first-time to luxury &mdash; we match you with the right home, neighborhood, and terms. No pressure, just clarity.</p>
+        <span class="persona-cta">Start your search &rarr;</span>
+      </a>
+      <a href="#services" class="persona-card" data-selling-card>
+        <h3>I'm Selling</h3>
+        <p>Data-driven pricing and white-glove marketing built around your net proceeds and timeline.</p>
+        <span class="persona-cta">See what you'd net &rarr;</span>
+      </a>
+      <a href="relocation-guide.html" class="persona-card">
+        <h3>I'm Relocating</h3>
+        <p>Moving to Austin? Neighborhoods, schools, and cost of living &mdash; plus our 150+ page relocation guide.</p>
+        <span class="persona-cta">Plan your move &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ RELOCATING TO AUSTIN (out-of-state buyers) ═══ -->
 <section class="section relocate-section" id="relocate" style="background:var(--cream,#f7f5f0);padding:4.5rem 0;">
   <div class="container" style="max-width:880px;text-align:center;">
@@ -2550,5 +2612,6 @@
   }
 })();
 </script>
+<a href="#contact" class="sticky-cta">Get a Free Consultation</a>
 </body>
 </html>
