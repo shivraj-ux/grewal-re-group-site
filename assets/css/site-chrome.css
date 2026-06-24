@@ -13,7 +13,7 @@
   --gh-ink-soft: #4f4a42;
   --gh-line: #e8e3d8;
   --gh-dark: #0a0a0a;
-  --gh-h: 72px;
+  --gh-h: 82px;
 }
 
 /* ---- Skip link ---- */
@@ -28,23 +28,27 @@
 /* ---- Header: fixed + transparent over hero ---- */
 .gh-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 9500;
-  background: transparent;
+  /* translucent frosted glass over the hero — you can see through it */
+  background: rgba(10, 10, 12, 0.34);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  backdrop-filter: blur(12px) saturate(1.3);
   font-family: Inter, system-ui, -apple-system, sans-serif;
   transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
-/* subtle scrim so white nav text stays readable over any hero */
-.gh-header::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,0));
-  opacity: 1; transition: opacity .3s ease;
-}
-/* solid state once scrolled */
+/* stays frosted, but lightens to translucent white once scrolled */
 .gh-header.gh-scrolled {
-  background: #fff; box-shadow: 0 2px 18px rgba(0,0,0,.08);
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, .08);
   border-bottom-color: var(--gh-line);
 }
-.gh-header.gh-scrolled::before { opacity: 0; }
+/* graceful fallback if a browser lacks backdrop-filter: use a bit more tint */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .gh-header { background: rgba(10, 10, 12, 0.6); }
+  .gh-header.gh-scrolled { background: rgba(255, 255, 255, 0.95); }
+}
 
 .gh-bar {
   position: relative; z-index: 1;
@@ -57,8 +61,8 @@
 .gh-logo { display: inline-flex; align-items: center; flex-shrink: 0; transition: transform .18s ease; }
 .gh-logo:hover { transform: translateY(-2px); }
 .gh-logo img { display: block; }
-.gh-logo-w { height: 44px; width: auto; }
-.gh-logo-b { height: 40px; width: auto; display: none; }
+.gh-logo-w { height: 56px; width: auto; }
+.gh-logo-b { height: 56px; width: auto; display: none; }
 .gh-scrolled .gh-logo-w { display: none; }
 .gh-scrolled .gh-logo-b { display: block; }
 
