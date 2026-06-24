@@ -111,8 +111,8 @@ FOOTER = '''<footer class="gh-footer">
   </div>
 </footer>'''
 
-CSS_LINK = '<link rel="stylesheet" href="/assets/css/site-chrome.css">'
-JS_LINK  = '<script defer src="/assets/js/site-chrome.js"></script>'
+CSS_LINK = '<link rel="stylesheet" href="/assets/css/site-chrome.css?v=2">'
+JS_LINK  = '<script defer src="/assets/js/site-chrome.js?v=2"></script>'
 
 def remove_balanced_div(s, cls):
     """Remove a <div class="cls" ...>...</div> block with balanced nesting."""
