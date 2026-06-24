@@ -1,11 +1,8 @@
 name: Daily Site Agent
 
 on:
-  schedule:
-    # 6:00 AM CDT = 11:00 UTC (May–Nov, Austin daylight time)
-    # 6:00 AM CST = 12:00 UTC (Nov–Mar, Austin standard time)
-    # Running at 11:00 UTC covers the CDT window; update to 12:00 UTC in winter
-    - cron: '0 11 * * *'
+  # SCHEDULE DISABLED 2026-06-24: this agent emitted fabricated run reports.
+  # Manual-only now. Re-add a cron trigger to re-enable.
   workflow_dispatch:
     inputs:
       dry_run:

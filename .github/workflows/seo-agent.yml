@@ -1,9 +1,8 @@
 name: SEO Analytics Agent
 
 on:
-  schedule:
-    # Mondays 12:00 UTC (~7 AM CST / 6 AM CDT, Austin) — weekly SEO report
-    - cron: '0 12 * * 1'
+  # SCHEDULE DISABLED 2026-06-24: this agent emitted fabricated run reports.
+  # Manual-only now. Re-add a cron trigger to re-enable.
   workflow_dispatch:
     inputs:
       open_pr:
