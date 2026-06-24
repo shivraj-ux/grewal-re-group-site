@@ -60,9 +60,11 @@
 /* ---- Logo (previous white wordmark; swaps to dark mark on scroll). Links home. ---- */
 .gh-logo { display: inline-flex; align-items: center; flex-shrink: 0; transition: transform .18s ease; }
 .gh-logo:hover { transform: translateY(-2px); }
-.gh-logo img { display: block; }
-.gh-logo-w { height: 56px; width: auto; }
-.gh-logo-b { height: 56px; width: auto; display: none; }
+/* height on the <img>; display toggled ONLY on the .w/.b classes so the
+   element-level rule can't override it (this was showing both logos at top) */
+.gh-logo img { height: 56px; width: auto; }
+.gh-logo-w { display: block; }
+.gh-logo-b { display: none; }
 .gh-scrolled .gh-logo-w { display: none; }
 .gh-scrolled .gh-logo-b { display: block; }
 
