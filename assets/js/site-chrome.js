@@ -58,14 +58,13 @@
       if (!header.contains(e.target)) closeAllSubs(null);
     });
 
-    /* ---- Subtle shadow once the user scrolls (polish, no layout shift) ---- */
+    /* ---- Transparent over hero -> solid white on scroll (toggles .gh-scrolled) ---- */
     var scrolled = false;
-    window.addEventListener('scroll', function () {
-      var on = window.scrollY > 4;
-      if (on !== scrolled) {
-        scrolled = on;
-        header.style.boxShadow = on ? '0 2px 16px rgba(0,0,0,.07)' : 'none';
-      }
-    }, { passive: true });
+    function onScroll() {
+      var on = window.scrollY > 30;
+      if (on !== scrolled) { scrolled = on; header.classList.toggle('gh-scrolled', on); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); /* set correct state if the page loads already scrolled */
   });
 })();

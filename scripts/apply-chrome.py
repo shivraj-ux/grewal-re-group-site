@@ -19,8 +19,8 @@ HEADER = '''<a class="gh-skip" href="#gh-main">Skip to main content</a>
 <header class="gh-header">
   <div class="gh-bar">
     <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
-      <img src="/assets/logos/logo-black.png" alt="Grewal RE Group" width="40" height="40">
-      <span class="gh-logo-name">Grewal RE Group</span>
+      <img src="/assets/logos/logo-white.png" alt="Grewal RE Group" class="gh-logo-w" width="147" height="44">
+      <img src="/assets/logos/logo-black.png" alt="" aria-hidden="true" class="gh-logo-b" width="40" height="40">
     </a>
     <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -131,7 +131,13 @@ def remove_balanced_div(s, cls):
 def apply_to(path):
     s = open(path, encoding='utf-8').read()
     if 'gh-header' in s:
-        return 'skip(has-chrome)'
+        # RE-APPLY: swap the existing canonical header block for the current HEADER
+        s2 = re.sub(r'<a class="gh-skip".*?<div id="gh-main" tabindex="-1"></div>',
+                    lambda m: HEADER, s, count=1, flags=re.S)
+        if s2 != s:
+            open(path, 'w', encoding='utf-8').write(s2)
+            return 'reapplied'
+        return 'nochange'
     orig = s
     # 1) replace the FIRST <header> (always the site nav) with canonical header + skip target
     s, n = re.subn(r'<header\b.*?</header>', lambda m: HEADER, s, count=1, flags=re.S)
