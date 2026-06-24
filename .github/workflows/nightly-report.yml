@@ -1,0 +1,45 @@
+name: Nightly Build Report
+
+# Deterministic nightly status email for grewalregroup.com.
+# No LLM: it only emails real git commits + real HTTP status codes.
+# Distinct from daily-agent.yml / seo-agent.yml (the fabricating agents).
+
+on:
+  schedule:
+    # 07:00 UTC ~= 02:00 America/Chicago during CDT (summer); 01:00 during CST (winter).
+    # GitHub cron is UTC-only and does not follow DST.
+    - cron: '0 7 * * *'
+  workflow_dispatch: {}   # lets you run it on demand to test (Actions tab -> Run workflow)
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for git log)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate report
+        id: gen
+        run: |
+          python3 scripts/daily-report.py > report.txt
+          echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "----- report preview -----"
+          cat report.txt
+
+      - name: Email the report to both addresses
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Grewal Site - Daily Build Report - ${{ steps.gen.outputs.date }}"
+          to: shivraj.grewal@compass.com, shivraj@grewalregroup.com
+          from: Grewal Growth Engine <${{ secrets.MAIL_USERNAME }}>
+          body: file://report.txt
