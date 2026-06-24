@@ -139,26 +139,46 @@
 /* ============================ MOBILE ============================ */
 @media (max-width: 900px) {
   .gh-toggle { display: flex; }
+  /* full-height slide-in panel; explicit width/height + border-box so wide
+     submenu labels can't force horizontal overflow and collapse the panel */
   .gh-nav {
-    position: fixed; top: var(--gh-h); left: 0; right: 0; bottom: 0;
-    background: #fff; transform: translateX(100%); transition: transform .28s ease;
-    overflow-y: auto; padding: 1rem 1.25rem 2.5rem; display: block;
+    position: fixed; top: var(--gh-h); left: 0; right: 0;
+    width: 100%; height: calc(100vh - var(--gh-h)); height: calc(100dvh - var(--gh-h));
+    box-sizing: border-box; background: #fff;
+    transform: translateX(100%); transition: transform .28s ease;
+    overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    padding: .5rem 1.1rem 2.5rem; display: block;
   }
   .gh-nav.gh-open { transform: translateX(0); }
-  .gh-menu { flex-direction: column; align-items: stretch; gap: .15rem; }
-  /* inside the white panel, links are always dark */
-  .gh-menu a, .gh-sub-toggle { color: var(--gh-ink) !important; padding: .9rem .5rem; font-size: 1rem; width: 100%; justify-content: space-between; border-radius: 8px; transform: none !important; }
+  .gh-menu {
+    display: flex !important; flex-direction: column !important;
+    align-items: stretch !important; width: 100%; gap: 0;
+  }
+  .gh-menu > li {
+    display: block !important; width: 100%; box-sizing: border-box;
+    border-bottom: 1px solid var(--gh-line);
+  }
+  /* inside the white panel, links are always dark + full-width rows */
+  .gh-menu a, .gh-sub-toggle {
+    display: flex !important; color: var(--gh-ink) !important;
+    width: 100% !important; box-sizing: border-box;
+    padding: 1rem .25rem; font-size: 1.05rem; font-weight: 500;
+    justify-content: space-between; align-items: center;
+    border-radius: 0; transform: none !important;
+  }
   .gh-menu a:hover, .gh-sub-toggle:hover { font-weight: 700; color: var(--gh-gold-dk) !important; }
-  .gh-menu > li { border-bottom: 1px solid var(--gh-line); }
   .gh-cta-li { border-bottom: none !important; margin-top: 1rem; }
-  .gh-cta { display: block; text-align: center; margin-left: 0; }
+  .gh-cta { display: block !important; text-align: center; margin-left: 0;
+    justify-content: center; border-radius: 6px; }
+  /* submenus: accordion, full width, can't push horizontal overflow */
   .gh-sub {
     position: static; opacity: 1; visibility: visible; transform: none;
-    box-shadow: none; border: none; border-radius: 0; padding: 0 0 .4rem .6rem;
-    max-height: 0; overflow: hidden; transition: max-height .25s ease;
+    box-shadow: none; border: none; border-radius: 0; width: 100%; box-sizing: border-box;
+    padding: 0 0 .25rem .75rem; max-height: 0; overflow: hidden; transition: max-height .25s ease;
   }
+  .gh-sub a { white-space: normal; padding: .75rem .25rem; }
   .gh-has-sub:hover > .gh-sub { max-height: 0; }
-  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub { max-height: 340px; }
+  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub { max-height: 360px; }
 }
 
 /* ============================ FOOTER ============================ */
