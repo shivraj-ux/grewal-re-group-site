@@ -1,0 +1,177 @@
+/* ============================================================================
+   Grewal RE Group — unified site chrome (header + footer + nav)
+   ONE source of truth, applied identically to every page (no build step).
+   Self-contained: does not depend on any page's existing CSS.
+   Accessible: skip link, semantic <nav>, ARIA, visible focus, keyboard dropdowns.
+   Fast: pure CSS, no layout shift (logo has width/height; header reserves height).
+   Brand: gold #B8963E. Contrast-safe (dark text on light; near-black text on gold).
+   Namespaced .gh-* so it never collides with legacy .site-header/.cm-header/etc.
+   ============================================================================ */
+
+:root {
+  --gh-gold: #B8963E;
+  --gh-gold-dk: #9a7c33;
+  --gh-ink: #171717;
+  --gh-ink-soft: #4f4a42;
+  --gh-line: #e8e3d8;
+  --gh-bg: #ffffff;
+  --gh-dark: #0a0a0a;
+  --gh-h: 68px; /* header height — reserved to prevent layout shift */
+}
+
+/* ---- Skip link (keyboard / screen-reader) ---- */
+.gh-skip {
+  position: absolute; left: 8px; top: -48px; z-index: 100000;
+  background: var(--gh-dark); color: #fff; padding: .7rem 1.1rem;
+  border-radius: 0 0 6px 6px; font: 600 .9rem/1 Inter, system-ui, sans-serif;
+  text-decoration: none; transition: top .15s ease;
+}
+.gh-skip:focus { top: 0; outline: 3px solid var(--gh-gold); outline-offset: 2px; }
+
+/* ---- Header shell (sticky, reserves height -> no CLS) ---- */
+.gh-header {
+  position: sticky; top: 0; z-index: 9500;
+  background: var(--gh-bg); border-bottom: 1px solid var(--gh-line);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+.gh-bar {
+  max-width: 1240px; margin: 0 auto; min-height: var(--gh-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; gap: 1rem;
+}
+.gh-logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+.gh-logo img { height: 40px; width: 40px; display: block; }
+.gh-logo-name {
+  font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+  font-size: 1.25rem; color: var(--gh-dark); margin-left: .55rem; letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+/* ---- Primary nav ---- */
+.gh-nav { display: flex; }
+.gh-menu {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; align-items: center; gap: .35rem;
+}
+.gh-menu a, .gh-sub-toggle {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font: 500 .92rem/1 Inter, sans-serif; color: var(--gh-ink);
+  text-decoration: none; padding: .65rem .85rem; border-radius: 6px;
+  background: none; border: none; cursor: pointer; white-space: nowrap;
+}
+.gh-menu > li > a:hover, .gh-sub-toggle:hover { color: var(--gh-gold-dk); background: #faf8f3; }
+.gh-sub-toggle svg { width: 11px; height: 11px; transition: transform .2s; }
+
+/* ---- Dropdown submenus ---- */
+.gh-has-sub { position: relative; }
+.gh-sub {
+  list-style: none; margin: 0; padding: .4rem;
+  position: absolute; top: calc(100% - 4px); left: 0; min-width: 210px;
+  background: #fff; border: 1px solid var(--gh-line); border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.10);
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+.gh-sub li { margin: 0; }
+.gh-sub a {
+  display: block; padding: .6rem .8rem; border-radius: 6px;
+  font-size: .9rem; color: var(--gh-ink-soft);
+}
+.gh-sub a:hover { background: #faf8f3; color: var(--gh-gold-dk); }
+/* open on hover (desktop) OR when JS sets aria-expanded (keyboard) */
+.gh-has-sub:hover > .gh-sub,
+.gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.gh-sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+/* ---- Contact CTA (gold + near-black text = 6.5:1, passes WCAG AA) ---- */
+.gh-cta {
+  background: var(--gh-gold) !important; color: #1a1a1a !important;
+  font-weight: 700 !important; padding: .62rem 1.25rem !important;
+  border-radius: 6px; margin-left: .4rem;
+}
+.gh-cta:hover { background: var(--gh-gold-dk) !important; color: #fff !important; }
+
+/* ---- Visible keyboard focus everywhere in the chrome ---- */
+.gh-header a:focus-visible, .gh-header button:focus-visible,
+.gh-footer a:focus-visible, .gh-footer button:focus-visible, .gh-skip:focus-visible {
+  outline: 3px solid var(--gh-gold); outline-offset: 2px; border-radius: 4px;
+}
+
+/* ---- Hamburger (mobile only) ---- */
+.gh-toggle { display: none; flex-direction: column; gap: 5px; background: none;
+  border: none; cursor: pointer; padding: 10px; }
+.gh-toggle span { width: 24px; height: 2px; background: var(--gh-ink); transition: .25s; }
+.gh-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.gh-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.gh-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================ MOBILE ============================ */
+@media (max-width: 900px) {
+  .gh-toggle { display: flex; }
+  .gh-nav {
+    position: fixed; top: var(--gh-h); left: 0; right: 0; bottom: 0;
+    background: #fff; transform: translateX(100%); transition: transform .28s ease;
+    overflow-y: auto; padding: 1rem 1.25rem 2.5rem; display: block;
+  }
+  .gh-nav.gh-open { transform: translateX(0); }
+  .gh-menu { flex-direction: column; align-items: stretch; gap: .15rem; }
+  .gh-menu a, .gh-sub-toggle { padding: .9rem .5rem; font-size: 1rem; width: 100%; justify-content: space-between; border-radius: 8px; }
+  .gh-menu > li { border-bottom: 1px solid var(--gh-line); }
+  .gh-cta-li { border-bottom: none !important; margin-top: 1rem; }
+  .gh-cta { display: block; text-align: center; margin-left: 0; }
+  /* mobile: submenus are accordions, not hover popovers */
+  .gh-sub {
+    position: static; opacity: 1; visibility: visible; transform: none;
+    box-shadow: none; border: none; border-radius: 0; padding: 0 0 .4rem .6rem;
+    max-height: 0; overflow: hidden; transition: max-height .25s ease;
+  }
+  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub { max-height: 320px; }
+  .gh-has-sub:hover > .gh-sub { max-height: 0; } /* disable hover-open on touch */
+  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub { max-height: 320px; }
+}
+
+/* ============================ FOOTER ============================ */
+.gh-footer {
+  background: var(--gh-dark); color: rgba(255,255,255,.72);
+  font-family: Inter, system-ui, sans-serif; padding: 3.25rem 1.5rem 1.75rem;
+  margin-top: 0;
+}
+.gh-foot-inner { max-width: 1240px; margin: 0 auto; }
+.gh-foot-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem;
+  padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.gh-foot-brand img { height: 34px; width: auto; margin-bottom: .9rem; }
+.gh-foot-brand p { margin: .25rem 0; line-height: 1.6; font-size: .9rem; }
+.gh-foot-tag { color: var(--gh-gold); font-style: italic;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+.gh-foot-brand a { color: rgba(255,255,255,.8); text-decoration: none; }
+.gh-foot-brand a:hover { color: #fff; }
+.gh-footer nav h2 {
+  font: 600 .78rem/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase;
+  color: #fff; margin: 0 0 1rem;
+}
+.gh-footer nav ul { list-style: none; margin: 0; padding: 0; }
+.gh-footer nav li { margin-bottom: .6rem; }
+.gh-footer nav a { color: rgba(255,255,255,.72); text-decoration: none; font-size: .9rem; }
+.gh-footer nav a:hover { color: var(--gh-gold); }
+.gh-foot-legal { padding-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.5); }
+.gh-foot-legal p { margin: .35rem 0; line-height: 1.6; }
+.gh-foot-legal a, .gh-link-btn {
+  color: rgba(255,255,255,.62); text-decoration: underline; background: none;
+  border: none; padding: 0; cursor: pointer; font: inherit;
+}
+.gh-foot-legal a:hover, .gh-link-btn:hover { color: var(--gh-gold); }
+@media (max-width: 760px) {
+  .gh-foot-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+}
+@media (max-width: 460px) {
+  .gh-foot-grid { grid-template-columns: 1fr; }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .gh-nav, .gh-sub, .gh-toggle span, .gh-skip { transition: none; }
+}

@@ -121,21 +121,52 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="/assets/css/site-chrome.css">
 </head>
 <body>
 
-<header class="cm-header">
-  <div class="cm-header-inner">
-    <a href="../index.html" class="cm-header-logo" aria-label="Grewal RE Group home"><img src="../assets/logos/logo-black.png" alt="Grewal RE Group"></a>
-    <nav class="cm-header-nav">
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#team">Team</a>
-      <a href="index.html">Communities</a>
-      <a href="../blog/index.html">Insights</a>
-      <a href="../index.html#contact" class="cm-cta">Schedule a Call</a>
+<a class="gh-skip" href="#gh-main">Skip to main content</a>
+<header class="gh-header">
+  <div class="gh-bar">
+    <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
+      <img src="/assets/logos/logo-black.png" alt="Grewal RE Group" width="40" height="40">
+      <span class="gh-logo-name">Grewal RE Group</span>
+    </a>
+    <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="gh-nav" id="gh-primary-nav" aria-label="Primary">
+      <ul class="gh-menu">
+        <li><a href="/communities/">Communities</a></li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Buy / Sell
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/#services">Buying</a></li>
+            <li><a href="/home-value-estimator.html">Selling &amp; Home Value</a></li>
+            <li><a href="/seller-net-proceeds-calculator.html">Net Proceeds Calculator</a></li>
+            <li><a href="/relocation-guide.html">Relocating to Austin</a></li>
+          </ul>
+        </li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#resources">Guides</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/search.html">Search</a></li>
+        <li class="gh-cta-li"><a href="/contact.html" class="gh-cta">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
+<div id="gh-main" tabindex="-1"></div>
 
 <section class="cm-detail-hero has-photo" style="--cm-hero:url('../assets/images/north-central-austin.jpg')">
   <div class="cm-detail-hero-inner">
@@ -237,38 +268,54 @@
   <a href="../index.html#contact" class="btn btn-gold">Request Your Analysis</a>
 </section>
 
-<footer class="cm-footer">
-  <div class="cm-footer-inner">
-    <div class="cm-footer-top">
-      <div>
-        <a href="../index.html" class="cm-footer-logo"><img src="../assets/logos/logo-white.png" alt="Grewal RE Group"></a>
-        <p class="cm-footer-tagline">People First. Straight Answers. Strong Results.</p>
-        <p class="cm-footer-about">Austin's luxury real estate team, Shivraj Grewal and Grewal RE Group. Westlake Hills, Tarrytown, Barton Creek, and the central + east Austin growth corridors.</p>
+<footer class="gh-footer">
+  <div class="gh-foot-inner">
+    <div class="gh-foot-grid">
+      <div class="gh-foot-brand">
+        <img src="/assets/logos/logo-white.png" alt="Grewal RE Group" width="113" height="34">
+        <p class="gh-foot-tag">People First. Straight Answers. Strong Results.</p>
+        <p><a href="tel:+15126170001">(512) 617-0001</a></p>
+        <p><a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a></p>
+        <p>2500 Bee Cave Rd, Bldg 3, Ste 200<br>Austin, TX 78746</p>
       </div>
-      <div>
-        <h4>Navigate</h4>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#team">Team</a></li>
-          <li><a href="index.html">Communities</a></li>
-          <li><a href="../blog/index.html">Insights</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="/communities/">Communities</a></li>
+          <li><a href="/search.html">Search Properties</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
+      </nav>
+      <nav aria-label="Buy and sell">
+        <h2>Buy &amp; Sell</h2>
         <ul>
-          <li><a href="tel:+15126170001">(512) 617-0001</a></li>
-          <li><a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a></li>
-          <li><a href="mailto:shivraj@grewalregroup.com">shivraj@grewalregroup.com</a></li>
-          <li>2500 Bee Cave Rd, Bldg 3, Ste 200<br>Austin, TX 78746</li>
+          <li><a href="/#services">Buying</a></li>
+          <li><a href="/home-value-estimator.html">Home Value Estimator</a></li>
+          <li><a href="/seller-net-proceeds-calculator.html">Net Proceeds Calculator</a></li>
+          <li><a href="/relocation-guide.html">Relocating to Austin</a></li>
         </ul>
-      </div>
+      </nav>
+      <nav aria-label="Guides and resources">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="/relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="/austin-schools-guide.html">Schools Guide</a></li>
+          <li><a href="/#resources">All Resources</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="cm-footer-bottom">
-      © 2026 Grewal RE Group · All Rights Reserved · Shivraj Grewal · TREC #736060 · Compass · TREC Broker #9006927<br>
-      <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener">Information About Brokerage Services</a> · <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener">TREC Consumer Protection Notice</a> · <a href="../SOURCES.md" target="_blank" rel="noopener">Sources</a>
+    <div class="gh-foot-legal">
+      <p>&copy; 2026 Grewal RE Group &middot; Shivraj Grewal &middot; TREC #736060 &middot; Brokered by Compass RE Texas, LLC &middot; TREC Broker #9006927</p>
+      <p>
+        <a href="/privacy.html">Privacy</a> &middot;
+        <a href="/terms.html">Terms</a> &middot;
+        <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a> &middot;
+        <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a> &middot;
+        <button type="button" data-cookie-prefs class="gh-link-btn">Cookie preferences</button>
+      </p>
     </div>
   </div>
 </footer>
@@ -321,5 +368,6 @@
   ]
 }
 </script>
+<script defer src="/assets/js/site-chrome.js"></script>
 </body>
 </html>

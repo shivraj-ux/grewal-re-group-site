@@ -1223,45 +1223,53 @@
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Grewal RE Group","url":"https://grewalregroup.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://grewalregroup.com/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
+  <link rel="stylesheet" href="/assets/css/site-chrome.css">
 </head>
 <body>
 
 <!-- ═══ HEADER ═══ -->
-<header class="site-header" id="site-header">
-  <a href="#top" class="brand brand--logo" aria-label="Grewal RE Group home">
-    <img src="assets/logos/logo-white.png" alt="Grewal RE Group" class="brand-logo brand-logo--white" width="160" height="48" />
-    <img src="assets/logos/logo-black.png" alt="Grewal RE Group" class="brand-logo brand-logo--black" width="48" height="48" />
-  </a>
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="communities/index.html">Communities</a>
-    <a href="#services">Services</a>
-    <a href="#resources">Resources</a>
-    <a href="search.html">Search</a>
-    <a href="#listings">Properties</a>
-    <a href="blog/index.html">Blog</a>
-    <a href="/faq.html">FAQ</a>
-    <a href="#contact" class="header-cta">Schedule a Call</a>
-  </nav>
-  <button class="menu-toggle" aria-label="Open menu" id="menu-open">
-    <span></span><span></span><span></span>
-  </button>
+<a class="gh-skip" href="#gh-main">Skip to main content</a>
+<header class="gh-header">
+  <div class="gh-bar">
+    <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
+      <img src="/assets/logos/logo-black.png" alt="Grewal RE Group" width="40" height="40">
+      <span class="gh-logo-name">Grewal RE Group</span>
+    </a>
+    <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="gh-nav" id="gh-primary-nav" aria-label="Primary">
+      <ul class="gh-menu">
+        <li><a href="/communities/">Communities</a></li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Buy / Sell
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/#services">Buying</a></li>
+            <li><a href="/home-value-estimator.html">Selling &amp; Home Value</a></li>
+            <li><a href="/seller-net-proceeds-calculator.html">Net Proceeds Calculator</a></li>
+            <li><a href="/relocation-guide.html">Relocating to Austin</a></li>
+          </ul>
+        </li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#resources">Guides</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/search.html">Search</a></li>
+        <li class="gh-cta-li"><a href="/contact.html" class="gh-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-
-<div class="mobile-nav" id="mobile-nav">
-  <button class="mn-close" aria-label="Close menu" id="menu-close">×</button>
-  <a href="#about">About</a>
-  <a href="#team">Team</a>
-  <a href="communities/index.html">Communities</a>
-  <a href="#services">Services</a>
-  <a href="#resources">Resources</a>
-  <a href="search.html">Search</a>
-  <a href="#listings">Properties</a>
-  <a href="blog/index.html">Blog</a>
-    <a href="/faq.html">FAQ</a>
-  <a href="#contact">Contact</a>
-</div>
+<div id="gh-main" tabindex="-1"></div>
 
 <!-- ═══ HERO ═══ -->
 <main id="main">
@@ -2161,95 +2169,54 @@
 <!-- ═══ FOOTER ═══ -->
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img src="assets/logos/logo-white.png" alt="Grewal RE Group" class="footer-brand-logo" width="160" height="48" />
-        <p class="footer-tagline" style="margin-top:.75rem;">People First. Straight Answers. Strong Results.</p>
-        <p class="footer-about">Austin's luxury real estate team, Shivraj Grewal. Specializing in Westlake Hills, Barton Creek, and Davenport Ranch.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/grewalregroup/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
-          <a href="https://www.facebook.com/Shivraj.Grewal.Realtor" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a>
-          <a href="https://www.linkedin.com/company/grewal-re-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm12.5 10.3h-3v-4.5c0-1.07-.02-2.45-1.5-2.45s-1.73 1.17-1.73 2.37v4.58h-3v-9h2.88v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v4.73z"/></svg></a>
-          <a href="https://x.com/ShivrajGrewal1" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="https://www.youtube.com/@GrewalREGroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.27-1-1.07-1.8-2.07-2.07C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.43.53c-1 .27-1.8 1.07-2.07 2.07C0 8.04 0 12 0 12s0 3.96.5 5.8c.27 1 1.07 1.8 2.07 2.07 1.83.53 9.43.53 9.43.53s7.6 0 9.43-.53c1-.27 1.8-1.07 2.07-2.07.5-1.84.5-5.8.5-5.8s0-3.96-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg></a>
-          <a href="https://www.tiktok.com/@grewalregroup?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg></a>
-          <a href="https://www.threads.com/@grewalregroup" target="_blank" rel="noopener noreferrer" aria-label="Threads"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.07 11.13c-.07-.03-.14-.06-.21-.09-.13-2.36-1.42-3.71-3.59-3.72h-.03c-1.3 0-2.38.55-3.04 1.56l1.2.82c.5-.75 1.27-.91 1.84-.91h.02c.71 0 1.25.21 1.6.62.26.3.43.71.51 1.23-.62-.1-1.29-.14-2-.1-2 .12-3.29 1.28-3.2 2.9.04.82.45 1.53 1.15 1.99.59.39 1.34.58 2.13.54 1.04-.06 1.86-.46 2.43-1.18.43-.55.7-1.26.83-2.15.51.31.89.71 1.1 1.19.36.82.38 2.16-.71 3.25-.96.96-2.11 1.37-3.85 1.39-1.93-.01-3.39-.63-4.34-1.84-.89-1.13-1.35-2.77-1.37-4.86.02-2.09.48-3.73 1.37-4.86.95-1.21 2.41-1.83 4.34-1.84 1.94.01 3.43.63 4.43 1.85.49.6.86 1.35 1.11 2.23l1.43-.38c-.3-1.07-.77-2-1.39-2.76-1.27-1.55-3.13-2.34-5.53-2.36h-.01c-2.4.02-4.24.81-5.47 2.37-1.1 1.39-1.66 3.32-1.69 5.74v.02c.03 2.42.6 4.36 1.69 5.75 1.23 1.55 3.07 2.35 5.47 2.37h.01c2.13-.01 3.64-.57 4.88-1.81 1.62-1.62 1.57-3.65.99-4.94-.42-.93-1.21-1.69-2.27-2.2zm-3.69 4.05c-.87.05-1.78-.34-1.82-1.18-.03-.63.45-1.32 1.87-1.4.16-.01.32-.01.48-.01.51 0 .99.05 1.42.14-.16 1.99-1.1 2.39-1.95 2.45z"/></svg></a>
-          <a href="https://www.pinterest.com/grewalshivraj/?invite_code=4f49e5fd78ee4c5c96452005adf715ea&amp;sender=1109433826863631928" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 5.1 3.2 9.4 7.6 11.2-.1-1-.2-2.4 0-3.5.2-1 1.4-6.1 1.4-6.1s-.4-.7-.4-1.8c0-1.7 1-3 2.2-3 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.1 1.8 2.1 2.1 0 3.7-2.2 3.7-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.5-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3-.1.4-.3 1.2-.3 1.4-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.4 3 7.4 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.7-1.4l-.7 2.8c-.3 1-1 2.3-1.5 3.1.1.1 1 0 4.5 0 6.6 0 12-5.4 12-12C24 5.4 18.6 0 12 0z"/></svg></a>
-          <a href="https://share.google/1pYwueIVdeVLAtANo" target="_blank" rel="noopener noreferrer" aria-label="Google Business"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.83z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" fill="#EA4335"/></svg></a>
-          <a href="https://www.zillow.com/profile/Grewal%20RE%20Group" target="_blank" rel="noopener noreferrer" aria-label="Zillow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 9.5V11h2.5v9h5.5v-5h4v5h5.5v-9H22V9.5L12 2zm6 16h-2.5v-5h-7v5H6v-7.4l6-4.5 6 4.5V18z"/></svg></a>
-          <a href="https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda" target="_blank" rel="noopener noreferrer" aria-label="Realtor.com"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 9v13h6v-7h8v7h6V9L12 2zm0 2.5L19 10v9h-2v-7H7v7H5v-9l7-5.5z"/></svg></a>
-          <a href="https://maps.apple/p/oTc0Km7azgEjNC" target="_blank" rel="noopener noreferrer" aria-label="Apple Maps"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg></a>
-          <a href="https://www.bing.com/maps/search?style=r&amp;q=Grewal+RE+Group%2C+2500+Bee+Caves+Rd%2C+Austin%2C+TX+78746%2C+United+States&amp;ss=id.local_ypid%3A%22YNBB07B358209CFB8F%22&amp;st=Grewal+RE+Group&amp;sfa=2500+Bee+Caves+Rd%2C+Austin%2C+TX+78746%2C+United+States" target="_blank" rel="noopener noreferrer" aria-label="Bing Maps"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 2v17l5-2.5v-7l5 2-3 1.5 6 3 4-2.5L5.5 2z"/></svg></a>
-        </div>
+<footer class="gh-footer">
+  <div class="gh-foot-inner">
+    <div class="gh-foot-grid">
+      <div class="gh-foot-brand">
+        <img src="/assets/logos/logo-white.png" alt="Grewal RE Group" width="113" height="34">
+        <p class="gh-foot-tag">People First. Straight Answers. Strong Results.</p>
+        <p><a href="tel:+15126170001">(512) 617-0001</a></p>
+        <p><a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a></p>
+        <p>2500 Bee Cave Rd, Bldg 3, Ste 200<br>Austin, TX 78746</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Navigate</h4>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
         <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#areas">Areas</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#listings">Properties</a></li>
-          <li><a href="communities/index.html">Communities &amp; Market Reports</a></li>
-          <li><a href="blog/index.html">Blog &amp; Research</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/communities/">Communities</a></li>
+          <li><a href="/search.html">Search Properties</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Services</h4>
+      </nav>
+      <nav aria-label="Buy and sell">
+        <h2>Buy &amp; Sell</h2>
         <ul>
-          <li><a href="#services">Buying</a></li>
-          <li><a href="#services">Selling</a></li>
-          <li><a href="#services">Relocation</a></li>
-          <li><a href="#services">Advisory</a></li>
-          <li><a href="#services">New Construction</a></li>
-          <li><a href="#concierge">Concierge</a></li>
+          <li><a href="/#services">Buying</a></li>
+          <li><a href="/home-value-estimator.html">Home Value Estimator</a></li>
+          <li><a href="/seller-net-proceeds-calculator.html">Net Proceeds Calculator</a></li>
+          <li><a href="/relocation-guide.html">Relocating to Austin</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <address class="footer-nap">
-          Grewal RE Group<br/>
-          2500 Bee Cave Rd<br/>
-          Building 3, Suite 200<br/>
-          Austin, TX 78746<br/>
-          <a href="tel:+15126170001">(512) 617-0001</a><br/>
-          <a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a><br/>
-          <a href="mailto:shivraj@grewalregroup.com">shivraj@grewalregroup.com</a>
-        </address>
-      </div>
+      </nav>
+      <nav aria-label="Guides and resources">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="/relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="/austin-schools-guide.html">Schools Guide</a></li>
+          <li><a href="/#resources">All Resources</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <div class="footer-legal">
-      <div class="footer-brokerage">
-        <div class="brokerage-info">
-          <p><strong>Grewal RE Group</strong> is a team of real estate licensees affiliated with Compass, a licensed real estate broker in Texas.</p>
-          <p>Grewal RE Group · 2500 Bee Cave Rd, Building 3 Suite 200, Austin, TX 78746</p>
-        </div>
-      </div>
-      <div style="margin-bottom:.5rem;">
-        © 2026 Grewal RE Group · All Rights Reserved<br/>
-        Shivraj Grewal · TREC License #736060 · Compass · TREC Broker License #9006927
-      </div>
-      <div class="footer-legal-row">
-        <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a>
-        <span>·</span>
-        <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a>
-        <span>·</span>
-        <a href="privacy.html">Privacy Policy</a>
-        <span>·</span>
-        <a href="terms.html">Terms of Service</a>
-      </div>
-      <div class="eho-row">
-        <span class="eho-icon">⌂</span>
-        <span>Equal Housing Opportunity · All information is deemed reliable but not guaranteed and should be independently verified.</span>
-      </div>
+    <div class="gh-foot-legal">
+      <p>&copy; 2026 Grewal RE Group &middot; Shivraj Grewal &middot; TREC #736060 &middot; Brokered by Compass RE Texas, LLC &middot; TREC Broker #9006927</p>
+      <p>
+        <a href="/privacy.html">Privacy</a> &middot;
+        <a href="/terms.html">Terms</a> &middot;
+        <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a> &middot;
+        <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a> &middot;
+        <button type="button" data-cookie-prefs class="gh-link-btn">Cookie preferences</button>
+      </p>
     </div>
   </div>
 </footer>
@@ -2616,5 +2583,6 @@
 })();
 </script>
 <a href="#contact" class="sticky-cta">Get a Free Consultation</a>
+<script defer src="/assets/js/site-chrome.js"></script>
 </body>
 </html>
