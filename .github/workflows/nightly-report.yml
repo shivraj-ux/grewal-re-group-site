@@ -1,17 +1,19 @@
 name: Nightly Build Report
 
-# Deterministic nightly status email for grewalregroup.com.
-# No LLM: it only emails real git commits + real HTTP status codes.
-# Sends via Resend (API key, no SMTP/app-password).
+# Deterministic nightly status report for grewalregroup.com.
+# No LLM (only real git commits + real HTTP status codes).
+# Delivery: posts the report as a GitHub issue and @-mentions the owner, so
+# GitHub emails it to you automatically. NO password, NO API key, NO SMTP.
 
 on:
   schedule:
-    # 07:00 UTC ~= 02:00 America/Chicago during CDT (summer); 01:00 during CST (winter).
+    # 07:00 UTC ~= 02:00 America/Chicago (CDT). 01:00 during CST (winter).
     - cron: '0 7 * * *'
   workflow_dispatch: {}   # Actions tab -> Run workflow, to test on demand
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   report:
@@ -28,7 +30,21 @@ jobs:
           echo "----- report preview -----"
           cat report.txt
 
-      - name: Email the report via Resend
+      - name: Post report (GitHub emails it to you, no credentials needed)
         env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: python3 scripts/send-report.py
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "@shivraj-ux your nightly site report:"
+            echo
+            echo '```'
+            cat report.txt
+            echo '```'
+          } > body.md
+          ISSUE_URL=$(gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Grewal Site - Daily Build Report - $(date -u +%Y-%m-%d)" \
+            --body-file body.md)
+          echo "Created: $ISSUE_URL"
+          # close it right away to keep the Issues tab tidy; the email already went out
+          gh issue close "$ISSUE_URL" || true
