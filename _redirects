@@ -20,3 +20,17 @@
 /blog/barton-creek-austin-neighborhood-guide-2026.html  /blog/barton-creek-austin-neighborhood-guide.html  301
 /blog/dripping-springs-tx-real-estate-guide-2026.html  /blog/dripping-springs-tx-real-estate-guide.html  301
 /blog/hudson-bend-lake-travis-guide-2026.html  /blog/hudson-bend-lake-travis-2026.html  301
+
+# Broken-link cleanup (coverage audit 2026-06-27) — old/ghost URLs -> live canonical page
+# Legacy /neighborhoods/* paths (all 404) -> /communities/*
+/neighborhoods/georgetown   /communities/georgetown.html   301
+/neighborhoods/lakeway      /communities/lakeway.html      301
+/neighborhoods/round-rock   /communities/round-rock.html   301
+/neighborhoods/tarrytown    /communities/tarrytown.html    301
+# Legacy extensionless blog slugs (all 404) -> correct post
+/blog/austin-dog-parks                 /blog/best-dog-parks-austin.html              301
+/blog/fine-dining-austin               /blog/austin-fine-dining-guide.html           301
+/blog/food-trucks-austin               /blog/austin-food-trucks-guide.html           301
+/blog/luxury-market-austin-tx          /blog/austin-luxury-market-report-2026.html   301
+/blog/the-colorado-river-austin        /blog/colorado-river-austin-guide.html        301
+/blog/pet-friendly-restaurants-austin  /blog/austin-dog-friendly-neighborhoods-2026.html  301
