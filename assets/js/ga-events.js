@@ -58,9 +58,21 @@
     if (document.getElementById('grg-sticky-cta')) return;
     var a = document.createElement('a');
     a.id = 'grg-sticky-cta';
-    a.href = '/#contact';
-    a.textContent = 'Schedule a Call';
-    a.setAttribute('aria-label', 'Schedule a call with Shivraj Grewal');
+    // Topic-aware CTA: route intent to the most relevant tool/page (routes that exist on the site).
+    var hay = (window.location.pathname + ' ' + (document.title || '') + ' ' +
+               ((document.querySelector('h1') || {}).textContent || '')).toLowerCase();
+    var cta = { href: '/contact.html', text: 'Schedule a Call', aria: 'Schedule a call with Shivraj Grewal' };
+    if (/sell|seller|listing|list your|home worth|home value|price your|net proceeds/.test(hay)) {
+      cta = { href: '/home-value-estimator.html', text: 'See What Your Home Is Worth', aria: 'Get a free home value estimate' };
+    } else if (/reloca|moving to austin|move to austin|relocating/.test(hay)) {
+      cta = { href: '/relocation-guide.html', text: 'Get the Relocation Guide', aria: 'Download the Austin relocation guide' };
+    } else if (/flood|insurance|risk/.test(hay)) {
+      cta = { href: '/contact.html', text: 'Request a Flood Risk Review', aria: 'Request a flood-risk review for an Austin address' };
+    }
+    a.href = cta.href;
+    a.textContent = cta.text;
+    a.setAttribute('aria-label', cta.aria);
+    a.setAttribute('data-cta-topic', cta.text);
     a.style.cssText = [
       'position:fixed', 'right:18px', 'bottom:18px', 'z-index:9998',
       'background:#b8963e', 'color:#fff', 'font:600 14px/1 Inter,system-ui,sans-serif',
@@ -68,6 +80,9 @@
       'box-shadow:0 6px 20px rgba(0,0,0,.25)', 'letter-spacing:.02em',
       'opacity:0', 'transform:translateY(12px)', 'transition:opacity .3s,transform .3s'
     ].join(';');
+    a.addEventListener('click', function () {
+      ev('event', 'qualify_lead', { button_text: 'Sticky CTA — ' + cta.text, page_location: here() });
+    });
     document.body.appendChild(a);
     var show = function () {
       var on = (window.scrollY || 0) > 600;
