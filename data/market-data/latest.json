@@ -1,24 +1,15 @@
 {
-  "date": "2026-06-18",
-  "source": "Team Price Austin Market Update (June 18 2026); prior run: Unlock MLS via KXAN (June 11 2026)",
-  "note": "All figures from publicly available market data. June 18 figures are metro-wide MLS data. Neighborhood medians represent 30-day rolling figures unless otherwise noted.",
+  "date": "2026-06-11",
+  "source": "Unlock MLS / Austin Board of REALTORS® (reported via KXAN), June 11 2026",
+  "note": "All figures from permitted public sources only (MLS board, national portals, government, academic). Per /CLAUDE.md, no competing Austin real-estate agent/team/brokerage may be used as a source. Neighborhood medians represent 30-day rolling figures unless otherwise noted.",
   "austin_metro": {
-    "medianSoldPrice": 473745,
-    "activeListings": 17317,
-    "pendingListings": 5042,
-    "monthsOfInventory": 6.0,
-    "dataDate": "2026-06-18",
-    "source": "Team Price Austin Market Update, published June 18 2026"
-  },
-  "austin_metro_prior": {
     "medianSoldPrice": 440000,
     "activeListings": 12508,
     "monthsOfInventory": 4.7,
     "avgDaysOnMarket": 61,
     "zip78746Median": 1720000,
     "dataDate": "2026-06-11",
-    "source": "Unlock MLS via KXAN, June 11 2026",
-    "note": "Different geographic scope than June 18 figure — retained for cross-reference"
+    "source": "Unlock MLS / Austin Board of REALTORS® (reported via KXAN), June 11 2026"
   },
   "luxury_segment": {
     "threshold": 1000000,
@@ -36,7 +27,7 @@
       "medianSoldPrice12Month": 2816410,
       "avgDaysOnMarket": "71-81",
       "schoolDistrict": "Eanes ISD",
-      "dataSource": "Redfin, Orchard",
+      "dataSource": "Redfin",
       "note": "30-day median up 34.6% YoY; 12-month median across 34 closings"
     },
     "barton_creek": {
@@ -52,15 +43,15 @@
       "medianSoldPriceQ1_2026": 755000,
       "avgDaysOnMarket": "63-87",
       "schoolDistrict": "Leander ISD",
-      "dataSource": "Steiner Life Real Estate Team Q1 2026 report",
-      "note": "Q1 2026 data; market shifting to balanced with more buyer leverage"
+      "dataSource": "Redfin (Steiner Ranch neighborhood market data)",
+      "note": "Q1 2026 approximate median; market shifting to balanced with more buyer leverage. Re-verify exact figure against Redfin before publishing as precise."
     },
     "tarrytown": {
       "zip": "78703",
       "schoolDistrict": "Austin ISD",
-      "note": "Low inventory market; most sales occur off-market. Data unavailable as of 2026-06-18."
+      "note": "Low inventory market; most sales occur off-market. Data unavailable as of 2026-06-11."
     }
   },
-  "lastUpdated": "2026-06-18",
-  "nextUpdateDue": "2026-06-25"
+  "lastUpdated": "2026-07-01",
+  "nextUpdateDue": "2026-07-08"
 }
