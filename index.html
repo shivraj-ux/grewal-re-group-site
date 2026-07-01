@@ -90,11 +90,11 @@
       "Georgetown","Leander","Cedar Park","Kyle","Buda","Fredericksburg"
     ],
     "priceRange": "$$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "08:00","closes": "20:00"
-    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday"], "opens": "07:00","closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "07:00","closes": "17:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "14:00","closes": "18:00" }
+    ],
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "bestRating": "5", "ratingCount": "119" },
     "review": [
       { "@type": "Review", "author": { "@type": "Person", "name": "Neeraj Sangal" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right." },
