@@ -53,21 +53,30 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  // ── Sticky "Schedule a Call" CTA (appears after scroll) ─────────────────
+  // ── Sticky CTA (appears after scroll): direct call on mobile ─────────────
+  var PHONE = 'tel:+15126170001';
+  var isMobile = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
   function mountCTA() {
     if (document.getElementById('grg-sticky-cta')) return;
     var a = document.createElement('a');
     a.id = 'grg-sticky-cta';
-    // Topic-aware CTA: route intent to the most relevant tool/page (routes that exist on the site).
-    var hay = (window.location.pathname + ' ' + (document.title || '') + ' ' +
-               ((document.querySelector('h1') || {}).textContent || '')).toLowerCase();
-    var cta = { href: '/contact.html', text: 'Schedule a Call', aria: 'Schedule a call with Shivraj Grewal' };
-    if (/sell|seller|listing|list your|home worth|home value|price your|net proceeds/.test(hay)) {
-      cta = { href: '/home-value-estimator.html', text: 'See What Your Home Is Worth', aria: 'Get a free home value estimate' };
-    } else if (/reloca|moving to austin|move to austin|relocating/.test(hay)) {
-      cta = { href: '/relocation-guide.html', text: 'Get the Relocation Guide', aria: 'Download the Austin relocation guide' };
-    } else if (/flood|insurance|risk/.test(hay)) {
-      cta = { href: '/contact.html', text: 'Request a Flood Risk Review', aria: 'Request a flood-risk review for an Austin address' };
+    var cta;
+    if (isMobile()) {
+      // On phones, skip topic routing entirely — one tap should dial.
+      cta = { href: PHONE, text: 'Call', aria: 'Call Shivraj Grewal' };
+    } else {
+      // Topic-aware CTA: route intent to the most relevant tool/page (routes that exist on the site).
+      var hay = (window.location.pathname + ' ' + (document.title || '') + ' ' +
+                 ((document.querySelector('h1') || {}).textContent || '')).toLowerCase();
+      cta = { href: '/contact.html', text: 'Schedule a Call', aria: 'Schedule a call with Shivraj Grewal' };
+      if (/sell|seller|listing|list your|home worth|home value|price your|net proceeds/.test(hay)) {
+        cta = { href: '/home-value-estimator.html', text: 'See What Your Home Is Worth', aria: 'Get a free home value estimate' };
+      } else if (/reloca|moving to austin|move to austin|relocating/.test(hay)) {
+        cta = { href: '/relocation-guide.html', text: 'Get the Relocation Guide', aria: 'Download the Austin relocation guide' };
+      } else if (/flood|insurance|risk/.test(hay)) {
+        cta = { href: '/contact.html', text: 'Request a Flood Risk Review', aria: 'Request a flood-risk review for an Austin address' };
+      }
     }
     a.href = cta.href;
     a.textContent = cta.text;
@@ -92,8 +101,22 @@
     };
     window.addEventListener('scroll', show, { passive: true }); show();
   }
-  if (document.readyState !== 'loading') mountCTA();
-  else document.addEventListener('DOMContentLoaded', mountCTA);
+
+  // ── Header "Contact" button: direct call on mobile ──────────────────────
+  function wireHeaderCTA() {
+    if (!isMobile()) return;
+    var links = document.querySelectorAll('.gh-cta[href="/contact.html"]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      a.href = PHONE;
+      a.textContent = 'Call';
+      a.setAttribute('aria-label', 'Call Shivraj Grewal');
+    }
+  }
+
+  function initCTAs() { mountCTA(); wireHeaderCTA(); }
+  if (document.readyState !== 'loading') initCTAs();
+  else document.addEventListener('DOMContentLoaded', initCTAs);
 })();
 
 /* Exit-intent market-report popup (desktop, once per session) */
