@@ -59,6 +59,9 @@
 
   function mountCTA() {
     if (document.getElementById('grg-sticky-cta')) return;
+    // A page-level full-width sticky bar (homepage .sticky-cta) already owns the
+    // bottom edge on phones — mounting the pill too would overlap it.
+    if (isMobile() && document.querySelector('.sticky-cta')) return;
     var a = document.createElement('a');
     a.id = 'grg-sticky-cta';
     var cta;

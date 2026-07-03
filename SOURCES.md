@@ -131,8 +131,10 @@ All 15 are verified live:
 | Pinterest | https://www.pinterest.com/grewalshivraj/ | |
 | Google Business | https://share.google/1pYwueIVdeVLAtANo | Source of truth for review count |
 | Zillow (team) | https://www.zillow.com/profile/Grewal%20RE%20Group | |
-| Zillow (Shivraj) | https://www.zillow.com/profile/Shivraj%20Grewal | |
-| Realtor.com | https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda | |
+| Zillow (Shivraj) | https://www.zillow.com/profile/Shivraj%20Grewal | 5.0 ★ · 3 reviews quoted verbatim on `/reviews.html` + homepage carousel + JSON-LD (`data/reviews.json → other_platforms.zillow`) |
+| Realtor.com | https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda | Steve Mayo testimonial quoted verbatim on `/reviews.html` + homepage carousel + JSON-LD (`data/reviews.json → other_platforms.realtor_com`) |
+| Yelp | https://www.yelp.com/biz/grewal-re-group-austin | Claimed, 0 reviews yet — linked from `/reviews.html` "leave a review" CTA |
+| Nextdoor | https://nextdoor.com/pages/shivraj-grewal-realtor-austin-tx/ | Neighbor recommendations (login-walled) — linked from `/reviews.html` hero |
 | Reddit | https://www.reddit.com/r/AustinREAdvisor/ | Community owned by team |
 | Alignable | https://www.alignable.com/rollingwood-tx/grewal-re-group | |
 | Apple Maps | https://maps.apple/p/oTc0Km7azgEjNC | |

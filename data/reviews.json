@@ -26,5 +26,55 @@
       "location": "",
       "text": "The realtor in town — knows his stuff!"
     }
-  ]
+  ],
+  "other_platforms": {
+    "_note": "Hand-maintained (sync_reviews.py only touches the Google fields above). Text is verbatim from each platform.",
+    "zillow": {
+      "profile_url": "https://www.zillow.com/profile/Shivraj%20Grewal",
+      "rating": "5.0",
+      "review_count": 3,
+      "reviews": [
+        {
+          "author": "chait desai",
+          "date": "2026-04-29",
+          "detail": "Bought a Single Family home in 2026 in Avery Ranch, Austin, TX.",
+          "text": "We recently purchased our second home with Shivraj in Austin. The first home is our primary residence and the second home is a rental property. Considering how smooth our experience was during the first purchase, we were completely at ease from the word go. Shivraj made himself available for numerous showings. He has a great gut feeling about any property the moment he steps inside. He'll give you a run down of all pros and cons. He's never too pushy and will always do what is in his client's best interests. A great advantage of working with Shivraj is that the team that he works with is just as top notch: home inspectors, roof inspectors, flooring experts, title company contacts, loan officers, etc. This makes a huge difference to closing quickly and closing on time without any hassle. In our case, Shivraj went the extra mile to also put up the listing for rent for us for no extra cost! That entire process was very streamlined and we were completely hands off. Can't wait to buy our third property with Shivraj!"
+        },
+        {
+          "author": "HeeSun Yu",
+          "date": "2024-11-21",
+          "detail": "Bought a Single Family home in 2024 in Buda, TX.",
+          "text": "My goto realtor in Austin. From the beginning, Shrivaj was very attentive, asked a lot of questions and really knew/understood what I was looking for. I'm not from Austin and wasn't around to oversee the building of my house and he was always there for me to send me videos and pictures along the way to give me peace of mind. He's truly genuine and enjoyed working with him. I can't imagine having gone with any other agent."
+        },
+        {
+          "author": "dervishisuzana02",
+          "date": "2023-02-02",
+          "detail": "Helped buyers purchase a home in Leander, TX.",
+          "text": "Shivraj helped us buy our home in Leander, TX. Despite the negotiations with the seller being ongoing and at times difficult, Shivraj kept us calm and focused. He provide guidance, and he worked tirelessly to make sure the process was as smooth as possible. Thanks to him, we were able to successfully buy our home. We would say, choose Shivraj, if you are looking to purchase a home"
+        }
+      ]
+    },
+    "realtor_com": {
+      "profile_url": "https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda",
+      "rating": null,
+      "review_count": 0,
+      "testimonials": [
+        {
+          "author": "Steve Mayo",
+          "date": "2024",
+          "detail": "Fall 2024 purchase, Austin, TX.",
+          "text": "After a terrible experience with a real estate agent when selling my previous home, I was hesitant to work with a buyer's agent during my Fall 2024 house hunt. The new rules requiring exclusive agreements just to view an house only made me more frustrated, to the point of focusing only on new construction. After learning I could view properties, sans lock-in, directly with the listing agents or by attending open houses on my own, I reluctantly started looking a resales as the new-construction market is limited. After meeting more than two dozen agents/firms this way, I met Shivraj, and it was clear he was different. He didn't pressure me into signing a contract but instead focused on understanding my needs. Shivraj prioritized helping me, and his genuine approach immediately earned my trust. He showed me about a dozen homes, ran detailed market analyses on several, and submitted three offers on my behalf. Thanks to his expert negotiation, I secured a fair price on a home that perfectly fit my needs. Throughout the process, he was patient, responsive, and incredibly thorough. Shivraj's support didn't end with the purchase. He used his network of professionals to get quotes for repairs, assisted with financing, and made sure the closing process was seamless. Even after the sale, he helped me set up my home's systems, hire reliable contractors, and settle in comfortably. What sets Shivraj apart is his unwavering commitment to his clients. His professionalism, market knowledge, and genuine care transformed what could have been a stressful experience into a smooth and enjoyable one. If you're looking for an agent who truly puts your needs first, I wholeheartedly recommend Shivraj. His dedication goes above and beyond expectations, making him a standout in the real estate world."
+        }
+      ]
+    },
+    "yelp": {
+      "profile_url": "https://www.yelp.com/biz/grewal-re-group-austin",
+      "review_count": 0,
+      "_note": "Claimed profile, zero reviews yet — review-generation opportunity."
+    },
+    "nextdoor": {
+      "profile_url": "https://nextdoor.com/pages/shivraj-grewal-realtor-austin-tx/",
+      "_note": "Neighbor recommendations exist; individual posts are login-walled."
+    }
+  }
 }

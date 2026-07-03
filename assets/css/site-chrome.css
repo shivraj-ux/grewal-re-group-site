@@ -16,6 +16,11 @@
   --gh-h: 82px;
 }
 
+/* ---- Guard: the off-canvas mobile nav sits at translateX(100%); without this,
+   phones can pan the page sideways into ~47px of dead space ---- */
+html, body { overflow-x: clip; }
+@supports not (overflow: clip) { html, body { overflow-x: hidden; } }
+
 /* ---- Skip link ---- */
 .gh-skip {
   position: fixed; left: 8px; top: -56px; z-index: 100000;

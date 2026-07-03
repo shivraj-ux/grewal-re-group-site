@@ -56,7 +56,6 @@
 
   <!-- Preload critical hero image (AVIF first, browser picks best supported via imagesrcset) -->
   <link rel="preload" as="image" href="assets/images/hero.avif" type="image/avif" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/images/hero.webp" type="image/webp" fetchpriority="high">
 
   <!-- Google Fonts (matching the brand: Cormorant Garamond serif + Inter sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,7 +98,10 @@
     "review": [
       { "@type": "Review", "author": { "@type": "Person", "name": "Neeraj Sangal" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right." },
       { "@type": "Review", "author": { "@type": "Person", "name": "Another Studio" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Shivraj provided excellent service and exceeded our expectations from start to finish." },
-      { "@type": "Review", "author": { "@type": "Person", "name": "Z. A." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "The realtor in town — knows his stuff!" }
+      { "@type": "Review", "author": { "@type": "Person", "name": "Z. A." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "The realtor in town — knows his stuff!" },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Chait Desai" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "We recently purchased our second home with Shivraj in Austin. He has a great gut feeling about any property the moment he steps inside. He'll give you a run down of all pros and cons. He's never too pushy and will always do what is in his client's best interests. Can't wait to buy our third property with Shivraj!" },
+      { "@type": "Review", "author": { "@type": "Person", "name": "HeeSun Yu" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "My goto realtor in Austin. I'm not from Austin and wasn't around to oversee the building of my house and he was always there for me to send me videos and pictures along the way to give me peace of mind. He's truly genuine and enjoyed working with him. I can't imagine having gone with any other agent." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Steve Mayo" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "After meeting more than two dozen agents/firms this way, I met Shivraj, and it was clear he was different. He didn't pressure me into signing a contract but instead focused on understanding my needs. Thanks to his expert negotiation, I secured a fair price on a home that perfectly fit my needs." }
     ],
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buyer Representation", "serviceType": "Real estate buyer representation", "description": "Matching buyers — first-time, move-up, or luxury — with the right home, neighborhood, and terms.", "areaServed": "Austin, TX", "provider": { "@type": "RealEstateAgent", "name": "Grewal RE Group" } } },
@@ -192,6 +194,7 @@
       --gold: #B8963E;
       --gold-light: #d4b366;
       --gold-dark: #9a7c33;
+      --gold-text: #8a6f2e; /* WCAG AA on white/cream backgrounds */
       --cream: #FAF7F2;
       --cream-2: #F4F0E9;
       --black: #0a0a0a;
@@ -230,7 +233,7 @@
       letter-spacing: 0.18em; text-transform: uppercase;
       font-size: 0.75rem; margin: 0 0 1rem;
     }
-    .eyebrow.ink-gold { color: var(--gold); }
+    .eyebrow.ink-gold { color: var(--gold-text); }
 
     .section-head { text-align: center; margin: 0 auto 3rem; max-width: 46rem; }
     .section-head h2 { margin-bottom: .75rem; }
@@ -246,7 +249,7 @@
       border-radius: 2px; border: 1px solid transparent;
       cursor: pointer; transition: all 0.25s ease; white-space: nowrap;
     }
-    .btn-gold { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .btn-gold { background: var(--gold-text); color: #fff; border-color: var(--gold-text); }
     .btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
     .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
     .btn-ghost:hover { background: #fff; color: var(--ink); border-color: #fff; }
@@ -437,11 +440,11 @@
       color: var(--ink); margin-bottom: 1.75rem;
       padding-bottom: 1.75rem; border-bottom: 1px solid var(--line);
     }
-    .about-story .about-lead em { color: var(--gold); font-style: italic; font-weight: 600; }
+    .about-story .about-lead em { color: var(--gold-text); font-style: italic; font-weight: 600; }
     .about-story .about-promise {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.3rem, 2.2vw, 1.65rem);
-      font-style: italic; color: var(--gold);
+      font-style: italic; color: var(--gold-dark);
       text-align: center; margin: 2.5rem 0 1.5rem;
       letter-spacing: 0.01em;
     }
@@ -484,7 +487,7 @@
     .digit-strip { display: flex; flex-direction: column; align-items: center; transition: transform 1.6s cubic-bezier(.2,.7,.2,1); will-change: transform; }
     .digit-strip > span { display: block; height: 1em; line-height: 1; width: 100%; text-align: center; }
 
-    .reviews-meta { text-align: center; margin-bottom: 1.5rem; }
+    .reviews-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; text-align: center; margin-bottom: 1.5rem; }
     .google-summary {
       display: inline-flex; align-items: center; gap: .55rem;
       padding: .45rem .9rem; border: 1px solid rgba(255,255,255,0.15);
@@ -546,11 +549,13 @@
     .nav-btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
     .carousel-dots { display: flex; gap: .4rem; }
     .dot {
-      width: 6px; height: 6px; background: rgba(255,255,255,0.2);
-      border: 0; border-radius: 50%; cursor: pointer; padding: 0;
+      /* 24px hit area (a11y target-size) with a 6px visible dot */
+      width: 24px; height: 24px; background: rgba(255,255,255,0.2);
+      border: 9px solid transparent; background-clip: content-box;
+      border-radius: 50%; cursor: pointer; padding: 0;
       transition: all 0.2s;
     }
-    .dot.active { background: var(--gold); width: 18px; border-radius: 3px; }
+    .dot.active { background: var(--gold); background-clip: content-box; width: 36px; border-radius: 12px; }
 
     @media (max-width: 720px) {
       .trust-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
@@ -1230,7 +1235,7 @@
     @media (min-width: 901px) and (max-width: 1100px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
 
     /* ─── Fade-up animation ─── */
-    .fade-up { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s ease; }
+    .fade-up { opacity: 0; transform: translateY(16px); transition: opacity .45s ease, transform .45s ease; }
     .fade-up.in { opacity: 1; transform: translateY(0); }
   </style>
   <script type="application/ld+json">
@@ -1275,6 +1280,7 @@
             <li><a href="/faq.html">FAQ</a></li>
           </ul>
         </li>
+        <li><a href="/reviews.html">Reviews</a></li>
         <li><a href="/#about">About</a></li>
         <li><a href="/search.html">Search</a></li>
         <li class="gh-cta-li"><a href="/contact.html" class="gh-cta">Contact</a></li>
@@ -1610,6 +1616,13 @@
         <span class="stars-mini" id="meta-stars"></span>
         <span class="gtext" data-review-count="119">119 reviews on Google · <span style="opacity:.6;">verified live</span></span>
       </a>
+      <a href="https://www.zillow.com/profile/Shivraj%20Grewal" target="_blank" rel="noopener noreferrer" class="google-summary" data-source="zillow">
+        <span class="gscore">5.0</span>
+        <span class="gtext">reviews on Zillow</span>
+      </a>
+      <a href="https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda" target="_blank" rel="noopener noreferrer" class="google-summary" data-source="realtor-com">
+        <span class="gtext">client testimonials on Realtor.com</span>
+      </a>
     </div>
 
     <div class="carousel" id="review-carousel">
@@ -1647,6 +1660,12 @@
          onmouseover="this.style.background='rgba(184,150,62,.12)';this.style.borderColor='rgba(184,150,62,.7)'"
          onmouseout="this.style.background='transparent';this.style.borderColor='rgba(184,150,62,.45)'">
         ★&nbsp; View All 119 Reviews on Google ↗
+      </a>
+      <a href="/reviews.html"
+         style="display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.5rem;margin-left:.5rem;border:1px solid rgba(184,150,62,0.45);border-radius:999px;color:#fff;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s;"
+         onmouseover="this.style.background='rgba(184,150,62,.12)';this.style.borderColor='rgba(184,150,62,.7)'"
+         onmouseout="this.style.background='transparent';this.style.borderColor='rgba(184,150,62,.45)'">
+        Google · Zillow · Realtor.com Reviews →
       </a>
     </div>
   </div>
@@ -2371,6 +2390,18 @@
       text: "The realtor in town. Knows his stuff!" }
   ];
   // REVIEWS_END
+  // Reviews from other platforms (Zillow, Realtor.com). Hand-maintained on purpose:
+  // sync_reviews.py only rewrites the Google REVIEWS block above, never this one.
+  // Text is verbatim from the platform (excerpted with "…" where long) — never invented.
+  const REVIEWS_OTHER = [
+    { author: 'Chait Desai', when: 'Zillow review · 2026', location: 'Bought in Avery Ranch, Austin',
+      text: "We recently purchased our second home with Shivraj in Austin. … He has a great gut feeling about any property the moment he steps inside. He'll give you a run down of all pros and cons. He's never too pushy and will always do what is in his client's best interests. … Can't wait to buy our third property with Shivraj!" },
+    { author: 'HeeSun Yu', when: 'Zillow review · 2024', location: 'Bought in Buda, TX',
+      text: "My goto realtor in Austin. … I'm not from Austin and wasn't around to oversee the building of my house and he was always there for me to send me videos and pictures along the way to give me peace of mind. He's truly genuine and enjoyed working with him. I can't imagine having gone with any other agent." },
+    { author: 'Steve Mayo', when: 'Realtor.com testimonial · 2024', location: 'Bought in Austin, TX',
+      text: "After meeting more than two dozen agents/firms this way, I met Shivraj, and it was clear he was different. He didn't pressure me into signing a contract but instead focused on understanding my needs. … Thanks to his expert negotiation, I secured a fair price on a home that perfectly fit my needs." }
+  ];
+  const ALL_REVIEWS = REVIEWS.concat(REVIEWS_OTHER);
   const ROTATE_MS = 6000;
 
   const carousel = document.getElementById('review-carousel');
@@ -2387,7 +2418,7 @@
     const fillEl = document.getElementById('review-progress-fill');
 
     starsEl.innerHTML = STAR_MINI.repeat(5);
-    REVIEWS.forEach((_, i) => {
+    ALL_REVIEWS.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'dot';
       dot.setAttribute('aria-label', `Review ${i + 1}`);
@@ -2400,7 +2431,7 @@
     let progressTimer = null, advanceTimer = null;
 
     const render = () => {
-      const r = REVIEWS[idx];
+      const r = ALL_REVIEWS[idx];
       avatarEl.textContent = r.author.charAt(0);
       quoteEl.textContent = r.text;
       authorEl.textContent = r.author;
@@ -2421,15 +2452,15 @@
         fillEl.style.transform = `scaleX(${p})`;
       }, 50);
       advanceTimer = setTimeout(() => {
-        idx = (idx + 1) % REVIEWS.length;
+        idx = (idx + 1) % ALL_REVIEWS.length;
         render(); restart();
       }, ROTATE_MS);
     };
 
     carousel.addEventListener('mouseenter', () => { paused = true; stop(); });
     carousel.addEventListener('mouseleave', () => { paused = false; restart(); });
-    prevBtn.addEventListener('click', () => { idx = (idx - 1 + REVIEWS.length) % REVIEWS.length; render(); restart(); });
-    nextBtn.addEventListener('click', () => { idx = (idx + 1) % REVIEWS.length; render(); restart(); });
+    prevBtn.addEventListener('click', () => { idx = (idx - 1 + ALL_REVIEWS.length) % ALL_REVIEWS.length; render(); restart(); });
+    nextBtn.addEventListener('click', () => { idx = (idx + 1) % ALL_REVIEWS.length; render(); restart(); });
 
     render(); restart();
   }
@@ -2499,8 +2530,8 @@
   fadeEls.forEach(el => el.classList.add('fade-up'));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
-      entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('in'); });
-    }, { threshold: 0.08 });
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -48px 0px' });
     fadeEls.forEach(el => io.observe(el));
   } else {
     fadeEls.forEach(el => el.classList.add('in'));
