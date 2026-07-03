@@ -175,6 +175,7 @@ def update_counts_everywhere(old: int, new: int, extra: int = 0):
     subs = [
         (f"{old} Google", f"{new} Google"),
         (f"{old} reviews", f"{new} reviews"),
+        (f"{old} Reviews", f"{new} Reviews"),
         (f"{old} five-star", f"{new} five-star"),
         (f'data-review-count="{old}"', f'data-review-count="{new}"'),
         # All-platform totals (hero/proof stats, FAQ schema, aggregateRating)
@@ -182,6 +183,8 @@ def update_counts_everywhere(old: int, new: int, extra: int = 0):
         (f"{old_total} five-star", f"{new_total} five-star"),
         (f'data-value="{old_total}"', f'data-value="{new_total}"'),
         (f'"ratingCount": "{old_total}"', f'"ratingCount": "{new_total}"'),
+        # Proof-strip badge: bare number in its own span (index.html)
+        (f'class="ps-num">{old_total}<', f'class="ps-num">{new_total}<'),
         # Legacy Google-count forms of the same attributes, in case a page
         # still carries the platform-specific number.
         (f'data-value="{old}"', f'data-value="{new}"'),
