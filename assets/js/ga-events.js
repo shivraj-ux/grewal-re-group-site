@@ -72,13 +72,13 @@
       // Topic-aware CTA: route intent to the most relevant tool/page (routes that exist on the site).
       var hay = (window.location.pathname + ' ' + (document.title || '') + ' ' +
                  ((document.querySelector('h1') || {}).textContent || '')).toLowerCase();
-      cta = { href: '/contact.html', text: 'Schedule a Call', aria: 'Schedule a call with Shivraj Grewal' };
+      cta = { href: '/contact', text: 'Schedule a Call', aria: 'Schedule a call with Shivraj Grewal' };
       if (/sell|seller|listing|list your|home worth|home value|price your|net proceeds/.test(hay)) {
-        cta = { href: '/home-value-estimator.html', text: 'See What Your Home Is Worth', aria: 'Get a free home value estimate' };
+        cta = { href: '/home-value-estimator', text: 'See What Your Home Is Worth', aria: 'Get a free home value estimate' };
       } else if (/reloca|moving to austin|move to austin|relocating/.test(hay)) {
-        cta = { href: '/relocation-guide.html', text: 'Get the Relocation Guide', aria: 'Download the Austin relocation guide' };
+        cta = { href: '/relocation-guide', text: 'Get the Relocation Guide', aria: 'Download the Austin relocation guide' };
       } else if (/flood|insurance|risk/.test(hay)) {
-        cta = { href: '/contact.html', text: 'Request a Flood Risk Review', aria: 'Request a flood-risk review for an Austin address' };
+        cta = { href: '/contact', text: 'Request a Flood Risk Review', aria: 'Request a flood-risk review for an Austin address' };
       }
     }
     a.href = cta.href;
@@ -108,7 +108,7 @@
   // ── Header "Contact" button: direct call on mobile ──────────────────────
   function wireHeaderCTA() {
     if (!isMobile()) return;
-    var links = document.querySelectorAll('.gh-cta[href="/contact.html"]');
+    var links = document.querySelectorAll('.gh-cta[href="/contact"]');
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
       a.href = PHONE;

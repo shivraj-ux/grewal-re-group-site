@@ -15,7 +15,7 @@ volume, blog data) and propagate the change to `index.html` in the same PR.
 |---|---|
 | Shivraj Grewal — TREC License #736060 | https://www.trec.texas.gov/apps/license-holder-search/ (search by license number) |
 | Compass — TREC Broker License #9006927 | https://www.trec.texas.gov/apps/license-holder-search/ (search by broker license) |
-| Office address: 2500 Bee Cave Rd, Bldg 3 Ste 200, Austin, TX 78746 | Google Business: https://share.google/1pYwueIVdeVLAtANo · Apple Maps: https://maps.apple/p/oTc0Km7azgEjNC |
+| Office address: 2500 Bee Cave Rd, Building 3, Suite 200, Austin, TX 78746 | Google Business: https://share.google/1pYwueIVdeVLAtANo · Apple Maps: https://maps.apple/p/oTc0Km7azgEjNC |
 | Compass affiliation | Compass Texas: https://www.compass.com/agents/shivraj-grewal/ (canonical agent page) |
 | Tagline "People First. Straight Answers. Strong Results." | Internal brand standard — `Grewal RE Group Brain/4-REFERENCES/brand/GrewalREGroup_BrandGuidelines.pdf` |
 
@@ -109,10 +109,9 @@ These are official Compass-maintained reports updated monthly.
 
 ## 8. Relocation Guide PDF
 
-- **File on site:** `assets/guides/the-relocation-edition.pdf` (144 pages, **163 MB — full print quality** as authoritative source-of-truth per Shivraj 2026-05-05)
+- **File on site:** `assets/guides/the-relocation-edition.pdf` (154 pages, ~7.6 MB web-optimized copy, deployed 2026-06-22)
 - **Source file:** `~/Downloads/Relocation guide_.pdf` (matches `Grewal RE Group Brain/10-MARKETING/relocation-guide/Relocation guide_.pdf`)
-- **Backup compressed copy:** `assets/guides/the-relocation-edition_22mb-compressed.pdf.bak` (same 144 pages, ~22 MB, kept locally not deployed)
-- **Earlier "141 pages" reference** was an approximation — file is 144 pages
+- **Earlier "141 pages" / "144 pages" / "153 pages" references** were approximations or counts of older revisions — the deployed file is 154 pages (verified against the PDF page tree, 2026-07-03)
 - **Note:** if download speed becomes a friction point for users, the .bak copy can be promoted with no content change
 
 ## 9. Social / Profile Verification (the `sameAs` JSON-LD entries)
@@ -173,14 +172,14 @@ All 15 are verified live:
 | 78746 zip median ~$1.72M | Unlock MLS / Austin Board of REALTORS® (zip-level table, via KXAN) | June 11, 2026 |
 
 > **Competitor-source removal (2026-07-01):** Earlier drafts sourced metro
-> figures (17,317 active, 5,042 pending, $473,745 median, 6.0 months) to the
-> **Team Price Austin Market Update**. Team Price Real Estate is a competing
-> Austin brokerage/team, so per the competitor-source rule in `/CLAUDE.md` all
-> such citations were removed sitewide and re-sourced to the Unlock MLS / ABoR
-> figures above. Team Price's proprietary "80-month recovery" forecast was
-> removed from the blog and reframed as illustrative CAGR arithmetic on ABoR /
-> Texas A&M TRERC data. "Orchard" (orchard.com, an Austin brokerage) was also
-> dropped as a neighborhood-comp source in favor of Redfin/Realtor.com.
+> figures (17,317 active, 5,042 pending, $473,745 median, 6.0 months) to a
+> competing Austin brokerage's market update. Per our sourcing policy we never
+> cite Austin-area agents, teams, or brokerages, so all such citations were
+> removed sitewide and re-sourced to the Unlock MLS / ABoR figures above. A
+> proprietary "80-month recovery" forecast was removed from the blog and
+> reframed as illustrative CAGR arithmetic on ABoR / Texas A&M TRERC data, and
+> a brokerage-sourced neighborhood-comp figure was re-sourced to
+> Redfin/Realtor.com.
 
 ### Luxury Segment (current)
 | Claim | Source | Date |

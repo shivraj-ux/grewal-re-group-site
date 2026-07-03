@@ -44,7 +44,7 @@ const AGENT = {
   brokerLicense: "TREC #9006927",
   agentLicense: "TREC #736060",
   designations: ["CLHMS Guild", "CNE"],
-  office: "2500 Bee Cave Rd, Building 3 Suite 200, Austin, TX 78746",
+  office: "2500 Bee Cave Rd, Building 3, Suite 200, Austin, TX 78746",
   phone: "(512) 617-0001",
   email: "shivraj.grewal@compass.com",
   stats: {
@@ -187,7 +187,7 @@ const TOOLS = {
 
   get_relocation_guide: {
     description:
-      "Get the free Austin Relocation Guide: a 144-page PDF covering neighborhoods, schools, cost of living, and the market. Returns the guide URL and a summary.",
+      "Get the free Austin Relocation Guide: a 154-page PDF covering neighborhoods, schools, cost of living, and the market. Returns the guide URL and a summary.",
     input: z.object({}),
     handler: async (_args, site) => ({
       title: "Austin Relocation Guide (The Relocation Edition)",

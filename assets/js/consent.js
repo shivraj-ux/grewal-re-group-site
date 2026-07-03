@@ -55,7 +55,7 @@
     bar.setAttribute('aria-label', 'Cookie consent');
     bar.innerHTML =
       '<div class="grg-in">' +
-      '<p>We use cookies to measure site traffic and improve your experience. Accept analytics cookies, or decline and we\'ll keep things anonymous. See our <a href="/privacy.html">Privacy Policy</a>.</p>' +
+      '<p>We use cookies to measure site traffic and improve your experience. Accept analytics cookies, or decline and we\'ll keep things anonymous. See our <a href="/privacy">Privacy Policy</a>.</p>' +
       '<div class="grg-btns">' +
       '<button type="button" class="grg-decline" id="grg-decline">Decline</button>' +
       '<button type="button" class="grg-accept" id="grg-accept">Accept</button>' +

@@ -60,7 +60,7 @@ Each community page embeds a live Compass market report refreshed monthly. See
 
 - Phone: (512) 617-0001
 - Email: shivraj.grewal@compass.com
-- Office: 2500 Bee Cave Rd, Building 3 Suite 200, Austin, TX 78746
+- Office: 2500 Bee Cave Rd, Building 3, Suite 200, Austin, TX 78746
 - Schedule: [`/#contact`](/#contact)
 
 Equal Housing Opportunity. Information deemed reliable but not guaranteed.
