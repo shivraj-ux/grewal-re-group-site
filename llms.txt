@@ -42,7 +42,7 @@ get_relocation_guide, request_consultation.
 Travis · Hays · Williamson · Bastrop Counties (Texas).
 Specialty neighborhoods: West Lake Hills, Tarrytown, Barton Creek, Davenport Ranch,
 Lakeway, Mueller, South Congress, Rollingwood, Steiner Ranch, Lake Travis,
-Dripping Springs, Tarrytown, Barton Hills, Zilker, Central Austin, East Austin,
+Dripping Springs, Barton Hills, Zilker, Central Austin, East Austin,
 Downtown Austin, Circle C Ranch, Northwest Hills, Travis Heights, Buda, Kyle,
 Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
 
