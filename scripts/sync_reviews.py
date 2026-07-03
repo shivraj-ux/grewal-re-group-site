@@ -151,18 +151,40 @@ def tidy_author(name: str) -> str:
     return name
 
 
-def update_counts_everywhere(old: int, new: int):
+def other_platform_count(current: dict) -> int:
+    """Reviews we display from platforms other than Google (Zillow, Realtor.com).
+
+    Hand-maintained in reviews.json -> other_platforms. The site shows the
+    all-platform total (Google + these) in the hero/proof stats and schema,
+    so the total must move together with the Google count on every sync.
+    """
+    other = current.get("other_platforms", {}) or {}
+    n = 0
+    n += int((other.get("zillow") or {}).get("review_count") or 0)
+    n += len((other.get("realtor_com") or {}).get("testimonials") or [])
+    return n
+
+
+def update_counts_everywhere(old: int, new: int, extra: int = 0):
     if old == new:
         return 0
     changed = 0
     targets = list(ROOT.glob("*.html")) + list(ROOT.glob("blog/*.html")) + \
         list(ROOT.glob("communities/*.html")) + [LLMS_TXT]
+    old_total, new_total = old + extra, new + extra
     subs = [
         (f"{old} Google", f"{new} Google"),
         (f"{old} reviews", f"{new} reviews"),
         (f"{old} five-star", f"{new} five-star"),
-        (f'data-value="{old}"', f'data-value="{new}"'),
         (f'data-review-count="{old}"', f'data-review-count="{new}"'),
+        # All-platform totals (hero/proof stats, FAQ schema, aggregateRating)
+        (f"{old_total} Five-Star", f"{new_total} Five-Star"),
+        (f"{old_total} five-star", f"{new_total} five-star"),
+        (f'data-value="{old_total}"', f'data-value="{new_total}"'),
+        (f'"ratingCount": "{old_total}"', f'"ratingCount": "{new_total}"'),
+        # Legacy Google-count forms of the same attributes, in case a page
+        # still carries the platform-specific number.
+        (f'data-value="{old}"', f'data-value="{new}"'),
         (f'"ratingCount": "{old}"', f'"ratingCount": "{new}"'),
     ]
     for f in targets:
@@ -258,7 +280,8 @@ def main():
         ]
     REVIEWS_JSON.write_text(json.dumps(current, indent=2) + "\n", encoding="utf-8")
 
-    changed_files = update_counts_everywhere(old_count, new_count)
+    changed_files = update_counts_everywhere(old_count, new_count,
+                                             extra=other_platform_count(current))
     updated_reviews = update_index_reviews(current["featured"])
 
     if new_count > old_count and current["featured"]:
