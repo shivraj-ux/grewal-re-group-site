@@ -170,7 +170,8 @@ def update_counts_everywhere(old: int, new: int, extra: int = 0):
         return 0
     changed = 0
     targets = list(ROOT.glob("*.html")) + list(ROOT.glob("blog/*.html")) + \
-        list(ROOT.glob("communities/*.html")) + [LLMS_TXT]
+        list(ROOT.glob("communities/*.html")) + \
+        [LLMS_TXT, ROOT / "index.md", ROOT / "AGENTS.md"]  # served markdown mirrors
     old_total, new_total = old + extra, new + extra
     subs = [
         (f"{old} Google", f"{new} Google"),
@@ -178,6 +179,11 @@ def update_counts_everywhere(old: int, new: int, extra: int = 0):
         (f"{old} Reviews", f"{new} Reviews"),
         (f"{old} five-star", f"{new} five-star"),
         (f'data-review-count="{old}"', f'data-review-count="{new}"'),
+        # Blog author-bio cards wrap the number in its own tag, e.g.
+        # <strong>119</strong> Google Reviews / <span>119</span> Google Reviews
+        (f'>{old}</strong> Google', f'>{new}</strong> Google'),
+        (f'>{old}</span> Google', f'>{new}</span> Google'),
+        (f'>{old} ★ 5.0<', f'>{new} ★ 5.0<'),
         # All-platform totals (hero/proof stats, FAQ schema, aggregateRating)
         (f"{old_total} Five-Star", f"{new_total} Five-Star"),
         (f"{old_total} five-star", f"{new_total} five-star"),

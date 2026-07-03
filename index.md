@@ -2,7 +2,7 @@
 
 > Austin's luxury real estate team led by **Shivraj Grewal** at Compass.
 > People First. Straight Answers. Strong Results.
-> 100+ closed transactions · $100M+ career volume · 117 five-star Google reviews.
+> 100+ closed transactions · $100M+ career volume · 119 five-star Google reviews.
 
 This is the markdown rendering of the homepage, served when you request
 `Accept: text/markdown`. For tool access, use the MCP server at
