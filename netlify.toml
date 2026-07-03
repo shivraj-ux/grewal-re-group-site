@@ -17,6 +17,24 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# JS/CSS are referenced by stable URLs (query-param versioning is easy to
+# forget), so keep them on a short cache — they're a few KB each.
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=600, must-revalidate"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=600, must-revalidate"
+
+# Logos occasionally get re-optimized under the same filename.
+[[headers]]
+  for = "/assets/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
 # AI crawler files: short cache so updates propagate fast
 [[headers]]
   for = "/llms.txt"
