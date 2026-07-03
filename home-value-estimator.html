@@ -156,6 +156,22 @@
   .tool-lead p{color:#6b6b6b;font-size:.92rem;margin:0 0 1.25rem;line-height:1.55;}
   .tool-fine{font-size:.75rem;color:#8a8478;text-align:center;margin-top:.6rem;}
 
+  /* ── Two-step funnel ── */
+  .hv-progress{display:flex;align-items:center;gap:.6rem;margin-bottom:1.6rem;}
+  .hv-progress .hv-step-dot{display:flex;align-items:center;gap:.45rem;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#b5ad9e;}
+  .hv-progress .hv-step-dot .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1.5px solid #d8d0c2;font-size:.72rem;color:#8a8478;background:#fff;}
+  .hv-progress .hv-step-dot.active{color:#8a6f2e;}
+  .hv-progress .hv-step-dot.active .n{background:#B8963E;border-color:#B8963E;color:#fff;}
+  .hv-progress .hv-bar{flex:1;height:1.5px;background:#e8e3d8;}
+  .hv-pane[hidden]{display:none;}
+  .hv-snapshot{background:#0f0e0c;color:#fff;border-radius:10px;padding:1.6rem 1.6rem 1.4rem;margin:1.4rem 0 .4rem;}
+  .hv-snapshot h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;margin:0 0 1rem;color:#fff;}
+  .hv-snapshot .line{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:.92rem;}
+  .hv-snapshot .line span:first-child{color:rgba(255,255,255,.6);}
+  .hv-snapshot .line strong{color:#d4b366;font-weight:600;text-align:right;}
+  .hv-snapshot .src{font-size:.72rem;color:rgba(255,255,255,.45);margin:.9rem 0 0;line-height:1.5;}
+  .hv-back{background:none;border:none;color:#8a6f2e;font:600 .8rem 'Inter',sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;padding:.4rem 0;margin-top:.75rem;}
+  .hv-back:hover{text-decoration:underline;}
 </style>
   <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
 </head>
@@ -207,34 +223,164 @@
 <section class="tool-hero">
   <span class="eyebrow">What's My Home Worth?</span>
   <h1>Austin Home Value Estimator</h1>
-  <p>Online estimates miss what makes your home unique. Tell us about your property and Shivraj will send a personalized valuation built on real, recent Austin comps &mdash; not an algorithm.</p>
+  <p>Two steps: tell us about your property and get an instant, sourced snapshot of your market &mdash; then Shivraj runs the comps by hand and sends your exact valuation. Real data, no algorithm guessing at your home.</p>
 </section>
 <div class="tool-wrap">
   <div class="tool-card">
-    <form name="home-value-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="hv-progress" aria-hidden="true">
+      <span class="hv-step-dot active" id="hv-dot-1"><span class="n">1</span> Your Property</span>
+      <span class="hv-bar"></span>
+      <span class="hv-step-dot" id="hv-dot-2"><span class="n">2</span> Your Valuation</span>
+    </div>
+    <form name="home-value-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" id="hv-form">
       <input type="hidden" name="form-name" value="home-value-request">
       <input type="hidden" name="interest" value="Sell - home valuation request">
       <p style="position:absolute;left:-9999px"><label>Don't fill: <input name="bot-field"></label></p>
-      <div class="tool-field"><label for="addr">Property address</label><input id="addr" name="address" type="text" required placeholder="Street, Austin TX"></div>
-      <div class="tool-row">
-        <div class="tool-field"><label for="beds">Bedrooms</label><input id="beds" name="beds" type="number" inputmode="numeric" min="0" placeholder="4"></div>
-        <div class="tool-field"><label for="baths">Bathrooms</label><input id="baths" name="baths" type="number" inputmode="decimal" min="0" step="0.5" placeholder="3"></div>
-      </div>
-      <div class="tool-row">
-        <div class="tool-field"><label for="sqft">Approx. square feet</label><input id="sqft" name="sqft" type="number" inputmode="numeric" min="0" placeholder="2800"></div>
-        <div class="tool-field"><label for="cond">Condition</label><select id="cond" name="condition"><option>Move-in / updated</option><option>Average</option><option>Needs work</option><option>New / luxury</option></select></div>
-      </div>
-      <div class="tool-field"><label for="timeline">When are you thinking of selling?</label><select id="timeline" name="timeline"><option>Just curious</option><option>0-3 months</option><option>3-6 months</option><option>6-12 months</option><option>Just refinancing/insurance</option></select></div>
-      <div class="tool-lead" style="border-top:none;margin-top:.5rem;padding-top:.5rem;">
-        <div class="tool-row">
-          <div class="tool-field"><label for="n">Name</label><input id="n" name="name" type="text" required placeholder="Your name"></div>
-          <div class="tool-field"><label for="p">Phone</label><input id="p" name="phone" type="tel" required placeholder="(512) 000-0000"></div>
+
+      <!-- ── STEP 1: property ── -->
+      <div class="hv-pane" id="hv-step1">
+        <div class="tool-field"><label for="addr">Property address</label><input id="addr" name="address" type="text" required placeholder="Street, Austin TX"></div>
+        <div class="tool-field"><label for="area">Area / neighborhood</label>
+          <select id="area" name="area">
+            <option value="">Choose the closest fit&hellip;</option>
+            <option value="westlake_hills">Westlake Hills / Rollingwood (78746)</option>
+            <option value="barton_creek">Barton Creek (78735)</option>
+            <option value="tarrytown">Tarrytown / Old West Austin (78703)</option>
+            <option value="steiner_ranch">Steiner Ranch (78732)</option>
+            <option value="west_austin_other">Other West Austin (78746)</option>
+            <option value="luxury_other">Another luxury area ($1M+)</option>
+            <option value="austin_other">Elsewhere in the Austin metro</option>
+          </select>
         </div>
-        <div class="tool-field"><label for="e">Email (where we send your valuation)</label><input id="e" name="email" type="email" required placeholder="you@email.com"></div>
+        <div class="tool-row">
+          <div class="tool-field"><label for="beds">Bedrooms</label><input id="beds" name="beds" type="number" inputmode="numeric" min="0" placeholder="4"></div>
+          <div class="tool-field"><label for="baths">Bathrooms</label><input id="baths" name="baths" type="number" inputmode="decimal" min="0" step="0.5" placeholder="3"></div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-field"><label for="sqft">Approx. square feet</label><input id="sqft" name="sqft" type="number" inputmode="numeric" min="0" placeholder="2800"></div>
+          <div class="tool-field"><label for="cond">Condition</label><select id="cond" name="condition"><option>Move-in / updated</option><option>Average</option><option>Needs work</option><option>New / luxury</option></select></div>
+        </div>
+        <div class="tool-field"><label for="timeline">When are you thinking of selling?</label><select id="timeline" name="timeline"><option>Just curious</option><option>0-3 months</option><option>3-6 months</option><option>6-12 months</option><option>Just refinancing/insurance</option></select></div>
+        <button type="button" class="tool-btn" id="hv-continue">See My Instant Market Snapshot &rarr;</button>
+        <p class="tool-fine">Free &middot; no obligation &middot; takes 30 seconds</p>
       </div>
-      <button type="submit" class="tool-btn">Get My Home Valuation</button>
-      <p class="tool-fine">A real person prepares your valuation &mdash; no automated estimate, no spam. <a href="/privacy.html">Privacy</a>.</p>
+
+      <!-- ── STEP 2: snapshot + contact ── -->
+      <div class="hv-pane" id="hv-step2" hidden>
+        <div class="hv-snapshot" id="hv-snapshot" aria-live="polite"></div>
+        <div class="tool-lead" style="border-top:none;margin-top:1rem;padding-top:.5rem;">
+          <h2>Now the number that actually matters</h2>
+          <p>The snapshot above is the market. Your home isn't the median &mdash; lot, finishes, floor plan, and timing move the real number six figures in this segment. Shivraj will run the comps by hand and send your exact valuation, usually within one business day.</p>
+          <div class="tool-row">
+            <div class="tool-field"><label for="n">Name</label><input id="n" name="name" type="text" required placeholder="Your name"></div>
+            <div class="tool-field"><label for="p">Phone</label><input id="p" name="phone" type="tel" required placeholder="(512) 000-0000"></div>
+          </div>
+          <div class="tool-field"><label for="e">Email (where we send your valuation)</label><input id="e" name="email" type="email" required placeholder="you@email.com"></div>
+        </div>
+        <button type="submit" class="tool-btn">Get My Exact Valuation &mdash; Free</button>
+        <button type="button" class="hv-back" id="hv-back">&larr; Back to property details</button>
+        <p class="tool-fine">A real person prepares your valuation &mdash; no automated estimate, no spam. <a href="/privacy.html">Privacy</a>.</p>
+      </div>
     </form>
+
+    <script>
+    (function () {
+      var step1 = document.getElementById('hv-step1');
+      var step2 = document.getElementById('hv-step2');
+      var dot1 = document.getElementById('hv-dot-1');
+      var dot2 = document.getElementById('hv-dot-2');
+      var snap = document.getElementById('hv-snapshot');
+      var MD = null;
+
+      function money(n) { return '$' + Number(n).toLocaleString('en-US'); }
+      function line(label, value) {
+        return '<div class="line"><span>' + label + '</span><strong>' + value + '</strong></div>';
+      }
+
+      // All figures come from /data/market-data/latest.json (permitted public
+      // sources only, dated). Nothing here is computed or invented.
+      function buildSnapshot(md) {
+        var area = document.getElementById('area').value;
+        var cond = document.getElementById('cond').value;
+        var m = md.austin_metro || {};
+        var lux = md.luxury_segment || {};
+        var nb = (md.neighborhoods || {});
+        var html = '', src = '';
+
+        if (area === 'westlake_hills' && nb.westlake_hills) {
+          var w = nb.westlake_hills;
+          html = line('Median sold price (last 30 days)', money(w.medianSoldPrice30Day)) +
+                 line('Median sold price (12 months)', money(w.medianSoldPrice12Month)) +
+                 line('Typical days on market', w.avgDaysOnMarket) +
+                 line('School district', w.schoolDistrict);
+          src = 'Source: ' + w.dataSource + ', as of ' + md.date + '.';
+        } else if (area === 'barton_creek' && nb.barton_creek) {
+          var b = nb.barton_creek;
+          html = line('Median sold price (last month)', money(b.medianSoldPrice)) +
+                 line('Median listing price', money(b.medianListingPrice)) +
+                 line('School district', b.schoolDistrict);
+          src = 'Source: ' + b.dataSource + ', as of ' + md.date + '.';
+        } else if (area === 'tarrytown') {
+          html = '<p style="margin:.2rem 0 0;font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.85);">Tarrytown is a thin, low-inventory market where many homes trade off-market &mdash; public medians are unreliable here, and that’s exactly why a hand-run comp analysis matters. Austin ISD; ZIP 78703.</p>';
+          src = 'Unlock MLS market context, as of ' + md.date + '.';
+        } else if (area === 'west_austin_other') {
+          html = line('ZIP 78746 median sold price', money(m.zip78746Median)) +
+                 line('Austin metro days on market', m.avgDaysOnMarket + ' days') +
+                 line('Metro months of inventory', m.monthsOfInventory);
+          src = 'Source: ' + m.source + '.';
+        } else if (area === 'luxury_other' || cond === 'New / luxury') {
+          html = line('Austin luxury ($1M+) median sold', money(lux.medianSoldPrice)) +
+                 line('Luxury days on market', lux.avgDaysOnMarket + ' days') +
+                 line('Luxury sales volume, year over year', lux.salesVolumeYoY);
+          src = 'Source: ' + lux.source + '.';
+        } else {
+          html = line('Austin metro median sold price', money(m.medianSoldPrice)) +
+                 line('Active listings', Number(m.activeListings).toLocaleString('en-US')) +
+                 line('Typical days on market', m.avgDaysOnMarket + ' days') +
+                 line('Months of inventory', m.monthsOfInventory);
+          src = 'Source: ' + m.source + '.';
+        }
+        snap.innerHTML = '<h3>Your instant market snapshot</h3>' + html +
+          '<p class="src">' + src + ' Medians describe the area, not your home.</p>';
+      }
+
+      document.getElementById('hv-continue').addEventListener('click', function () {
+        var addr = document.getElementById('addr');
+        if (!addr.value.trim()) { addr.reportValidity(); return; }
+        var go = function (md) {
+          if (md) {
+            buildSnapshot(md);
+          } else {
+            snap.innerHTML = '<h3>Your instant market snapshot</h3>' +
+              '<p style="margin:.2rem 0 0;font-size:.95rem;line-height:1.65;color:rgba(255,255,255,.85);">We could not load live market data just now &mdash; your hand-prepared valuation will include current medians, days on market, and inventory for your exact area.</p>';
+          }
+          step1.hidden = true; step2.hidden = false;
+          dot1.classList.remove('active'); dot2.classList.add('active');
+          step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (window.gtag) gtag('event', 'hv_snapshot_shown', { area: document.getElementById('area').value || 'unspecified' });
+        };
+        if (MD) { go(MD); return; }
+        fetch('/data/market-data/latest.json')
+          .then(function (r) { return r.json(); })
+          .then(function (md) { MD = md; go(md); })
+          .catch(function () { go(null); });
+      });
+
+      // Enter in a step-1 field should advance the step, not submit the form
+      // (the required contact fields are still hidden at that point).
+      step1.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+          e.preventDefault();
+          document.getElementById('hv-continue').click();
+        }
+      });
+
+      document.getElementById('hv-back').addEventListener('click', function () {
+        step2.hidden = true; step1.hidden = false;
+        dot2.classList.remove('active'); dot1.classList.add('active');
+      });
+    })();
+    </script>
   </div>
 </div>
 <section class="tool-wrap" style="padding-top:0;"><div class="tool-card"><h2 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:#0a0a0a;margin:0 0 1rem;">Frequently asked questions</h2><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">How can I find out what my Austin home is worth?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">The most accurate way is a comparative market analysis (CMA), a review of recent sales of similar homes in your neighborhood adjusted for your home&#x27;s size, condition, and features. Request one through this tool and Grewal RE Group will prepare it.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">Are online home value estimates accurate?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">Automated estimates can be off by tens of thousands of dollars, especially in non-disclosure states like Texas where sale prices are not public record. A local agent&#x27;s comp-based valuation is far more reliable.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">How much does a home valuation cost?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">Nothing. A professional comparative market analysis from Grewal RE Group is free and comes with no obligation to list.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">How long does it take to get my home valuation?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">After you submit your home&#x27;s details, Grewal RE Group typically returns a personalized valuation within one to two business days.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">How fast are homes selling in Austin right now?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">It depends heavily on price point, neighborhood, and condition. Compared with the 2021 to 2022 frenzy, the typical Austin home now takes longer to sell and buyers have more negotiating room, but well-priced, well-presented homes in desirable areas still sell quickly. Accurate pricing from day one is the single biggest factor. We include current days-on-market for your specific area in your valuation.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">What is the real estate agent commission in Austin in 2026?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">Commissions are always negotiable and are not set by law. Since the 2024 National Association of REALTORS settlement, buyer-agent compensation is negotiated separately and disclosed up front rather than assumed. We will walk you through current Austin norms and exactly what your costs would look like; you can also estimate your bottom line with our <a href="/seller-net-proceeds-calculator.html" style="color:#9a7c33;">Seller Net Proceeds Calculator</a>.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">When is the best time to sell a home in Austin?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">Historically, spring through early summer (roughly February to June) brings the most buyer activity in Austin, which can support stronger pricing. That said, Austin's steady stream of relocating buyers shops year-round, and lower-competition seasons like fall and winter can mean motivated buyers and fewer competing listings. The right timing depends on your home and your goals.</div></details><details class="faq-item" style="border-bottom:1px solid #e8e3d8;"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;">What should I do to get my Austin home ready to sell?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;">The highest-return steps are usually decluttering and deep cleaning, handling minor repairs and fresh paint, improving curb appeal, and pricing correctly based on recent comparable sales. Professional photography and light staging help your listing stand out online, where nearly every buyer starts. We provide a tailored pre-listing checklist with your valuation.</div></details></div></section>
