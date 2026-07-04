@@ -6,7 +6,7 @@
   # Internal files must not ship in the publish output. CLAUDE.md is the
   # internal editorial policy (was being served at /CLAUDE.md), the competitor
   # log is internal research, and _TEMPLATE files are scaffolding.
-  command = "rm -f CLAUDE.md data/competitor-log.json data/site-audit.json data/seo-config.json blog/_TEMPLATE_ENHANCED.html"
+  command = "rm -rf archive && rm -f CLAUDE.md data/competitor-log.json data/site-audit.json data/seo-config.json blog/_TEMPLATE_ENHANCED.html"
 
 # ── Cache headers ────────────────────────────────────────────
 # HTML: never cache long (must reflect new edits instantly)
