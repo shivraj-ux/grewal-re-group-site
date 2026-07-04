@@ -16,6 +16,10 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Gated lead-asset PDFs: keep out of search indexes (robots.txt also disallows)
+/assets/guides/*
+  X-Robots-Tag: noindex
+
 # JS/CSS are referenced by stable URLs (query-param versioning is easy to
 # forget), so keep them on a short cache — they're a few KB each.
 /assets/js/*

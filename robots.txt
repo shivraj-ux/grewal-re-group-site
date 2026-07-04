@@ -1,7 +1,7 @@
 # Grewal RE Group — robots.txt
 # Last updated: 2026-06-09
-# Allows search engines and AI crawlers full access to public content.
-# Do not crawl: relocation guide PDF (large download), source markdown files.
+# Allows search engines and AI crawlers full access to public content,
+# except /assets/guides/ (gated lead-asset PDFs, disallowed per group below).
 #
 # Content Signals Policy (machine-readable AI usage policy):
 #   search    = listing this site in a search engine
@@ -13,93 +13,121 @@
 # ── Standard search engines ──────────────────────────────────
 User-agent: Googlebot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Googlebot-Image
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Applebot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: YandexBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Slurp
 Allow: /
+Disallow: /assets/guides/
 
 # ── AI crawlers (explicitly allowed) ─────────────────────────
 # We want LLMs and AI search products to index this site.
 
 User-agent: GPTBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: CCBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Meta-ExternalFetcher
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Diffbot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: ImagesiftBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: FacebookBot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /assets/guides/
 
 User-agent: LinkedInBot
 Allow: /
+Disallow: /assets/guides/
 
-# ── Default policy: allow everything (no blanket Disallow) ───
+# ── Default policy: allow everything except /assets/guides/ ──
 # SOURCES.md and AGENTS.md are intentionally crawlable: they are agent resources.
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
+Disallow: /assets/guides/
 
 # ── Sitemaps + AI entry point ────────────────────────────────
 Sitemap: https://grewalregroup.com/sitemap.xml

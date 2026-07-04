@@ -31,7 +31,7 @@
     { "name": "search_communities", "description": "Free-text search across name, zip, and description." },
     { "name": "list_services", "description": "Buying, selling, relocation, advisory, new construction." },
     { "name": "get_market_report", "description": "Live monthly market-report links for a community." },
-    { "name": "get_relocation_guide", "description": "Free 144-page Austin Relocation Guide." },
+    { "name": "get_relocation_guide", "description": "Free 154-page Austin Relocation Guide." },
     { "name": "request_consultation", "description": "Submit a consultation request into the lead inbox (consent required)." }
   ],
   "documentation": {
