@@ -13,19 +13,49 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://grewalregroup.com/blog/neighborhoods</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/buying</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/selling</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/luxury</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/market-reports</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/relocation</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/blog/lifestyle</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://grewalregroup.com/blog/selling-luxury-home-austin-white-glove-guide-2026</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/austin-luxury-market-data-deep-dive-2026</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/tarrytown-historic-luxury-central-austin-2026</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -55,26 +85,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/east-austin-homes-for-sale-2026</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/austin-tx-real-estate-2026-central-east</loc>
     <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/rollingwood-2026-neighborhood-guide</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/spring-2026-west-austin-luxury-homes</loc>
-    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,13 +98,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/west-austin-luxury-homes-2026</loc>
-    <lastmod>2026-03-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/west-austin-luxury-spring-2026</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -247,12 +253,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/tarrytown-austin-real-estate-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/downtown-austin-real-estate-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -271,14 +271,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/south-congress-soco-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/bouldin-creek-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -290,43 +284,43 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/hyde-park-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/mueller-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/cherrywood-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/north-loop-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/crestview-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/rosedale-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/allandale-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -338,12 +332,6 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/old-west-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/windsor-park-austin-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -368,18 +356,12 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/rob-roy-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/spanish-oaks-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/bee-cave-austin-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -415,12 +397,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/lakeway-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/rough-hollow-lakeway-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -434,13 +410,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/dripping-springs-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/driftwood-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -458,13 +428,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/lago-vista-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/spicewood-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -475,44 +439,38 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/round-rock-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/georgetown-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/cedar-park-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/leander-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/pflugerville-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/hutto-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/liberty-hill-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -536,13 +494,13 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/kyle-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/buda-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -560,7 +518,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/govalle-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -596,13 +554,13 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/westlake-hills-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/barton-creek-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -655,12 +613,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/relocating-to-austin-from-california-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/relocating-to-austin-from-new-york-seattle-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -692,7 +644,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/austin-downtown-condos-guide-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -716,31 +668,31 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/taylor-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/manor-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/del-valle-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/bastrop-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/elgin-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -758,7 +710,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/volente-tx-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -794,7 +746,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/rollingwood-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -818,18 +770,6 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/rob-roy-on-the-lake-austin-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/westlake-hills-luxury-estates-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/tarrytown-luxury-homes-austin-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -883,12 +823,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/austin-condo-market-2026</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/austin-adu-guide-2026</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>yearly</changefreq>
@@ -914,18 +848,6 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/78704-austin-zip-code-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/allandale-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/allandale-crestview-austin-guide</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -986,7 +908,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/austin-condo-market-report-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1214,7 +1136,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/austin-luxury-market-report-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1555,26 +1477,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/barton-creek-austin-neighborhood-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/barton-creek-resort-real-estate-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/bastrop-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/bee-cave-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1597,43 +1507,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/bouldin-creek-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/buda-kyle-real-estate-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/buda-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/cedar-park-leander-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/cedar-park-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/cherrywood-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/cherrywood-french-place-austin-guide</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1663,37 +1543,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/crestview-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/del-valle-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/downtown-austin-condos-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/driftwood-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/dripping-springs-isd-school-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/dripping-springs-tx-real-estate-guide</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1706,36 +1562,12 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/east-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/east-austin-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/elgin-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/georgetown-isd-school-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/georgetown-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/govalle-austin-neighborhood-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1795,36 +1627,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/hutto-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/hyde-park-austin-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/hyde-park-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/kyle-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/lago-vista-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/lake-austin-waterfront-homes-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -1868,30 +1670,12 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/lakeway-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/leander-isd-school-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/leander-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/liberty-hill-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/manor-tx-real-estate-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1916,7 +1700,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/moving-to-austin-from-california-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1975,25 +1759,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/mueller-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/mueller-austin-neighborhood-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/north-austin-domain-neighborhood-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/north-loop-austin-neighborhood-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2011,37 +1777,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/pflugerville-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/rainey-street-downtown-austin-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/rob-roy-austin-gated-community-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/rob-roy-austin-luxury-neighborhood</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/rollingwood-austin-neighborhood-guide</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/rosedale-austin-neighborhood-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2054,7 +1790,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/round-rock-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2083,14 +1819,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/south-congress-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/south-congress-soco-austin-guide</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2102,7 +1832,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/spicewood-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2114,18 +1844,12 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/tarrytown-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/tarrytown-vs-westlake-austin</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/taylor-tx-real-estate-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2161,12 +1885,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grewalregroup.com/blog/volente-tx-real-estate-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://grewalregroup.com/blog/west-lake-hills-vs-bee-cave-comparison</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -2174,18 +1892,6 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/westlake-eanes-isd-market-report-2026</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/westlake-hills-homes-for-sale</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://grewalregroup.com/blog/westlake-hills-homes-guide-2026</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2210,7 +1916,7 @@
   </url>
   <url>
     <loc>https://grewalregroup.com/blog/windsor-park-austin-neighborhood-guide-2026</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
