@@ -17,14 +17,6 @@
 //
 // Nothing here throws on a missing integration — each sink is best-effort so a
 // lead is never lost just because one destination is unconfigured.
-//
-// Optional env for email:
-//   RESEND_API_KEY   API key from resend.com — add in Netlify site env vars.
-//                    Free tier: 3,000 emails/month. Sending domain must be
-//                    verified in Resend, or use onboarding@resend.dev for testing.
-//   RESEND_FROM      "From" address, e.g. "Grewal RE Group <leads@grewalregroup.com>"
-//                    Defaults to "leads@grewalregroup.com" if not set.
-//   LEAD_EMAIL       Destination address. Defaults to shivraj.grewal@compass.com.
 
 const NOTION_DB = process.env.NOTION_LEADS_DB_ID;
 const NOTION_VERSION = "2022-06-28";
@@ -100,40 +92,6 @@ async function toNotion(lead) {
   return { ok: true, pageId: json.id };
 }
 
-async function toEmail(lead) {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) return { skipped: "no RESEND_API_KEY" };
-
-  const from = process.env.RESEND_FROM || "leads@grewalregroup.com";
-  const to = process.env.LEAD_EMAIL || "shivraj.grewal@compass.com";
-
-  const lines = [
-    `Name: ${lead.name || "(not provided)"}`,
-    `Email: ${lead.email || "(not provided)"}`,
-    `Phone: ${lead.phone || "(not provided)"}`,
-    `Interest: ${lead.interest}`,
-    `Page: ${lead.page}`,
-    lead.notes ? `Notes:\n${lead.notes}` : null,
-    `Submitted: ${lead.iso}`,
-  ].filter(Boolean).join("\n");
-
-  const res = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from,
-      to,
-      subject: `New lead: ${lead.name || "Website visitor"} (${lead.interest})`,
-      text: `New website lead\n\n${lines}\n\n---\nSent from grewalregroup.com`,
-    }),
-  });
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`Resend ${res.status}: ${err.slice(0, 300)}`);
-  }
-  return { ok: true };
-}
-
 async function toAirtable(lead) {
   const { AIRTABLE_TOKEN, AIRTABLE_BASE_ID } = process.env;
   if (!AIRTABLE_TOKEN || !AIRTABLE_BASE_ID) return { skipped: "no Airtable env" };
@@ -178,7 +136,7 @@ export const handler = async (event) => {
   };
 
   const results = {};
-  for (const [k, fn] of [["notion", toNotion], ["airtable", toAirtable], ["email", toEmail]]) {
+  for (const [k, fn] of [["notion", toNotion], ["airtable", toAirtable]]) {
     try { results[k] = await fn(lead); }
     catch (e) { results[k] = { error: String(e.message || e) }; }
   }
