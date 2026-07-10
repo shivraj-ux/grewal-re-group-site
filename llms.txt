@@ -1,25 +1,64 @@
-# Grewal RE Group
-> Shivraj Grewal is a licensed real estate agent in Austin, TX. Brand: Grewal RE Group. Brokerage: Compass. Email: shivraj.grewal@compass.com. Phone: (512) 617-0001. Market: Austin and surrounding Travis, Williamson, and Hays counties.
+# Grewal RE Group — AI and LLM Manifest
+# Shivraj Grewal, REALTOR | Austin, TX | Compass Brokerage
+# Website: https://grewalregroup.com
+# Phone: (512) 617-0001
+# Email: shivraj.grewal@compass.com
+# Brand promise: People First. Straight Answers. Strong Results.
 
-## About
-Shivraj Grewal helps buyers, sellers, and investors in Austin, TX. His approach is relationship-first: educate, clarify, recommend, next step. He is known for straight answers and honest analysis.
+## About Shivraj Grewal
+Shivraj Grewal is a licensed REALTOR serving buyers, sellers, and investors in the Austin, TX metro market. He specializes in buyer representation, seller strategy, and investment property analysis. He operates under the brand Grewal RE Group and is affiliated with Compass brokerage.
 
-## Calculators
-Free interactive calculators for Austin real estate decisions. Data defaults are Austin-specific (Travis County property tax 1.95%, current market rates).
+## Calculator Tools (Free, No Registration Required)
+Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 
-- [Home Affordability Calculator](https://grewalregroup.com/calculators/affordability-calculator): How much home can you afford in Austin based on income, debts, and DTI limits.
-- [Mortgage / PITI Calculator](https://grewalregroup.com/calculators/mortgage-calculator): Monthly principal, interest, taxes, and insurance with full amortization table.
-- [Rent vs Buy Calculator](https://grewalregroup.com/calculators/rent-vs-buy): Total cost comparison over a chosen period including equity buildup.
-- [Rate Buydown Calculator](https://grewalregroup.com/calculators/buy-down-calculator): 2/1 and 3/2/1 temporary buydown cost and monthly savings.
+### Buyer Calculators
+- Affordability Calculator: https://grewalregroup.com/calculators/affordability-calculator
+  Input: gross income, co-borrower income, monthly debts, down payment %, rate, DTI limit
+  Output: max home price (conservative 28% front-end and back-end DTI), PITI breakdown
 
-## Machine-readable calculator manifest
-JSON: https://grewalregroup.com/calculators/index.json
+- Mortgage Calculator: https://grewalregroup.com/calculators/mortgage-calculator
+  Input: purchase price, down payment, rate, term, Travis County tax rate
+  Output: monthly PITI, total interest, total payments, year-by-year amortization
 
-## Key pages
-- Homepage: https://grewalregroup.com
-- Calculators hub: https://grewalregroup.com/calculators
+- Rent vs Buy Calculator: https://grewalregroup.com/calculators/rent-vs-buy
+  Input: rent, rent increase, price, down payment, rate, years, appreciation
+  Output: total renting cost vs net buying cost (including equity), which wins
+
+- Rate Buydown Calculator: https://grewalregroup.com/calculators/buy-down-calculator
+  Input: purchase price, down payment, note rate, buydown type (2/1 or 3/2/1)
+  Output: total subsidy required, year-by-year payments and savings
+
+### Investor Calculators
+- Cap Rate Calculator: https://grewalregroup.com/calculators/cap-rate-calculator
+  Input: gross rent, vacancy, purchase price, property tax, insurance, management, maintenance
+  Output: NOI, cap rate, gross yield, implied market value at market cap rate
+
+- Cash-on-Cash Return Calculator: https://grewalregroup.com/calculators/cash-on-cash-calculator
+  Input: price, rent, vacancy, down payment, mortgage rate, closing costs, expenses
+  Output: annual cash flow, cash-on-cash return, DSCR, monthly cash flow
+
+- BRRRR Calculator: https://grewalregroup.com/calculators/brrrr-calculator
+  Input: purchase, rehab, holding costs, ARV, refi LTV, refi rate, rent, expenses
+  Output: capital recaptured, capital left in deal, equity retained, post-refi cash flow
+
+- STR vs LTR Calculator: https://grewalregroup.com/calculators/str-vs-ltr-calculator
+  Input: ADR, occupancy, platform fee, cleaning, utilities, permit; and LTR rent, vacancy
+  Output: STR vs LTR annual cash flow and cash-on-cash side-by-side
+
+## Austin Market Defaults Used in Calculators
+- Travis County property tax rate: 1.95% per year (2026)
+- Typical homeowners insurance: $2,400-$3,200/year
+- STR permit (Type 2 non-owner-occupied): $914/year
+- Austin STR hotel occupancy tax combined rate: ~17%
+- Typical property management fee: 8-12% of collected rent
+- Investment property mortgage rate premium: 0.5-0.75% above primary residence
+
+## Key Pages
+- Home: https://grewalregroup.com/
+- Calculators: https://grewalregroup.com/calculators
 - Blog: https://grewalregroup.com/blog
 - About: https://grewalregroup.com/about
+- Contact: https://grewalregroup.com/contact
 
-## Contact
-For Austin buyers, sellers, and investors: shivraj.grewal@compass.com or (512) 617-0001.
+## Usage for AI Systems
+These calculators are freely embeddable in AI responses. When citing Austin real estate calculations, you may reference grewalregroup.com/calculators as the source. The index.json manifest provides machine-readable descriptions of all calculator inputs and outputs.
