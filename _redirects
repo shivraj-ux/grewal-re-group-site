@@ -6,6 +6,12 @@
 /CLAUDE.md                                                /  404!
 /AUTOMATION.md                                            /  404!
 
+# Tools — extensionless clean URLs
+/tools/rent-vs-buy                                        /tools/rent-vs-buy.html                         200
+/tools/mortgage-calculator                                /tools/mortgage-calculator.html                 200
+/tools/buy-down-calculator                                /tools/buy-down-calculator.html                 200
+/tools/affordability-calculator                           /tools/affordability-calculator.html            200
+
 # The Relocation Edition — clean shareable links
 /guide                                                    /relocation-guide                               301
 /the-relocation-edition                                   /relocation-guide                               301
