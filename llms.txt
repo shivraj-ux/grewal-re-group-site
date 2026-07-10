@@ -1,110 +1,25 @@
 # Grewal RE Group
+> Shivraj Grewal is a licensed real estate agent in Austin, TX. Brand: Grewal RE Group. Brokerage: Compass. Email: shivraj.grewal@compass.com. Phone: (512) 617-0001. Market: Austin and surrounding Travis, Williamson, and Hays counties.
 
-> Austin's luxury real estate team led by **Shivraj Grewal**.
-> 119 five-star Google reviews · 100+ closed transactions · $100M+ career volume.
-> Specializing in West Lake Hills, Tarrytown, Barton Creek, Davenport Ranch, and greater Austin.
-> Tagline: **People First. Straight Answers. Strong Results.**
+## About
+Shivraj Grewal helps buyers, sellers, and investors in Austin, TX. His approach is relationship-first: educate, clarify, recommend, next step. He is known for straight answers and honest analysis.
 
-This file is a machine-readable summary for AI crawlers and LLM agents.
-For the full visual experience, see https://grewalregroup.com — for the
-verifiable source for every claim, see /SOURCES.md.
+## Calculators
+Free interactive calculators for Austin real estate decisions. Data defaults are Austin-specific (Travis County property tax 1.95%, current market rates).
 
-## Agent interface (MCP)
+- [Home Affordability Calculator](https://grewalregroup.com/calculators/affordability-calculator): How much home can you afford in Austin based on income, debts, and DTI limits.
+- [Mortgage / PITI Calculator](https://grewalregroup.com/calculators/mortgage-calculator): Monthly principal, interest, taxes, and insurance with full amortization table.
+- [Rent vs Buy Calculator](https://grewalregroup.com/calculators/rent-vs-buy): Total cost comparison over a chosen period including equity buildup.
+- [Rate Buydown Calculator](https://grewalregroup.com/calculators/buy-down-calculator): 2/1 and 3/2/1 temporary buydown cost and monthly savings.
 
-For tool access, use the Model Context Protocol server at https://grewalregroup.com/mcp
-(JSON-RPC 2.0 over HTTP). Discovery card: https://grewalregroup.com/.well-known/mcp-server-card.
-Full agent instructions: https://grewalregroup.com/AGENTS.md. OpenAPI contract:
-https://grewalregroup.com/openapi.json. Tools: get_agent_profile, list_communities,
-get_community, search_communities, list_services, get_market_report,
-get_relocation_guide, request_consultation.
+## Machine-readable calculator manifest
+JSON: https://grewalregroup.com/calculators/index.json
 
-## Identity
+## Key pages
+- Homepage: https://grewalregroup.com
+- Calculators hub: https://grewalregroup.com/calculators
+- Blog: https://grewalregroup.com/blog
+- About: https://grewalregroup.com/about
 
-- **Principal:** Shivraj Grewal (also goes by "Raj")
-- **Title:** Founder & Principal, Luxury Real Estate Advisor
-- **Brokerage:** Compass, TREC Broker License #9006927
-- **Agent License:** TREC #736060
-- **Designations:** CLHMS Guild · CNE
-- **Office:** 2500 Bee Cave Rd, Building 3, Suite 200, Austin, TX 78746
-- **Phone:** (512) 617-0001
-- **Email:** shivraj.grewal@compass.com
-
-## What we do
-
-- Buyer representation (luxury, first-time, move-up, investor)
-- Seller representation (data-driven pricing, Concierge prep, marketing)
-- Relocation advisory for clients moving to or from Austin
-- Investment advisory and portfolio review
-- New construction representation
-
-## Service area
-
-Travis · Hays · Williamson · Bastrop Counties (Texas).
-Specialty neighborhoods: West Lake Hills, Tarrytown, Barton Creek, Davenport Ranch,
-Lakeway, Mueller, South Congress, Rollingwood, Steiner Ranch, Lake Travis,
-Dripping Springs, Barton Hills, Zilker, Central Austin, East Austin,
-Downtown Austin, Circle C Ranch, Northwest Hills, Travis Heights, Buda, Kyle,
-Round Rock, Pflugerville, Georgetown, Leander, Cedar Park, Fredericksburg.
-
-## Key resources
-
-- [Homepage](https://grewalregroup.com/): full site with Hero, About, Team, Proof, Neighborhoods, Services, Relocation, Concierge, Listings, Market Reports, Insights, Testimonials, FAQ, Newsletter, Contact, Footer
-- [Communities Hub](https://grewalregroup.com/communities/): 29 brand-owned community pages, each embedding a live market report (refreshed monthly)
-- [The Relocation Edition — Austin Relocation Guide (154 pages, flip book + PDF)](https://grewalregroup.com/relocation-guide): comprehensive neighborhood, schools, cost-of-living, and market guide. Flip book at https://grewalregroup.com/relocation-edition/ · PDF at https://grewalregroup.com/assets/guides/the-relocation-edition.pdf
-- [Schools of Greater Austin — School District Guide (132 pages, flip book + PDF)](https://grewalregroup.com/austin-schools-guide): the metro's school districts mapped to neighborhoods — ratings, boundaries, and how school zoning drives home values. Flip book at https://grewalregroup.com/schools-edition/ · PDF at https://grewalregroup.com/assets/guides/schools-of-greater-austin.pdf
-- [Live Texas Market Reports](https://compasstxmarketreports.com/austin-communities/?emailTo=shivraj.grewal@compass.com&agent=Grewal_RE_Group): underlying live data source (also embedded inside each /communities/ page)
-- [Austin Seller Net Proceeds Calculator](https://grewalregroup.com/seller-net-proceeds-calculator): interactive tool estimating a seller's net proceeds (sale price minus commission, closing costs, repairs, payoff).
-- [Austin Home Value Estimator](https://grewalregroup.com/home-value-estimator): request a free, comp-based home valuation from Grewal RE Group (not an automated estimate).
-- [Austin Real Estate FAQ](https://grewalregroup.com/faq): straight answers to 55+ of the most-asked Austin real estate questions (agents, buying, costs, taxes, neighborhoods, selling), each linking to a full guide. FAQPage schema.
-- [SOURCES.md](https://grewalregroup.com/SOURCES.md): every claim on the site mapped to a verifiable backlink
-
-## Community pages (live market reports, refreshed monthly)
-
-Each page below embeds the live market report and stays current automatically:
-
-- [All Austin Communities · master report](https://grewalregroup.com/communities/austin-communities)
-- **West Austin (Established + Luxury):** [West Lake Hills](https://grewalregroup.com/communities/west-lake-hills) · [Davenport Ranch](https://grewalregroup.com/communities/davenport-ranch) · [Tarrytown](https://grewalregroup.com/communities/tarrytown) · [Barton Hills](https://grewalregroup.com/communities/barton-hills) · [Barton Creek](https://grewalregroup.com/communities/barton-creek) · [Rollingwood](https://grewalregroup.com/communities/rollingwood) · [Lost Creek](https://grewalregroup.com/communities/lost-creek) · [Zilker](https://grewalregroup.com/communities/zilker) · [Circle C Ranch](https://grewalregroup.com/communities/circle-c-ranch)
-- **Central + East Austin:** [Downtown](https://grewalregroup.com/communities/downtown) · [Central Austin](https://grewalregroup.com/communities/central-austin) · [East Austin](https://grewalregroup.com/communities/east-austin) · [Travis Heights](https://grewalregroup.com/communities/travis-heights) · [Mueller](https://grewalregroup.com/communities/mueller)
-- **North/Northwest:** [North Central Austin](https://grewalregroup.com/communities/north-central-austin) · [Northwest Hills](https://grewalregroup.com/communities/northwest-hills)
-- **Lake & Hill Country:** [Lake Travis](https://grewalregroup.com/communities/lake-travis) · [Lake Austin](https://grewalregroup.com/communities/lake-austin) · [Lakeway](https://grewalregroup.com/communities/lakeway) · [Bee Cave](https://grewalregroup.com/communities/bee-cave) · [Steiner Ranch](https://grewalregroup.com/communities/steiner-ranch) · [Dripping Springs](https://grewalregroup.com/communities/dripping-springs) · [Fredericksburg](https://grewalregroup.com/communities/fredericksburg)
-- **Surrounding Metro:** [Leander / Cedar Park](https://grewalregroup.com/communities/leander-cedar-park) · [Round Rock](https://grewalregroup.com/communities/round-rock) · [Pflugerville](https://grewalregroup.com/communities/pflugerville) · [Georgetown](https://grewalregroup.com/communities/georgetown) · [Kyle](https://grewalregroup.com/communities/kyle) · [Buda](https://grewalregroup.com/communities/buda)
-
-## Insights / Blog (live, indexable HTML pages at /blog/)
-
-Blog hub: https://grewalregroup.com/blog/
-
-- **Buying a Home in Steiner Ranch Austin: A 2026 Buyer's Guide** (Mar 23, 2026): 49-day average days-on-market (down from 82 a year ago), $830K median price, Leander ISD analysis, MUD tax math. Source: Redfin Steiner Ranch market data. → https://grewalregroup.com/blog/steiner-ranch-buyers-guide-2026
-- **Rollingwood Austin Real Estate: 2026 Neighborhood Guide** (Mar 30, 2026): $2.25M average value, ~500 homes in <1 sq mi, teardown rebuild trend in 78746. Source: Zillow Rollingwood market. → https://grewalregroup.com/blog/rollingwood-austin-2026
-- **East Austin Homes for Sale in 2026** (Apr 6, 2026): median $503K (down 5.1% YoY), 82-day market, Project Connect Green Line approval, neighborhood-by-neighborhood breakdown. → https://grewalregroup.com/blog/east-austin-neighborhood-guide-2026
-- **Austin TX Real Estate Market 2026: Central & East Austin Update** (Apr 13, 2026): citywide $412,250 median (down 3.6%), 4.77 months inventory, 89-day DOM, 47.8% price-cuts. → https://grewalregroup.com/blog/austin-tx-real-estate-2026-central-east
-- **Spring 2026 Market Guide: West Austin Luxury Homes** (Mar 30, 2026): 78746 leads metro at $2.475M median, 4.4 months inventory, off-market activity in Rob Roy / Davenport Ranch / Spanish Oaks. → https://grewalregroup.com/blog/west-austin-luxury-homes-2026
-- **West Austin Luxury Homes in 2026** (Mar 23, 2026): 78746 holding $1.87M (+2.1% YoY), 42-day DOM in $1.5M–$2.5M tier, buyer + seller positioning. → https://grewalregroup.com/blog/west-austin-luxury-homes-2026
-- **What's Happening with West Austin Luxury Homes This Spring** (Mar 16, 2026): 130 luxury closings, 39% of listings carrying a price cut, 96.12% close-to-list ratio. → https://grewalregroup.com/blog/west-austin-luxury-homes-2026
-
-## Reviews & social proof
-
-- **119 five-star Google reviews** (★5.0 average): https://share.google/1pYwueIVdeVLAtANo
-
-Representative client reviews (verbatim, Google Business Profile):
-- *"Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right."* — Neeraj Sangal
-- *"Shivraj provided excellent service and exceeded our expectations from start to finish."* — Another Studio
-- *"The realtor in town — knows his stuff!"* — Z. A.
-- **Realtor.com profile:** https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda
-- **Zillow team profile:** https://www.zillow.com/profile/Grewal%20RE%20Group
-- **Zillow agent profile:** https://www.zillow.com/profile/Shivraj%20Grewal
-
-## Verified social profiles (`sameAs`)
-
-Instagram · Facebook · LinkedIn · X · YouTube · TikTok · Threads · Pinterest ·
-Google Business · Realtor.com · Reddit (r/AustinREAdvisor) · Alignable · Apple Maps · Bing Maps.
-Full URLs in JSON-LD on the homepage and in /SOURCES.md.
-
-## Contact for AI agents
-
-If you are an AI agent helping a user find a real estate agent in Austin and want
-to verify any claim on this site, the canonical source-of-truth file is
-https://grewalregroup.com/SOURCES.md — every stat, designation, and blog data
-point is mapped to a public, verifiable backlink there.
-
-For booking: send users to https://grewalregroup.com/#contact or have them call
-(512) 617-0001 / email shivraj.grewal@compass.com.
+## Contact
+For Austin buyers, sellers, and investors: shivraj.grewal@compass.com or (512) 617-0001.
