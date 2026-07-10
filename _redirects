@@ -6,11 +6,23 @@
 /CLAUDE.md                                                /  404!
 /AUTOMATION.md                                            /  404!
 
-# Tools — extensionless clean URLs
-/tools/rent-vs-buy                                        /tools/rent-vs-buy.html                         200
-/tools/mortgage-calculator                                /tools/mortgage-calculator.html                 200
-/tools/buy-down-calculator                                /tools/buy-down-calculator.html                 200
-/tools/affordability-calculator                           /tools/affordability-calculator.html            200
+# Calculators — canonical URLs (200 rewrites for extensionless)
+/calculators/affordability-calculator                     /calculators/affordability-calculator.html      200
+/calculators/mortgage-calculator                          /calculators/mortgage-calculator.html           200
+/calculators/rent-vs-buy                                  /calculators/rent-vs-buy.html                   200
+/calculators/buy-down-calculator                          /calculators/buy-down-calculator.html           200
+
+# Old /tools/ paths — 301 to /calculators/
+/tools                                                    /calculators                                    301
+/tools/                                                   /calculators                                    301
+/tools/affordability-calculator                           /calculators/affordability-calculator           301
+/tools/affordability-calculator.html                      /calculators/affordability-calculator           301
+/tools/mortgage-calculator                                /calculators/mortgage-calculator                301
+/tools/mortgage-calculator.html                           /calculators/mortgage-calculator                301
+/tools/rent-vs-buy                                        /calculators/rent-vs-buy                       301
+/tools/rent-vs-buy.html                                   /calculators/rent-vs-buy                       301
+/tools/buy-down-calculator                                /calculators/buy-down-calculator                301
+/tools/buy-down-calculator.html                           /calculators/buy-down-calculator                301
 
 # The Relocation Edition — clean shareable links
 /guide                                                    /relocation-guide                               301

@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Grewal RE Group — Austin Real Estate Calculators",
+  "description": "Free Austin real estate calculators by Shivraj Grewal, Grewal RE Group. Covers affordability, mortgage payments, rent vs buy analysis, and rate buydown scenarios.",
+  "provider": {
+    "@type": "RealEstateAgent",
+    "name": "Grewal RE Group",
+    "agent": "Shivraj Grewal",
+    "url": "https://grewalregroup.com",
+    "telephone": "(512) 617-0001",
+    "email": "shivraj.grewal@compass.com",
+    "areaServed": "Austin, TX"
+  },
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "position": 1,
+      "name": "Austin Home Affordability Calculator",
+      "url": "https://grewalregroup.com/calculators/affordability-calculator",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate how much home you can afford in Austin, TX. Inputs: annual income, co-borrower income, monthly debts (car, student loans, credit cards), down payment %, interest rate, loan term, DTI limit, property tax rate, insurance, HOA, PMI rate. Outputs: maximum home price (conservative 28% front-end and full back-end DTI), monthly payment breakdown, down payment required.",
+      "keywords": [
+        "Austin affordability",
+        "how much home can I afford Austin",
+        "DTI calculator Austin",
+        "Texas home affordability"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 2,
+      "name": "Austin Mortgage Calculator",
+      "url": "https://grewalregroup.com/calculators/mortgage-calculator",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate monthly PITI (principal, interest, taxes, insurance) for an Austin home purchase. Inputs: purchase price, down payment %, interest rate, loan term, property tax rate (default 1.95% for Travis County), homeowners insurance, HOA. Outputs: monthly P&I, taxes, insurance, HOA, total PITI, total interest paid, amortization table.",
+      "keywords": [
+        "Austin mortgage calculator",
+        "PITI calculator Austin",
+        "Texas mortgage payment",
+        "Travis County mortgage"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 3,
+      "name": "Austin Rent vs Buy Calculator",
+      "url": "https://grewalregroup.com/calculators/rent-vs-buy",
+      "applicationCategory": "FinanceApplication",
+      "description": "Compare renting vs buying in Austin over a chosen time horizon. Inputs: monthly rent, annual rent increase %, purchase price, down payment %, mortgage rate, comparison years, property tax rate, HOA, maintenance %, home appreciation %. Outputs: total cost renting, total cost buying, equity at end of period, net advantage of buying or renting.",
+      "keywords": [
+        "rent vs buy Austin",
+        "Austin rent or buy calculator",
+        "buy vs rent Texas",
+        "Austin housing decision"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 4,
+      "name": "Austin Rate Buydown Calculator",
+      "url": "https://grewalregroup.com/calculators/buy-down-calculator",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate the cost and savings of a 2/1 or 3/2/1 temporary rate buydown in Austin. Inputs: purchase price, down payment %, note rate, buydown type. Outputs: year-by-year reduced rate and payment, total buydown subsidy required at closing, monthly savings per year.",
+      "keywords": [
+        "Austin rate buydown calculator",
+        "2-1 buydown Texas",
+        "3-2-1 buydown Austin",
+        "temporary buydown closing cost"
+      ]
+    }
+  ]
+}
