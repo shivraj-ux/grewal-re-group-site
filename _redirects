@@ -1,5 +1,11 @@
 # Cloudflare Pages / Netlify _redirects (works on both hosts)
 
+# Internal files: force-404 so they are never served even if the build command
+# or .netlifyignore fails to exclude them. The 404! forces Netlify to skip the
+# file-system match and apply the redirect regardless.
+/CLAUDE.md                                                /  404!
+/AUTOMATION.md                                            /  404!
+
 # The Relocation Edition — clean shareable links
 /guide                                                    /relocation-guide                               301
 /the-relocation-edition                                   /relocation-guide                               301
