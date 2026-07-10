@@ -111,7 +111,50 @@
 </style>
 </head>
 <body class="calc-page">
-<div id="site-header"></div>
+<a class="gh-skip" href="#gh-main">Skip to main content</a>
+<header class="gh-header">
+  <div class="gh-bar">
+    <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
+      <img src="/assets/logos/logo-horizontal-white.png?v=2" alt="Grewal RE Group" class="gh-logo-w" width="187" height="56">
+      <img src="/assets/logos/logo-horizontal.png?v=2" alt="" aria-hidden="true" class="gh-logo-b" width="187" height="56">
+    </a>
+    <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="gh-nav" id="gh-primary-nav" aria-label="Primary">
+      <ul class="gh-menu">
+        <li><a href="/communities/">Communities</a></li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Buy / Sell
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/#services">Buying</a></li>
+            <li><a href="/calculators/home-value-estimator">Selling &amp; Home Value</a></li>
+            <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds Calculator</a></li>
+            <li><a href="/relocation-guide">Relocating to Austin</a></li>
+          </ul>
+        </li>
+        <li><a href="/calculators">Calculators</a></li>
+        <li class="gh-has-sub">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="gh-sub">
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#resources">Guides</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/search">Search</a></li>
+        <li class="gh-cta-li"><a href="/contact" class="gh-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="gh-main" tabindex="-1"></div>
 <nav class="calc-nav" aria-label="Calculator navigation">
   <ul>
     <li><a href="/calculators">All Calculators</a></li>
@@ -311,7 +354,57 @@
   </div>
 </div>
 
-<div id="site-footer"></div>
+<footer class="gh-footer">
+  <div class="gh-foot-inner">
+    <div class="gh-foot-grid">
+      <div class="gh-foot-brand">
+        <img src="/assets/logos/logo-white.png?v=2" alt="Grewal RE Group" width="113" height="34">
+        <p class="gh-foot-tag">People First. Straight Answers. Strong Results.</p>
+        <p><a href="tel:+15126170001">(512) 617-0001</a></p>
+        <p><a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a></p>
+        <p>2500 Bee Cave Rd, Building 3, Suite 200<br>Austin, TX 78746</p>
+      </div>
+      <nav aria-label="Explore">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="/communities/">Communities</a></li>
+          <li><a href="/search">Search Properties</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Buy and sell">
+        <h2>Buy &amp; Sell</h2>
+        <ul>
+          <li><a href="/#services">Buying</a></li>
+          <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
+          <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds Calculator</a></li>
+          <li><a href="/relocation-guide">Relocating to Austin</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Guides and resources">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="/relocation-guide">Relocation Guide</a></li>
+          <li><a href="/austin-schools-guide">Schools Guide</a></li>
+          <li><a href="/#resources">All Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="gh-foot-legal">
+      <p>&copy; 2026 Grewal RE Group &middot; Shivraj Grewal &middot; TREC #736060 &middot; Brokered by Compass RE Texas, LLC &middot; TREC Broker #9006927</p>
+      <p>
+        <a href="/privacy">Privacy</a> &middot;
+        <a href="/terms">Terms</a> &middot;
+        <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a> &middot;
+        <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a> &middot;
+        <button type="button" data-cookie-prefs class="gh-link-btn">Cookie preferences</button>
+      </p>
+    </div>
+  </div>
+</footer>
 <script src="/assets/js/site-chrome.js?v=4"></script>
 </body>
 </html>
