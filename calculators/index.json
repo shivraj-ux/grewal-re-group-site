@@ -2,9 +2,9 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Grewal RE Group Austin Real Estate Calculators",
-  "description": "Free Austin TX real estate calculators by Shivraj Grewal, Grewal RE Group. Buyer and investor tools with Austin-specific defaults.",
+  "description": "Free Austin TX real estate calculators by Shivraj Grewal, Grewal RE Group. Buyer, seller, and investor tools with Austin-specific defaults.",
   "url": "https://grewalregroup.com/calculators",
-  "numberOfItems": 8,
+  "numberOfItems": 10,
   "provider": {
     "@type": "RealEstateAgent",
     "name": "Grewal RE Group",
@@ -91,6 +91,44 @@
       "position": 5,
       "item": {
         "@type": "SoftwareApplication",
+        "name": "Austin Home Value Estimator",
+        "url": "https://grewalregroup.com/calculators/home-value-estimator",
+        "applicationCategory": "RealEstateApplication",
+        "description": "Two-step lead form that shows an instant area market snapshot (medians, days on market, inventory) based on neighborhood, then collects property details so Shivraj can return a personalized comp-based valuation within one business day. Texas is a non-disclosure state — this tool connects sellers with MLS data they cannot get elsewhere.",
+        "keywords": [
+          "what is my Austin home worth",
+          "Austin home value estimator",
+          "home valuation Austin",
+          "CMA Austin",
+          "Westlake Hills home value",
+          "Austin home worth 2026"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Seller Net Proceeds Calculator",
+        "url": "https://grewalregroup.com/calculators/seller-net-proceeds-calculator",
+        "applicationCategory": "FinanceApplication",
+        "description": "Calculates estimated net proceeds from selling an Austin home: sale price minus agent commission, seller closing costs, mortgage payoff, and repairs or concessions. Outputs: commission amount, closing cost amount, mortgage payoff, and final net proceeds. Includes a lead form to request an exact line-by-line net sheet.",
+        "keywords": [
+          "seller net proceeds Austin",
+          "how much will I net selling my home Austin",
+          "Austin home sale costs",
+          "Texas seller closing costs",
+          "agent commission Austin",
+          "net sheet Austin"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "SoftwareApplication",
         "name": "Cap Rate Calculator",
         "url": "https://grewalregroup.com/calculators/cap-rate-calculator",
         "applicationCategory": "FinanceApplication",
@@ -106,7 +144,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 6,
+      "position": 8,
       "item": {
         "@type": "SoftwareApplication",
         "name": "Cash-on-Cash Return Calculator",
@@ -124,7 +162,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 7,
+      "position": 9,
       "item": {
         "@type": "SoftwareApplication",
         "name": "BRRRR Calculator",
@@ -142,7 +180,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 8,
+      "position": 10,
       "item": {
         "@type": "SoftwareApplication",
         "name": "STR vs LTR Calculator",
