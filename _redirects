@@ -1007,3 +1007,8 @@
 /blog/relocation/                                         /blog/relocation                                301
 /blog/lifestyle.html                                      /blog/lifestyle                                 301!
 /blog/lifestyle/                                          /blog/lifestyle                                 301
+
+/calculators/cap-rate-calculator  /calculators/cap-rate-calculator.html  200
+/calculators/cash-on-cash-calculator  /calculators/cash-on-cash-calculator.html  200
+/calculators/brrrr-calculator  /calculators/brrrr-calculator.html  200
+/calculators/str-vs-ltr-calculator  /calculators/str-vs-ltr-calculator.html  200
