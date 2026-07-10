@@ -28,6 +28,16 @@ Machine-readable manifest: https://grewalregroup.com/calculators/index.json
   Input: purchase price, down payment, note rate, buydown type (2/1 or 3/2/1)
   Output: total subsidy required, year-by-year payments and savings
 
+### Seller Calculators
+- Austin Home Value Estimator: https://grewalregroup.com/calculators/home-value-estimator
+  Input: property address, neighborhood, bedrooms, bathrooms, sq ft, condition, selling timeline
+  Output: instant area market snapshot (medians, days on market, inventory) in step 1; personalized comp-based valuation from Shivraj delivered within one business day after step 2
+  Note: Texas is a non-disclosure state — sale prices are not public record. This tool connects sellers with MLS-sourced data not available to automated estimators.
+
+- Seller Net Proceeds Calculator: https://grewalregroup.com/calculators/seller-net-proceeds-calculator
+  Input: estimated sale price, mortgage payoff, agent commission %, seller closing costs %, repairs/concessions
+  Output: agent commission amount, closing costs amount, mortgage payoff, estimated net proceeds
+
 ### Investor Calculators
 - Cap Rate Calculator: https://grewalregroup.com/calculators/cap-rate-calculator
   Input: gross rent, vacancy, purchase price, property tax, insurance, management, maintenance
@@ -52,6 +62,7 @@ Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 - Austin STR hotel occupancy tax combined rate: ~17%
 - Typical property management fee: 8-12% of collected rent
 - Investment property mortgage rate premium: 0.5-0.75% above primary residence
+- Typical Texas seller closing costs: 1-2% of sale price (title policy, escrow, recording, prorated taxes)
 
 ## Key Pages
 - Home: https://grewalregroup.com/

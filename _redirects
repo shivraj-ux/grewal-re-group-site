@@ -11,6 +11,14 @@
 /calculators/mortgage-calculator                          /calculators/mortgage-calculator.html           200
 /calculators/rent-vs-buy                                  /calculators/rent-vs-buy.html                   200
 /calculators/buy-down-calculator                          /calculators/buy-down-calculator.html           200
+/calculators/home-value-estimator                         /calculators/home-value-estimator.html          200
+/calculators/seller-net-proceeds-calculator               /calculators/seller-net-proceeds-calculator.html  200
+
+# Old root-level seller tool paths — 301 to /calculators/
+/home-value-estimator                                     /calculators/home-value-estimator               301
+/home-value-estimator.html                                /calculators/home-value-estimator               301
+/seller-net-proceeds-calculator                           /calculators/seller-net-proceeds-calculator     301
+/seller-net-proceeds-calculator.html                      /calculators/seller-net-proceeds-calculator     301
 
 # Old /tools/ paths — 301 to /calculators/
 /tools                                                    /calculators                                    301
