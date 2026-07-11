@@ -44,7 +44,7 @@
     html, body { margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'GRG Sans', system-ui, -apple-system, sans-serif;
       color: var(--ink);
       background: #fff;
       -webkit-font-smoothing: antialiased;
@@ -52,7 +52,7 @@
     }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+    h1, h2, h3, h4 { font-family: 'GRG Serif', Georgia, serif; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
     p { line-height: 1.65; margin: 0 0 1rem; }
 
     /* ─── HEADER ─── */
@@ -132,7 +132,7 @@
       color: var(--gold); font-weight: 600;
       letter-spacing: 0.18em; text-transform: uppercase;
       font-size:0.75rem; margin: 0 0 0.75rem;
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
     }
     .search-hero h1 {
       font-size: clamp(2rem, 4vw, 3rem);
@@ -162,19 +162,19 @@
       text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem;
     }
     .qs-input {
-      border: 0; outline: 0; font-family: 'Inter', sans-serif;
+      border: 0; outline: 0; font-family: 'GRG Sans', sans-serif;
       font-size: 0.9rem; color: var(--ink); background: transparent;
       padding: 0; width: 100%;
     }
     .qs-input::placeholder { color: var(--muted-2); }
     .qs-select {
-      border: 0; outline: 0; font-family: 'Inter', sans-serif;
+      border: 0; outline: 0; font-family: 'GRG Sans', sans-serif;
       font-size: 0.9rem; color: var(--ink); background: transparent;
       padding: 0; appearance: none; width: 100%; cursor: pointer;
     }
     .qs-btn {
       padding: 0 2rem; background: var(--gold); color: #fff;
-      border: 0; cursor: pointer; font-family: 'Inter', sans-serif;
+      border: 0; cursor: pointer; font-family: 'GRG Sans', sans-serif;
       font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em;
       text-transform: uppercase; transition: background 0.2s; white-space: nowrap;
     }
@@ -197,7 +197,7 @@
       border-radius: 999px; color: rgba(255,255,255,0.7);
       font-size:0.75rem; font-weight: 500; letter-spacing: 0.05em;
       cursor: pointer; transition: all 0.2s; user-select: none;
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
     }
     .status-pill.active {
       background: var(--gold); border-color: var(--gold); color: #fff;
@@ -231,7 +231,7 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .sidebar-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.1rem; font-weight: 700; color: var(--ink);
     }
     .sidebar-reset {
@@ -303,7 +303,7 @@
     .filter-input, .filter-select {
       width: 100%; padding: 0.55rem 0.75rem;
       border: 1px solid var(--line); border-radius: 2px;
-      font-family: 'Inter', sans-serif; font-size: 0.82rem;
+      font-family: 'GRG Sans', sans-serif; font-size: 0.82rem;
       color: var(--ink); background: #fff; outline: 0;
       transition: border-color 0.2s;
     }
@@ -346,7 +346,7 @@
       min-width: 38px; height: 34px;
       border: 1px solid var(--line); border-radius: 2px;
       background: #fff; color: var(--ink); font-size: 0.82rem; font-weight: 500;
-      cursor: pointer; transition: all 0.15s; font-family: 'Inter', sans-serif;
+      cursor: pointer; transition: all 0.15s; font-family: 'GRG Sans', sans-serif;
     }
     .stepper-btn.active { background: var(--gold); border-color: var(--gold); color: #fff; }
     .stepper-btn:hover:not(.active) { border-color: var(--gold); color: var(--gold); }
@@ -356,7 +356,7 @@
     .tag-search-input {
       width: 100%; padding: 0.5rem 0.75rem;
       border: 1px solid var(--line); border-radius: 2px;
-      font-family: 'Inter', sans-serif; font-size: 0.82rem;
+      font-family: 'GRG Sans', sans-serif; font-size: 0.82rem;
       color: var(--ink); background: #fff; outline: 0;
       transition: border-color 0.2s;
     }
@@ -402,7 +402,7 @@
     .btn-apply {
       width: 100%; padding: 0.9rem;
       background: var(--gold); color: #fff; border: 0; border-radius: 2px;
-      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.82rem;
+      font-family: 'GRG Sans', sans-serif; font-weight: 600; font-size: 0.82rem;
       letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
       transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
     }
@@ -431,14 +431,14 @@
     .view-btn svg { width: 15px; height: 15px; }
     .sort-select {
       padding: 0.45rem 0.75rem; border: 1px solid var(--line); border-radius: 2px;
-      font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--ink);
+      font-family: 'GRG Sans', sans-serif; font-size: 0.8rem; color: var(--ink);
       background: #fff; outline: 0; cursor: pointer;
     }
     .sort-select:focus { border-color: var(--gold); }
     .filter-mobile-btn {
       display: none; padding: 0.45rem 0.85rem;
       border: 1px solid var(--gold); border-radius: 2px;
-      background: transparent; color: var(--gold); font-family: 'Inter', sans-serif;
+      background: transparent; color: var(--gold); font-family: 'GRG Sans', sans-serif;
       font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
       cursor: pointer; align-items: center; gap: 0.4rem;
     }
@@ -500,7 +500,7 @@
 
     .card-body { padding: 1rem; }
     .card-price {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
+      font-family: 'GRG Serif', serif; font-size: 1.5rem; font-weight: 700;
       color: var(--ink); line-height: 1; margin-bottom: 0.35rem;
     }
     .card-price span { font-size: 1rem; }
@@ -558,7 +558,7 @@
     .footer-socials a:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
     .footer-socials svg { width: 13px; height: 13px; }
     .footer-col h4 {
-      font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #fff;
+      font-family: 'GRG Serif', serif; font-size: 1rem; color: #fff;
       margin: 0 0 1rem; font-weight: 700;
     }
     .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .65rem; }
@@ -1495,7 +1495,7 @@
         <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
         <polyline points="9 22 9 12 15 12 15 22"/>
       </svg>
-      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;margin-bottom:0.75rem;color:#171717;">Live MLS Search Coming Soon</h2>
+      <h2 style="font-family:'GRG Serif', Georgia, serif;font-size:2rem;margin-bottom:0.75rem;color:#171717;">Live MLS Search Coming Soon</h2>
       <p style="max-width:480px;color:#6b6b6b;margin-bottom:0.5rem;line-height:1.7;">
         Full MLS search with live Austin Board of Realtors data is being connected now and will be available within the next few days.
       </p>

@@ -174,7 +174,7 @@
     <div class="result-card">
       <div class="rc-label">Total Buydown Subsidy</div>
       <div class="rc-big" id="total-subsidy">$0</div>
-      <div style="font-family:'Inter',sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.25rem;">Deposited at closing by seller or builder</div>
+      <div style="font-family:'GRG Sans', sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.25rem;">Deposited at closing by seller or builder</div>
       <div class="result-grid" id="savings-grid"></div>
     </div>
     <div class="breakdown-card">
@@ -215,7 +215,7 @@
 
 <section style="max-width:1120px;margin:0 auto;padding:0 1.5rem 4rem;">
   <div style="background:#F4F0E9;border-radius:14px;padding:2.5rem;">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin:0 0 1rem;">How This Calculator Works</h2>
+    <h2 style="font-family:'GRG Serif', serif;font-size:1.5rem;font-weight:600;margin:0 0 1rem;">How This Calculator Works</h2>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">The buydown subsidy is calculated as the sum of monthly payment differences between the reduced rate and the note rate, over each year of the buydown period. For a 2-1 buydown: Year 1 subsidy = 12 × (note rate P&I − Year 1 reduced rate P&I). Year 2 subsidy = 12 × (note rate P&I − Year 2 reduced rate P&I). Total subsidy = Year 1 + Year 2.</p>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">All payments use the standard 30-year amortization formula applied to the loan amount. The reduced rate is simply the note rate minus the reduction for each year. This matches how lenders calculate the escrow requirement at closing.</p>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;"><em>This calculator is for educational purposes. Actual subsidy amounts are determined by your lender. Last updated July 2026.</em></p>
@@ -301,12 +301,12 @@
       totalSubsidy+=yrSubsidy;
       var isY1=i===0;
       yearCards+='<div style="background:'+(isY1?'#0a0a0a':'#F4F0E9')+';border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:.75rem;display:flex;justify-content:space-between;align-items:center;">'
-        +'<div><div style="font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:'+(isY1?'rgba(255,255,255,.4)':'#9a8060')+';">Year '+yr+'</div>'
-        +'<div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:'+(isY1?'#B8963E':'#0a0a0a')+';">'+(noteRate-red).toFixed(3)+'%</div>'
-        +'<div style="font-family:'Inter',sans-serif;font-size:.78rem;color:'+(isY1?'rgba(255,255,255,.45)':'#6b6560')+';">'+red+'% below note rate</div></div>'
+        +'<div><div style="font-family:'GRG Sans', sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:'+(isY1?'rgba(255,255,255,.4)':'#9a8060')+';">Year '+yr+'</div>'
+        +'<div style="font-family:'GRG Serif', serif;font-size:2rem;font-weight:700;color:'+(isY1?'#B8963E':'#0a0a0a')+';">'+(noteRate-red).toFixed(3)+'%</div>'
+        +'<div style="font-family:'GRG Sans', sans-serif;font-size:.78rem;color:'+(isY1?'rgba(255,255,255,.45)':'#6b6560')+';">'+red+'% below note rate</div></div>'
         +'<div style="text-align:right;">'
-        +'<div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:'+(isY1?'#fff':'#0a0a0a')+';">'+fmt(adjPmt)+'/mo</div>'
-        +'<div style="font-family:'Inter',sans-serif;font-size:.75rem;color:'+(isY1?'rgba(255,255,255,.4)':'#6b6560')+';">Saves '+fmt(savings)+'/mo</div></div></div>';
+        +'<div style="font-family:'GRG Serif', serif;font-size:1.5rem;font-weight:700;color:'+(isY1?'#fff':'#0a0a0a')+';">'+fmt(adjPmt)+'/mo</div>'
+        +'<div style="font-family:'GRG Sans', sans-serif;font-size:.75rem;color:'+(isY1?'rgba(255,255,255,.4)':'#6b6560')+';">Saves '+fmt(savings)+'/mo</div></div></div>';
       savingsItems+='<div class="rg-item"><div class="rg-val">'+fmt(yrSubsidy)+'</div><div class="rg-lab">Year '+yr+' savings</div></div>';
     }
     document.getElementById('year-cards').innerHTML=yearCards;
