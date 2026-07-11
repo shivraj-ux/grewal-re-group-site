@@ -124,6 +124,35 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
 .org-card.admin p { color: rgba(255,255,255,.68); }
 .org-card.admin .org-icon { width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border: 2px solid var(--gold); background: rgba(184,150,62,.12); font-family: var(--serif); font-size: 1.6rem; color: var(--gold-soft); }
 
+/* ---- Sitewide card hover: highlight + a hair of tilt ----
+   Uses the standalone `rotate` property (not `transform`) so this layers on
+   top of any page-local `transform: translateY()` hover lift without being
+   overridden by it -- both apply together. */
+.lib-card, .blog-card, .community-card, .neighborhood-card, .nbhd-card,
+.property-card, .listing-card, .related-card, .related-post-card,
+.team-card, .value-card, .persona-card, .concierge-card,
+.school-card, .campus-card, .county-card, .district-card, .suburb-card,
+.winery-card, .golf-card, .review-card, .rv-card, .author-card,
+.stat-card, .scorecard, .result-card, .report-card, .reports-hero-card,
+.u-card, .calc-card, .sidebar-card, .built-card, .breakdown-card,
+.exemption-card, .hs-card, .hv-card, .lead-card, .col-card, .rg-modal-card {
+  transition: rotate .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease;
+}
+.lib-card:hover, .blog-card:hover, .community-card:hover, .neighborhood-card:hover, .nbhd-card:hover,
+.property-card:hover, .listing-card:hover, .related-card:hover, .related-post-card:hover,
+.team-card:hover, .value-card:hover, .persona-card:hover, .concierge-card:hover,
+.school-card:hover, .campus-card:hover, .county-card:hover, .district-card:hover, .suburb-card:hover,
+.winery-card:hover, .golf-card:hover, .review-card:hover, .rv-card:hover, .author-card:hover,
+.stat-card:hover, .scorecard:hover, .result-card:hover, .report-card:hover, .reports-hero-card:hover,
+.u-card:hover, .calc-card:hover, .sidebar-card:hover, .built-card:hover, .breakdown-card:hover,
+.exemption-card:hover, .hs-card:hover, .hv-card:hover, .lead-card:hover, .col-card:hover, .rg-modal-card:hover {
+  rotate: -1deg;
+  box-shadow: 0 18px 40px rgba(0,0,0,.14);
+  border-color: var(--gold);
+}
+.lib-card { transition: rotate .3s cubic-bezier(.22,1,.36,1), transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease; }
+.lib-card:hover { transform: translateY(-6px); }
+
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .rail-head, .rail-track { padding-left: 1.2rem; padding-right: 1.2rem; }
@@ -134,4 +163,14 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
 @media (prefers-reduced-motion: reduce) {
   .kb img { animation: none; }
   .reveal, .reveal-line > span, .wipe { transition-duration: .01ms !important; }
+  .lib-card:hover, .blog-card:hover, .community-card:hover, .neighborhood-card:hover, .nbhd-card:hover,
+  .property-card:hover, .listing-card:hover, .related-card:hover, .related-post-card:hover,
+  .team-card:hover, .value-card:hover, .persona-card:hover, .concierge-card:hover,
+  .school-card:hover, .campus-card:hover, .county-card:hover, .district-card:hover, .suburb-card:hover,
+  .winery-card:hover, .golf-card:hover, .review-card:hover, .rv-card:hover, .author-card:hover,
+  .stat-card:hover, .scorecard:hover, .result-card:hover, .report-card:hover, .reports-hero-card:hover,
+  .u-card:hover, .calc-card:hover, .sidebar-card:hover, .built-card:hover, .breakdown-card:hover,
+  .exemption-card:hover, .hs-card:hover, .hv-card:hover, .lead-card:hover, .col-card:hover, .rg-modal-card:hover {
+    rotate: none;
+  }
 }
