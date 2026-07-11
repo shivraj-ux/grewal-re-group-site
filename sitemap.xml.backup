@@ -115,12 +115,47 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://grewalregroup.com/communities/west-lake-hills</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/tarrytown</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/barton-hills</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/barton-creek</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/zilker</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/circle-c-ranch</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/downtown</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grewalregroup.com/communities/central-austin</loc>
     <lastmod>2026-05-06</lastmod>
@@ -128,13 +163,53 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://grewalregroup.com/communities/east-austin</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/travis-heights</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/mueller</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/north-central-austin</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/northwest-hills</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/steiner-ranch</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/lake-travis</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/dripping-springs</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grewalregroup.com/communities/fredericksburg</loc>
     <lastmod>2026-05-06</lastmod>
@@ -142,11 +217,41 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://grewalregroup.com/communities/leander-cedar-park</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/round-rock</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/pflugerville</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/georgetown</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/kyle</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/buda</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grewalregroup.com/blog/downtown-austin-real-estate-2026</loc>
     <lastmod>2026-05-08</lastmod>
@@ -1998,11 +2103,40 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://grewalregroup.com/communities/lakeway</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/bee-cave</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/davenport-ranch</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/lake-austin</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/lost-creek</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
+    <loc>https://grewalregroup.com/communities/rollingwood</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grewalregroup.com/blog/austin-luxury-neighborhoods-guide-2026</loc>
     <lastmod>2026-06-22</lastmod>
