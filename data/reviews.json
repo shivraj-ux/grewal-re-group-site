@@ -32,7 +32,12 @@
     "review_count": 26,
     "birdeye_mirror_url": "https://reviews.birdeye.com/modernaire-group-171614397877735",
     "birdeye_mirror_count_note": "Birdeye shows 29 (includes one duplicate/anonymized entry of a named review) -- the live Google count (26) is used as authoritative.",
-    "top_review_tags": ["home buying", "easy process", "above and beyond", "personable"],
+    "top_review_tags": [
+      "home buying",
+      "easy process",
+      "above and beyond",
+      "personable"
+    ],
     "reviews": [
       {
         "author": "Dan Rohrer",
@@ -45,10 +50,110 @@
         "text": "Raj has been an incredible Realtor and a great support system through this turbulent market environment. His advise has been incredibly valuable, and Raj handled everything end-to-end with diligence. I highly recommend Raj and colleagues if you are considering a real estate sale/purchase."
       },
       {
+        "author": "Melissa Wischnewsky",
+        "when": "Google review",
+        "text": "I had the pleasure of working with the Modernaire Group, specifically Shivraj and I was very impressed. I am a new home sales professional and I work with realtors all day every day. It's rare when one stands out from the group but Shivraj…",
+        "excerpt": true
+      },
+      {
+        "author": "Kelly Gibbs",
+        "when": "Google review",
+        "text": "I am an on-site sales agent so I meet A LOT of Realtors. Shivraj is by far one of THE very best Realtors I have ever worked with!! He does a ton of research for his clients, asks a ton of questions, cares genuinely about his clients and…",
+        "excerpt": true
+      },
+      {
+        "author": "ranjodh kailey",
+        "when": "Google review",
+        "text": "Shivraj from Modernaire Group is excellent for real estate needs here in Austin and peripheral areas. We recently bought a home through him and everything went smooth including his suggestion and help in financing and we had an added…",
+        "excerpt": true
+      },
+      {
         "author": "Swapnil Soni",
         "when": "Google review",
-        "text": "It was been hassle/stress free experience buying a home through Arsh. Best part of Arsh not being pushy at all from day one and listening to what we wanted. He focused on what we needed and showed me homes until we were satisfied."
+        "text": "It was been hassle/stress free experience buying a home through Arsh. Best part of Arsh not being pushy at all from day one and listening to what we wanted. He focused on what we needed and showed me homes until we were satisfied.…",
+        "excerpt": true
+      },
+      {
+        "author": "Pradeep S",
+        "when": "Google review",
+        "text": "Shivraj from Modernaire group is great! He helped me in my house search. He works really hard for your and he is completely trustworthy especially when you are moving between states like I did. He asks good questions to understand your…",
+        "excerpt": true
+      },
+      {
+        "author": "Nathan Rowell",
+        "when": "Google review",
+        "text": "The team with Modernaire are incredibly professional, patient, and personable! As a top tier home inspection company operator and manager, my guys looks forward to working with their clients regularly. Their agents are attentive, super…",
+        "excerpt": true
+      },
+      {
+        "author": "Srikanth Thanneeru",
+        "when": "Google review",
+        "text": "I worked with Shivraj from Modernaire Group. It was pleasure working with them on my new home buying process. They made the whole process very easy and helped me throughout each step. I really appreciate Shivraj's patience and acknowledge his knowledge in the real estate market."
+      },
+      {
+        "author": "charlene meltzer",
+        "when": "Google review",
+        "text": "Raj is an outstanding real estate agent. After telling Raj exactly what we were looking for he went above and beyond to help us find our dream home. He has great communication skills and responds promptly. We highly recommend Raj for your real estate needs."
+      },
+      {
+        "author": "pradhyumna kommareddy",
+        "when": "Google review",
+        "text": "Arsh and Modernaire group are a one stop shop for all your realtor needs. Arsh helped me buy my home and has been a great partner and very happy with our decision."
+      },
+      {
+        "author": "Carla Mitchell",
+        "when": "Google review",
+        "text": "I have had the pleasure of working with Arsh Khaira on several transactions and found him to be a clear communicator and he has always handled himself in a professional manner. He is personable, knowledgeable and easy to do business with."
+      },
+      {
+        "author": "NAVJOT S",
+        "when": "Google review",
+        "text": "Worked with Shivraj from Modernaire Group great person to work with ample of knowledge about properties and real estate. He will be my go to realtor in future as well."
+      },
+      {
+        "author": "Samia Faizi",
+        "when": "Google review",
+        "text": "Great leader, shivraj has been our realtor for for the last few properties we purchased and sold."
+      },
+      {
+        "author": "Avery Turek",
+        "when": "Google review",
+        "text": "I had the honor of working with Shivraj & his clients. He was extremely professional & helped facilitate the entire transaction. Would highly recommend!"
+      },
+      {
+        "author": "Kim Clark",
+        "when": "Google review",
+        "text": "Thank you Arsh for your hard work! This guy goes above and beyond. He was available and on top of everything from start to finish. Excellent realtor and also a great person."
+      },
+      {
+        "author": "asma tanveer",
+        "when": "Google review",
+        "text": "Shivraj can be the best guide in home buying, makes the process smooth, honest and very knowledgeable realtor."
+      },
+      {
+        "author": "Priyyank Maisuriya",
+        "when": "Google review",
+        "text": "Excellent customer service - definately recommend Arsh if looking to buy a house. He will find you the best deal and great location."
+      },
+      {
+        "author": "Adit kulshreshtha",
+        "when": "Google review",
+        "text": "The experience was very good. Arsh was able to think though and help us with all our needs and close the house with utmost urgency as per needed."
+      },
+      {
+        "author": "E Allen",
+        "when": "Google review",
+        "text": "Awesome guy! Very personal and genuine! Go with this guy if you need to buy or sell a home."
       }
+    ],
+    "reviews_with_text_count": 20,
+    "reviews_star_only_no_text": [
+      "Lana Nguyen",
+      "Teri Singh",
+      "Nbmang",
+      "Ravneet Kaur",
+      "Manu Mann",
+      "Mohamed Bassiouny"
     ]
   },
   "featured": [
@@ -56,19 +161,22 @@
       "author": "Neeraj Sangal",
       "when": "Google review",
       "location": "",
-      "text": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right."
+      "text": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right.",
+      "verify_url": "https://www.google.com/maps/contrib/104760682207372857782"
     },
     {
       "author": "Another Studio",
       "when": "Google review",
       "location": "",
-      "text": "Shivraj provided excellent service and exceeded our expectations from start to finish."
+      "text": "Shivraj provided excellent service and exceeded our expectations from start to finish.",
+      "verify_url": "https://www.google.com/maps/contrib/116486904821980614886"
     },
     {
       "author": "Z. A.",
       "when": "Google review",
       "location": "",
-      "text": "The realtor in town — knows his stuff!"
+      "text": "The realtor in town — knows his stuff!",
+      "verify_url": "https://www.google.com/maps/contrib/103816654933290380082"
     }
   ],
   "other_platforms": {
