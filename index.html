@@ -639,7 +639,8 @@
       position: relative; aspect-ratio: 4/3;
       background-size: cover; background-position: center;
       color: #fff; overflow: hidden;
-      transition: transform 0.4s, box-shadow 0.4s;
+      border: 1px solid transparent;
+      transition: transform 0.4s, box-shadow 0.4s, border-color .3s ease, rotate .3s cubic-bezier(.22,1,.36,1);
     }
     .service-tile-overlay {
       position: absolute; inset: 0;
@@ -650,7 +651,7 @@
     }
     .service-tile-text h3 { font-size: 1.4rem; color: #fff; margin: 0 0 .35rem; }
     .service-tile-text p { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.5; }
-    .service-tile:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); }
+    .service-tile:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); border-color: var(--gold); rotate: -1deg; }
     @media (max-width: 900px) { .services-tiles { grid-template-columns: 1fr; } }
 
     /* ─── MARKET REPORTS ─── */
@@ -1002,9 +1003,9 @@
     .team-mate {
       background: #fff; padding: 2rem;
       border: 1px solid var(--line);
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s, transform 0.3s, rotate .3s cubic-bezier(.22,1,.36,1);
     }
-    .team-mate:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .team-mate:hover { border-color: var(--gold); transform: translateY(-2px); rotate: -1deg; }
     .team-mate-avatar {
       width: 56px; height: 56px; border-radius: 50%;
       background: var(--gold); color: #fff;
@@ -1264,11 +1265,11 @@
     .persona-card, .listing-card, .blog-card, .service-tile, .concierge-card, .review-card,
     .cmodal-box, .btn, .btn-gold, .btn-ghost, .btn-ghost-gold, .nav-btn, .dot, .google-summary,
     .form-field input, .form-field select, .form-field textarea { border-radius: 0 !important; }
-    .persona-card { background: #0d0c0a; border: 1px solid rgba(184,150,62,.3); color: #fff; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1); }
+    .persona-card { background: #0d0c0a; border: 1px solid rgba(184,150,62,.3); color: #fff; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1), rotate .3s cubic-bezier(.22,1,.36,1); }
     .persona-card:hover { border-color: var(--gold); transform: translateY(-6px); box-shadow: none; }
     .persona-card h3 { color: #fff; }
     .persona-card p { color: rgba(255,255,255,.65); }
-    .blog-card { background: #0d0c0a; border: 1px solid rgba(184,150,62,.25); transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1); }
+    .blog-card { background: #0d0c0a; border: 1px solid rgba(184,150,62,.25); transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1), rotate .3s cubic-bezier(.22,1,.36,1); }
     .blog-card:hover { border-color: var(--gold); transform: translateY(-6px); }
     .blog-card h3 { color: #fff; font-size: 1.3rem; }
     .blog-summary { color: rgba(255,255,255,.62); }
@@ -1280,8 +1281,8 @@
     .faq-answer-inner { color: rgba(255,255,255,.72); }
     .faq-answer-inner a { color: var(--gold-light); }
     /* Resources, listings, contact stay cream — sharpen corners + gold hairlines only */
-    .resources-section article, .listing-card { border-color: rgba(184,150,62,.3) !important; box-shadow: none !important; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1); }
-    .resources-section article:hover, .listing-card:hover { border-color: var(--gold) !important; transform: translateY(-6px); }
+    .resources-section article, .listing-card { border-color: rgba(184,150,62,.3) !important; box-shadow: none !important; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1), rotate .3s cubic-bezier(.22,1,.36,1); }
+    .resources-section article:hover, .listing-card:hover { border-color: var(--gold) !important; transform: translateY(-6px); rotate: -1deg; }
     .form-field input, .form-field select, .form-field textarea { border: 1px solid var(--line); }
     .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--gold); }
     .rail-track .blog-card { flex: 0 0 clamp(280px, 30vw, 380px); }

@@ -108,8 +108,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
 .org-node .org-name { font-family: var(--serif); font-size: 1.2rem; margin-top: .3rem; }
 .org-connector { width: 1px; height: 2.4rem; background: rgba(184,150,62,.4); margin: 0 auto; }
 .org-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
-.org-card { border: 1px solid rgba(184,150,62,.3); padding: 2rem; text-align: center; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1); }
-.org-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+.org-card { border: 1px solid rgba(184,150,62,.3); padding: 2rem; text-align: center; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1), rotate .3s cubic-bezier(.22,1,.36,1); }
+.org-card:hover { border-color: var(--gold); transform: translateY(-6px); rotate: -1deg; }
 .org-card img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; display: block; border: 2px solid var(--gold); }
 .org-card .org-title { font-size: .64rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: .3rem; }
 .org-card h4 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 .5rem; }
@@ -118,7 +118,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
   display: flex; flex-direction: column; justify-content: center;
   background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%); border-color: var(--gold); color: #fff;
 }
-.org-card.admin:hover { border-color: var(--gold-soft); }
+.org-card.admin:hover { border-color: var(--gold-soft); rotate: -1deg; }
 .org-card.admin .org-title { color: var(--gold-soft); }
 .org-card.admin h4 { color: #fff; }
 .org-card.admin p { color: rgba(255,255,255,.68); }
