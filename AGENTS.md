@@ -8,8 +8,8 @@ this first.
 
 Grewal RE Group is an Austin, Texas luxury real estate team led by **Shivraj
 Grewal** ("Raj") at Compass. Brand promise: **People First. Straight Answers.
-Strong Results.** 100+ closed transactions, $100M+ career volume, 149
-five-star reviews (across two Google Business Profiles, Zillow, and Realtor.com).
+Strong Results.** 100+ closed transactions, $100M+ career volume, 189
+five-star reviews (across two Google Business Profiles, Zillow, Realtor.com, and RateMyAgent).
 
 - **Phone:** (512) 617-0001
 - **Email:** shivraj.grewal@compass.com

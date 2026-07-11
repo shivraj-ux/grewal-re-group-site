@@ -152,16 +152,21 @@ def tidy_author(name: str) -> str:
 
 
 def other_platform_count(current: dict) -> int:
-    """Reviews we display from platforms other than Google (Zillow, Realtor.com).
+    """Reviews we display from platforms other than the primary Grewal RE Group
+    Google profile (Zillow, Realtor.com, the second Modernaire Group Google
+    profile, RateMyAgent).
 
-    Hand-maintained in reviews.json -> other_platforms. The site shows the
-    all-platform total (Google + these) in the hero/proof stats and schema,
-    so the total must move together with the Google count on every sync.
+    Hand-maintained in reviews.json -> other_platforms / modernaire_group_google /
+    ratemyagent_grewal. The site shows the all-platform total (primary Google +
+    these) in the hero/proof stats and schema, so the total must move together
+    with the primary Google count on every sync.
     """
     other = current.get("other_platforms", {}) or {}
     n = 0
     n += int((other.get("zillow") or {}).get("review_count") or 0)
     n += len((other.get("realtor_com") or {}).get("testimonials") or [])
+    n += int((current.get("modernaire_group_google") or {}).get("review_count") or 0)
+    n += int((current.get("ratemyagent_grewal") or {}).get("review_count") or 0)
     return n
 
 
