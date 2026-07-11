@@ -7,7 +7,6 @@
    ============================================================================ */
 
 @import url('/assets/css/site-chrome.css?v=4');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --gold: #B8963E;
@@ -22,7 +21,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'GRG Sans', system-ui, -apple-system, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--ink);
@@ -31,7 +30,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'GRG Serif', Georgia, serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.15;
@@ -60,7 +59,7 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 }
 .hero h1 { color: #fff; }
 .hero .lede {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'GRG Serif', Georgia, serif;
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   font-style: italic;
   color: #d4b366;
@@ -87,7 +86,7 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 .btn {
   display: inline-block;
   padding: 0.85rem 1.8rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'GRG Sans', system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -130,7 +129,7 @@ form input:focus, form select:focus, form textarea:focus {
 }
 form button[type="submit"] {
   padding: 0.9rem 1.8rem;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'GRG Sans', system-ui, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
