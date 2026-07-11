@@ -15,22 +15,22 @@
 /calculators/seller-net-proceeds-calculator               /calculators/seller-net-proceeds-calculator.html  200
 
 # Old root-level seller tool paths — 301 to /calculators/
-/home-value-estimator                                     /calculators/home-value-estimator               301
-/home-value-estimator.html                                /calculators/home-value-estimator               301
-/seller-net-proceeds-calculator                           /calculators/seller-net-proceeds-calculator     301
-/seller-net-proceeds-calculator.html                      /calculators/seller-net-proceeds-calculator     301
+/home-value-estimator                                     /calculators/home-value-estimator               301!
+/home-value-estimator.html                                /calculators/home-value-estimator               301!
+/seller-net-proceeds-calculator                           /calculators/seller-net-proceeds-calculator     301!
+/seller-net-proceeds-calculator.html                      /calculators/seller-net-proceeds-calculator     301!
 
 # Old /tools/ paths — 301 to /calculators/
-/tools                                                    /calculators                                    301
-/tools/                                                   /calculators                                    301
-/tools/affordability-calculator                           /calculators/affordability-calculator           301
-/tools/affordability-calculator.html                      /calculators/affordability-calculator           301
-/tools/mortgage-calculator                                /calculators/mortgage-calculator                301
-/tools/mortgage-calculator.html                           /calculators/mortgage-calculator                301
-/tools/rent-vs-buy                                        /calculators/rent-vs-buy                       301
-/tools/rent-vs-buy.html                                   /calculators/rent-vs-buy                       301
-/tools/buy-down-calculator                                /calculators/buy-down-calculator                301
-/tools/buy-down-calculator.html                           /calculators/buy-down-calculator                301
+/tools                                                    /calculators                                    301!
+/tools/                                                   /calculators                                    301!
+/tools/affordability-calculator                           /calculators/affordability-calculator           301!
+/tools/affordability-calculator.html                      /calculators/affordability-calculator           301!
+/tools/mortgage-calculator                                /calculators/mortgage-calculator                301!
+/tools/mortgage-calculator.html                           /calculators/mortgage-calculator                301!
+/tools/rent-vs-buy                                        /calculators/rent-vs-buy                       301!
+/tools/rent-vs-buy.html                                   /calculators/rent-vs-buy                       301!
+/tools/buy-down-calculator                                /calculators/buy-down-calculator                301!
+/tools/buy-down-calculator.html                           /calculators/buy-down-calculator                301!
 
 # The Relocation Edition — clean shareable links
 /guide                                                    /relocation-guide                               301
