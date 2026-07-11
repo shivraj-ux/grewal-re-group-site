@@ -64,9 +64,11 @@
     Cache-Control = "public, max-age=3600"
     Content-Type = "application/xml; charset=utf-8"
 
-# SOURCES.md: serve as plain text so browsers render it
+# Every markdown file (SOURCES.md, AGENTS.md, index.md, and the per-page
+# renderings under /blog/*.md, /communities/*.md, /calculators/*.md, etc.):
+# served as text/markdown so both browsers and AI agents render it correctly.
 [[headers]]
-  for = "/SOURCES.md"
+  for = "/*.md"
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
     Cache-Control = "public, max-age=3600"
@@ -88,10 +90,13 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-# Markdown content negotiation at the edge (Accept: text/markdown -> index.md)
+# Markdown content negotiation at the edge (Accept: text/markdown -> sibling .md).
+# Covers every page; the function itself falls through to normal HTML if no
+# .md has been published yet for that path, so this is safe to bind broadly.
 [[edge_functions]]
   function = "markdown-negotiation"
-  path = "/"
+  path = "/*"
+  excludedPath = ["/assets/*", "/.netlify/*", "/mcp", "/.well-known/*"]
 
 # Clean public endpoint for the MCP server. Rewrite (200) keeps the URL at /mcp.
 [[redirects]]
@@ -117,18 +122,6 @@
     Content-Type = "application/json; charset=utf-8"
     Cache-Control = "public, max-age=3600"
     Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/AGENTS.md"
-  [headers.values]
-    Content-Type = "text/markdown; charset=utf-8"
-    Cache-Control = "public, max-age=3600"
-
-[[headers]]
-  for = "/index.md"
-  [headers.values]
-    Content-Type = "text/markdown; charset=utf-8"
-    Cache-Control = "public, max-age=3600"
 
 # ── Redirects ────────────────────────────────────────────────
 

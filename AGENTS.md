@@ -27,7 +27,15 @@ five-star reviews (across two Google Business Profiles, Zillow, and Realtor.com)
 3. **Plain-text summary.** `/llms.txt` is a
    machine-readable overview of the whole business.
 4. **Markdown of any page.** Send `Accept: text/markdown` to a page URL to get a
-   markdown rendering instead of HTML (currently available for the homepage `/`).
+   clean markdown rendering instead of HTML — covers the homepage, every blog
+   post, every community page, the calculators, and the core guide/service
+   pages (buy, sell, about, FAQ, reviews, library, relocation guide, schools
+   guide). You can also read the `.md` file directly (e.g.
+   `/blog/austin-mortgage-guide-2026.md`). The two long-form flipbook guides
+   (Relocation Edition, Schools of Greater Austin) render as page images, not
+   text, so their `.md` covers the landing page and FAQ only, not the full
+   page-by-page content — use `get_relocation_guide` via MCP for that guide's
+   summary instead.
 5. **Sourced claims.** `/SOURCES.md` maps every public
    claim to a verifiable backlink.
 
