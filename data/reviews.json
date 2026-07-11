@@ -5,8 +5,8 @@
   "place_fid": "0x865b2d8559b35f0f:0xceb6e8b660270652",
   "rating": "5.0",
   "review_count": 119,
-  "combined_total": 189,
-  "combined_total_note": "119 Google (Shivraj Grewal / Grewal RE Group GBP) + 3 Zillow + 1 Realtor.com testimonial + 26 Google (Modernaire Group -- a second, distinct Google Business Profile for the same team, same office, same license, zero overlapping reviewer names with the 119) + 40 RateMyAgent (Shivraj Grewal's claimed, license-verified profile, TX #736060). This is the number shown sitewide as the unqualified '189 five-star reviews' / ratingCount / stat total. Any string that specifically says 'on Google' or 'Google reviews' referring to the Grewal RE Group profile correctly stays 119, and any string that says 'on RateMyAgent' stays 40 -- those are true, single-platform counts, not the combined one.",
+  "combined_total": 149,
+  "combined_total_note": "119 Google (Shivraj Grewal / Grewal RE Group GBP) + 3 Zillow + 1 Realtor.com testimonial + 26 Google (Modernaire Group -- our team's previous business name, a second, distinct Google Business Profile, same team, same office, same license, zero overlapping reviewer names with the 119). This is the number shown sitewide as the unqualified '149 five-star reviews' / ratingCount / stat total. Any string that specifically says 'on Google' or 'Google reviews' referring to the Grewal RE Group profile correctly stays 119 -- that is a true, single-platform count, not the combined one.",
   "last_synced": "2026-07-11",
   "last_sync_status": "seed — first automated sync pending key (see scripts/sync_reviews.py). combined_total manually verified live 2026-07-11 via Google Business Profile, Zillow, Realtor.com, and RateMyAgent, plus the Modernaire Group Google listing (Shivraj supplied the live page contents directly; cross-checked against a Birdeye mirror of the same listing, which shows 29 vs. the live 26 -- Birdeye's total includes a duplicate entry, so the live count is used).",
   "checked_no_additional_reviews": {
@@ -29,6 +29,332 @@
       "share.google/iI5PrR2EPPVVE6H2D": "Resolves to the primary Grewal RE Group Google Business Profile search card -- same CID 0x865b2d8559b35f0f:0xceb6e8b660270652 as the top-level place_fid above. Same 119 reviews. Not a new source.",
       "google.com/search?q=modernaire+group ... lrd=0x865b2de301347b27:0x7536a7a30db4f682": "Resolves to the Modernaire Group Google Business Profile already documented below -- ludocid 8446122469931415170 converts to the same hex pair 0x7536a7a30db4f682. Same 26 reviews. Not a new source. Its real canonical link (https://www.google.com/maps?cid=8446122469931415170) now replaces the earlier constructed Maps-search-query fallback URL.",
       "ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd": "A genuinely new, separate platform -- claimed profile, license TX #736060 matches Shivraj exactly, 40 reviews, 5.0 average, zero overlap with any Google/Zillow/Realtor.com reviewer already counted. Added as ratemyagent_grewal below."
+    },
+    "ratemyagent_excluded_2026-07-11": {
+      "_note": "RateMyAgent (https://www.ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd/sales/overview) was briefly added to combined_total (149 -> 189) and then removed the same day. It is a real, claimed, license-matched (TREC #736060) profile with 40 five-star reviews -- but on inspection, a large share of those reviews are the SAME clients' testimonials already reflected in the 119 Google count, cross-posted verbatim or near-verbatim to both platforms (e.g. Inderpreet Grewal's Google review and the RateMyAgent 'Professional and Reloable' review share the exact typo 'Reloable', confirming same underlying review; Steve Mayo's review appears on Google, Realtor.com, AND RateMyAgent). Rather than represent 40 additional distinct client experiences, RateMyAgent substantially duplicates experiences already counted. Shivraj decided (2026-07-11) to exclude it from the combined total and remove it from /reviews rather than double count. The full 40-review dataset is preserved below for reference in case this needs revisiting.",
+      "removed_data": {
+        "_note": "New platform, verified live 2026-07-11. Claimed profile ('Claimed Profile' badge), license TX #736060 shown on-page matches Shivraj Grewal exactly, brokerage Compass RE Texas LLC matches. All 40 reviews are 5-star. Zero reviewer-name overlap with Google, Zillow, or Realtor.com reviews already counted -- confirmed additive, not a re-scrape of an existing source.",
+        "profile_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd/sales/overview",
+        "rating": "5.0",
+        "review_count": 40,
+        "reviews": [
+          {
+            "author": "Verified client",
+            "title": "Excellent Residential Real Estate knowledge, communication, and professionalism.",
+            "when": "over 1 year ago",
+            "text": "Based on our experience with Shivraj and the recent sale of our home, we find that Shivraj is very knowledgeable regarding residential real estate in the Bastrop and Austin Texas area. He has demonstrated that he is keenly aware of who is buying, at what price point, and especially at the time of year (December/January) that we placed our home on the market. Communication has been exceptional in terms of content, frequency, and included accurate documentation of discussion and decisions along the way to successful sale of our home. Shivraj impressed us with his professionalism throughout our dealings.",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3sza"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent professional",
+            "when": "over 1 year ago",
+            "text": "Shivraj was professional, responsive, knowledgeable about pricing and expectations and managed a complicated closing beautifully. Really nice person. Highly recommended!",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szd"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent service. High knowledge level and responsiveness.",
+            "when": "over 1 year ago",
+            "text": "Excellent service. High knowledge level and responsiveness.",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szg"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly Recommend",
+            "when": "over 1 year ago",
+            "text": "I am a first time home buyer and Shivraj went above and beyond to find me the perfect home. His negotiation skills and market knowledge is top notch. Shivraj was patient and worked through some tough negotiations without…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/20308-smedley-drive-pflugerville-ab3qzt"
+          },
+          {
+            "author": "Verified client",
+            "title": "A Truly Exceptional Agent That Really Wants to Help: Shivraj Grewal",
+            "when": "over 1 year ago",
+            "text": "After a terrible experience with a real estate agent when selling my previous home, I was hesitant t…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/301-bella-montagna-cir-lakeway-ab3lhm"
+          },
+          {
+            "author": "Verified client",
+            "title": "My goto realtor in Austin",
+            "when": "over 1 year ago",
+            "text": "From the beginning, Shrivaj was very attentive, asked a lot of questions and really knew/understood what I was looking for…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/12620-summer-springs-pass-buda-ab2nzc"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly Recommend- 5 Star",
+            "when": "almost 2 years ago",
+            "text": "We are so happy we found Shivraj. He is very professional and knowledgeable. He was very patient t…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqn"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable, patient realtor",
+            "when": "almost 2 years ago",
+            "text": "Shivraj helped us search and close in on a property! He is very knowledgeable about single family ho…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqm"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent agent",
+            "when": "almost 2 years ago",
+            "text": "We had the pleasure of working with Shivraj to rent a house, and the experience was outstanding. Shi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1ean"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent Guidance",
+            "when": "almost 2 years ago",
+            "text": "Shivraj Grewal made the daunting process of buying a home an absolute breeze. From the very beginnin…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwm"
+          },
+          {
+            "author": "Verified client",
+            "title": "Outstanding at Every Step",
+            "when": "almost 2 years ago",
+            "text": "We worked with Shivraj for more than a year as our search was interrupted due to personal issues. Sh…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4301-44-east-avenue-austin-ab1ive"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly recommend!",
+            "when": "almost 2 years ago",
+            "text": "Mr. Grewal has an exception grasp of market conditions. His marketing skills were amazing and exceed…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eet"
+          },
+          {
+            "author": "Verified client",
+            "title": "Professional and Reliable",
+            "when": "almost 2 years ago",
+            "text": "Working with Shivraj Grewal was an outstanding experience from start to finish. He was incredibly at…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwk"
+          },
+          {
+            "author": "Verified client",
+            "title": "Exceptional!",
+            "when": "almost 2 years ago",
+            "text": "I enjoyed working with Shivraj as my realtor, and I couldn't be happier with the experience! From da…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1eah"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great Agent, Marketing Wizard",
+            "when": "almost 2 years ago",
+            "text": "The marketing campaign was awesome and effective. Great communications and a real pitbull negotiatin…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eev"
+          },
+          {
+            "author": "Verified client",
+            "title": "He sold our home quickly and at a great price",
+            "when": "about 2 years ago",
+            "text": "Raj is a very proactive and professional realtor. He navigated us through a challenging market with…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12tr"
+          },
+          {
+            "author": "Verified client",
+            "title": "A Perfect Fit!",
+            "when": "about 2 years ago",
+            "text": "We have listed many houses over the years. Shivraj was by far the most attentive and accurate. He kn…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12ts"
+          },
+          {
+            "author": "Verified client",
+            "title": "Good professional realtor",
+            "when": "about 2 years ago",
+            "text": "Good professional realtor",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/801-oatmeal-drive-austin-ab0ixt"
+          },
+          {
+            "author": "Verified client",
+            "title": "Thank you for your support and help",
+            "when": "about 2 years ago",
+            "text": "Firstly, I'd like to thank you for your dedication and hard work throughout the home renting process…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0njr"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is a great agent that understood our needs.",
+            "when": "about 2 years ago",
+            "text": "It took only 2 weeks for us to find our new rental home as move in to Austin. Shivraj has been fanta…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/13-3600-brushy-creek-road-cedar-park-ab0nmw"
+          },
+          {
+            "author": "Verified client",
+            "title": "Putting Professionalism to its best",
+            "when": "about 2 years ago",
+            "text": "Shivraj has gone above and beyond multiple times during my engagement with him. It amazes me how he…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0nju"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable and organized",
+            "when": "about 2 years ago",
+            "text": "Knowledgeable and organized. Good to partner with for your next deal",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0np2"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable and organized",
+            "when": "about 2 years ago",
+            "text": "Has good understanding of Austin market and is very organized in getting stuff done. Would recommend…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0iwj"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is top-notch real estate agent",
+            "when": "about 2 years ago",
+            "text": "Shivraj consistently went above and beyond to ensure we made informed decisions and had a smooth pro…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1106-shiloh-street-cedar-park-ab0iwd"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great guy!! Helps personalize the purchase",
+            "when": "about 2 years ago",
+            "text": "Great guy!! Helps personalize the purchase, always there for supporting, no pushing on purchasing bu…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/b-14801-grey-ghost-way-travis-county-ab0k4r"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj's knowledge of the local real estate market was impressive",
+            "when": "over 2 years ago",
+            "text": "Shivraj's knowledge of the local real estate market was impressive. He took the time to understand m…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0jir"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj exceeded all expectations!",
+            "when": "over 2 years ago",
+            "text": "Shivraj exceeded all expectations! His deep knowledge of the local market, combined with a proactive…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/305-liberty-drive-liberty-hill-ab0jpj"
+          },
+          {
+            "author": "Verified client",
+            "title": "My wife and I had a really great experience with Shivraj and his team",
+            "when": "over 2 years ago",
+            "text": "My wife and I had a really great experience with Shivraj and his team. He answered all of our questi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/246-starling-creek-new-braunfels-ab0jis"
+          },
+          {
+            "author": "Verified client",
+            "title": "Adept, knowledgeable and efficient",
+            "when": "over 2 years ago",
+            "text": "There are many realtors out there who are Adept, knowledgeable and efficient, along with these trait…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11905-paseo-de-los-lagos-lane-manor-ab0jiu"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj and his teammate Melissa were incredible to work with when buying my house",
+            "when": "almost 3 years ago",
+            "text": "Shivraj and his teammate Melissa were incredible to work with when buying my house. They were persis…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1225-al-fresco-cove-leander-ab0jiv"
+          },
+          {
+            "author": "Verified client",
+            "title": "A good, honest person to guide you through buying a new home",
+            "when": "almost 3 years ago",
+            "text": "If you're looking for a good, honest person to help guide you through the process of buying a new ho…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/341-bald-eagle-ln-hays-county-ab0jix"
+          },
+          {
+            "author": "Verified client",
+            "title": "A game-changer in my home-buying journey",
+            "when": "almost 3 years ago",
+            "text": "Working with Shivraj Grewal was a game-changer in my home-buying journey. His attentive listening, n…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1511-e-park-st-cedar-park-ab0jpk"
+          },
+          {
+            "author": "Verified client",
+            "title": "Listed a property that was part of a bankruptcy estate",
+            "when": "almost 3 years ago",
+            "text": "I listed with Shivraj real property which was part of a bankruptcy estate. Shivraj was very responsi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2807-kings-circle-drive-granite-shoals-ab0jiy"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj has been nothing but exceptional to work with",
+            "when": "about 3 years ago",
+            "text": "Shivraj has been nothing but exceptional to work with. His knowledge of the market and the greater A…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2803-prosperity-leander-ab028k"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great working with Shivraj during the whole process of buying a house",
+            "when": "about 3 years ago",
+            "text": "It was great working with Shivrai during the whole process of buying a house. I really appreciate hi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1513-pflugerville-parkway-pflugerville-ab0jj0"
+          },
+          {
+            "author": "Verified client",
+            "title": "Very fortunate to have Shivraj represent us for our home purchase",
+            "when": "over 3 years ago",
+            "text": "We've been very fortunate to have Shivraj represent us for our recent home purchase. We are in the p…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/716-paper-daisy-path-leander-ab0jiz"
+          },
+          {
+            "author": "Verified client",
+            "title": "You know how intense this market is",
+            "when": "almost 4 years ago",
+            "text": "You know how intense this market is. And without someone in your corner, you won't get far. That's w…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/120-lake-point-way-circle-d-kc-estates-ab028m"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is an amazing realtor and his focus to be of service really shows",
+            "when": "about 4 years ago",
+            "text": "Shivraj is an amazing realtor and his focus to be of service really shows. We came to Austin and sta…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2304-arroyo-grande-leander-ab0k4q"
+          },
+          {
+            "author": "Verified client",
+            "title": "Bought 2 houses and sold 1 through Raj over two years",
+            "when": "about 4 years ago",
+            "text": "Over the course of two years we have bought 2 houses and sold 1 through Raj (Shivraj Grewal). His…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2008-rosemary-lane-round-rock-ab0k4o"
+          },
+          {
+            "author": "Verified client",
+            "title": "Raj is a very caring person and was so attentive to our needs",
+            "when": "about 4 years ago",
+            "text": "Raj is a very caring person and was so attentive to our needs. He was patient, kind, and always answ…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/233-bremen-street-georgetown-ab0k4n"
+          }
+        ]
+      }
     }
   },
   "modernaire_group_google": {
@@ -161,329 +487,6 @@
       "Ravneet Kaur",
       "Manu Mann",
       "Mohamed Bassiouny"
-    ]
-  },
-  "ratemyagent_grewal": {
-    "_note": "New platform, verified live 2026-07-11. Claimed profile ('Claimed Profile' badge), license TX #736060 shown on-page matches Shivraj Grewal exactly, brokerage Compass RE Texas LLC matches. All 40 reviews are 5-star. Zero reviewer-name overlap with Google, Zillow, or Realtor.com reviews already counted -- confirmed additive, not a re-scrape of an existing source.",
-    "profile_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd/sales/overview",
-    "rating": "5.0",
-    "review_count": 40,
-    "reviews": [
-      {
-        "author": "Verified client",
-        "title": "Excellent Residential Real Estate knowledge, communication, and professionalism.",
-        "when": "over 1 year ago",
-        "text": "Based on our experience with Shivraj and the recent sale of our home, we find that Shivraj is very knowledgeable regarding residential real estate in the Bastrop and Austin Texas area. He has demonstrated that he is keenly aware of who is buying, at what price point, and especially at the time of year (December/January) that we placed our home on the market. Communication has been exceptional in terms of content, frequency, and included accurate documentation of discussion and decisions along the way to successful sale of our home. Shivraj impressed us with his professionalism throughout our dealings.",
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3sza"
-      },
-      {
-        "author": "Verified client",
-        "title": "Excellent professional",
-        "when": "over 1 year ago",
-        "text": "Shivraj was professional, responsive, knowledgeable about pricing and expectations and managed a complicated closing beautifully. Really nice person. Highly recommended!",
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szd"
-      },
-      {
-        "author": "Verified client",
-        "title": "Excellent service. High knowledge level and responsiveness.",
-        "when": "over 1 year ago",
-        "text": "Excellent service. High knowledge level and responsiveness.",
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szg"
-      },
-      {
-        "author": "Verified client",
-        "title": "Highly Recommend",
-        "when": "over 1 year ago",
-        "text": "I am a first time home buyer and Shivraj went above and beyond to find me the perfect home. His negotiation skills and market knowledge is top notch. Shivraj was patient and worked through some tough negotiations without…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/20308-smedley-drive-pflugerville-ab3qzt"
-      },
-      {
-        "author": "Verified client",
-        "title": "A Truly Exceptional Agent That Really Wants to Help: Shivraj Grewal",
-        "when": "over 1 year ago",
-        "text": "After a terrible experience with a real estate agent when selling my previous home, I was hesitant t…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/301-bella-montagna-cir-lakeway-ab3lhm"
-      },
-      {
-        "author": "Verified client",
-        "title": "My goto realtor in Austin",
-        "when": "over 1 year ago",
-        "text": "From the beginning, Shrivaj was very attentive, asked a lot of questions and really knew/understood what I was looking for…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/12620-summer-springs-pass-buda-ab2nzc"
-      },
-      {
-        "author": "Verified client",
-        "title": "Highly Recommend- 5 Star",
-        "when": "almost 2 years ago",
-        "text": "We are so happy we found Shivraj. He is very professional and knowledgeable. He was very patient t…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqn"
-      },
-      {
-        "author": "Verified client",
-        "title": "Knowledgeable, patient realtor",
-        "when": "almost 2 years ago",
-        "text": "Shivraj helped us search and close in on a property! He is very knowledgeable about single family ho…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqm"
-      },
-      {
-        "author": "Verified client",
-        "title": "Excellent agent",
-        "when": "almost 2 years ago",
-        "text": "We had the pleasure of working with Shivraj to rent a house, and the experience was outstanding. Shi…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1ean"
-      },
-      {
-        "author": "Verified client",
-        "title": "Excellent Guidance",
-        "when": "almost 2 years ago",
-        "text": "Shivraj Grewal made the daunting process of buying a home an absolute breeze. From the very beginnin…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwm"
-      },
-      {
-        "author": "Verified client",
-        "title": "Outstanding at Every Step",
-        "when": "almost 2 years ago",
-        "text": "We worked with Shivraj for more than a year as our search was interrupted due to personal issues. Sh…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4301-44-east-avenue-austin-ab1ive"
-      },
-      {
-        "author": "Verified client",
-        "title": "Highly recommend!",
-        "when": "almost 2 years ago",
-        "text": "Mr. Grewal has an exception grasp of market conditions. His marketing skills were amazing and exceed…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eet"
-      },
-      {
-        "author": "Verified client",
-        "title": "Professional and Reliable",
-        "when": "almost 2 years ago",
-        "text": "Working with Shivraj Grewal was an outstanding experience from start to finish. He was incredibly at…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwk"
-      },
-      {
-        "author": "Verified client",
-        "title": "Exceptional!",
-        "when": "almost 2 years ago",
-        "text": "I enjoyed working with Shivraj as my realtor, and I couldn't be happier with the experience! From da…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1eah"
-      },
-      {
-        "author": "Verified client",
-        "title": "Great Agent, Marketing Wizard",
-        "when": "almost 2 years ago",
-        "text": "The marketing campaign was awesome and effective. Great communications and a real pitbull negotiatin…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eev"
-      },
-      {
-        "author": "Verified client",
-        "title": "He sold our home quickly and at a great price",
-        "when": "about 2 years ago",
-        "text": "Raj is a very proactive and professional realtor. He navigated us through a challenging market with…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12tr"
-      },
-      {
-        "author": "Verified client",
-        "title": "A Perfect Fit!",
-        "when": "about 2 years ago",
-        "text": "We have listed many houses over the years. Shivraj was by far the most attentive and accurate. He kn…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12ts"
-      },
-      {
-        "author": "Verified client",
-        "title": "Good professional realtor",
-        "when": "about 2 years ago",
-        "text": "Good professional realtor",
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/801-oatmeal-drive-austin-ab0ixt"
-      },
-      {
-        "author": "Verified client",
-        "title": "Thank you for your support and help",
-        "when": "about 2 years ago",
-        "text": "Firstly, I'd like to thank you for your dedication and hard work throughout the home renting process…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0njr"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj is a great agent that understood our needs.",
-        "when": "about 2 years ago",
-        "text": "It took only 2 weeks for us to find our new rental home as move in to Austin. Shivraj has been fanta…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/13-3600-brushy-creek-road-cedar-park-ab0nmw"
-      },
-      {
-        "author": "Verified client",
-        "title": "Putting Professionalism to its best",
-        "when": "about 2 years ago",
-        "text": "Shivraj has gone above and beyond multiple times during my engagement with him. It amazes me how he…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0nju"
-      },
-      {
-        "author": "Verified client",
-        "title": "Knowledgeable and organized",
-        "when": "about 2 years ago",
-        "text": "Knowledgeable and organized. Good to partner with for your next deal",
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0np2"
-      },
-      {
-        "author": "Verified client",
-        "title": "Knowledgeable and organized",
-        "when": "about 2 years ago",
-        "text": "Has good understanding of Austin market and is very organized in getting stuff done. Would recommend…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0iwj"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj is top-notch real estate agent",
-        "when": "about 2 years ago",
-        "text": "Shivraj consistently went above and beyond to ensure we made informed decisions and had a smooth pro…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1106-shiloh-street-cedar-park-ab0iwd"
-      },
-      {
-        "author": "Verified client",
-        "title": "Great guy!! Helps personalize the purchase",
-        "when": "about 2 years ago",
-        "text": "Great guy!! Helps personalize the purchase, always there for supporting, no pushing on purchasing bu…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/b-14801-grey-ghost-way-travis-county-ab0k4r"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj's knowledge of the local real estate market was impressive",
-        "when": "over 2 years ago",
-        "text": "Shivraj's knowledge of the local real estate market was impressive. He took the time to understand m…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0jir"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj exceeded all expectations!",
-        "when": "over 2 years ago",
-        "text": "Shivraj exceeded all expectations! His deep knowledge of the local market, combined with a proactive…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/305-liberty-drive-liberty-hill-ab0jpj"
-      },
-      {
-        "author": "Verified client",
-        "title": "My wife and I had a really great experience with Shivraj and his team",
-        "when": "over 2 years ago",
-        "text": "My wife and I had a really great experience with Shivraj and his team. He answered all of our questi…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/246-starling-creek-new-braunfels-ab0jis"
-      },
-      {
-        "author": "Verified client",
-        "title": "Adept, knowledgeable and efficient",
-        "when": "over 2 years ago",
-        "text": "There are many realtors out there who are Adept, knowledgeable and efficient, along with these trait…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11905-paseo-de-los-lagos-lane-manor-ab0jiu"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj and his teammate Melissa were incredible to work with when buying my house",
-        "when": "almost 3 years ago",
-        "text": "Shivraj and his teammate Melissa were incredible to work with when buying my house. They were persis…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1225-al-fresco-cove-leander-ab0jiv"
-      },
-      {
-        "author": "Verified client",
-        "title": "A good, honest person to guide you through buying a new home",
-        "when": "almost 3 years ago",
-        "text": "If you're looking for a good, honest person to help guide you through the process of buying a new ho…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/341-bald-eagle-ln-hays-county-ab0jix"
-      },
-      {
-        "author": "Verified client",
-        "title": "A game-changer in my home-buying journey",
-        "when": "almost 3 years ago",
-        "text": "Working with Shivraj Grewal was a game-changer in my home-buying journey. His attentive listening, n…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1511-e-park-st-cedar-park-ab0jpk"
-      },
-      {
-        "author": "Verified client",
-        "title": "Listed a property that was part of a bankruptcy estate",
-        "when": "almost 3 years ago",
-        "text": "I listed with Shivraj real property which was part of a bankruptcy estate. Shivraj was very responsi…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2807-kings-circle-drive-granite-shoals-ab0jiy"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj has been nothing but exceptional to work with",
-        "when": "about 3 years ago",
-        "text": "Shivraj has been nothing but exceptional to work with. His knowledge of the market and the greater A…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2803-prosperity-leander-ab028k"
-      },
-      {
-        "author": "Verified client",
-        "title": "Great working with Shivraj during the whole process of buying a house",
-        "when": "about 3 years ago",
-        "text": "It was great working with Shivrai during the whole process of buying a house. I really appreciate hi…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1513-pflugerville-parkway-pflugerville-ab0jj0"
-      },
-      {
-        "author": "Verified client",
-        "title": "Very fortunate to have Shivraj represent us for our home purchase",
-        "when": "over 3 years ago",
-        "text": "We've been very fortunate to have Shivraj represent us for our recent home purchase. We are in the p…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/716-paper-daisy-path-leander-ab0jiz"
-      },
-      {
-        "author": "Verified client",
-        "title": "You know how intense this market is",
-        "when": "almost 4 years ago",
-        "text": "You know how intense this market is. And without someone in your corner, you won't get far. That's w…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/120-lake-point-way-circle-d-kc-estates-ab028m"
-      },
-      {
-        "author": "Verified client",
-        "title": "Shivraj is an amazing realtor and his focus to be of service really shows",
-        "when": "about 4 years ago",
-        "text": "Shivraj is an amazing realtor and his focus to be of service really shows. We came to Austin and sta…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2304-arroyo-grande-leander-ab0k4q"
-      },
-      {
-        "author": "Verified client",
-        "title": "Bought 2 houses and sold 1 through Raj over two years",
-        "when": "about 4 years ago",
-        "text": "Over the course of two years we have bought 2 houses and sold 1 through Raj (Shivraj Grewal). His…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2008-rosemary-lane-round-rock-ab0k4o"
-      },
-      {
-        "author": "Verified client",
-        "title": "Raj is a very caring person and was so attentive to our needs",
-        "when": "about 4 years ago",
-        "text": "Raj is a very caring person and was so attentive to our needs. He was patient, kind, and always answ…",
-        "excerpt": true,
-        "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/233-bremen-street-georgetown-ab0k4n"
-      }
     ]
   },
   "featured": [
