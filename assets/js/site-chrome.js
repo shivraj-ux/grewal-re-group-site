@@ -14,7 +14,7 @@
     if (!header) return;
     var nav = header.querySelector('.gh-nav');
     var toggle = header.querySelector('.gh-toggle');
-    var subToggles = Array.prototype.slice.call(header.querySelectorAll('.gh-sub-toggle'));
+    var dropdowns = Array.prototype.slice.call(header.querySelectorAll('.gh-has-sub'));
 
     /* ---- Mobile hamburger ---- */
     if (toggle && nav) {
@@ -26,36 +26,83 @@
       });
     }
 
-    /* ---- Accessible dropdown submenus (click/keyboard) ---- */
-    function closeAllSubs(except) {
-      subToggles.forEach(function (t) {
-        if (t !== except) t.setAttribute('aria-expanded', 'false');
-      });
-    }
-    subToggles.forEach(function (t) {
-      t.addEventListener('click', function (e) {
+    /* ---- Accessible dropdown submenus (split pattern: parent link + chevron button) ---- */
+    dropdowns.forEach(function (dropdown) {
+      var btn = dropdown.querySelector('.gh-sub-toggle');
+      var submenu = dropdown.querySelector('.gh-sub');
+      if (!btn || !submenu) return;
+
+      /* Open/close submenu on button click */
+      btn.addEventListener('click', function (e) {
         e.preventDefault();
-        var open = t.getAttribute('aria-expanded') === 'true';
-        closeAllSubs(t);
-        t.setAttribute('aria-expanded', open ? 'false' : 'true');
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        closeAllDropdowns(dropdown);
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+
+      /* Desktop: open on hover and focus-within */
+      dropdown.addEventListener('mouseenter', function () {
+        if (window.innerWidth > 900) {
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+      dropdown.addEventListener('mouseleave', function () {
+        if (window.innerWidth > 900) {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      /* Keyboard navigation within submenu */
+      var links = Array.prototype.slice.call(submenu.querySelectorAll('a'));
+      links.forEach(function (link) {
+        link.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            var idx = links.indexOf(link);
+            if (idx < links.length - 1) links[idx + 1].focus();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            var idx = links.indexOf(link);
+            if (idx > 0) links[idx - 1].focus();
+          }
+        });
       });
     });
+
+    /* ---- Close all dropdowns except the one passed in ---- */
+    function closeAllDropdowns(except) {
+      dropdowns.forEach(function (d) {
+        if (d !== except) {
+          var btn = d.querySelector('.gh-sub-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
 
     /* ---- Escape closes everything; returns focus sensibly ---- */
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
-      var openSub = subToggles.filter(function (t) { return t.getAttribute('aria-expanded') === 'true'; })[0];
-      if (openSub) { openSub.setAttribute('aria-expanded', 'false'); openSub.focus(); return; }
+      var openBtn = Array.prototype.slice.call(header.querySelectorAll('.gh-sub-toggle'))
+        .filter(function (t) { return t.getAttribute('aria-expanded') === 'true'; })[0];
+      if (openBtn) {
+        openBtn.setAttribute('aria-expanded', 'false');
+        openBtn.focus();
+        return;
+      }
       if (nav && nav.classList.contains('gh-open')) {
         nav.classList.remove('gh-open');
-        if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); toggle.focus(); }
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open menu');
+          toggle.focus();
+        }
         document.body.style.overflow = '';
       }
     });
 
     /* ---- Click outside closes open dropdowns ---- */
     document.addEventListener('click', function (e) {
-      if (!header.contains(e.target)) closeAllSubs(null);
+      if (!header.contains(e.target)) closeAllDropdowns(null);
     });
 
     /* ---- Transparent over hero -> solid white on scroll (toggles .gh-scrolled) ---- */

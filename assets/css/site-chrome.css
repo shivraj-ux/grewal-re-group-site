@@ -84,14 +84,16 @@ html, body { overflow-x: clip; }
   transition: transform .18s ease, color .2s ease;
 }
 .gh-scrolled .gh-menu a, .gh-scrolled .gh-sub-toggle { color: var(--gh-ink); }
+.gh-sub-toggle { padding: .6rem .5rem; min-width: 40px; justify-content: center; }
 .gh-sub-toggle svg { width: 11px; height: 11px; transition: transform .2s; }
 
 /* hover: pop up a hair + go bold (like the "How can we help" tiles) */
 .gh-menu > li > a:hover, .gh-sub-toggle:hover { font-weight: 700; transform: translateY(-2px); }
 .gh-scrolled .gh-menu > li > a:hover, .gh-scrolled .gh-sub-toggle:hover { color: var(--gh-gold-dk); }
 
-/* ---- Dropdown submenus ---- */
-.gh-has-sub { position: relative; }
+/* ---- Dropdown submenus (split pattern: parent link + chevron button) ---- */
+.gh-has-sub { position: relative; display: flex; align-items: center; }
+.gh-menu-link { padding-right: 0; }
 .gh-sub {
   list-style: none; margin: 0; padding: .4rem;
   position: absolute; top: calc(100% - 2px); left: 0; min-width: 230px;
@@ -106,8 +108,17 @@ html, body { overflow-x: clip; }
   font-size: .9rem; color: var(--gh-ink-soft) !important; font-weight: 500;
 }
 .gh-sub a:hover { background: #faf8f3; color: var(--gh-gold-dk) !important; font-weight: 700; transform: translateY(-2px); }
+.gh-sub-header {
+  display: block; padding: .75rem .8rem .4rem; font-size: .8rem;
+  font-weight: 700; color: var(--gh-ink) !important; text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.gh-sub-divider { height: 1px; background: var(--gh-line); margin: .25rem 0; padding: 0 !important; }
+/* desktop: open on parent link focus, button click, and hover on the whole dropdown */
 .gh-has-sub:hover > .gh-sub,
-.gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub {
+.gh-has-sub .gh-menu-link:focus ~ .gh-sub,
+.gh-has-sub:focus-within > .gh-sub,
+.gh-has-sub .gh-sub-toggle[aria-expanded="true"] ~ .gh-sub {
   opacity: 1; visibility: visible; transform: translateY(0);
 }
 .gh-sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
@@ -163,27 +174,33 @@ html, body { overflow-x: clip; }
     display: block !important; width: 100%; box-sizing: border-box;
     border-bottom: 1px solid var(--gh-line);
   }
+  /* split pattern on mobile: parent link + button flex into one row */
+  .gh-has-sub { flex-direction: row; width: 100%; }
+  .gh-menu-link { flex: 1; border-radius: 0; padding: 1rem .25rem; width: auto; }
   /* inside the white panel, links are always dark + full-width rows */
   .gh-menu a, .gh-sub-toggle {
     display: flex !important; color: var(--gh-ink) !important;
-    width: 100% !important; box-sizing: border-box;
+    box-sizing: border-box;
     padding: 1rem .25rem; font-size: 1.05rem; font-weight: 500;
     justify-content: space-between; align-items: center;
     border-radius: 0; transform: none !important;
   }
+  .gh-sub-toggle { width: auto; padding: 1rem .5rem; justify-content: center; min-width: auto; }
   .gh-menu a:hover, .gh-sub-toggle:hover { font-weight: 700; color: var(--gh-gold-dk) !important; }
-  .gh-cta-li { border-bottom: none !important; margin-top: 1rem; }
-  .gh-cta { display: block !important; text-align: center; margin-left: 0;
-    justify-content: center; border-radius: 6px; }
+  .gh-cta-li { border-bottom: none !important; margin-top: 1rem; display: block; width: 100%; }
+  .gh-cta { display: flex !important; text-align: center; margin-left: 0;
+    justify-content: center; border-radius: 6px; width: 100%; }
   /* submenus: accordion, full width, can't push horizontal overflow */
   .gh-sub {
     position: static; opacity: 1; visibility: visible; transform: none;
     box-shadow: none; border: none; border-radius: 0; width: 100%; box-sizing: border-box;
     padding: 0 0 .25rem .75rem; max-height: 0; overflow: hidden; transition: max-height .25s ease;
   }
-  .gh-sub a { white-space: normal; padding: .75rem .25rem; }
+  .gh-sub a, .gh-sub-header { white-space: normal; padding: .75rem .25rem; display: block !important; }
+  .gh-sub-header { padding: 1rem .25rem .5rem; margin-top: .5rem; }
+  .gh-sub-divider { display: none; }
   .gh-has-sub:hover > .gh-sub { max-height: 0; }
-  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] + .gh-sub { max-height: 360px; }
+  .gh-has-sub .gh-sub-toggle[aria-expanded="true"] ~ .gh-sub { max-height: 600px; }
 }
 
 /* ============================ FOOTER ============================ */
