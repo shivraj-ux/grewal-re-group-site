@@ -1,0 +1,156 @@
+/* ============================================================================
+   Grewal RE Group — global page styles for standalone pages (/about, /buy, /sell)
+   Pulls in the shared site chrome, then styles the page-level building blocks
+   these pages use: .container, .hero, .lede, .content-block, .cta-block,
+   .btn.btn-gold, .text-link, and lead forms. Brand: black / gold #B8963E /
+   cream #F4F0E9. Referenced by pages that have no inline style blocks.
+   ============================================================================ */
+
+@import url('/assets/css/site-chrome.css?v=4');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gold: #B8963E;
+  --gold-dk: #9a7c33;
+  --ink: #171717;
+  --ink-soft: #4f4a42;
+  --cream: #F4F0E9;
+  --line: #e8e3d8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+  color: inherit;
+}
+h1 { font-size: clamp(2.4rem, 5.5vw, 3.6rem); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+h3 { font-size: clamp(1.25rem, 2.4vw, 1.5rem); margin-top: 1.6em; }
+
+p { margin: 0 0 1.1em; }
+ul, ol { padding-left: 1.4rem; }
+img { max-width: 100%; height: auto; }
+
+a { color: var(--gold-dk); }
+a:hover { color: var(--gold); }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ---- Hero: sits under the fixed transparent header, so pad for --gh-h ---- */
+.hero {
+  padding-top: calc(var(--gh-h, 82px) + 4rem) !important;
+  background: linear-gradient(135deg, #000 0%, #1a1714 100%);
+  color: #fff;
+}
+.hero h1 { color: #fff; }
+.hero .lede {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-style: italic;
+  color: #d4b366;
+  max-width: 46ch;
+  margin: 0 auto;
+}
+
+.content-block h2 { color: #000; }
+.content-block h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 0.35em;
+}
+
+/* ---- CTA block ---- */
+.cta-block { background: #000; color: #fff; }
+.cta-block h2 { color: #fff; }
+.cta-block h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-gold { background: var(--gold); color: #000; }
+.btn-gold:hover { background: var(--gold-dk); color: #fff; }
+
+.text-link {
+  font-weight: 600;
+  color: var(--gold-dk);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+}
+.text-link:hover { color: var(--gold); }
+
+/* ---- Lead forms (Netlify) ---- */
+form label { font-weight: 600; font-size: 0.9rem; }
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184, 150, 62, 0.25);
+}
+form button[type="submit"] {
+  padding: 0.9rem 1.8rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+form button[type="submit"]:hover { background: var(--gold-dk); color: #fff; }
+
+/* ---- Details/summary (FAQ) ---- */
+details {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  padding: 0.9rem 1.2rem;
+  margin: 0 0 0.8rem;
+}
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+}
