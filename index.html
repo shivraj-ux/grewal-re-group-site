@@ -1562,15 +1562,14 @@
   </div>
 </section>
 
-<div class="container" style="max-width:1040px;padding-top:2.5rem;padding-bottom:3rem;">
-  <p style="text-align:center;font-size:0.85rem;color:var(--muted,#6b6b6b);">Flip through any guide free. Downloading the PDF takes just a name and email so we can send it your way.</p>
-  <div id="library-notify" style="max-width:480px;margin:2rem auto 0;text-align:center;">
-    <p style="font-size:.95rem;color:var(--muted,#6b6b6b);margin-bottom:1rem;">Want a note when one of the in-production editions publishes?</p>
-    <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;">
+<div class="container" style="max-width:1040px;padding:0 1.5rem;">
+  <div id="library-notify" style="display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;padding:.7rem 1rem 1.5rem;border-top:1px solid var(--line,#e8e3d8);margin-top:.5rem;">
+    <span style="font-size:.76rem;color:var(--muted,#6b6b6b);white-space:nowrap;">Get a note when a new guide publishes:</span>
+    <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.5rem;">
       <input type="hidden" name="page" value="/">
       <input type="hidden" name="form_name" value="library-notify">
-      <input type="email" name="email" placeholder="Email address" required style="flex:1;min-width:220px;padding:.75rem 1rem;border:1px solid var(--line,#e8e3d8);">
-      <button type="submit" class="btn btn-gold" data-magnet>Notify Me</button>
+      <input type="email" name="email" placeholder="Email address" required style="padding:.5rem .75rem;font-size:.8rem;border:1px solid var(--line,#e8e3d8);min-width:190px;">
+      <button type="submit" class="btn btn-gold" style="padding:.5rem 1rem;font-size:.7rem;" data-magnet>Notify Me</button>
     </form>
   </div>
 </div>

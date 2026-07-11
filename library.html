@@ -245,13 +245,13 @@
     </div>
   </section>
 
-  <div id="notify" style="max-width:480px;margin:3rem auto 0;padding:1rem 1.5rem 4.5rem;text-align:center;">
-    <p style="font-family:var(--sans);font-size:.95rem;color:var(--muted,#6b6b6b);margin-bottom:1rem;">Want a note when one of these publishes?</p>
-    <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;">
+  <div id="notify" style="display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;max-width:1040px;margin:0 auto;padding:.7rem 1.5rem 3.5rem;">
+    <span style="font-family:var(--sans);font-size:.76rem;color:var(--muted,#6b6b6b);white-space:nowrap;">Get a note when a new guide publishes:</span>
+    <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.5rem;">
       <input type="hidden" name="page" value="/library">
       <input type="hidden" name="form_name" value="library-notify">
-      <input type="email" name="email" placeholder="Email address" required style="flex:1;min-width:220px;padding:.75rem 1rem;border:1px solid var(--line,#e8e3d8);">
-      <button type="submit" class="btn btn-gold" data-magnet>Notify Me</button>
+      <input type="email" name="email" placeholder="Email address" required style="padding:.5rem .75rem;font-size:.8rem;border:1px solid var(--line,#e8e3d8);min-width:190px;">
+      <button type="submit" class="btn btn-gold" style="padding:.5rem 1rem;font-size:.7rem;" data-magnet>Notify Me</button>
     </form>
   </div>
 
