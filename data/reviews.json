@@ -1083,5 +1083,18 @@
       "text": "Raj is a rare gem. What amazes me all the time with him is his presence, and always being in the moment. He truly takes the time to listen, and cares about the personal needs and wants of his clients. Whether a past or present client, one of the unique things about Raj is that he never forgets about you."
     }
   ],
-  "reviews_extended_note": "Additional real reviews from the primary Grewal RE Group Google profile (same 119 total already counted -- this is a content-completeness addition, not a new count), supplied directly by Shivraj via a full page paste on 2026-07-11. review_count stays 119 -- Google's own aggregate rating for the profile is 5.0, though the full page paste confirmed at least one lower-rated review exists among the 119 (a 2026 review with no text, excluded here since only text-bearing reviews are shown). No individual verify_url is available per review from this source (unlike the featured 3, which have contributor-profile links); the section source line links to the live profile for verification of the full list. 96 of 119 have visible text; the remainder are star-only."
+  "reviews_extended_note": "Additional real reviews from the primary Grewal RE Group Google profile (same 119 total already counted -- this is a content-completeness addition, not a new count), supplied directly by Shivraj via a full page paste on 2026-07-11. review_count stays 119 -- Google's own aggregate rating for the profile is 5.0, though the full page paste confirmed at least one lower-rated review exists among the 119 (a 2026 review with no text, excluded here since only text-bearing reviews are shown). No individual verify_url is available per review from this source (unlike the featured 3, which have contributor-profile links); the section source line links to the live profile for verification of the full list. 96 of 119 have visible text; the remainder are star-only.",
+  "reviews_no_text_confirmed": {
+    "_note": "Named reviewers confirmed real on the live Grewal RE Group Google profile via Shivraj's page paste, but with no visible written review text (rating-only, or truncated to nothing in the copy). Do NOT assume these are all 5-star -- Lance Hobbs is explicitly a lower rating (owner reply asks 'why one star'). 99 (text) + 8 (named, no text) = 107 of 119 accounted for; the remaining 12 were not visible in either paste Shivraj supplied (Google lazy-loads more only on in-panel scroll, which a page copy does not capture).",
+    "names": [
+      "Lance Hobbs (confirmed lower rating, not 5-star)",
+      "Jon Birt",
+      "Amy Case",
+      "Myca Prude",
+      "Delaney Besecker",
+      "Margaret Cunningham",
+      "Natalie Gust",
+      "Rudra X"
+    ]
+  }
 }
