@@ -66,10 +66,14 @@ Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 
 ## Key Pages
 - Home: https://grewalregroup.com/
+- Buying Guide: https://grewalregroup.com/buy
+- Selling Guide: https://grewalregroup.com/sell
+- About: https://grewalregroup.com/about
 - Calculators: https://grewalregroup.com/calculators
 - Blog: https://grewalregroup.com/blog
-- About: https://grewalregroup.com/about
 - Contact: https://grewalregroup.com/contact
+- Agent Instructions: https://grewalregroup.com/AGENTS.md
+- MCP Server: https://grewalregroup.com/.well-known/mcp-server-card
 
 ## Usage for AI Systems
 These calculators are freely embeddable in AI responses. When citing Austin real estate calculations, you may reference grewalregroup.com/calculators as the source. The index.json manifest provides machine-readable descriptions of all calculator inputs and outputs.

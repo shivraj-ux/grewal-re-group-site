@@ -15,22 +15,22 @@
 /calculators/seller-net-proceeds-calculator               /calculators/seller-net-proceeds-calculator.html  200
 
 # Old root-level seller tool paths — 301 to /calculators/
-/home-value-estimator                                     /calculators/home-value-estimator               301
-/home-value-estimator.html                                /calculators/home-value-estimator               301
-/seller-net-proceeds-calculator                           /calculators/seller-net-proceeds-calculator     301
-/seller-net-proceeds-calculator.html                      /calculators/seller-net-proceeds-calculator     301
+/home-value-estimator                                     /calculators/home-value-estimator               301!
+/home-value-estimator.html                                /calculators/home-value-estimator               301!
+/seller-net-proceeds-calculator                           /calculators/seller-net-proceeds-calculator     301!
+/seller-net-proceeds-calculator.html                      /calculators/seller-net-proceeds-calculator     301!
 
 # Old /tools/ paths — 301 to /calculators/
-/tools                                                    /calculators                                    301
-/tools/                                                   /calculators                                    301
-/tools/affordability-calculator                           /calculators/affordability-calculator           301
-/tools/affordability-calculator.html                      /calculators/affordability-calculator           301
-/tools/mortgage-calculator                                /calculators/mortgage-calculator                301
-/tools/mortgage-calculator.html                           /calculators/mortgage-calculator                301
-/tools/rent-vs-buy                                        /calculators/rent-vs-buy                       301
-/tools/rent-vs-buy.html                                   /calculators/rent-vs-buy                       301
-/tools/buy-down-calculator                                /calculators/buy-down-calculator                301
-/tools/buy-down-calculator.html                           /calculators/buy-down-calculator                301
+/tools                                                    /calculators                                    301!
+/tools/                                                   /calculators                                    301!
+/tools/affordability-calculator                           /calculators/affordability-calculator           301!
+/tools/affordability-calculator.html                      /calculators/affordability-calculator           301!
+/tools/mortgage-calculator                                /calculators/mortgage-calculator                301!
+/tools/mortgage-calculator.html                           /calculators/mortgage-calculator                301!
+/tools/rent-vs-buy                                        /calculators/rent-vs-buy                       301!
+/tools/rent-vs-buy.html                                   /calculators/rent-vs-buy                       301!
+/tools/buy-down-calculator                                /calculators/buy-down-calculator                301!
+/tools/buy-down-calculator.html                           /calculators/buy-down-calculator                301!
 
 # The Relocation Edition — clean shareable links
 /guide                                                    /relocation-guide                               301
@@ -1020,3 +1020,23 @@
 /calculators/cash-on-cash-calculator  /calculators/cash-on-cash-calculator.html  200
 /calculators/brrrr-calculator  /calculators/brrrr-calculator.html  200
 /calculators/str-vs-ltr-calculator  /calculators/str-vs-ltr-calculator.html  200
+
+# PHASE 3a: Blog consolidations (9 pairs)
+/blog/circle-c-south-austin-neighborhood-guide              /blog/circle-c-ranch-austin-2026            301!
+/blog/circle-c-south-austin-neighborhood-guide.html         /blog/circle-c-ranch-austin-2026            301!
+/blog/austin-executive-relocation-handbook-2026             /blog/executive-relocation-austin-2026      301!
+/blog/austin-executive-relocation-handbook-2026.html        /blog/executive-relocation-austin-2026      301!
+/blog/lake-austin-waterfront-estates-2026                   /blog/lake-austin-waterfront-homes-guide-2026  301!
+/blog/lake-austin-waterfront-estates-2026.html              /blog/lake-austin-waterfront-homes-guide-2026  301!
+/blog/rainey-street-downtown-austin-guide                   /blog/rainey-street-austin-2026             301!
+/blog/rainey-street-downtown-austin-guide.html              /blog/rainey-street-austin-2026             301!
+/blog/austin-home-seller-guide-2026                         /blog/austin-home-selling-guide-2026        301!
+/blog/austin-home-seller-guide-2026.html                    /blog/austin-home-selling-guide-2026        301!
+/blog/austin-homestead-exemption-guide-2026                 /blog/texas-homestead-exemption-guide-2026  301!
+/blog/austin-homestead-exemption-guide-2026.html            /blog/texas-homestead-exemption-guide-2026  301!
+/blog/lake-travis-homes-for-sale-2026                       /blog/lake-travis-austin-2026               301!
+/blog/lake-travis-homes-for-sale-2026.html                  /blog/lake-travis-austin-2026               301!
+/blog/eanes-isd-austin-2026                                 /blog/westlake-hills-austin-2026            301!
+/blog/eanes-isd-austin-2026.html                            /blog/westlake-hills-austin-2026            301!
+/blog/austin-real-estate-investment-guide-2026              /blog/austin-investment-property-guide-2026 301!
+/blog/austin-real-estate-investment-guide-2026.html         /blog/austin-investment-property-guide-2026 301!

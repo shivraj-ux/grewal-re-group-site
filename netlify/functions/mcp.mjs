@@ -50,7 +50,7 @@ const AGENT = {
   stats: {
     transactions: "100+ closed",
     careerVolume: "$100M+",
-    googleReviews: "117 five-star",
+    googleReviews: "119 five-star",
   },
   counties: ["Travis", "Hays", "Williamson", "Bastrop"],
 };
@@ -191,7 +191,7 @@ const TOOLS = {
     input: z.object({}),
     handler: async (_args, site) => ({
       title: "Austin Relocation Guide (The Relocation Edition)",
-      pages: 144,
+      pages: 154,
       url: `${site}/assets/guides/the-relocation-edition.pdf`,
       landingUrl: `${site}/relocation-guide`,
       covers: ["Neighborhoods", "Schools & districts", "Cost of living", "Market context", "Commute & lifestyle"],

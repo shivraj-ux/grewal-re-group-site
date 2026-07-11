@@ -6,8 +6,8 @@
   <script>gtag('js',new Date());gtag('config','G-X3GFZCS0JE');</script>
   <script defer src="/assets/js/consent.js"></script>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Austin Real Estate Calculators 2026 — Buyer &amp; Investor Tools | Grewal RE Group</title>
-<meta name="description" content="Free Austin real estate calculators from Grewal RE Group. Buyer tools: affordability, mortgage PITI, rent vs buy, rate buydown. Investor tools: cap rate, cash-on-cash, BRRRR, STR vs LTR.">
+<title>Austin Real Estate Calculators 2026</title>
+<meta name="description" content="Free Austin real estate calculators from Grewal RE Group. Buyer tools: affordability, mortgage PITI, rent vs buy, rate buydown">
 <link rel="canonical" href="https://grewalregroup.com/calculators">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta property="og:title" content="Austin Real Estate Calculators 2026 | Grewal RE Group">
@@ -40,6 +40,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
 <link rel="stylesheet" href="/assets/css/calculators.css?v=1">
+  <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
 <body class="calc-page">
 <a class="gh-skip" href="#gh-main">Skip to main content</a>
@@ -47,7 +48,7 @@
   <div class="gh-bar">
     <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
       <img src="/assets/logos/logo-horizontal-white.png?v=2" alt="Grewal RE Group" class="gh-logo-w" width="187" height="56">
-      <img src="/assets/logos/logo-horizontal.png?v=2" alt="" aria-hidden="true" class="gh-logo-b" width="187" height="56">
+      <img src="/assets/logos/logo-horizontal.png?v=2" alt="" aria-hidden="true" class="gh-logo-b" width="187" height="56" loading="lazy">
     </a>
     <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -112,11 +113,46 @@
     <a href="/contact" style="display:inline-block;padding:.85rem 2rem;background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;letter-spacing:.05em;text-decoration:none;border-radius:8px;">Talk to Shivraj</a>
   </div>
 </div>
+  <div style="background:#F4F0E9;border-radius:14px;padding:2.5rem;text-align:center;margin-bottom:3rem;">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:#0a0a0a;margin-bottom:.5rem;">Let me help you run the numbers.</div>
+    <p style="font-family:'Inter',sans-serif;font-size:.92rem;color:#6b6560;max-width:480px;margin:.5rem auto 1.75rem;line-height:1.75;">Every calculator tells a story. Submit your details and let's talk about what your numbers really mean for your situation — no obligation, we typically reply within one business day.</p>
+    <form name="calculators-hub-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="max-width:500px;margin:0 auto;text-align:left;">
+      <input type="hidden" name="form-name" value="calculators-hub-lead">
+      <input type="hidden" name="page" value="/calculators">
+      <p style="position:absolute;left:-9999px"><label>Don't fill: <input name="bot-field"></label></p>
+      <div style="margin-bottom:1.1rem;display:flex;flex-direction:column;">
+        <label style="font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#6b6b6b;margin-bottom:.4rem;" for="chub-name">Name</label>
+        <input id="chub-name" name="name" type="text" required autocomplete="name" style="padding:.8rem 1rem;font:1rem Inter,sans-serif;border:1px solid #d8d0c2;border-radius:6px;background:#fff;color:#1a1a1a;">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem;">
+        <div style="display:flex;flex-direction:column;">
+          <label style="font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#6b6b6b;margin-bottom:.4rem;" for="chub-email">Email</label>
+          <input id="chub-email" name="email" type="email" required autocomplete="email" style="padding:.8rem 1rem;font:1rem Inter,sans-serif;border:1px solid #d8d0c2;border-radius:6px;background:#fff;color:#1a1a1a;">
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <label style="font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#6b6b6b;margin-bottom:.4rem;" for="chub-phone">Phone</label>
+          <input id="chub-phone" name="phone" type="tel" autocomplete="tel" style="padding:.8rem 1rem;font:1rem Inter,sans-serif;border:1px solid #d8d0c2;border-radius:6px;background:#fff;color:#1a1a1a;">
+        </div>
+      </div>
+      <div style="margin-bottom:1.1rem;display:flex;flex-direction:column;">
+        <label style="font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#6b6b6b;margin-bottom:.4rem;" for="chub-msg">Message</label>
+        <textarea id="chub-msg" name="message" style="padding:.8rem 1rem;font:1rem Inter,sans-serif;border:1px solid #d8d0c2;border-radius:6px;background:#fff;color:#1a1a1a;resize:vertical;" rows="3"></textarea>
+      </div>
+      <div style="margin-bottom:1.1rem;display:flex;flex-direction:column;">
+        <label style="font-size:.75rem;color:#6b6b6b;display:flex;gap:.5rem;align-items:flex-start;">
+          <input name="tcpa_consent" type="checkbox" value="agreed" required style="margin-top:.4rem;cursor:pointer;">
+          <span>I agree to receive text messages and emails from Grewal RE Group, including automated messages. Message frequency varies. Standard text rates apply. Reply STOP to unsubscribe anytime.</span>
+        </label>
+      </div>
+      <button type="submit" style="width:100%;padding:.9rem;background:#B8963E;color:#1a1a1a;font:700 .9rem Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;">Get Help With Your Numbers</button>
+    </form>
+  </div>
+
 <footer class="gh-footer">
   <div class="gh-foot-inner">
     <div class="gh-foot-grid">
       <div class="gh-foot-brand">
-        <img src="/assets/logos/logo-white.png?v=2" alt="Grewal RE Group" width="113" height="34">
+        <img src="/assets/logos/logo-white.png?v=2" alt="Grewal RE Group" width="113" height="34" loading="lazy">
         <p class="gh-foot-tag">People First. Straight Answers. Strong Results.</p>
         <p><a href="tel:+15126170001">(512) 617-0001</a></p>
         <p><a href="mailto:shivraj.grewal@compass.com">shivraj.grewal@compass.com</a></p>
