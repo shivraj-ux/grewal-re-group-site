@@ -6,6 +6,15 @@
 /CLAUDE.md                                                /  404!
 /AUTOMATION.md                                            /  404!
 
+# Questions — canonical URLs (200 rewrites for extensionless)
+/questions/                                               /questions/index.html                           200
+/questions/buying                                         /questions/buying.html                          200
+/questions/selling                                        /questions/selling.html                         200
+/questions/leasing                                        /questions/leasing.html                         200
+/questions/investing                                      /questions/investing.html                       200
+/questions/relocation                                     /questions/relocation.html                      200
+/questions/closing-process                                /questions/closing-process.html                 200
+
 # Calculators — canonical URLs (200 rewrites for extensionless)
 /calculators/affordability-calculator                     /calculators/affordability-calculator.html      200
 /calculators/mortgage-calculator                          /calculators/mortgage-calculator.html           200
