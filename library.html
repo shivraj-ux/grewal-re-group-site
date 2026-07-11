@@ -242,24 +242,16 @@
         </div>
       </div>
       <div class="rail-progress"><i data-progress></i></div>
-    </div>
-  </section>
-
-  <div id="notify" style="display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;max-width:1040px;margin:0 auto;padding:.7rem 1.5rem 3.5rem;">
-    <span style="font-family:var(--sans);font-size:.76rem;color:var(--muted,#6b6b6b);white-space:nowrap;">Get a note when a new guide publishes:</span>
-    <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.5rem;">
-      <input type="hidden" name="page" value="/library">
-      <input type="hidden" name="form_name" value="library-notify">
-      <input type="email" name="email" placeholder="Email address" required style="padding:.5rem .75rem;font-size:.8rem;border:1px solid var(--line,#e8e3d8);min-width:190px;">
-      <button type="submit" class="btn btn-gold" style="padding:.5rem 1rem;font-size:.7rem;" data-magnet>Notify Me</button>
-    </form>
-  </div>
-
-  <section class="cta-block section-cream" style="padding: 4rem 1.5rem; text-align: center;">
-    <div class="container reveal">
-      <h2>Have a guide idea?</h2>
-      <p style="font-family: var(--sans); max-width: 50ch; margin: 0 auto 2rem;">If there's an Austin guide you wish existed, tell us. We're building this library one honest, useful guide at a time.</p>
-      <a href="/contact" class="btn btn-gold" data-magnet>Get in Touch</a>
+      <div id="notify" style="display:flex;align-items:center;justify-content:center;gap:.5rem 1rem;flex-wrap:wrap;max-width:1040px;margin:0 auto;padding:.6rem 1.5rem 0;">
+        <span style="font-family:var(--sans);font-size:.74rem;color:var(--muted,#6b6b6b);white-space:nowrap;">Get a note when a new guide publishes:</span>
+        <form name="library-notify" method="POST" data-netlify="true" style="display:flex;gap:.5rem;">
+          <input type="hidden" name="page" value="/library">
+          <input type="hidden" name="form_name" value="library-notify">
+          <input type="email" name="email" placeholder="Email address" required style="padding:.45rem .7rem;font-size:.78rem;border:1px solid var(--line,#e8e3d8);min-width:170px;">
+          <button type="submit" class="btn btn-gold" style="padding:.45rem .9rem;font-size:.68rem;" data-magnet>Notify Me</button>
+        </form>
+        <span style="font-family:var(--sans);font-size:.74rem;color:var(--muted,#6b6b6b);white-space:nowrap;">&middot; Have a guide idea? <a href="/contact" style="color:var(--gold-dk);text-decoration:underline;">Get in touch</a></span>
+      </div>
     </div>
   </section>
 
