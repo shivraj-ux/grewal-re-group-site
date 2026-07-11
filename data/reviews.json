@@ -5,26 +5,514 @@
   "place_fid": "0x865b2d8559b35f0f:0xceb6e8b660270652",
   "rating": "5.0",
   "review_count": 119,
-  "last_synced": "2026-06-10",
-  "last_sync_status": "seed — first automated sync pending key (see scripts/sync_reviews.py)",
+  "combined_total": 149,
+  "combined_total_note": "119 Google (Shivraj Grewal / Grewal RE Group GBP) + 3 Zillow + 1 Realtor.com testimonial + 26 Google (Modernaire Group -- our team's previous business name, a second, distinct Google Business Profile, same team, same office, same license, zero overlapping reviewer names with the 119). This is the number shown sitewide as the unqualified '149 five-star reviews' / ratingCount / stat total. Any string that specifically says 'on Google' or 'Google reviews' referring to the Grewal RE Group profile correctly stays 119 -- that is a true, single-platform count, not the combined one.",
+  "last_synced": "2026-07-11",
+  "last_sync_status": "seed — first automated sync pending key (see scripts/sync_reviews.py). combined_total manually verified live 2026-07-11 via Google Business Profile, Zillow, Realtor.com, and RateMyAgent, plus the Modernaire Group Google listing (Shivraj supplied the live page contents directly; cross-checked against a Birdeye mirror of the same listing, which shows 29 vs. the live 26 -- Birdeye's total includes a duplicate entry, so the live count is used).",
+  "checked_no_additional_reviews": {
+    "_note": "Verified live 2026-07-11, all at zero (or confirmed duplicate) -- do not add to combined_total unless a real future check finds otherwise.",
+    "arsh_khaira": {
+      "zillow": "https://www.zillow.com/profile/Arsh%20Khaira%20Realtor",
+      "realtor_com": "https://www.realtor.com/realestateagents/5e860535fa49f5001179058e",
+      "har_com": "https://www.har.com/arsh-khaira/agent_arshkhaira",
+      "review_count": 0,
+      "_note": "Arsh has no reviews yet on his own separate profiles. His Google reviews live under the shared Modernaire Group listing below, not a separate Arsh-only profile."
+    },
+    "modernaire_group_other_platforms": {
+      "_note": "Same team, same office (2500 Bee Caves Rd Bldg 3 Ste 200), led by Shivraj Grewal and Arsh Khaira -- confirmed via ProvenExpert listing. Checked on Yelp and ProvenExpert specifically: zero reviews on both, distinct from its real Google listing below.",
+      "yelp": "https://www.yelp.com/biz/modernaire-group-west-lake-hills",
+      "provenexpert": "https://www.provenexpert.com/en-us/modernaire-group/",
+      "review_count": 0
+    },
+    "duplicate_links_verified_2026-07-11": {
+      "_note": "Shivraj supplied three links to cross-check for double-counting. Two resolved to profiles already in this file (confirmed via place ID match, not re-added); one was a genuinely new platform (added as ratemyagent_grewal below).",
+      "share.google/iI5PrR2EPPVVE6H2D": "Resolves to the primary Grewal RE Group Google Business Profile search card -- same CID 0x865b2d8559b35f0f:0xceb6e8b660270652 as the top-level place_fid above. Same 119 reviews. Not a new source.",
+      "google.com/search?q=modernaire+group ... lrd=0x865b2de301347b27:0x7536a7a30db4f682": "Resolves to the Modernaire Group Google Business Profile already documented below -- ludocid 8446122469931415170 converts to the same hex pair 0x7536a7a30db4f682. Same 26 reviews. Not a new source. Its real canonical link (https://www.google.com/maps?cid=8446122469931415170) now replaces the earlier constructed Maps-search-query fallback URL.",
+      "ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd": "A genuinely new, separate platform -- claimed profile, license TX #736060 matches Shivraj exactly, 40 reviews, 5.0 average, zero overlap with any Google/Zillow/Realtor.com reviewer already counted. Added as ratemyagent_grewal below."
+    },
+    "ratemyagent_excluded_2026-07-11": {
+      "_note": "RateMyAgent (https://www.ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd/sales/overview) was briefly added to combined_total (149 -> 189) and then removed the same day. It is a real, claimed, license-matched (TREC #736060) profile with 40 five-star reviews -- but on inspection, a large share of those reviews are the SAME clients' testimonials already reflected in the 119 Google count, cross-posted verbatim or near-verbatim to both platforms (e.g. Inderpreet Grewal's Google review and the RateMyAgent 'Professional and Reloable' review share the exact typo 'Reloable', confirming same underlying review; Steve Mayo's review appears on Google, Realtor.com, AND RateMyAgent). Rather than represent 40 additional distinct client experiences, RateMyAgent substantially duplicates experiences already counted. Shivraj decided (2026-07-11) to exclude it from the combined total and remove it from /reviews rather than double count. The full 40-review dataset is preserved below for reference in case this needs revisiting.",
+      "removed_data": {
+        "_note": "New platform, verified live 2026-07-11. Claimed profile ('Claimed Profile' badge), license TX #736060 shown on-page matches Shivraj Grewal exactly, brokerage Compass RE Texas LLC matches. All 40 reviews are 5-star. Zero reviewer-name overlap with Google, Zillow, or Realtor.com reviews already counted -- confirmed additive, not a re-scrape of an existing source.",
+        "profile_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal-b21jfd/sales/overview",
+        "rating": "5.0",
+        "review_count": 40,
+        "reviews": [
+          {
+            "author": "Verified client",
+            "title": "Excellent Residential Real Estate knowledge, communication, and professionalism.",
+            "when": "over 1 year ago",
+            "text": "Based on our experience with Shivraj and the recent sale of our home, we find that Shivraj is very knowledgeable regarding residential real estate in the Bastrop and Austin Texas area. He has demonstrated that he is keenly aware of who is buying, at what price point, and especially at the time of year (December/January) that we placed our home on the market. Communication has been exceptional in terms of content, frequency, and included accurate documentation of discussion and decisions along the way to successful sale of our home. Shivraj impressed us with his professionalism throughout our dealings.",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3sza"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent professional",
+            "when": "over 1 year ago",
+            "text": "Shivraj was professional, responsive, knowledgeable about pricing and expectations and managed a complicated closing beautifully. Really nice person. Highly recommended!",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szd"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent service. High knowledge level and responsiveness.",
+            "when": "over 1 year ago",
+            "text": "Excellent service. High knowledge level and responsiveness.",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/112-colorado-bluff-bastrop-county-ab3szg"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly Recommend",
+            "when": "over 1 year ago",
+            "text": "I am a first time home buyer and Shivraj went above and beyond to find me the perfect home. His negotiation skills and market knowledge is top notch. Shivraj was patient and worked through some tough negotiations without…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/20308-smedley-drive-pflugerville-ab3qzt"
+          },
+          {
+            "author": "Verified client",
+            "title": "A Truly Exceptional Agent That Really Wants to Help: Shivraj Grewal",
+            "when": "over 1 year ago",
+            "text": "After a terrible experience with a real estate agent when selling my previous home, I was hesitant t…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/301-bella-montagna-cir-lakeway-ab3lhm"
+          },
+          {
+            "author": "Verified client",
+            "title": "My goto realtor in Austin",
+            "when": "over 1 year ago",
+            "text": "From the beginning, Shrivaj was very attentive, asked a lot of questions and really knew/understood what I was looking for…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/12620-summer-springs-pass-buda-ab2nzc"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly Recommend- 5 Star",
+            "when": "almost 2 years ago",
+            "text": "We are so happy we found Shivraj. He is very professional and knowledgeable. He was very patient t…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqn"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable, patient realtor",
+            "when": "almost 2 years ago",
+            "text": "Shivraj helped us search and close in on a property! He is very knowledgeable about single family ho…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11604-faubian-lane-austin-ab1vqm"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent agent",
+            "when": "almost 2 years ago",
+            "text": "We had the pleasure of working with Shivraj to rent a house, and the experience was outstanding. Shi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1ean"
+          },
+          {
+            "author": "Verified client",
+            "title": "Excellent Guidance",
+            "when": "almost 2 years ago",
+            "text": "Shivraj Grewal made the daunting process of buying a home an absolute breeze. From the very beginnin…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwm"
+          },
+          {
+            "author": "Verified client",
+            "title": "Outstanding at Every Step",
+            "when": "almost 2 years ago",
+            "text": "We worked with Shivraj for more than a year as our search was interrupted due to personal issues. Sh…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4301-44-east-avenue-austin-ab1ive"
+          },
+          {
+            "author": "Verified client",
+            "title": "Highly recommend!",
+            "when": "almost 2 years ago",
+            "text": "Mr. Grewal has an exception grasp of market conditions. His marketing skills were amazing and exceed…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eet"
+          },
+          {
+            "author": "Verified client",
+            "title": "Professional and Reliable",
+            "when": "almost 2 years ago",
+            "text": "Working with Shivraj Grewal was an outstanding experience from start to finish. He was incredibly at…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/4317-trey-edsel-drive-pflugerville-ab0iwk"
+          },
+          {
+            "author": "Verified client",
+            "title": "Exceptional!",
+            "when": "almost 2 years ago",
+            "text": "I enjoyed working with Shivraj as my realtor, and I couldn't be happier with the experience! From da…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/3609-birdhouse-drive-round-rock-ab1eah"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great Agent, Marketing Wizard",
+            "when": "almost 2 years ago",
+            "text": "The marketing campaign was awesome and effective. Great communications and a real pitbull negotiatin…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/137-trinity-street-bastrop-county-ab1eev"
+          },
+          {
+            "author": "Verified client",
+            "title": "He sold our home quickly and at a great price",
+            "when": "about 2 years ago",
+            "text": "Raj is a very proactive and professional realtor. He navigated us through a challenging market with…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12tr"
+          },
+          {
+            "author": "Verified client",
+            "title": "A Perfect Fit!",
+            "when": "about 2 years ago",
+            "text": "We have listed many houses over the years. Shivraj was by far the most attentive and accurate. He kn…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/151-trinity-st-bastrop-county-ab12ts"
+          },
+          {
+            "author": "Verified client",
+            "title": "Good professional realtor",
+            "when": "about 2 years ago",
+            "text": "Good professional realtor",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/801-oatmeal-drive-austin-ab0ixt"
+          },
+          {
+            "author": "Verified client",
+            "title": "Thank you for your support and help",
+            "when": "about 2 years ago",
+            "text": "Firstly, I'd like to thank you for your dedication and hard work throughout the home renting process…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0njr"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is a great agent that understood our needs.",
+            "when": "about 2 years ago",
+            "text": "It took only 2 weeks for us to find our new rental home as move in to Austin. Shivraj has been fanta…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/13-3600-brushy-creek-road-cedar-park-ab0nmw"
+          },
+          {
+            "author": "Verified client",
+            "title": "Putting Professionalism to its best",
+            "when": "about 2 years ago",
+            "text": "Shivraj has gone above and beyond multiple times during my engagement with him. It amazes me how he…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/9508-indina-hills-dr-austin-ab0nju"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable and organized",
+            "when": "about 2 years ago",
+            "text": "Knowledgeable and organized. Good to partner with for your next deal",
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0np2"
+          },
+          {
+            "author": "Verified client",
+            "title": "Knowledgeable and organized",
+            "when": "about 2 years ago",
+            "text": "Has good understanding of Austin market and is very organized in getting stuff done. Would recommend…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0iwj"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is top-notch real estate agent",
+            "when": "about 2 years ago",
+            "text": "Shivraj consistently went above and beyond to ensure we made informed decisions and had a smooth pro…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1106-shiloh-street-cedar-park-ab0iwd"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great guy!! Helps personalize the purchase",
+            "when": "about 2 years ago",
+            "text": "Great guy!! Helps personalize the purchase, always there for supporting, no pushing on purchasing bu…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/b-14801-grey-ghost-way-travis-county-ab0k4r"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj's knowledge of the local real estate market was impressive",
+            "when": "over 2 years ago",
+            "text": "Shivraj's knowledge of the local real estate market was impressive. He took the time to understand m…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1033-ferryman-drive-georgetown-ab0jir"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj exceeded all expectations!",
+            "when": "over 2 years ago",
+            "text": "Shivraj exceeded all expectations! His deep knowledge of the local market, combined with a proactive…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/305-liberty-drive-liberty-hill-ab0jpj"
+          },
+          {
+            "author": "Verified client",
+            "title": "My wife and I had a really great experience with Shivraj and his team",
+            "when": "over 2 years ago",
+            "text": "My wife and I had a really great experience with Shivraj and his team. He answered all of our questi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/246-starling-creek-new-braunfels-ab0jis"
+          },
+          {
+            "author": "Verified client",
+            "title": "Adept, knowledgeable and efficient",
+            "when": "over 2 years ago",
+            "text": "There are many realtors out there who are Adept, knowledgeable and efficient, along with these trait…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/11905-paseo-de-los-lagos-lane-manor-ab0jiu"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj and his teammate Melissa were incredible to work with when buying my house",
+            "when": "almost 3 years ago",
+            "text": "Shivraj and his teammate Melissa were incredible to work with when buying my house. They were persis…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1225-al-fresco-cove-leander-ab0jiv"
+          },
+          {
+            "author": "Verified client",
+            "title": "A good, honest person to guide you through buying a new home",
+            "when": "almost 3 years ago",
+            "text": "If you're looking for a good, honest person to help guide you through the process of buying a new ho…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/341-bald-eagle-ln-hays-county-ab0jix"
+          },
+          {
+            "author": "Verified client",
+            "title": "A game-changer in my home-buying journey",
+            "when": "almost 3 years ago",
+            "text": "Working with Shivraj Grewal was a game-changer in my home-buying journey. His attentive listening, n…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1511-e-park-st-cedar-park-ab0jpk"
+          },
+          {
+            "author": "Verified client",
+            "title": "Listed a property that was part of a bankruptcy estate",
+            "when": "almost 3 years ago",
+            "text": "I listed with Shivraj real property which was part of a bankruptcy estate. Shivraj was very responsi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2807-kings-circle-drive-granite-shoals-ab0jiy"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj has been nothing but exceptional to work with",
+            "when": "about 3 years ago",
+            "text": "Shivraj has been nothing but exceptional to work with. His knowledge of the market and the greater A…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2803-prosperity-leander-ab028k"
+          },
+          {
+            "author": "Verified client",
+            "title": "Great working with Shivraj during the whole process of buying a house",
+            "when": "about 3 years ago",
+            "text": "It was great working with Shivrai during the whole process of buying a house. I really appreciate hi…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/1513-pflugerville-parkway-pflugerville-ab0jj0"
+          },
+          {
+            "author": "Verified client",
+            "title": "Very fortunate to have Shivraj represent us for our home purchase",
+            "when": "over 3 years ago",
+            "text": "We've been very fortunate to have Shivraj represent us for our recent home purchase. We are in the p…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/716-paper-daisy-path-leander-ab0jiz"
+          },
+          {
+            "author": "Verified client",
+            "title": "You know how intense this market is",
+            "when": "almost 4 years ago",
+            "text": "You know how intense this market is. And without someone in your corner, you won't get far. That's w…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/120-lake-point-way-circle-d-kc-estates-ab028m"
+          },
+          {
+            "author": "Verified client",
+            "title": "Shivraj is an amazing realtor and his focus to be of service really shows",
+            "when": "about 4 years ago",
+            "text": "Shivraj is an amazing realtor and his focus to be of service really shows. We came to Austin and sta…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2304-arroyo-grande-leander-ab0k4q"
+          },
+          {
+            "author": "Verified client",
+            "title": "Bought 2 houses and sold 1 through Raj over two years",
+            "when": "about 4 years ago",
+            "text": "Over the course of two years we have bought 2 houses and sold 1 through Raj (Shivraj Grewal). His…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/2008-rosemary-lane-round-rock-ab0k4o"
+          },
+          {
+            "author": "Verified client",
+            "title": "Raj is a very caring person and was so attentive to our needs",
+            "when": "about 4 years ago",
+            "text": "Raj is a very caring person and was so attentive to our needs. He was patient, kind, and always answ…",
+            "excerpt": true,
+            "verify_url": "https://www.ratemyagent.com/real-estate-agent/shivraj-grewal/reviews/p/233-bremen-street-georgetown-ab0k4n"
+          }
+        ]
+      }
+    }
+  },
+  "modernaire_group_google": {
+    "_note": "Modernaire Group is our team's previous business name -- this Google Business Profile predates the rebrand to Grewal RE Group and is a real, distinct, still-live listing (same team: Shivraj Grewal + Arsh Khaira, same office). Replies signed 'Modernaire Group (Owner)', some explicitly '- Shivraj & The Modernaire Group'. Zero reviewer-name overlap in review TEXT with the 119 on the current Grewal RE Group profile, though several of the same clients left separate reviews on both profiles under the two different names -- confirmed additive, not duplicated. Place ID re-verified live 2026-07-11 via a Google Search knowledge-panel scrape (ludocid=8446122469931415170, hex 0x7536a7a30db4f682 -- matches this profile exactly, confirming it is not a third/duplicate listing).",
+    "address": "2500 Bee Caves Rd Bldg 3, Suite 200, West Lake Hills, TX 78746",
+    "profile_url": "https://www.google.com/maps?cid=8446122469931415170",
+    "rating": "5.0",
+    "review_count": 26,
+    "birdeye_mirror_url": "https://reviews.birdeye.com/modernaire-group-171614397877735",
+    "birdeye_mirror_count_note": "Birdeye shows 29 (includes one duplicate/anonymized entry of a named review) -- the live Google count (26) is used as authoritative.",
+    "top_review_tags": [
+      "home buying",
+      "easy process",
+      "above and beyond",
+      "personable"
+    ],
+    "reviews": [
+      {
+        "author": "Dan Rohrer",
+        "when": "Google review",
+        "text": "Shivraj made the process of buying our family's new home tension free. It's so nice to trust that he will work with only your best interests in mind, even if it means losing a sale. I appreciate his people-first philosophy towards his business immensely, he makes it easy to confidently navigate a very big decision."
+      },
+      {
+        "author": "Siddharth Taduri",
+        "when": "Google review",
+        "text": "Raj has been an incredible Realtor and a great support system through this turbulent market environment. His advise has been incredibly valuable, and Raj handled everything end-to-end with diligence. I highly recommend Raj and colleagues if you are considering a real estate sale/purchase."
+      },
+      {
+        "author": "Melissa Wischnewsky",
+        "when": "Google review",
+        "text": "I had the pleasure of working with the Modernaire Group, specifically Shivraj and I was very impressed. I am a new home sales professional and I work with realtors all day every day. It's rare when one stands out from the group but Shivraj…",
+        "excerpt": true
+      },
+      {
+        "author": "Kelly Gibbs",
+        "when": "Google review",
+        "text": "I am an on-site sales agent so I meet A LOT of Realtors. Shivraj is by far one of THE very best Realtors I have ever worked with!! He does a ton of research for his clients, asks a ton of questions, cares genuinely about his clients and…",
+        "excerpt": true
+      },
+      {
+        "author": "ranjodh kailey",
+        "when": "Google review",
+        "text": "Shivraj from Modernaire Group is excellent for real estate needs here in Austin and peripheral areas. We recently bought a home through him and everything went smooth including his suggestion and help in financing and we had an added…",
+        "excerpt": true
+      },
+      {
+        "author": "Swapnil Soni",
+        "when": "Google review",
+        "text": "It was been hassle/stress free experience buying a home through Arsh. Best part of Arsh not being pushy at all from day one and listening to what we wanted. He focused on what we needed and showed me homes until we were satisfied.…",
+        "excerpt": true
+      },
+      {
+        "author": "Pradeep S",
+        "when": "Google review",
+        "text": "Shivraj from Modernaire group is great! He helped me in my house search. He works really hard for your and he is completely trustworthy especially when you are moving between states like I did. He asks good questions to understand your…",
+        "excerpt": true
+      },
+      {
+        "author": "Nathan Rowell",
+        "when": "Google review",
+        "text": "The team with Modernaire are incredibly professional, patient, and personable! As a top tier home inspection company operator and manager, my guys looks forward to working with their clients regularly. Their agents are attentive, super…",
+        "excerpt": true
+      },
+      {
+        "author": "Srikanth Thanneeru",
+        "when": "Google review",
+        "text": "I worked with Shivraj from Modernaire Group. It was pleasure working with them on my new home buying process. They made the whole process very easy and helped me throughout each step. I really appreciate Shivraj's patience and acknowledge his knowledge in the real estate market."
+      },
+      {
+        "author": "charlene meltzer",
+        "when": "Google review",
+        "text": "Raj is an outstanding real estate agent. After telling Raj exactly what we were looking for he went above and beyond to help us find our dream home. He has great communication skills and responds promptly. We highly recommend Raj for your real estate needs."
+      },
+      {
+        "author": "pradhyumna kommareddy",
+        "when": "Google review",
+        "text": "Arsh and Modernaire group are a one stop shop for all your realtor needs. Arsh helped me buy my home and has been a great partner and very happy with our decision."
+      },
+      {
+        "author": "Carla Mitchell",
+        "when": "Google review",
+        "text": "I have had the pleasure of working with Arsh Khaira on several transactions and found him to be a clear communicator and he has always handled himself in a professional manner. He is personable, knowledgeable and easy to do business with."
+      },
+      {
+        "author": "NAVJOT S",
+        "when": "Google review",
+        "text": "Worked with Shivraj from Modernaire Group great person to work with ample of knowledge about properties and real estate. He will be my go to realtor in future as well."
+      },
+      {
+        "author": "Samia Faizi",
+        "when": "Google review",
+        "text": "Great leader, shivraj has been our realtor for for the last few properties we purchased and sold."
+      },
+      {
+        "author": "Avery Turek",
+        "when": "Google review",
+        "text": "I had the honor of working with Shivraj & his clients. He was extremely professional & helped facilitate the entire transaction. Would highly recommend!"
+      },
+      {
+        "author": "Kim Clark",
+        "when": "Google review",
+        "text": "Thank you Arsh for your hard work! This guy goes above and beyond. He was available and on top of everything from start to finish. Excellent realtor and also a great person."
+      },
+      {
+        "author": "asma tanveer",
+        "when": "Google review",
+        "text": "Shivraj can be the best guide in home buying, makes the process smooth, honest and very knowledgeable realtor."
+      },
+      {
+        "author": "Priyyank Maisuriya",
+        "when": "Google review",
+        "text": "Excellent customer service - definately recommend Arsh if looking to buy a house. He will find you the best deal and great location."
+      },
+      {
+        "author": "Adit kulshreshtha",
+        "when": "Google review",
+        "text": "The experience was very good. Arsh was able to think though and help us with all our needs and close the house with utmost urgency as per needed."
+      },
+      {
+        "author": "E Allen",
+        "when": "Google review",
+        "text": "Awesome guy! Very personal and genuine! Go with this guy if you need to buy or sell a home."
+      }
+    ],
+    "reviews_with_text_count": 20,
+    "reviews_star_only_no_text": [
+      "Lana Nguyen",
+      "Teri Singh",
+      "Nbmang",
+      "Ravneet Kaur",
+      "Manu Mann",
+      "Mohamed Bassiouny"
+    ]
+  },
   "featured": [
     {
       "author": "Neeraj Sangal",
       "when": "Google review",
       "location": "",
-      "text": "Shivraj brings great personal attributes to the process of purchasing a home — knowledgeable, responsive, and genuinely invested in getting it right."
+      "text": "We worked with Shivraj for more than a year as our search was interrupted due to personal issues. Shivraj was patient and understanding at every step. He became our guide to Austin as he helped us understand the city and narrow down our search.",
+      "verify_url": "https://www.google.com/maps/contrib/104760682207372857782",
+      "_source_note": "Text corrected 2026-07-11 against a full authoritative page paste supplied directly by Shivraj (earlier automated scrape had truncated/mismatched text for this reviewer)."
     },
     {
       "author": "Another Studio",
       "when": "Google review",
       "location": "",
-      "text": "Shivraj provided excellent service and exceeded our expectations from start to finish."
+      "text": "Shivraj provided excellent service and exceeded our expectations. He was attentive to our needs and always had our best interests at heart. His professionalism and commitment are truly commendable.",
+      "verify_url": "https://www.google.com/maps/contrib/116486904821980614886",
+      "_source_note": "Text corrected 2026-07-11 against a full authoritative page paste supplied directly by Shivraj (earlier automated scrape had truncated/mismatched text for this reviewer)."
     },
     {
       "author": "Z. A.",
       "when": "Google review",
       "location": "",
-      "text": "The realtor in town — knows his stuff!"
+      "text": "The realtor in town, knows his stuff! Call him if you are looking to sell or buy",
+      "verify_url": "https://www.google.com/maps/contrib/103816654933290380082",
+      "_source_note": "Text corrected 2026-07-11 against a full authoritative page paste supplied directly by Shivraj (earlier automated scrape had truncated/mismatched text for this reviewer)."
     }
   ],
   "other_platforms": {
@@ -76,5 +564,540 @@
       "profile_url": "https://nextdoor.com/pages/shivraj-grewal-realtor-austin-tx/",
       "_note": "Neighbor recommendations exist; individual posts are login-walled."
     }
+  },
+  "reviews_extended": [
+    {
+      "author": "Rachel K",
+      "when": "a month ago",
+      "text": "Working with Shivraj Grewal on this transaction was a pleasure! He was kind, prompt, and made communication feel effortless. His collaborative approach helped ensure everything moved smoothly from start to finish. We appreciate you and all your hard work, Shivraj!"
+    },
+    {
+      "author": "Deepa Desai",
+      "when": "a month ago",
+      "text": "We bought 2 homes and leased our second home through Shivraj. Every time he has provided a comprehensive, stress-free experience by combining personal expertise with a reliable network of professionals to streamline the buying/leasing process."
+    },
+    {
+      "author": "Daisy Gonzalez",
+      "when": "10 months ago",
+      "text": "My fiancé and I feel so grateful to have worked with Shivraj as our buyers agent purchasing for the first time here in Austin. We started to look at homes through Zillow and realtor.com and really thought we could do it on our own.. What…",
+      "excerpt": true
+    },
+    {
+      "author": "srikrishna reddy",
+      "when": "a year ago",
+      "text": "Highly Recommend. I am a first time home buyer and Shivraj went above and beyond to find me the perfect home. His negotiation skills and market knowledge is top notch. Shivraj was patient and worked through some tough negotiations without…",
+      "excerpt": true
+    },
+    {
+      "author": "Deanne Davis",
+      "when": "2 years ago",
+      "text": "If you're looking for a good, honest person to help guide you through the process of buying a new home or renting out your old home, Raj is your guy. He truly goes above and beyond what's expected from a realtor. Before my husband and I…",
+      "excerpt": true
+    },
+    {
+      "author": "Deanna Garza",
+      "when": "8 months ago",
+      "text": "Working with Shivraj Grewal was an excellent experience. He's professional, knowledgeable, and consistently follows up to ensure every detail is handled smoothly. His communication and commitment to his clients truly stand out. I highly recommend Shivraj."
+    },
+    {
+      "author": "Ibu Profen",
+      "when": "a year ago",
+      "text": "Working with Shivraj has been an exceptional experience. He is honest, direct, and transparent, always ensuring that his advice is tailored to what's best for the buyer. Shivraj took the time to truly understand my needs and preferences,…",
+      "excerpt": true
+    },
+    {
+      "author": "Rajesh Varadharaj",
+      "when": "a year ago",
+      "text": "Exceptional! I enjoyed working with Shivraj as my realtor, and I couldn't be happier with the experience! From day one, Shivraj was super friendly and approachable, making buying my primary residence and renting out a rental property a…",
+      "excerpt": true
+    },
+    {
+      "author": "sarb kaur",
+      "when": "a year ago",
+      "text": "I had the pleasure of working with Shivraj for a recent investment property opportunity, and I couldn't be more satisfied with the experience. From start to finish, Shivraj demonstrated exceptional knowledge of the real estate market and…",
+      "excerpt": true
+    },
+    {
+      "author": "Rahel Hundley",
+      "when": "11 months ago",
+      "text": "As first time home buyers, Shivraj was the perfect realtor to help us out. He knows the market well, is very relational, a fantastic negotiator and we always felt confident with him on our team."
+    },
+    {
+      "author": "Srilatha Yalavarthi",
+      "when": "a year ago",
+      "text": "Shivraj is top-notch real estate agent. Shivraj consistently went above and beyond to ensure we made informed decisions and had a smooth process with our recent real estate transactions. His personalized advice, strong negotiation skills,…",
+      "excerpt": true
+    },
+    {
+      "author": "Sreereddy Vaasant",
+      "when": "3 years ago",
+      "text": "I recently had the pleasure of working with Shivraj Grewal for my home purchase in Round Rock, and I am so impressed with his level of expertise and professionalism. From the very beginning, Shivraj was incredibly helpful and patient in…",
+      "excerpt": true
+    },
+    {
+      "author": "Harini Shiv Kumar",
+      "when": "11 months ago",
+      "text": "Phenomenal Realtor – Truly Goes Above and Beyond! I cannot speak highly enough of my experience working with Shivraj. From our very first conversation, it was clear that he is not just a real estate agent—he is…",
+      "excerpt": true
+    },
+    {
+      "author": "Steve Mayo",
+      "when": "a year ago",
+      "text": "A Truly Exceptional Agent That Really Wants to Help: Shivraj Grewal. After a terrible experience with a real estate agent when selling my previous home, I was hesitant to work with a buyer's agent during my Fall 2024 house hunt. The new…",
+      "excerpt": true
+    },
+    {
+      "author": "Becca White",
+      "when": "a year ago",
+      "text": "Shivraj is such a pleasure to work with! He is not only personable, he is also extremely knowledgeable in the Greater-Austin market, has a strong attention to detail, is responsive and direct with communication, and always puts his clients'…",
+      "excerpt": true
+    },
+    {
+      "author": "krishna krish",
+      "when": "2 years ago",
+      "text": "Working with Shivraj Grewal on the sale of my property in Austin, TX was an absolutely fantastic experience! His deep knowledge of the real estate market and cutting-edge marketing strategies clearly shone through as he sold my property in…",
+      "excerpt": true
+    },
+    {
+      "author": "Amanda Rocha",
+      "when": "a year ago",
+      "text": "Over the past few years, my mortgage team has had the pleasure of working with Shivraj. He is responsive, attentive, and personable, making him the perfect agent to work with. I wholeheartedly recommend Shivraj as your realtor. He will…",
+      "excerpt": true
+    },
+    {
+      "author": "kusam rakesh",
+      "when": "2 years ago",
+      "text": "Putting Professionalism to its best. Shivraj has gone above and beyond multiple times during his engagement with him. It amazes me how he strives for best customer satisfaction at every step of engagement. Best thing I like about Shivraj is…",
+      "excerpt": true
+    },
+    {
+      "author": "Katie Lowder",
+      "when": "10 months ago",
+      "text": "Raj is fantastic! He's easy to talk to, quick to respond, and always looking out for what's best for his clients. He is professional and genuinely cares. He makes the whole experience feel comfortable and stress-free. I'd recommend Raj to anyone who wants a great realtor"
+    },
+    {
+      "author": "Momin Samir",
+      "when": "2 years ago",
+      "text": "Choosing Shivraj as our seller's agent was the best decision we made. His honesty, direct approach, and insightful advice stood out from the beginning. Shivraj's deep understanding of the Austin market and his high-tech, personalized…",
+      "excerpt": true
+    },
+    {
+      "author": "Pragati Kalnawat",
+      "when": "a year ago",
+      "text": "Working with Shivraj was an absolute pleasure. His deep knowledge of the market, attention to detail made our home search journey smooth and stress-free. We could not be happier with the service and support we received throughout the process! Highly recommend"
+    },
+    {
+      "author": "Debbie Fecteau",
+      "when": "a year ago",
+      "text": "Highly recommend! Mr. Grewal has an exception grasp of market conditions. His marketing skills were amazing and exceeded our expectations by far. He was cordial and understanding of what we were wanting to accomplish. “Raj” has…",
+      "excerpt": true
+    },
+    {
+      "author": "ranjodh kailey",
+      "when": "a year ago",
+      "text": "We had the pleasure of working with Shivraj Grewal in our home-buying journey, and we couldn't be more thrilled with the outcome. Shivraj's expertise and dedication were evident from the start as he guided us through every step of…",
+      "excerpt": true
+    },
+    {
+      "author": "Travis Hundley",
+      "when": "a year ago",
+      "text": "A Perfect Fit! We have listed many houses over the years. Shivraj was by far the most attentive and accurate. He knows the market and…",
+      "excerpt": true
+    },
+    {
+      "author": "Inderpreet Grewal",
+      "when": "a year ago",
+      "text": "Professional and Reliable. Working with Shivraj Grewal was an outstanding experience from start to finish. He was incredibly attentive to our needs and took the time to understand exactly…",
+      "excerpt": true
+    },
+    {
+      "author": "Souvik Ghosh",
+      "when": "2 years ago",
+      "text": "Shivraj and his teammate Melissa were incredible to work with when buying my house. They were persistent and responded quickly, making the entire process smooth and stress-free. They constantly followed up with all parties, keeping…",
+      "excerpt": true
+    },
+    {
+      "author": "Jaime Campos Olsowka",
+      "when": "a year ago",
+      "text": "I highly respect Shivraj for his exceptional work in the Austin, Texas real estate market. His expertise, professionalism, and dedication to his clients is truly impressive. If you're looking for a top-notch realtor in Austin, Shivraj is someone I would highly recommend!"
+    },
+    {
+      "author": "Shalini Rajan",
+      "when": "3 years ago",
+      "text": "Shivraj has been nothing but exceptional to work with. His knowledge of the market and the greater Austin area and it's suburbs are impressive. His experience and deep understanding of the market backed by strong statistics was definitely…",
+      "excerpt": true
+    },
+    {
+      "author": "Caleb White",
+      "when": "a year ago",
+      "text": "Shivraj has been incredible to work with. He is genuine, personable, and highly knowledgeable. He is definitely someone you want in your corner. Shivraj is reliable, and will go the extra mile to make sure you're taken care of."
+    },
+    {
+      "author": "Priyesh R",
+      "when": "2 years ago",
+      "text": "Shivraj's knowledge of the local real estate market was impressive. He took the time to understand my specific needs and preferences, and he provided valuable insights and guidance throughout the entire process. I highly recommend Shivraj to…",
+      "excerpt": true
+    },
+    {
+      "author": "Srinivas Prativadi",
+      "when": "2 years ago",
+      "text": "We had a pleasure of working with Shivraj for our recent new construction home purchase. It's a seamless experience working with him. Our journey with him started my wife finding him on google as we planned to move to Austin, TX area. We are…",
+      "excerpt": true
+    },
+    {
+      "author": "Sabrina Hundley",
+      "when": "2 years ago",
+      "text": "Raj is a very proactive and professional realtor. He navigated us through a challenging market with confidence and compassion. His negotiation skills are top notch and always had our best interests at heart. I highly recommend him to anyone who wants to enjoy their selling or buying process."
+    },
+    {
+      "author": "Kamaljeet Dhillon",
+      "when": "2 years ago",
+      "text": "We visited Austin for a brief trip to look into real estate investments. We met Shivraj at an open house. He understood our goals quickly and helped us get under contract in just a week. He's incredibly fast, and unlike some realtors we've…",
+      "excerpt": true
+    },
+    {
+      "author": "Divya Krishnankutty",
+      "when": "a year ago",
+      "text": "Highly Recommend. We are so happy we found Shivraj. He is very professional and knowledgeable. He was very patient throughout the process, answered all our questions and got us the best possible deal. We really appreciate the fact that…",
+      "excerpt": true
+    },
+    {
+      "author": "Pat Lowe",
+      "when": "2 years ago",
+      "text": "I listed with Shivraj real property which was part of a bankruptcy estate. Shivraj was very responsive, efficiently reviewed the property and in short order obtained a contract to sell the property for more than I thought it was worth. He…",
+      "excerpt": true
+    },
+    {
+      "author": "Shilpa Shandil",
+      "when": "a year ago",
+      "text": "Our real estate agent was amazing! From the very beginning, he made the process of finding our new home so easy and stress-free. He really listened to what we wanted and asked all the right questions to understand our needs. He explained…",
+      "excerpt": true
+    },
+    {
+      "author": "Pradeep S",
+      "when": "a year ago",
+      "text": "Shivraj helped us search and close in on a property! He is very knowledgeable about single family homes and was therefore able to advise us on the pros & cons about a property when we found one. He is patient and available to answer any & all questions we had. I would definitely recommend him to anyone looking to purchase a property!"
+    },
+    {
+      "author": "Mr Sidhu",
+      "when": "2 years ago",
+      "text": "During our home search in Austin, TX, we encountered several agents, but Shivraj truly distinguished himself through his honesty and attentive listening to our requirements. In just a few weeks, he skillfully identified a fantastic home…",
+      "excerpt": true
+    },
+    {
+      "author": "Melissa Wischnewsky",
+      "when": "2 years ago",
+      "text": "As a new home sales representative I work with realtors all day every day, and let me tell you what Shivraj was INCREDIBLE to work with. He was very helpful and detail oriented but also a great teammate and a great representative for his buyer! Thank you Shivraj!"
+    },
+    {
+      "author": "Marco Chavez",
+      "when": "a year ago",
+      "text": "His focus on building a genuine relationship rather than just closing a sale really set him apart. If you're looking for a realtor who genuinely cares about your best interests, Shivraj is the person to go to. Highly recommend!"
+    },
+    {
+      "author": "Rob Levin",
+      "when": "4 years ago",
+      "text": "Shivraj is an amazing realtor and his focus to be of service really shows. We came to Austin and started hitting up open houses one weekend. At one open house we met Shivraj (on a Sunday). By that Thursday we'd seen something like 15-20…",
+      "excerpt": true
+    },
+    {
+      "author": "Gopal Thapa",
+      "when": "a year ago",
+      "text": "Shivraj's professionalism and market expertise stood out throughout the process. He was always available and ready to assist with any questions or concerns. His dedication made the experience smooth and enjoyable."
+    },
+    {
+      "author": "David Xettri",
+      "when": "a year ago",
+      "text": "Working with Shivraj was an outstanding experience. He provided expert advice and insights, making complex situations feel manageable. His dedication and skill ensured a smooth and successful experience."
+    },
+    {
+      "author": "Patrick Simpson",
+      "when": "2 years ago",
+      "text": "My wife and I had a really great experience with Shivraj and his team. He answered all of our questions, fought for us when we needed him, and made the entire home selling process as simple as possible. We couldn't speak more highly of his services."
+    },
+    {
+      "author": "NAVJOT S",
+      "when": "2 years ago",
+      "text": "Shivraj exceeded all expectations! His deep knowledge of the local market, combined with a proactive approach, made the home-buying process smooth and stress-free. Grateful professionalism and dedication to finding us the perfect first home. On top of that very good in hospitality as well 😊"
+    },
+    {
+      "author": "Govinda kc",
+      "when": "a year ago",
+      "text": "Shivraj Grewal's market knowledge and exceptional communication made the process seamless. His dedication and professionalism were evident in every step. We highly recommend him for his honesty and hard work."
+    },
+    {
+      "author": "Yogendra kc",
+      "when": "a year ago",
+      "text": "Shivraj's knowledge and responsiveness were greatly appreciated. He made the entire process much less intimidating with his clear explanations and guidance. His commitment to his clients is truly exceptional."
+    },
+    {
+      "author": "HeeSun Yu",
+      "when": "a year ago",
+      "text": "My goto realtor in Austin. From the beginning, Shrivaj was very attentive, asked a lot of questions and really knew/understood what I was looking for. I'm not from Austin and wasn't around to oversee the building of my house and he was…",
+      "excerpt": true
+    },
+    {
+      "author": "Aditya Dixit",
+      "when": "a year ago",
+      "text": "Shivraj has been great for us. He has been there for us through the entire process of our house buying. A++ for his commitment, his sincerity and his punctuality."
+    },
+    {
+      "author": "Kc Basanta",
+      "when": "a year ago",
+      "text": "Shivraj's dedication and market insight were invaluable. His market insights and clear explanations helped, and I appreciated his hard work and…",
+      "excerpt": true
+    },
+    {
+      "author": "Vincent Watson",
+      "when": "a year ago",
+      "text": "Raj doesn't just walk on water - when it comes to real estate, water makes a throne to carry him.…",
+      "excerpt": true
+    },
+    {
+      "author": "Kelly McLaren",
+      "when": "a year ago",
+      "text": "Raj is the consummate professional - experienced, knowledgeable, and 100% focused on his clients' needs and goals. All sellers and buyers will benefit from having Raj at their side, representing their interests and guiding them through their real estate journey."
+    },
+    {
+      "author": "Ashley Wesley",
+      "when": "3 years ago",
+      "text": "Shivraj is the realtor you want in your corner when purchasing your new home!!! From the builders to the mortgage company… Shivraj went above and beyond to keep them accountable and on track to get us into new home! We are very thankful for…",
+      "excerpt": true
+    },
+    {
+      "author": "Clint Pohler",
+      "when": "a year ago",
+      "text": "Shivraj has an impressive knowledge of the local real estate market, and provides valuable insights and guidance. I highly recommend Shivraj to anyone looking for a knowledgeable, dedicated, and professional real estate agent."
+    },
+    {
+      "author": "Melissa Galicia",
+      "when": "a year ago",
+      "text": "Shivraj is professional and knowledgeable. He goes above and beyond for his clients and is always available for questions! I would recommend him to all my friends and family."
+    },
+    {
+      "author": "Maxx He",
+      "when": "2 years ago",
+      "text": "There are many realtors out there who are adept, knowledgeable and efficient, along with these traits Shivraj and team offer extreme levels of proactiveness, honesty with a will-to-do attitude. They provide the best service, they make it…",
+      "excerpt": true
+    },
+    {
+      "author": "H G",
+      "when": "a year ago",
+      "text": "Shivraj is very knowledgeable and experienced real estate professional. Navigates extremely well in complex transactions and very effective in negotiations. Highly recommend Shivraj."
+    },
+    {
+      "author": "Dan",
+      "when": "4 years ago",
+      "text": "Over the course of two years we have bought 2 houses and sold 1 through Raj (Shivraj Grewal). His service is excellent. He is a very hardworking individual with integrity. One of the house purchases required extensive search and…",
+      "excerpt": true
+    },
+    {
+      "author": "sanket bhoyate",
+      "when": "2 years ago",
+      "text": "Great guy!! Helps personalize the purchase, always there for supporting, no pushing on purchasing but rather helps you make right decision, well experienced and will give you valuable suggestions on house purchase, filled with good energy and does what is best for you!! Happy to have purchased house with him!!"
+    },
+    {
+      "author": "jay nibber",
+      "when": "a year ago",
+      "text": "It was super easy to work with Shivraj, he was able to find exactly what I was looking for in the market. With how things are in the market, he was still able to navigate and locate what I was looking for. He definitely exceeded my expectations"
+    },
+    {
+      "author": "charlene meltzer",
+      "when": "4 years ago",
+      "text": "Not only did Raj sell two of my homes over the asking price, Raj found my dream home within a few days. As stressful as it was, Raj always kept me calm and always called me to be sure I was OK. Raj is very professional, honest, trust worthy…",
+      "excerpt": true
+    },
+    {
+      "author": "Srikanth Thanneeru",
+      "when": "3 years ago",
+      "text": "It was great working with Shrivaj during the whole process of buying a house. I really appreciate his patience while walking around the houses and answering the infinite number of questions posed by me. He is always there to answer any doubts and went off his way to get the required help."
+    },
+    {
+      "author": "Dhivya Mohan",
+      "when": "4 years ago",
+      "text": "Raj is a very caring person and was so attentive to our needs. He was patient, kind, and always answered all our questions in a holistic manner. He went above and beyond his role to help us find our new home in Austin by showing us the…",
+      "excerpt": true
+    },
+    {
+      "author": "Yadwinder Khangura",
+      "when": "a year ago",
+      "text": "Highly recommend Shivraj for your realtor needs. He has a fine grasp of the real estate market and makes the process very easy."
+    },
+    {
+      "author": "Rebekah Odle",
+      "when": "3 years ago",
+      "text": "You know how intense this market is. And without someone in your corner, you won't get far. That's why my family and I have worked with Raj FOUR times, each to perfect success. He keeps you level headed - whether you are excited or nervous,…",
+      "excerpt": true
+    },
+    {
+      "author": "Barjinder Kaur",
+      "when": "a year ago",
+      "text": "We want to thank you for all the fantastic work you've done for us. Thank you for going the extra mile for us on every step to show us a beautiful house in a well organized and beautiful community like Santa Rita Ranch. It was hard to do…",
+      "excerpt": true
+    },
+    {
+      "author": "Taran Dhillon",
+      "when": "a year ago",
+      "text": "Shivraj helped us finding the perfect home for us. He is very knowledgeable and experienced in the area."
+    },
+    {
+      "author": "Supreet Dhillon",
+      "when": "a year ago",
+      "text": "Shivraj is an outstanding realtor, demonstrating exceptional thoroughness and an impressive attention to detail that is truly remarkable."
+    },
+    {
+      "author": "Shannon Cobb",
+      "when": "a year ago",
+      "text": "Raj is hands down the best in Austin. He is knowledgeable and trustworthy and I can't say enough good things about him!"
+    },
+    {
+      "author": "Norman Ernst",
+      "when": "2 years ago",
+      "text": "Raj is, in a word: Fantastic! He's more than capable/qualified to find you your dream home. Thanks for your help in finding ours."
+    },
+    {
+      "author": "Charles Wesley",
+      "when": "a year ago",
+      "text": "Shivraj Grewal is excellent at what he does, always comes through in the clutch, would never use any other realty service, beyond satisfied!!"
+    },
+    {
+      "author": "Lacey Givin Peterson",
+      "when": "a year ago",
+      "text": "Best realtor! Shivraj really focuses on what his clients' needs & wants!"
+    },
+    {
+      "author": "Tori Simons",
+      "when": "a year ago",
+      "text": "Raj is an expert in the Austin area real estate market! We are so grateful for his expertise."
+    },
+    {
+      "author": "Kiran Yogesh",
+      "when": "4 years ago",
+      "text": "I recommend him for real estate needs in Austin, TX. He has been with us for every decision through our house purchase process with expert advice and transparency."
+    },
+    {
+      "author": "Amber McCloughan",
+      "when": "a year ago",
+      "text": "Raj is very passionate and dedicated to helping families. A great agent and person."
+    },
+    {
+      "author": "Cora W",
+      "when": "a year ago",
+      "text": "Raj is awesome. Not only fun and friendly but very informative. You want to work with him."
+    },
+    {
+      "author": "Estefany Obando",
+      "when": "a year ago",
+      "text": "One of the best realtors I know, very professional in everything, regarding his work I have no words, he is the best."
+    },
+    {
+      "author": "sarah reid",
+      "when": "a year ago",
+      "text": "I have worked with Raj multiple times over the year, and he is always on his A game and knows his stuff. Always dependable!"
+    },
+    {
+      "author": "Avani Iddalgi",
+      "when": "3 years ago",
+      "text": "Raj was amazing throughout our journey and helped us with everything possible. Thank you!! Would like to work with you again in future."
+    },
+    {
+      "author": "Russell Kauitzsch, MS, LPC",
+      "when": "a year ago",
+      "text": "Shivraj is professional and knowledgeable and works hard for his clients!"
+    },
+    {
+      "author": "Stephen Ocean",
+      "when": "a year ago",
+      "text": "What a great guy to have working for you! Look no further! Truly a pro! Thanks Shivraj, cheers!"
+    },
+    {
+      "author": "Joaquin Vasquez",
+      "when": "a year ago",
+      "text": "He is very professional and well versed in his field of work. The king of real estate!!"
+    },
+    {
+      "author": "asma tanveer",
+      "when": "2 years ago",
+      "text": "Great working with Shivraj, he knows exactly what you want and can guide you in the right path."
+    },
+    {
+      "author": "Jeevan Singh",
+      "when": "3 years ago",
+      "text": "I really appreciate his honesty and patience during the entire process. His knowledge of the market was definitely a huge plus."
+    },
+    {
+      "author": "Ahmad Al Rshaideh",
+      "when": "a year ago",
+      "text": "Possibly the best realtor ever dealt with! Direct, honest, and follows through!"
+    },
+    {
+      "author": "Tina Khangura",
+      "when": "a year ago",
+      "text": "Amazing realtor very helpful and he made the process very easy for me and my family."
+    },
+    {
+      "author": "Bryan Peterson",
+      "when": "a year ago",
+      "text": "Knowledgeable and easy going. Makes you feel comfortable about the entire process. Highly recommend."
+    },
+    {
+      "author": "maurice causly",
+      "when": "a year ago",
+      "text": "Great guy!!!! Full of energy. Time for a new house in Georgetown."
+    },
+    {
+      "author": "Adam Zagata",
+      "when": "a year ago",
+      "text": "I would recommend Shivraj to anyone I know. Best that Texas has to offer."
+    },
+    {
+      "author": "P K",
+      "when": "2 years ago",
+      "text": "Knowledgeable and organized. Good to partner with for your next deal."
+    },
+    {
+      "author": "Jaeleen Halloran",
+      "when": "a year ago",
+      "text": "Most amazing company I've ever worked with!"
+    },
+    {
+      "author": "Samia Faizi",
+      "when": "a year ago",
+      "text": "Very very great real estate agent."
+    },
+    {
+      "author": "RONNIE NEEL",
+      "when": "a year ago",
+      "text": "Amazing, total professional at what he does."
+    },
+    {
+      "author": "Paul Chohan",
+      "when": "a year ago",
+      "text": "Best in the business! Hands down."
+    },
+    {
+      "author": "Erick Bryan",
+      "when": "a year ago",
+      "text": "Excellent service."
+    },
+    {
+      "author": "Joe Barron",
+      "when": "2 months ago",
+      "text": "Raj is a rare gem. What amazes me all the time with him is his presence, and always being in the moment. He truly takes the time to listen, and cares about the personal needs and wants of his clients. Whether a past or present client, one of the unique things about Raj is that he never forgets about you."
+    }
+  ],
+  "reviews_extended_note": "Additional real reviews from the primary Grewal RE Group Google profile (same 119 total already counted -- this is a content-completeness addition, not a new count), supplied directly by Shivraj via a full page paste on 2026-07-11. review_count stays 119 -- Google's own aggregate rating for the profile is 5.0, though the full page paste confirmed at least one lower-rated review exists among the 119 (a 2026 review with no text, excluded here since only text-bearing reviews are shown). No individual verify_url is available per review from this source (unlike the featured 3, which have contributor-profile links); the section source line links to the live profile for verification of the full list. 96 of 119 have visible text; the remainder are star-only.",
+  "reviews_no_text_confirmed": {
+    "_note": "Named reviewers confirmed real on the live Grewal RE Group Google profile via Shivraj's page paste, but with no visible written review text (rating-only, or truncated to nothing in the copy). Do NOT assume these are all 5-star -- Lance Hobbs is explicitly a lower rating (owner reply asks 'why one star'). 99 (text) + 8 (named, no text) = 107 of 119 accounted for; the remaining 12 were not visible in either paste Shivraj supplied (Google lazy-loads more only on in-panel scroll, which a page copy does not capture).",
+    "names": [
+      "Lance Hobbs (confirmed lower rating, not 5-star)",
+      "Jon Birt",
+      "Amy Case",
+      "Myca Prude",
+      "Delaney Besecker",
+      "Margaret Cunningham",
+      "Natalie Gust",
+      "Rudra X"
+    ]
   }
 }

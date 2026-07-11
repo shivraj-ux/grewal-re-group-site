@@ -113,5 +113,19 @@
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); /* set correct state if the page loads already scrolled */
+
+    /* ---- Nav CTA: "Contact" on desktop, "Call" on mobile (<=900px matches the hamburger breakpoint) ---- */
+    var cta = header.querySelector('.gh-cta');
+    if (cta) {
+      var ctaHref = cta.getAttribute('href');
+      var ctaText = cta.textContent;
+      var mq = window.matchMedia('(max-width: 900px)');
+      function syncCta(e) {
+        if (e.matches) { cta.textContent = 'Call'; cta.setAttribute('href', 'tel:+15126170001'); }
+        else { cta.textContent = ctaText; cta.setAttribute('href', ctaHref); }
+      }
+      syncCta(mq);
+      mq.addEventListener ? mq.addEventListener('change', syncCta) : mq.addListener(syncCta);
+    }
   });
 })();

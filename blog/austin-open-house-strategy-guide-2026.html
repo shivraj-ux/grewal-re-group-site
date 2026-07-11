@@ -42,11 +42,7 @@
 
   <!-- Assets -->
   <link rel="icon" href="../assets/logos/logo-mark.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
+  <noscript></noscript>
     <link rel="stylesheet" href="blog.css">
   <link rel="stylesheet" href="blog-enhanced.css">
 <link rel="stylesheet" href="">
@@ -130,17 +126,19 @@
   }
   </script>
 
-  <style>
+    <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; color: #171717; background: #fff; line-height: 1.7; }
+    body { font-family: 'GRG Sans', sans-serif; color: #171717; background: #fff; line-height: 1.7; }
     a { color: #B8963E; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     /* NAV */
     nav { background: #171717; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #B8963E; letter-spacing: 0.04em; }
+    .nav-brand { font-family: 'GRG Serif', serif; font-size: 1.5rem; color: #B8963E; letter-spacing: 0.04em; }
     .nav-links { display: flex; gap: 2rem; }
-    .nav-links a { font-family: 'Inter', sans-serif; color: #FAF7F2; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links a { font-family: 'GRG Sans', sans-serif; color: #FAF7F2; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
     .nav-links a:hover { color: #B8963E; text-decoration: none; }
 
     /* ARTICLE */
@@ -157,7 +155,7 @@
     .hero-figure figcaption { font-size: 0.75rem; color: #999; text-align: right; padding: 0.4rem 0; }
 
     /* H1 */
-    h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; color: #171717; line-height: 1.2; margin-bottom: 1rem; font-weight: 600; }
+    h1 { font-family: 'GRG Serif', serif; font-size: 2.6rem; color: #171717; line-height: 1.2; margin-bottom: 1rem; font-weight: 600; }
 
     /* BYLINE */
     .byline { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e8e0d5; }
@@ -169,8 +167,8 @@
     .aeo-lede { border-left: 3px solid #B8963E; padding: 1rem 1.25rem; margin-bottom: 2rem; background: #FAF7F2; border-radius: 0 4px 4px 0; font-size: 1.05rem; line-height: 1.7; }
 
     /* BODY HEADINGS */
-    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; color: #171717; margin: 2.4rem 0 0.9rem; font-weight: 600; }
-    h3 { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #171717; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+    h2 { font-family: 'GRG Serif', serif; font-size: 1.85rem; color: #171717; margin: 2.4rem 0 0.9rem; font-weight: 600; }
+    h3 { font-family: 'GRG Sans', sans-serif; font-size: 1.05rem; color: #171717; margin: 1.5rem 0 0.5rem; font-weight: 600; }
     p { margin-bottom: 1.1rem; }
     ul, ol { padding-left: 1.5rem; margin-bottom: 1.1rem; }
     li { margin-bottom: 0.4rem; }
@@ -185,7 +183,7 @@
     .expert-insight picture img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid #B8963E; flex-shrink: 0; }
     .expert-insight-content { flex: 1; }
     .expert-insight-label { font-size:0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #B8963E; font-weight: 600; margin-bottom: 0.5rem; }
-    .expert-insight blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.18rem; font-style: italic; line-height: 1.6; color: #171717; margin-bottom: 0.75rem; }
+    .expert-insight blockquote { font-family: 'GRG Serif', serif; font-size: 1.18rem; font-style: italic; line-height: 1.6; color: #171717; margin-bottom: 0.75rem; }
     .expert-insight-byline { font-size: 0.8rem; color: #555; }
     .expert-insight-byline a { color: #B8963E; }
 
@@ -194,7 +192,7 @@
     .faq-section h2 { margin-bottom: 1.25rem; }
     details { border: 1px solid #e8e0d5; border-radius: 4px; margin-bottom: 0.75rem; overflow: hidden; }
     details[open] { border-color: #B8963E; }
-    summary { padding: 1rem 1.25rem; font-family: 'Inter', sans-serif; font-size: 0.97rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+    summary { padding: 1rem 1.25rem; font-family: 'GRG Sans', sans-serif; font-size: 0.97rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; background: #fff; }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: '+'; font-size: 1.3rem; color: #B8963E; font-weight: 400; transition: transform 0.2s; }
     details[open] summary::after { content: '−'; }
@@ -203,7 +201,7 @@
     /* AUTHOR CARD */
     .author-card { background: #FAF7F2; border: 1px solid #e8e0d5; border-radius: 8px; padding: 2rem; margin: 2.5rem 0; display: flex; gap: 1.5rem; align-items: flex-start; }
     .author-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid #B8963E; flex-shrink: 0; }
-    .author-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .author-info h3 { font-family: 'GRG Serif', serif; font-size: 1.35rem; margin: 0 0 0.3rem; }
     .author-creds { font-size: 0.82rem; color: #666; margin-bottom: 0.6rem; line-height: 1.5; }
     .author-stats { font-size: 0.85rem; color: #171717; font-weight: 600; margin-bottom: 0.5rem; }
     .author-contact { font-size: 0.85rem; }
@@ -218,21 +216,21 @@
 
     /* CTA */
     .cta-block { background: #171717; border-radius: 8px; padding: 2.5rem 2rem; margin: 2.5rem 0; text-align: center; }
-    .cta-block h2 { font-family: 'Cormorant Garamond', serif; color: #B8963E; font-size: 2rem; margin-bottom: 0.75rem; }
+    .cta-block h2 { font-family: 'GRG Serif', serif; color: #B8963E; font-size: 2rem; margin-bottom: 0.75rem; }
     .cta-block p { color: #FAF7F2; margin-bottom: 1.5rem; font-size: 0.97rem; }
-    .cta-btn { display: inline-block; background: #B8963E; color: #171717; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.85rem 2.2rem; border-radius: 3px; transition: background 0.15s; }
+    .cta-btn { display: inline-block; background: #B8963E; color: #171717; font-family: 'GRG Sans', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.85rem 2.2rem; border-radius: 3px; transition: background 0.15s; }
     .cta-btn:hover { background: #a07c2e; text-decoration: none; }
 
     /* FOOTER */
     footer { background: #171717; color: #FAF7F2; text-align: center; padding: 2.5rem 2rem; margin-top: 3rem; }
-    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: #B8963E; margin-bottom: 0.5rem; }
+    .footer-brand { font-family: 'GRG Serif', serif; font-size: 1.4rem; color: #B8963E; margin-bottom: 0.5rem; }
     .footer-info { font-size: 0.82rem; color: #aaa; line-height: 1.8; }
     .footer-info a { color: #B8963E; }
 
     /* STAT TILES */
     .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
     .stat-tile { background: #FAF7F2; border: 1px solid #e8e0d5; border-radius: 6px; padding: 1.1rem; text-align: center; }
-    .stat-tile .stat-value { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; color: #B8963E; font-weight: 600; display: block; }
+    .stat-tile .stat-value { font-family: 'GRG Serif', serif; font-size: 1.65rem; color: #B8963E; font-weight: 600; display: block; }
     .stat-tile .stat-label { font-size: 0.75rem; color: #555; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
 
     @media (max-width: 640px) {
@@ -246,7 +244,6 @@
   <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grewalregroup.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://grewalregroup.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Austin Open House Strategy for Sellers in 2026", "item": "https://grewalregroup.com/blog/austin-open-house-strategy-guide-2026"}]}
 </script>
-  <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
 </head>
 <body>
 
@@ -318,6 +315,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/relocation-guide">Relocation Guide</a></li>
             <li><a href="/austin-schools-guide">Schools Guide</a></li>
@@ -732,6 +730,7 @@
       <nav aria-label="Guides and resources">
         <h2>Guides</h2>
         <ul>
+          <li><a href="/library">The Library</a></li>
           <li><a href="/relocation-guide">Relocation Guide</a></li>
           <li><a href="/austin-schools-guide">Schools Guide</a></li>
           <li><a href="/calculators">All Resources</a></li>
@@ -840,5 +839,6 @@
 })();
 </script>
 <script defer src="/assets/js/site-chrome.js?v=4"></script>
+<script defer src="/assets/js/motion.js?v=1"></script>
 </body>
 </html>

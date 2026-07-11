@@ -42,11 +42,7 @@
 
   <!-- Assets -->
   <link rel="icon" href="../assets/logos/logo-mark.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
+  <noscript></noscript>
   <link rel="stylesheet" href="blog.css">
   <link rel="stylesheet" href="blog-enhanced.css">
 
@@ -142,9 +138,11 @@
   }
   </script>
 
-  <style>
+    <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #FAF7F2; color: #171717; line-height: 1.7; }
+    body { font-family: 'GRG Sans', sans-serif; background: #FAF7F2; color: #171717; line-height: 1.7; }
     a { color: #B8963E; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -160,7 +158,7 @@
       z-index: 100;
     }
     .site-nav .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.3rem;
       font-weight: 600;
       color: #B8963E;
@@ -197,7 +195,7 @@
 
     /* H1 */
     h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: clamp(2rem, 4.5vw, 2.8rem);
       font-weight: 600;
       line-height: 1.2;
@@ -238,14 +236,14 @@
 
     /* H2/H3 */
     h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: clamp(1.4rem, 3vw, 1.85rem);
       font-weight: 600;
       color: #171717;
       margin: 48px 0 16px;
     }
     h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.25rem;
       font-weight: 600;
       color: #B8963E;
@@ -274,7 +272,7 @@
     }
     .expert-insight picture { display: none; }
     .expert-insight blockquote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: clamp(1.15rem, 2.5vw, 1.4rem);
       font-style: italic;
       color: #FAF7F2;
@@ -332,7 +330,7 @@
       flex-shrink: 0;
     }
     .author-card h4 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 4px;
@@ -345,7 +343,7 @@
 
     /* RELATED POSTS */
     .related-posts { margin: 40px 0; }
-    .related-posts h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #171717; margin-bottom: 16px; }
+    .related-posts h3 { font-family: 'GRG Serif', serif; font-size: 1.3rem; color: #171717; margin-bottom: 16px; }
     .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
     .related-card {
       border: 1px solid #e8e2d9;
@@ -368,7 +366,7 @@
       margin: 48px 0;
     }
     .cta-block h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       color: #FAF7F2;
       font-size: clamp(1.5rem, 3vw, 2rem);
       margin: 0 0 14px;
@@ -415,7 +413,6 @@
   <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grewalregroup.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://grewalregroup.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Moving to Austin from Houston: 2026 Relocation Guide", "item": "https://grewalregroup.com/blog/moving-to-austin-from-houston-2026"}]}
 </script>
-  <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
 </head>
 <body>
 
@@ -488,6 +485,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/relocation-guide">Relocation Guide</a></li>
             <li><a href="/austin-schools-guide">Schools Guide</a></li>
@@ -883,6 +881,7 @@
       <nav aria-label="Guides and resources">
         <h2>Guides</h2>
         <ul>
+          <li><a href="/library">The Library</a></li>
           <li><a href="/relocation-guide">Relocation Guide</a></li>
           <li><a href="/austin-schools-guide">Schools Guide</a></li>
           <li><a href="/calculators">All Resources</a></li>
@@ -991,5 +990,6 @@
 })();
 </script>
 <script defer src="/assets/js/site-chrome.js?v=4"></script>
+<script defer src="/assets/js/motion.js?v=1"></script>
 </body>
 </html>

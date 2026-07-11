@@ -211,17 +211,15 @@
   </script>
 
   <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="/assets/css/site-chrome.css?v=3">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
       color: #2a2a2a;
       line-height: 1.6;
       background: #fff;
@@ -254,7 +252,7 @@
     .hero-inner { max-width: 800px; margin: 0 auto; }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 600;
       margin: 0 0 1rem;
@@ -296,7 +294,7 @@
     .qa-item:last-of-type { border-bottom: none; }
 
     .qa-item h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.35rem;
       font-weight: 600;
       color: #0a0a0a;
@@ -380,7 +378,7 @@
     .cta-inner { max-width: 800px; margin: 0 auto; }
 
     .cta-section h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.7rem;
       font-weight: 600;
       color: #0a0a0a;
@@ -437,7 +435,7 @@
     .form-inner { max-width: 600px; margin: 0 auto; }
 
     .form-section h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.7rem;
       font-weight: 600;
       margin: 0 0 0.75rem;
@@ -473,7 +471,7 @@
       padding: 0.75rem 1rem;
       border: 1px solid rgba(255,255,255,0.3);
       border-radius: 3px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
       font-size: 0.95rem;
       background: rgba(255,255,255,0.05);
       color: inherit;
@@ -513,7 +511,7 @@
       letter-spacing: 0.05em;
       cursor: pointer;
       transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
     }
 
     button[type="submit"]:hover { background: #9a7c33; }
@@ -566,7 +564,6 @@
       footer { background: #f0f0f0; color: #0a0a0a; }
     }
   </style>
-  <link rel="stylesheet" href="/assets/css/site-chrome.css?v=3">
 </head>
 
 <body>
@@ -599,6 +596,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/#resources">Guides</a></li>
             <li><a href="/faq.html">FAQ</a></li>
@@ -883,6 +881,7 @@
   </div>
 </footer>
 <script defer src="/assets/js/site-chrome.js?v=3"></script>
+<script defer src="/assets/js/motion.js?v=1"></script>
 </body>
 
 </html>

@@ -51,9 +51,8 @@
 ]}
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
 <link rel="stylesheet" href="/assets/css/calculators.css?v=1">
   <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
@@ -126,6 +125,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/relocation-guide">Relocation Guide</a></li>
             <li><a href="/austin-schools-guide">Schools Guide</a></li>
@@ -183,12 +183,14 @@
     <div class="result-card">
       <div class="rc-label" id="winner-label">Over 7 years</div>
       <div class="rc-big" id="advantage">—</div>
-      <div style="font-family:'Inter',sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.25rem;" id="winner-sub"></div>
+      <div style="font-family:'GRG Sans', sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.25rem;" id="winner-sub"></div>
       <div class="result-grid">
         <div class="rg-item"><div class="rg-val" id="total-rent-out">$0</div><div class="rg-lab">Total Cost Renting</div></div>
         <div class="rg-item"><div class="rg-val" id="net-buy-out">$0</div><div class="rg-lab">Net Cost Buying</div></div>
       </div>
     </div>
+    <div class="calc-disclaimer" style="margin-top:1rem;padding:.9rem 1.1rem;background:rgba(184,150,62,.08);border-left:3px solid #B8963E;font-size:.8rem;line-height:1.6;color:#6b6560;"><strong>This is a rough estimate.</strong> Real numbers may be different depending on your exact situation. Confirm precise figures with your lender, title company, or Shivraj before making a decision.</div>
+
     <div class="breakdown-card">
       <div class="bc-title">Buying Cost Breakdown</div>
       <div class="bk-row"><span>Total P&amp;I Paid</span><span class="bk-val" id="b-pi">—</span></div>
@@ -230,7 +232,7 @@
 
 <section style="max-width:1120px;margin:0 auto;padding:0 1.5rem 4rem;">
   <div style="background:#F4F0E9;border-radius:14px;padding:2.5rem;">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin:0 0 1rem;">How This Comparison Works</h2>
+    <h2 style="font-family:'GRG Serif', serif;font-size:1.5rem;font-weight:600;margin:0 0 1rem;">How This Comparison Works</h2>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">Renting cost: monthly rent × 12, with annual increases compounding at your entered rate. Buying gross cost: total P&I payments + property taxes + maintenance + HOA + down payment over the comparison period. Equity at the end: future home value (appreciation compounded annually) minus remaining loan balance after principal paydown.</p>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">Net cost of buying = gross buying cost minus equity. This is compared to total rent paid. The scenario with the lower net cost wins. Note that this is a simplified model — it excludes tax deductions, opportunity cost of down payment, and transaction costs (typically 6-8% of sale price) at time of sale. For a complete analysis on a specific property, reach out.</p>
     <p style="font-size:.9rem;color:#6b6560;line-height:1.8;"><em>Defaults: Travis County 2026 tax rate 1.95%, Austin long-run appreciation 4%/year. Last updated July 2026.</em></p>
@@ -271,6 +273,7 @@
       <nav aria-label="Guides and resources">
         <h2>Guides</h2>
         <ul>
+          <li><a href="/library">The Library</a></li>
           <li><a href="/relocation-guide">Relocation Guide</a></li>
           <li><a href="/austin-schools-guide">Schools Guide</a></li>
           <li><a href="/calculators">All Resources</a></li>

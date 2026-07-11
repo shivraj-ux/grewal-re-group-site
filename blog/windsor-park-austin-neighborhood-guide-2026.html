@@ -33,21 +33,16 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Stylesheet 1: Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="blog.css">
   <link rel="stylesheet" href="blog-enhanced.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
+  <noscript></noscript>
 
   <!-- Stylesheet 2: Base / Reset -->
   <style id="stylesheet-base">
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
       background: #FAF7F2;
       color: #171717;
       line-height: 1.7;
@@ -73,7 +68,7 @@
       z-index: 100;
     }
     .site-header .logo {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       color: #B8963E;
       font-size: 1.25rem;
       font-weight: 700;
@@ -124,7 +119,7 @@
       width: fit-content;
     }
     .hero-overlay h1 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       color: #FAF7F2;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
@@ -156,7 +151,7 @@
 
     /* ── Article Prose ── */
     .article-body h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.6rem;
       font-weight: 700;
       color: #171717;
@@ -165,7 +160,7 @@
       border-bottom: 2px solid #B8963E;
     }
     .article-body h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.2rem;
       color: #171717;
       margin: 1.75rem 0 0.5rem;
@@ -229,7 +224,7 @@
     /* ── FAQ Accordion ── */
     .faq-section { margin: 2.5rem 0; }
     .faq-section h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.6rem;
       font-weight: 700;
       color: #171717;
@@ -249,7 +244,7 @@
       border: none;
       padding: 1rem 1.25rem;
       text-align: left;
-      font-family: 'Inter', sans-serif;
+      font-family: 'GRG Sans', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
       color: #171717;
@@ -294,7 +289,7 @@
       margin-bottom: 1rem;
     }
     .author-card .author-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.15rem;
       font-weight: 700;
       color: #B8963E;
@@ -353,7 +348,7 @@
 
     /* ── Related Posts ── */
     .related-posts h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       font-size: 1.1rem;
       font-weight: 700;
       color: #171717;
@@ -388,7 +383,7 @@
       margin-top: 4rem;
     }
     .cta-banner h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'GRG Serif', serif;
       color: #B8963E;
       font-size: 1.9rem;
       margin-bottom: 0.75rem;
@@ -582,6 +577,7 @@
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grewalregroup.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://grewalregroup.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Windsor Park Austin Neighborhood Guide 2026", "item": "https://grewalregroup.com/blog/windsor-park-austin-neighborhood-guide-2026"}]}
 </script>
   <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
 </head>
 <body>
 
@@ -653,6 +649,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/relocation-guide">Relocation Guide</a></li>
             <li><a href="/austin-schools-guide">Schools Guide</a></li>
@@ -1222,6 +1219,7 @@
       <nav aria-label="Guides and resources">
         <h2>Guides</h2>
         <ul>
+          <li><a href="/library">The Library</a></li>
           <li><a href="/relocation-guide">Relocation Guide</a></li>
           <li><a href="/austin-schools-guide">Schools Guide</a></li>
           <li><a href="/calculators">All Resources</a></li>
@@ -1354,5 +1352,6 @@
 })();
 </script>
 <script defer src="/assets/js/site-chrome.js?v=4"></script>
+<script defer src="/assets/js/motion.js?v=1"></script>
 </body>
 </html>

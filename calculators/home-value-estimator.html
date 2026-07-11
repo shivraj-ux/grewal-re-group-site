@@ -70,9 +70,8 @@
 }
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
+  <link rel="stylesheet" href="/assets/css/system.css?v=1">
 <link rel="stylesheet" href="/assets/css/calculators.css?v=1">
 <style>
   /* Two-step funnel styles */
@@ -180,6 +179,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
+            <li><a href="/library">The Library</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="/relocation-guide">Relocation Guide</a></li>
             <li><a href="/austin-schools-guide">Schools Guide</a></li>
@@ -233,12 +233,116 @@
         <div class="hv-field"><label for="area">Area / neighborhood</label>
           <select id="area" name="area">
             <option value="">Choose the closest fit...</option>
-            <option value="westlake_hills">Westlake Hills / Rollingwood (78746)</option>
-            <option value="barton_creek">Barton Creek (78735)</option>
-            <option value="tarrytown">Tarrytown / Old West Austin (78703)</option>
-            <option value="steiner_ranch">Steiner Ranch (78732)</option>
-            <option value="west_austin_other">Other West Austin (78746)</option>
-            <option value="luxury_other">Another luxury area ($1M+)</option>
+            <optgroup label="West Austin (Eanes ISD)">
+              <option value="westlake_hills">Westlake Hills</option>
+              <option value="tarrytown">Tarrytown</option>
+              <option value="rollingwood">Rollingwood</option>
+              <option value="barton_hills">Barton Hills</option>
+              <option value="west_lake">West Lake</option>
+              <option value="barton_creek">Barton Creek</option>
+              <option value="davenport_ranch">Davenport Ranch</option>
+              <option value="lost_creek">Lost Creek</option>
+              <option value="lake_austin">Lake Austin</option>
+              <option value="spanish_oaks">Spanish Oaks</option>
+              <option value="rob_roy">Rob Roy</option>
+              <option value="highland_park_west">Highland Park West</option>
+              <option value="river_place">River Place</option>
+              <option value="four_points">Four Points</option>
+              <option value="great_hills">Great Hills</option>
+              <option value="northwest_hills">Northwest Hills</option>
+              <option value="balcones_hills">Balcones Hills</option>
+            </optgroup>
+            <optgroup label="Central Austin">
+              <option value="downtown">Downtown</option>
+              <option value="rainey_street">Rainey Street</option>
+              <option value="clarksville">Clarksville</option>
+              <option value="hyde_park">Hyde Park</option>
+              <option value="travis_heights">Travis Heights</option>
+              <option value="bouldin_creek">Bouldin Creek</option>
+              <option value="zilker">Zilker</option>
+              <option value="mueller">Mueller</option>
+              <option value="north_loop">North Loop</option>
+              <option value="old_west_austin">Old West Austin</option>
+              <option value="pemberton_heights">Pemberton Heights</option>
+              <option value="rosewood">Rosewood</option>
+              <option value="chestnut">Chestnut</option>
+              <option value="south_lamar_sola">South Lamar / SoLa</option>
+              <option value="manor_road">Manor Road</option>
+              <option value="govalle">Govalle</option>
+              <option value="east_cesar_chavez">East Cesar Chavez</option>
+              <option value="del_valle">Del Valle</option>
+            </optgroup>
+            <optgroup label="South Austin">
+              <option value="south_congress">South Congress</option>
+              <option value="circle_c_ranch">Circle C Ranch</option>
+              <option value="shady_hollow">Shady Hollow</option>
+              <option value="oak_hill">Oak Hill</option>
+              <option value="barton_springs">Barton Springs</option>
+              <option value="manchaca">Manchaca</option>
+              <option value="sunset_valley">Sunset Valley</option>
+            </optgroup>
+            <optgroup label="East Austin">
+              <option value="cherrywood">Cherrywood</option>
+              <option value="french_place">French Place</option>
+              <option value="holly">Holly</option>
+              <option value="mlk_govalle">MLK / Govalle</option>
+            </optgroup>
+            <optgroup label="North Central Austin">
+              <option value="allandale">Allandale</option>
+              <option value="crestview">Crestview</option>
+              <option value="rosedale">Rosedale</option>
+              <option value="brentwood">Brentwood</option>
+              <option value="north_central_austin">North Central Austin</option>
+              <option value="domain_north_austin">Domain / North Austin</option>
+            </optgroup>
+            <optgroup label="North Suburbs">
+              <option value="cedar_park">Cedar Park</option>
+              <option value="leander">Leander</option>
+              <option value="liberty_hill">Liberty Hill</option>
+              <option value="brushy_creek">Brushy Creek</option>
+              <option value="wells_branch">Wells Branch</option>
+            </optgroup>
+            <optgroup label="Far North Suburbs">
+              <option value="georgetown">Georgetown</option>
+              <option value="round_rock">Round Rock</option>
+              <option value="pflugerville">Pflugerville</option>
+              <option value="hutto">Hutto</option>
+              <option value="manor">Manor</option>
+              <option value="taylor">Taylor</option>
+              <option value="elgin">Elgin</option>
+            </optgroup>
+            <optgroup label="South Suburbs">
+              <option value="kyle">Kyle</option>
+              <option value="buda">Buda</option>
+              <option value="san_marcos">San Marcos</option>
+              <option value="plum_creek">Plum Creek</option>
+            </optgroup>
+            <optgroup label="Lake Travis / Hill Country">
+              <option value="lakeway">Lakeway</option>
+              <option value="bee_cave">Bee Cave</option>
+              <option value="steiner_ranch">Steiner Ranch</option>
+              <option value="spicewood">Spicewood</option>
+              <option value="the_hills">The Hills</option>
+              <option value="rough_hollow">Rough Hollow</option>
+              <option value="hudson_bend">Hudson Bend</option>
+              <option value="point_venture">Point Venture</option>
+              <option value="lago_vista">Lago Vista</option>
+              <option value="jonestown">Jonestown</option>
+              <option value="volente">Volente</option>
+            </optgroup>
+            <optgroup label="Dripping Springs / Hill Country">
+              <option value="dripping_springs">Dripping Springs</option>
+              <option value="driftwood">Driftwood</option>
+              <option value="wimberley">Wimberley</option>
+              <option value="belterra">Belterra</option>
+              <option value="caliterra">Caliterra</option>
+              <option value="headwaters">Headwaters</option>
+            </optgroup>
+            <optgroup label="Hill Country (Beyond Austin)">
+              <option value="fredericksburg">Fredericksburg</option>
+              <option value="bastrop">Bastrop</option>
+              <option value="reunion_ranch">Reunion Ranch</option>
+            </optgroup>
             <option value="austin_other">Elsewhere in the Austin metro</option>
           </select>
         </div>
@@ -258,6 +362,7 @@
       <!-- STEP 2: snapshot + contact -->
       <div class="hv-pane" id="hv-step2" hidden>
         <div class="hv-snapshot" id="hv-snapshot" aria-live="polite"></div>
+        <div class="calc-disclaimer" style="margin:1rem 0;padding:.9rem 1.1rem;background:rgba(184,150,62,.08);border-left:3px solid #B8963E;font-size:.8rem;line-height:1.6;color:#6b6560;"><strong>This is a rough estimate.</strong> Real numbers may be different depending on your exact situation. Confirm precise figures with your lender, title company, or Shivraj before making a decision.</div>
         <div class="hv-lead-head">
           <h2>Now the number that actually matters</h2>
           <p>The snapshot above is the market. Your home is not the median. Lot, finishes, floor plan, and timing move the real number six figures in this segment. Shivraj will run the comps by hand and send your exact valuation, usually within one business day.</p>
@@ -428,6 +533,7 @@
       <nav aria-label="Guides and resources">
         <h2>Guides</h2>
         <ul>
+          <li><a href="/library">The Library</a></li>
           <li><a href="/relocation-guide">Relocation Guide</a></li>
           <li><a href="/austin-schools-guide">Schools Guide</a></li>
           <li><a href="/calculators">All Resources</a></li>
