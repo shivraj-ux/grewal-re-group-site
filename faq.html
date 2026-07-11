@@ -516,6 +516,14 @@
   .faq-a p { color:#4f4a42; line-height:1.7; margin:0; }
   .faq-more { color:#9a7c33; font-weight:600; text-decoration:none; white-space:nowrap; }
   .faq-more:hover { text-decoration:underline; }
+  .faq-rq { background:#fff; padding:3rem 1.5rem; border-top:2px solid #e8e3d8; text-align:center; }
+  .faq-rq h2 { font-family:'Cormorant Garamond',serif; font-size:1.8rem; margin:0 0 0.75rem; color:#0a0a0a; }
+  .faq-rq > p { color:#6b6b6b; max-width:600px; margin:0 auto 2rem; line-height:1.7; }
+  .faq-rq-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; max-width:900px; margin:0 auto 2rem; }
+  .faq-rq-link { background:#f4f0e9; padding:1rem; border-radius:6px; color:#9a7c33; text-decoration:none; font-size:0.95rem; font-weight:500; transition:all 0.2s; border:1px solid #e8e3d8; }
+  .faq-rq-link:hover { background:#fefbf7; border-color:#B8963E; }
+  .faq-rq-more { display:inline-block; color:#B8963E; font-weight:600; text-decoration:none; font-size:1rem; }
+  .faq-rq-more:hover { text-decoration:underline; }
   .faq-cta { background:#F4F0E9; text-align:center; padding:3.5rem 1.5rem; }
   .faq-cta h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3.5vw,2.2rem); margin:0 0 .6rem; color:#0a0a0a; }
   .faq-cta p { color:#5b554c; max-width:520px; margin:0 auto 1.5rem; line-height:1.7; }
@@ -528,8 +536,8 @@
 <header class="gh-header">
   <div class="gh-bar">
     <a href="/" class="gh-logo" aria-label="Grewal RE Group — home">
-      <img src="/assets/logos/logo-horizontal-white.png?v=2" alt="Grewal RE Group" class="gh-logo-w" width="187" height="56">
-      <img src="/assets/logos/logo-horizontal.png?v=2" alt="" aria-hidden="true" class="gh-logo-b" width="187" height="56" loading="lazy">
+      <img src="/assets/logos/logo-horizontal-white.png" alt="Grewal RE Group" class="gh-logo-w" width="187" height="56">
+      <img src="/assets/logos/logo-horizontal.png" alt="" aria-hidden="true" class="gh-logo-b" width="187" height="56">
     </a>
     <button class="gh-toggle" type="button" aria-expanded="false" aria-controls="gh-primary-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -538,53 +546,14 @@
       <ul class="gh-menu">
         <li><a href="/communities/">Communities</a></li>
         <li class="gh-has-sub">
-          <a href="/buy" class="gh-menu-link">Buy</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false">Buy / Sell
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
-            <li><a href="/buy">Buying in Austin</a></li>
-            <li><a href="/relocation-guide">Relocating to Austin</a></li>
-            <li><a href="/blog/austin-first-time-home-buyer-guide-2026">First-Time Buyers</a></li>
-            <li><a href="/calculators/affordability-calculator">Affordability Calculator</a></li>
-            <li><a href="/calculators/mortgage-calculator">Mortgage Calculator</a></li>
-            <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-          </ul>
-        </li>
-        <li class="gh-has-sub">
-          <a href="/sell" class="gh-menu-link">Sell</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="gh-sub">
-            <li><a href="/sell">Selling in Austin</a></li>
-            <li><a href="/calculators/home-value-estimator">What's My Home Worth</a></li>
-            <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds Calculator</a></li>
-            <li><a href="/blog/austin-home-selling-guide-2026">Seller Guide</a></li>
-            <li><a href="/sell#concierge">Compass Concierge</a></li>
-          </ul>
-        </li>
-        <li class="gh-has-sub">
-          <a href="/calculators" class="gh-menu-link">Calculators</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="gh-sub">
-            <li class="gh-sub-header">For Buyers</li>
-            <li><a href="/calculators/affordability-calculator">Affordability</a></li>
-            <li><a href="/calculators/mortgage-calculator">Mortgage</a></li>
-            <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-            <li><a href="/calculators/rate-buydown">Rate Buydown</a></li>
-            <li class="gh-sub-header">For Sellers</li>
-            <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
-            <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds</a></li>
-            <li class="gh-sub-header">For Investors</li>
-            <li><a href="/calculators/cap-rate">Cap Rate</a></li>
-            <li><a href="/calculators/cash-on-cash">Cash-on-Cash</a></li>
-            <li><a href="/calculators/brrrr">BRRRR</a></li>
-            <li><a href="/calculators/str-vs-ltr">STR vs LTR</a></li>
-            <li class="gh-sub-divider"></li>
-            <li><a href="/calculators">All Calculators</a></li>
+            <li><a href="/#services">Buying</a></li>
+            <li><a href="/home-value-estimator.html">Selling &amp; Home Value</a></li>
+            <li><a href="/seller-net-proceeds-calculator.html">Net Proceeds Calculator</a></li>
+            <li><a href="/relocation-guide.html">Relocating to Austin</a></li>
           </ul>
         </li>
         <li class="gh-has-sub">
@@ -593,15 +562,13 @@
           </button>
           <ul class="gh-sub">
             <li><a href="/blog/">Blog</a></li>
-            <li><a href="/relocation-guide">Relocation Guide</a></li>
-            <li><a href="/austin-schools-guide">Schools Guide</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/search">Search Listings</a></li>
+            <li><a href="/#resources">Guides</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
           </ul>
         </li>
-        <li><a href="/reviews">Reviews</a></li>
-        <li><a href="/about">About</a></li>
-        <li class="gh-cta-li"><a href="/contact" class="gh-cta">Contact</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/search.html">Search</a></li>
+        <li class="gh-cta-li"><a href="/contact.html" class="gh-cta">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -866,6 +833,20 @@
     </section>
 </div>
 
+<section class="faq-rq">
+  <h2>Real Questions from Real Transactions</h2>
+  <p>102 more FAQs answered from our actual client deals. Every answer is backed by a real transaction.</p>
+  <div class="faq-rq-grid">
+    <a href="/questions/buying.html" class="faq-rq-link">Buying Questions (19)</a>
+    <a href="/questions/selling.html" class="faq-rq-link">Selling Questions (20)</a>
+    <a href="/questions/investing.html" class="faq-rq-link">Investing Questions (17)</a>
+    <a href="/questions/leasing.html" class="faq-rq-link">Leasing Questions (14)</a>
+    <a href="/questions/relocation.html" class="faq-rq-link">Relocation Questions (16)</a>
+    <a href="/questions/closing-process.html" class="faq-rq-link">Closing Process (16)</a>
+  </div>
+  <a href="/questions/" class="faq-rq-more">View all 102 Real Questions →</a>
+</section>
+
 <section class="faq-cta">
   <h2>Still have questions?</h2>
   <p>Every situation is different. Get straight answers for your specific move — no pressure, no spam.</p>
@@ -898,6 +879,7 @@
         <h2>Buy &amp; Sell</h2>
         <ul>
           <li><a href="/buy">Buying</a></li>
+          <li><a href="/sell">Selling</a></li>
           <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
           <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds Calculator</a></li>
           <li><a href="/relocation-guide">Relocating to Austin</a></li>

@@ -64,12 +64,24 @@ Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 - Investment property mortgage rate premium: 0.5-0.75% above primary residence
 - Typical Texas seller closing costs: 1-2% of sale price (title policy, escrow, recording, prorated taxes)
 
+## Real Transaction Q&A
+102 FAQs answered from actual Grewal RE Group client transactions — buying, selling, investing, leasing, relocation, and closing. Each answer is backed by a real deal with concrete numbers anonymized to protect clients.
+- Hub: https://grewalregroup.com/questions/ — Directory of all 102 questions
+- Buying Questions: https://grewalregroup.com/questions/buying.html — 19 real answers
+- Selling Questions: https://grewalregroup.com/questions/selling.html — 20 real answers
+- Investing Questions: https://grewalregroup.com/questions/investing.html — 17 real answers
+- Leasing Questions: https://grewalregroup.com/questions/leasing.html — 14 real answers
+- Relocation Questions: https://grewalregroup.com/questions/relocation.html — 16 real answers
+- Closing Process: https://grewalregroup.com/questions/closing-process.html — 16 real answers
+
 ## Key Pages
 - Home: https://grewalregroup.com/
 - Buying Guide: https://grewalregroup.com/buy
 - Selling Guide: https://grewalregroup.com/sell
 - About: https://grewalregroup.com/about
 - Calculators: https://grewalregroup.com/calculators
+- Real Questions: https://grewalregroup.com/questions/
+- FAQ: https://grewalregroup.com/faq
 - Blog: https://grewalregroup.com/blog
 - Contact: https://grewalregroup.com/contact
 - Agent Instructions: https://grewalregroup.com/AGENTS.md
