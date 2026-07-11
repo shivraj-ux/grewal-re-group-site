@@ -114,8 +114,15 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
 .org-card .org-title { font-size: .64rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: .3rem; }
 .org-card h4 { font-family: var(--serif); font-size: 1.3rem; margin: 0 0 .5rem; }
 .org-card p { font-size: .84rem; opacity: .75; margin: 0; }
-.org-card.admin { display: flex; flex-direction: column; justify-content: center; }
-.org-card.admin .org-icon { width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border: 2px solid var(--gold); background: rgba(184,150,62,.08); font-family: var(--serif); font-size: 1.6rem; color: var(--gold-dk); }
+.org-card.admin {
+  display: flex; flex-direction: column; justify-content: center;
+  background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%); border-color: var(--gold); color: #fff;
+}
+.org-card.admin:hover { border-color: var(--gold-soft); }
+.org-card.admin .org-title { color: var(--gold-soft); }
+.org-card.admin h4 { color: #fff; }
+.org-card.admin p { color: rgba(255,255,255,.68); }
+.org-card.admin .org-icon { width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; border: 2px solid var(--gold); background: rgba(184,150,62,.12); font-family: var(--serif); font-size: 1.6rem; color: var(--gold-soft); }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
