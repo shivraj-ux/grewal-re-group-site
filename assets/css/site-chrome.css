@@ -25,7 +25,7 @@ html, body { overflow-x: clip; }
 .gh-skip {
   position: fixed; left: 8px; top: -56px; z-index: 100000;
   background: var(--gh-dark); color: #fff; padding: .7rem 1.1rem;
-  border-radius: 0 0 6px 6px; font: 600 .9rem/1 Inter, system-ui, sans-serif;
+  border-radius: 0 0 6px 6px; font: 600 .9rem/1 'GRG Sans', system-ui, sans-serif;
   text-decoration: none; transition: top .15s ease;
 }
 .gh-skip:focus { top: 0; outline: 3px solid var(--gh-gold); outline-offset: 2px; }
@@ -37,7 +37,7 @@ html, body { overflow-x: clip; }
   background: rgba(10, 10, 12, 0.34);
   -webkit-backdrop-filter: blur(12px) saturate(1.3);
   backdrop-filter: blur(12px) saturate(1.3);
-  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-family: 'GRG Sans', system-ui, -apple-system, sans-serif;
   transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
@@ -78,7 +78,7 @@ html, body { overflow-x: clip; }
 .gh-menu { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: .25rem; }
 .gh-menu a, .gh-sub-toggle {
   display: inline-flex; align-items: center; gap: .3rem;
-  font: 500 .92rem/1 Inter, sans-serif; color: #fff;
+  font: 500 .92rem/1 'GRG Sans', sans-serif; color: #fff;
   text-decoration: none; padding: .6rem .85rem; border-radius: 6px;
   background: none; border: none; cursor: pointer; white-space: nowrap;
   transition: transform .18s ease, color .2s ease;
@@ -206,7 +206,7 @@ html, body { overflow-x: clip; }
 /* ============================ FOOTER ============================ */
 .gh-footer {
   background: var(--gh-dark); color: rgba(255,255,255,.72);
-  font-family: Inter, system-ui, sans-serif; padding: 3.25rem 1.5rem 1.75rem;
+  font-family: 'GRG Sans', system-ui, sans-serif; padding: 3.25rem 1.5rem 1.75rem;
 }
 .gh-foot-inner { max-width: 1240px; margin: 0 auto; }
 .gh-foot-grid {
@@ -215,10 +215,10 @@ html, body { overflow-x: clip; }
 }
 .gh-foot-brand img { height: 34px; width: auto; margin-bottom: .9rem; }
 .gh-foot-brand p { margin: .25rem 0; line-height: 1.6; font-size: .9rem; }
-.gh-foot-tag { color: var(--gh-gold); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+.gh-foot-tag { color: var(--gh-gold); font-style: italic; font-family: 'GRG Serif', serif; font-size: 1.1rem; }
 .gh-foot-brand a { color: rgba(255,255,255,.8); text-decoration: none; }
 .gh-foot-brand a:hover { color: #fff; }
-.gh-footer nav h2 { font: 600 .78rem/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+.gh-footer nav h2 { font: 600 .78rem/1 'GRG Sans', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
 .gh-footer nav ul { list-style: none; margin: 0; padding: 0; }
 .gh-footer nav li { margin-bottom: .6rem; }
 .gh-footer nav a { color: rgba(255,255,255,.72); text-decoration: none; font-size: .9rem; transition: color .2s, transform .18s; display: inline-block; }
@@ -233,4 +233,33 @@ html, body { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   .gh-nav, .gh-sub, .gh-toggle span, .gh-skip, .gh-menu a, .gh-sub-toggle, .gh-logo, .gh-cta, .gh-footer nav a { transition: none; }
   .gh-menu > li > a:hover, .gh-sub-toggle:hover, .gh-cta:hover, .gh-logo:hover, .gh-footer nav a:hover { transform: none; }
+}
+
+/* ============================================================================
+   REDESIGN OVERRIDES — dark-glass dropdowns, sharper nav rhythm.
+   Structure/behavior above is untouched; this only restyles the look.
+   ============================================================================ */
+.gh-header { padding: 0; }
+.gh-header.gh-scrolled { backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); }
+.gh-menu a, .gh-sub-toggle { font-weight: 600; letter-spacing: .04em; font-size: .82rem; text-transform: uppercase; }
+.gh-sub {
+  background: rgba(8,8,9,.95); border: 1px solid rgba(184,150,62,.28); border-top: 2px solid var(--gh-gold);
+  border-radius: 0; backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: 0 20px 44px rgba(0,0,0,.45);
+}
+.gh-sub a { color: rgba(255,255,255,.82) !important; border-radius: 0; }
+.gh-sub a:hover { background: rgba(184,150,62,.1); color: var(--gh-gold) !important; }
+.gh-sub-header { color: rgba(184,150,62,.85) !important; }
+.gh-sub-divider { background: rgba(184,150,62,.2); }
+.gh-cta { border-radius: 0; border: 1px solid var(--gh-gold); background: transparent !important; color: var(--gh-gold) !important; }
+.gh-cta:hover { background: var(--gh-gold) !important; color: #000 !important; }
+@media (max-width: 1150px) and (min-width: 901px) {
+  .gh-bar { padding: 0 1rem; }
+  .gh-menu a, .gh-sub-toggle { padding: .55rem .55rem; font-size: .7rem; }
+  .gh-cta { padding: .55rem .9rem !important; }
+}
+@media (max-width: 900px) {
+  .gh-nav { background: rgba(8,8,9,.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  .gh-menu a, .gh-sub-toggle { color: #fff !important; }
+  .gh-menu a:hover, .gh-sub-toggle:hover { color: var(--gh-gold) !important; }
 }
