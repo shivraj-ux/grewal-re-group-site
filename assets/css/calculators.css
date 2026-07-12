@@ -1,13 +1,13 @@
 /* Grewal RE Group — Calculators shared stylesheet */
 :root{
-  --black:#0a0a0a;
+  --black:#000000;
   --gold:#B8963E;
   --cream:#F4F0E9;
   --white:#ffffff;
   --border:#E2DBD0;
   --muted:#6b6560;
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'Inter',system-ui,sans-serif;
+  --serif:'GRG Serif',Georgia,serif;
+  --sans:'GRG Sans',system-ui,-apple-system,sans-serif;
 }
 
 /* ── Layout ── */

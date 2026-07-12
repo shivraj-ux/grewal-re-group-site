@@ -109,7 +109,7 @@
   margin: 0 0 0.35rem;
 }
 .expert-insight-quote {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'GRG Serif', Georgia, serif;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.5;
@@ -142,7 +142,7 @@
 .faq-question {
   display: block;
   padding: 1rem 1.25rem;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'GRG Serif', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: #171717;
@@ -162,7 +162,7 @@
   transform: translateY(-50%);
   font-size: 1.2rem;
   color: #B8963E;
-  font-family: 'Inter', sans-serif;
+  font-family: 'GRG Sans', sans-serif;
   font-weight: 400;
 }
 details[open] .faq-question::after { content: '\2212'; }
