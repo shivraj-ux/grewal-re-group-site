@@ -46,8 +46,8 @@
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
-  <link rel="stylesheet" href="/assets/css/system.css?v=1">
-<link rel="stylesheet" href="/assets/css/calculators.css?v=1">
+  <link rel="stylesheet" href="/assets/css/system.css?v=2">
+<link rel="stylesheet" href="/assets/css/calculators.css?v=2">
   <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
 <body class="calc-page">
@@ -101,15 +101,15 @@
             <li><a href="/calculators/affordability-calculator">Affordability</a></li>
             <li><a href="/calculators/mortgage-calculator">Mortgage</a></li>
             <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-            <li><a href="/calculators/rate-buydown">Rate Buydown</a></li>
+            <li><a href="/calculators/buy-down-calculator">Rate Buydown</a></li>
             <li class="gh-sub-header">For Sellers</li>
             <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
             <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds</a></li>
             <li class="gh-sub-header">For Investors</li>
-            <li><a href="/calculators/cap-rate">Cap Rate</a></li>
-            <li><a href="/calculators/cash-on-cash">Cash-on-Cash</a></li>
-            <li><a href="/calculators/brrrr">BRRRR</a></li>
-            <li><a href="/calculators/str-vs-ltr">STR vs LTR</a></li>
+            <li><a href="/calculators/cap-rate-calculator">Cap Rate</a></li>
+            <li><a href="/calculators/cash-on-cash-calculator">Cash-on-Cash</a></li>
+            <li><a href="/calculators/brrrr-calculator">BRRRR</a></li>
+            <li><a href="/calculators/str-vs-ltr-calculator">STR vs LTR</a></li>
             <li class="gh-sub-divider"></li>
             <li><a href="/calculators">All Calculators</a></li>
           </ul>
@@ -299,6 +299,7 @@
   </div>
 </footer>
 <script src="/assets/js/site-chrome.js?v=4"></script>
+<script src="/assets/js/calc-validate.js"></script>
 <script>
 (function(){
   var ids=['purchase','rehab','closing-buy','holding','arv','refi-ltv','refi-rate','refi-closing','rent','vacancy','tax-rate','insurance','mgmt','maint'];
@@ -306,20 +307,20 @@
   function fmt(n){return '$'+Math.round(Math.abs(n)).toLocaleString('en-US');}
   function pmt(r,n,pv){if(r===0)return pv/n;return pv*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);}
   function calc(){
-    var purchase=parseFloat(document.getElementById('purchase').value)||0;
-    var rehab=parseFloat(document.getElementById('rehab').value)||0;
-    var closingBuy=parseFloat(document.getElementById('closing-buy').value)||0;
-    var holding=parseFloat(document.getElementById('holding').value)||0;
-    var arv=parseFloat(document.getElementById('arv').value)||0;
-    var ltv=(parseFloat(document.getElementById('refi-ltv').value)||75)/100;
-    var refiRate=parseFloat(document.getElementById('refi-rate').value)/100/12;
-    var refiClosing=parseFloat(document.getElementById('refi-closing').value)||0;
-    var rent=parseFloat(document.getElementById('rent').value)||0;
-    var vac=(parseFloat(document.getElementById('vacancy').value)||0)/100;
-    var tx=(parseFloat(document.getElementById('tax-rate').value)||1.95)/100;
-    var ins=parseFloat(document.getElementById('insurance').value)||2400;
-    var mgmtPct=(parseFloat(document.getElementById('mgmt').value)||10)/100;
-    var maintPct=(parseFloat(document.getElementById('maint').value)||1)/100;
+    var purchase=grgVal('purchase',280000);
+    var rehab=grgVal('rehab',45000);
+    var closingBuy=grgVal('closing-buy',7000);
+    var holding=grgVal('holding',8000);
+    var arv=grgVal('arv',420000);
+    var ltv=grgVal('refi-ltv',75)/100;
+    var refiRate=grgVal('refi-rate',7.5)/100/12;
+    var refiClosing=grgVal('refi-closing',8000);
+    var rent=grgVal('rent',2400);
+    var vac=grgVal('vacancy',8)/100;
+    var tx=grgVal('tax-rate',1.95)/100;
+    var ins=grgVal('insurance',2400);
+    var mgmtPct=grgVal('mgmt',10)/100;
+    var maintPct=grgVal('maint',1)/100;
     var allIn=purchase+rehab+closingBuy+holding;
     var refiLoan=arv*ltv;
     var netRefi=refiLoan-refiClosing;

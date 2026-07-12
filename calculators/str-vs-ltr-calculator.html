@@ -47,8 +47,8 @@
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
-  <link rel="stylesheet" href="/assets/css/system.css?v=1">
-<link rel="stylesheet" href="/assets/css/calculators.css?v=1">
+  <link rel="stylesheet" href="/assets/css/system.css?v=2">
+<link rel="stylesheet" href="/assets/css/calculators.css?v=2">
   <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
 <body class="calc-page">
@@ -102,15 +102,15 @@
             <li><a href="/calculators/affordability-calculator">Affordability</a></li>
             <li><a href="/calculators/mortgage-calculator">Mortgage</a></li>
             <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-            <li><a href="/calculators/rate-buydown">Rate Buydown</a></li>
+            <li><a href="/calculators/buy-down-calculator">Rate Buydown</a></li>
             <li class="gh-sub-header">For Sellers</li>
             <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
             <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds</a></li>
             <li class="gh-sub-header">For Investors</li>
-            <li><a href="/calculators/cap-rate">Cap Rate</a></li>
-            <li><a href="/calculators/cash-on-cash">Cash-on-Cash</a></li>
-            <li><a href="/calculators/brrrr">BRRRR</a></li>
-            <li><a href="/calculators/str-vs-ltr">STR vs LTR</a></li>
+            <li><a href="/calculators/cap-rate-calculator">Cap Rate</a></li>
+            <li><a href="/calculators/cash-on-cash-calculator">Cash-on-Cash</a></li>
+            <li><a href="/calculators/brrrr-calculator">BRRRR</a></li>
+            <li><a href="/calculators/str-vs-ltr-calculator">STR vs LTR</a></li>
             <li class="gh-sub-divider"></li>
             <li><a href="/calculators">All Calculators</a></li>
           </ul>
@@ -310,6 +310,7 @@
   </div>
 </footer>
 <script src="/assets/js/site-chrome.js?v=4"></script>
+<script src="/assets/js/calc-validate.js"></script>
 <script>
 (function(){
   var ids=['price','dp','rate','tax-rate','insurance','adr','occupancy','platform-fee','str-mgmt','cleaning','avg-stay','str-utilities','str-supplies','str-permit','str-maint','ltr-rent','ltr-vacancy','ltr-mgmt','ltr-maint'];
@@ -317,27 +318,27 @@
   function fmt(n){return '$'+Math.round(Math.abs(n)).toLocaleString('en-US');}
   function pmt(r,n,pv){if(r===0)return pv/n;return pv*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);}
   function calc(){
-    var price=parseFloat(document.getElementById('price').value)||0;
-    var dpPct=(parseFloat(document.getElementById('dp').value)||25)/100;
-    var rate=parseFloat(document.getElementById('rate').value)/100/12;
-    var tx=(parseFloat(document.getElementById('tax-rate').value)||1.95)/100;
-    var ins=parseFloat(document.getElementById('insurance').value)||3200;
+    var price=grgVal('price',550000);
+    var dpPct=grgVal('dp',25)/100;
+    var rate=grgVal('rate',7.5)/100/12;
+    var tx=grgVal('tax-rate',1.95)/100;
+    var ins=grgVal('insurance',3200);
     // STR
-    var adr=parseFloat(document.getElementById('adr').value)||0;
-    var occ=(parseFloat(document.getElementById('occupancy').value)||62)/100;
-    var platFee=(parseFloat(document.getElementById('platform-fee').value)||3)/100;
-    var strMgmtPct=(parseFloat(document.getElementById('str-mgmt').value)||25)/100;
-    var cleanCost=parseFloat(document.getElementById('cleaning').value)||130;
-    var avgStay=parseFloat(document.getElementById('avg-stay').value)||3;
-    var strUtil=(parseFloat(document.getElementById('str-utilities').value)||300)*12;
-    var strSupp=(parseFloat(document.getElementById('str-supplies').value)||75)*12;
-    var strPermit=parseFloat(document.getElementById('str-permit').value)||914;
-    var strMaint=parseFloat(document.getElementById('str-maint').value)||4000;
+    var adr=grgVal('adr',185);
+    var occ=grgVal('occupancy',62)/100;
+    var platFee=grgVal('platform-fee',3)/100;
+    var strMgmtPct=grgVal('str-mgmt',25)/100;
+    var cleanCost=grgVal('cleaning',130);
+    var avgStay=grgVal('avg-stay',3);
+    var strUtil=grgVal('str-utilities',300)*12;
+    var strSupp=grgVal('str-supplies',75)*12;
+    var strPermit=grgVal('str-permit',914);
+    var strMaint=grgVal('str-maint',4000);
     // LTR
-    var ltrRent=parseFloat(document.getElementById('ltr-rent').value)||0;
-    var ltrVac=(parseFloat(document.getElementById('ltr-vacancy').value)||8)/100;
-    var ltrMgmtPct=(parseFloat(document.getElementById('ltr-mgmt').value)||10)/100;
-    var ltrMaint=parseFloat(document.getElementById('ltr-maint').value)||4000;
+    var ltrRent=grgVal('ltr-rent',3200);
+    var ltrVac=grgVal('ltr-vacancy',8)/100;
+    var ltrMgmtPct=grgVal('ltr-mgmt',10)/100;
+    var ltrMaint=grgVal('ltr-maint',4000);
     var loan=price*(1-dpPct);
     var monthlyPI=pmt(rate,360,loan);
     var annualDebt=monthlyPI*12;

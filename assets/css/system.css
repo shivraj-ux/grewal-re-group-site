@@ -72,7 +72,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -0
 .rail-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
 .rail-head { padding: 0 2.6rem 2.2rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .rail-head h2 { font-size: clamp(1.9rem, 3.8vw, 3.2rem); letter-spacing: -0.015em; line-height: 1.06; margin: 0; }
-.rail-head .rail-count { font-family: var(--serif); font-style: italic; color: var(--gold-soft); font-size: 1.02rem; white-space: nowrap; }
+.rail-head .rail-count { font-family: var(--serif); font-style: italic; color: var(--gold-soft); font-size: 1.02rem; }
 .rail-track { display: flex; gap: 1.5rem; padding: 0 2.6rem; will-change: transform; }
 .rail-progress { height: 1px; background: rgba(184,150,62,.25); margin: 2.6rem 2.6rem 0; position: relative; }
 .rail-progress i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gold); width: 0%; }

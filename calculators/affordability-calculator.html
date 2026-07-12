@@ -51,8 +51,8 @@
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
-  <link rel="stylesheet" href="/assets/css/system.css?v=1">
-<link rel="stylesheet" href="/assets/css/calculators.css?v=1">
+  <link rel="stylesheet" href="/assets/css/system.css?v=2">
+<link rel="stylesheet" href="/assets/css/calculators.css?v=2">
   <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
 <body class="calc-page">
@@ -106,15 +106,15 @@
             <li><a href="/calculators/affordability-calculator">Affordability</a></li>
             <li><a href="/calculators/mortgage-calculator">Mortgage</a></li>
             <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-            <li><a href="/calculators/rate-buydown">Rate Buydown</a></li>
+            <li><a href="/calculators/buy-down-calculator">Rate Buydown</a></li>
             <li class="gh-sub-header">For Sellers</li>
             <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
             <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds</a></li>
             <li class="gh-sub-header">For Investors</li>
-            <li><a href="/calculators/cap-rate">Cap Rate</a></li>
-            <li><a href="/calculators/cash-on-cash">Cash-on-Cash</a></li>
-            <li><a href="/calculators/brrrr">BRRRR</a></li>
-            <li><a href="/calculators/str-vs-ltr">STR vs LTR</a></li>
+            <li><a href="/calculators/cap-rate-calculator">Cap Rate</a></li>
+            <li><a href="/calculators/cash-on-cash-calculator">Cash-on-Cash</a></li>
+            <li><a href="/calculators/brrrr-calculator">BRRRR</a></li>
+            <li><a href="/calculators/str-vs-ltr-calculator">STR vs LTR</a></li>
             <li class="gh-sub-divider"></li>
             <li><a href="/calculators">All Calculators</a></li>
           </ul>
@@ -307,6 +307,7 @@
   </div>
 </footer>
 <script src="/assets/js/site-chrome.js?v=4"></script>
+<script src="/assets/js/calc-validate.js"></script>
 <script>
 (function(){
   var ids=['gross-income','co-income','car-payment','student-loans','credit-cards','other-debts','down-payment-pct','rate','tax-rate','insurance-yr','hoa','pmi-rate'];
@@ -323,17 +324,17 @@
     return{c:Math.floor(fmax/1000)*1000,mx:Math.floor(lo/1000)*1000};
   }
   function calc(){
-    var gi=(parseFloat(document.getElementById('gross-income').value)||0)+(parseFloat(document.getElementById('co-income').value)||0);
+    var gi=grgVal('gross-income',0)+grgVal('co-income',0);
     var gm=gi/12;
-    var debt=(parseFloat(document.getElementById('car-payment').value)||0)+(parseFloat(document.getElementById('student-loans').value)||0)+(parseFloat(document.getElementById('credit-cards').value)||0)+(parseFloat(document.getElementById('other-debts').value)||0);
-    var dp=parseFloat(document.getElementById('down-payment-pct').value)||20;
-    var mr=parseFloat(document.getElementById('rate').value)/100/12;
+    var debt=grgVal('car-payment',0)+grgVal('student-loans',0)+grgVal('credit-cards',0)+grgVal('other-debts',0);
+    var dp=grgVal('down-payment-pct',20);
+    var mr=grgVal('rate',7)/100/12;
     var np=parseInt(document.getElementById('term').value)*12;
     var dti=parseInt(document.getElementById('dti-limit').value)/100;
-    var tx=parseFloat(document.getElementById('tax-rate').value)||1.95;
-    var ins=parseFloat(document.getElementById('insurance-yr').value)||2400;
-    var hoa=parseFloat(document.getElementById('hoa').value)||0;
-    var pmi=parseFloat(document.getElementById('pmi-rate').value)||0.85;
+    var tx=grgVal('tax-rate',1.95);
+    var ins=grgVal('insurance-yr',2400);
+    var hoa=grgVal('hoa',0);
+    var pmi=grgVal('pmi-rate',0.85);
     var r=findMax(gm,debt,dp,mr,np,tx,ins,hoa,pmi,dti,0.28);
     var maxP=r.mx;var loan=maxP*(1-dp/100);
     var pi=pmt(mr,np,loan);var tax=maxP*tx/100/12;var ins2=ins/12;

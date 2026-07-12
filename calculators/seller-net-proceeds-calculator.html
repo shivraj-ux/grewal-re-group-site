@@ -84,8 +84,8 @@
 </script>
 <link rel="icon" type="image/png" href="/assets/logos/logo-mark.png">
 <link rel="stylesheet" href="/assets/css/site-chrome.css?v=4">
-  <link rel="stylesheet" href="/assets/css/system.css?v=1">
-<link rel="stylesheet" href="/assets/css/calculators.css?v=1">
+  <link rel="stylesheet" href="/assets/css/system.css?v=2">
+<link rel="stylesheet" href="/assets/css/calculators.css?v=2">
   <script defer src="/assets/js/ga-events.js?v=2"></script>
 </head>
 <body class="calc-page">
@@ -139,15 +139,15 @@
             <li><a href="/calculators/affordability-calculator">Affordability</a></li>
             <li><a href="/calculators/mortgage-calculator">Mortgage</a></li>
             <li><a href="/calculators/rent-vs-buy">Rent vs Buy</a></li>
-            <li><a href="/calculators/rate-buydown">Rate Buydown</a></li>
+            <li><a href="/calculators/buy-down-calculator">Rate Buydown</a></li>
             <li class="gh-sub-header">For Sellers</li>
             <li><a href="/calculators/home-value-estimator">Home Value Estimator</a></li>
             <li><a href="/calculators/seller-net-proceeds-calculator">Net Proceeds</a></li>
             <li class="gh-sub-header">For Investors</li>
-            <li><a href="/calculators/cap-rate">Cap Rate</a></li>
-            <li><a href="/calculators/cash-on-cash">Cash-on-Cash</a></li>
-            <li><a href="/calculators/brrrr">BRRRR</a></li>
-            <li><a href="/calculators/str-vs-ltr">STR vs LTR</a></li>
+            <li><a href="/calculators/cap-rate-calculator">Cap Rate</a></li>
+            <li><a href="/calculators/cash-on-cash-calculator">Cash-on-Cash</a></li>
+            <li><a href="/calculators/brrrr-calculator">BRRRR</a></li>
+            <li><a href="/calculators/str-vs-ltr-calculator">STR vs LTR</a></li>
             <li class="gh-sub-divider"></li>
             <li><a href="/calculators">All Calculators</a></li>
           </ul>
@@ -195,88 +195,61 @@
 </section>
 <div class="calc-body">
   <div class="calc-col-inputs">
-    <div class="input-group">
-      <label for="price">Estimated sale price</label>
-      <div class="input-prefix"><span>$</span><input id="price" type="number" inputmode="numeric" value="600000" min="0" step="1000"></div>
-    </div>
-    <div class="input-group">
-      <label for="payoff">Remaining mortgage balance (payoff)</label>
-      <div class="input-prefix"><span>$</span><input id="payoff" type="number" inputmode="numeric" value="350000" min="0" step="1000"></div>
-    </div>
-    <div class="input-row">
-      <div class="input-group">
-        <label for="comm">Total agent commission</label>
-        <div class="input-suffix"><input id="comm" type="number" inputmode="decimal" value="5.5" min="0" step="0.1"><span>%</span></div>
+    <div class="calc-card">
+      <div class="calc-group-title">Sale Details</div>
+      <div class="field-row">
+        <div class="field"><label for="price">Estimated Sale Price $</label><input type="number" id="price" value="600000" min="0" step="1000"></div>
+        <div class="field"><label for="payoff">Mortgage Payoff $</label><input type="number" id="payoff" value="350000" min="0" step="1000"></div>
       </div>
-      <div class="input-group">
-        <label for="closing">Seller closing costs</label>
-        <div class="input-suffix"><input id="closing" type="number" inputmode="decimal" value="1.5" min="0" step="0.1"><span>%</span></div>
+      <div class="calc-group-title">Selling Costs</div>
+      <div class="field-row">
+        <div class="field"><label for="comm">Total Agent Commission %</label><input type="number" id="comm" value="5.5" min="0" max="15" step="0.1"></div>
+        <div class="field"><label for="closing">Seller Closing Costs %</label><input type="number" id="closing" value="1.5" min="0" max="10" step="0.1"></div>
       </div>
-    </div>
-    <div class="input-group">
-      <label for="repairs">Repairs / concessions (optional)</label>
-      <div class="input-prefix"><span>$</span><input id="repairs" type="number" inputmode="numeric" value="0" min="0" step="500"></div>
-    </div>
-
-    <div class="methodology-card" style="margin-top:1.5rem;">
-      <h3>How This Calculator Works</h3>
-      <p>Net proceeds = sale price minus agent commission, seller closing costs, mortgage payoff, and any repairs or concessions. All deductions are shown line by line so you can see exactly where the money goes.</p>
-      <p style="margin-top:.75rem;">Texas seller closing costs cover the owner's title policy (required in Texas), escrow fees, recording fees, and prorated property taxes. The default of 1.5 percent is a typical estimate — your actual figure depends on your title company and closing date. Commission is negotiable and has been since the 2024 NAR settlement.</p>
+      <div class="field-row">
+        <div class="field"><label for="repairs">Repairs / Concessions $</label><input type="number" id="repairs" value="0" min="0" step="500"></div>
+      </div>
     </div>
   </div>
 
   <div class="calc-col-results">
     <div class="result-card">
-      <div class="result-label">Estimated Net Proceeds</div>
-      <div class="result-value" id="r-net">$208,000</div>
+      <div class="rc-label">Estimated Net Proceeds</div>
+      <div class="rc-big" id="r-net">$208,000</div>
     </div>
     <div class="calc-disclaimer" style="margin-top:1rem;padding:.9rem 1.1rem;background:rgba(184,150,62,.08);border-left:3px solid #B8963E;font-size:.8rem;line-height:1.6;color:#6b6560;"><strong>This is a rough estimate.</strong> Real numbers may be different depending on your exact situation. Confirm precise figures with your lender, title company, or Shivraj before making a decision.</div>
 
     <div class="breakdown-card">
-      <div class="breakdown-row">
-        <span>Sale price</span>
-        <span id="r-price">$600,000</span>
-      </div>
-      <div class="breakdown-row deduction">
-        <span>Agent commission</span>
-        <span id="r-comm">-$33,000</span>
-      </div>
-      <div class="breakdown-row deduction">
-        <span>Closing costs</span>
-        <span id="r-close">-$9,000</span>
-      </div>
-      <div class="breakdown-row deduction">
-        <span>Mortgage payoff</span>
-        <span id="r-payoff">-$350,000</span>
-      </div>
-      <div class="breakdown-row deduction" id="r-repairs-row">
-        <span>Repairs / concessions</span>
-        <span id="r-repairs">$0</span>
-      </div>
+      <div class="bc-title">Proceeds Breakdown</div>
+      <div class="bk-row"><span>Sale Price</span><span class="bk-val" id="r-price">$600,000</span></div>
+      <div class="bk-row"><span>Agent Commission</span><span class="bk-val" id="r-comm">-$33,000</span></div>
+      <div class="bk-row"><span>Closing Costs</span><span class="bk-val" id="r-close">-$9,000</span></div>
+      <div class="bk-row"><span>Mortgage Payoff</span><span class="bk-val" id="r-payoff">-$350,000</span></div>
+      <div class="bk-row" id="r-repairs-row"><span>Repairs / Concessions</span><span class="bk-val" id="r-repairs">$0</span></div>
     </div>
-    <p class="result-note">Estimate only. Commission is negotiable. Texas closing costs vary by title company, taxes owed, and timing. For an exact figure, request a personalized net sheet below.</p>
 
-    <div class="lead-card" style="margin-top:1.5rem;">
+    <div class="lead-card">
       <h3>Get your exact net sheet</h3>
       <p>Shivraj will pull real comps and a line-by-line net sheet for your specific home — no obligation.</p>
       <form name="seller-net-sheet" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="seller-net-sheet">
         <input type="hidden" name="interest" value="Sell - net sheet request">
-        <p style="position:absolute;left:-9999px"><label>Don't fill: <input name="bot-field"></label></p>
-        <div class="lead-field"><label for="ln">Name</label><input id="ln" name="name" type="text" required placeholder="Your name"></div>
-        <div class="lead-field"><label for="le">Email</label><input id="le" name="email" type="email" required placeholder="you@email.com"></div>
-        <div class="lead-field"><label for="lp">Phone</label><input id="lp" name="phone" type="tel" required placeholder="(512) 000-0000"></div>
-        <div class="lead-field"><label for="la">Property address</label><input id="la" name="address" type="text" placeholder="Street, Austin TX"></div>
-        <button type="submit" class="lead-submit">Get My Net Sheet</button>
+        <p style="display:none;"><label>Do not fill: <input name="bot-field"></label></p>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="text" name="address" placeholder="Property address (Street, Austin TX)">
+        <input type="hidden" name="source" value="seller-net-proceeds-calculator">
+        <button type="submit">Get My Net Sheet</button>
       </form>
-      <p class="lead-fine">No spam. We use this only to prepare your net sheet. <a href="/privacy">Privacy</a>.</p>
     </div>
   </div>
 </div>
 
+<script src="/assets/js/calc-validate.js"></script>
 <script>
 (function(){
-  function n(id){return parseFloat(document.getElementById(id).value)||0;}
+  function n(id){return grgVal(id,0);}
   function fmt(v){return v.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
   function calc(){
     var price=n('price'),payoff=n('payoff'),comm=n('comm'),closing=n('closing'),repairs=n('repairs');
@@ -296,21 +269,28 @@
 })();
 </script>
 
-<div style="max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem 4rem;">
-  <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:2rem;">
-    <h2 style="font-family:var(--serif);font-size:1.6rem;color:var(--black);margin:0 0 1rem;">Frequently asked questions</h2>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">How do you calculate net proceeds when selling a home in Austin?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">Net proceeds are your sale price minus the costs of selling: agent commission, seller closing costs (title, escrow, prorated taxes), any repairs or buyer concessions, and your remaining mortgage payoff. This calculator estimates each and subtracts them from your sale price.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">What are typical seller closing costs in Austin in 2026?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">Beyond agent commission, Texas sellers typically pay about 1 to 2 percent of the sale price in closing costs. This covers the title policy (required in Texas), escrow and recording fees, and prorated property taxes and HOA dues. The exact figure varies by title company and the time of year you close.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">Is the real estate commission negotiable in Austin?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">Yes. Since the 2024 NAR settlement, commissions are openly negotiable and buyer-agent compensation is set in a written agreement. The old assumption of 5 to 6 percent total is no longer standard — both sides are separately negotiated.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">How accurate is this net proceeds estimate?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">It is a close estimate based on the numbers you enter. The main variables are your actual mortgage payoff (which changes daily with accrued interest) and the title company's specific fee schedule. For an exact, line-by-line net sheet using real comps and your specific payoff and taxes, request a personalized net sheet from Grewal RE Group.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">What are the seller closing costs in Texas vs other states?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">Texas sellers pay for the owner's title policy, which is a standard requirement here and costs roughly 0.5 to 1 percent of the sale price depending on the price tier. Most other states split this cost or have the buyer pay it. This is the main cost that surprises Texas sellers who have previously sold in other states.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">What is a seller concession in Austin?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">A seller concession is money you agree to pay toward the buyer's costs at closing — such as their closing costs, a rate buydown, or repair credits. Concessions come out of your proceeds at closing the same as commission does. This calculator lets you enter any expected concession or repair amount.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">What happens to HOA fees and property taxes when I sell?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">At closing, your property taxes are prorated to the day you close, so you pay only for the portion of the year you owned the home. Any HOA dues owed are also collected at closing. These amounts appear on your settlement statement and reduce your net proceeds.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">Do I pay capital gains tax when I sell my Austin home?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">If you have lived in the home as your primary residence for at least 2 of the last 5 years, you may exclude up to $250,000 in gains ($500,000 for married couples filing jointly) from federal capital gains tax. Texas has no state income tax, so there is no state-level capital gains tax. Consult a tax advisor for your specific situation.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">What is the typical Austin seller net proceeds on a $600,000 home?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">On a $600,000 sale with a 5.5 percent total commission ($33,000), 1.5 percent closing costs ($9,000), and a $350,000 mortgage payoff, estimated net proceeds would be around $208,000 before any repairs or concessions. The exact figure depends on your payoff amount and title company. Use the calculator above to run your own numbers.</div></details>
-    <details style="border-bottom:1px solid var(--border);"><summary style="cursor:pointer;padding:1rem 0;font-weight:600;color:#171717;font-family:var(--sans);font-size:.95rem;">How do I get an exact net sheet for my Austin home sale?</summary><div style="padding:0 0 1rem;color:#4f4a42;line-height:1.65;font-family:var(--sans);font-size:.92rem;">Submit the contact form above. Shivraj will pull your specific property details, run the numbers with your title company's actual fee schedule, and return a line-by-line net sheet. It is free and comes with no obligation.</div></details>
+<section class="faq-section">
+  <h2>Austin Seller Net Proceeds: Frequently Asked Questions</h2>
+  <div class="faq-item"><details><summary>How do you calculate net proceeds when selling a home in Austin?</summary><p>Net proceeds are your sale price minus the costs of selling: agent commission, seller closing costs (title, escrow, prorated taxes), any repairs or buyer concessions, and your remaining mortgage payoff. This calculator estimates each and subtracts them from your sale price.</p></details></div>
+  <div class="faq-item"><details><summary>What are typical seller closing costs in Austin in 2026?</summary><p>Beyond agent commission, Texas sellers typically pay about 1 to 2 percent of the sale price in closing costs. This covers the title policy (required in Texas), escrow and recording fees, and prorated property taxes and HOA dues. The exact figure varies by title company and the time of year you close.</p></details></div>
+  <div class="faq-item"><details><summary>Is the real estate commission negotiable in Austin?</summary><p>Yes. Since the 2024 NAR settlement, commissions are openly negotiable and buyer-agent compensation is set in a written agreement. The old assumption of 5 to 6 percent total is no longer standard — both sides are separately negotiated.</p></details></div>
+  <div class="faq-item"><details><summary>How accurate is this net proceeds estimate?</summary><p>It is a close estimate based on the numbers you enter. The main variables are your actual mortgage payoff (which changes daily with accrued interest) and the title company's specific fee schedule. For an exact, line-by-line net sheet using real comps and your specific payoff and taxes, request a personalized net sheet from Grewal RE Group.</p></details></div>
+  <div class="faq-item"><details><summary>What are the seller closing costs in Texas vs other states?</summary><p>Texas sellers pay for the owner's title policy, which is a standard requirement here and costs roughly 0.5 to 1 percent of the sale price depending on the price tier. Most other states split this cost or have the buyer pay it. This is the main cost that surprises Texas sellers who have previously sold in other states.</p></details></div>
+  <div class="faq-item"><details><summary>What is a seller concession in Austin?</summary><p>A seller concession is money you agree to pay toward the buyer's costs at closing — such as their closing costs, a rate buydown, or repair credits. Concessions come out of your proceeds at closing the same as commission does. This calculator lets you enter any expected concession or repair amount.</p></details></div>
+  <div class="faq-item"><details><summary>What happens to HOA fees and property taxes when I sell?</summary><p>At closing, your property taxes are prorated to the day you close, so you pay only for the portion of the year you owned the home. Any HOA dues owed are also collected at closing. These amounts appear on your settlement statement and reduce your net proceeds.</p></details></div>
+  <div class="faq-item"><details><summary>Do I pay capital gains tax when I sell my Austin home?</summary><p>If you have lived in the home as your primary residence for at least 2 of the last 5 years, you may exclude up to $250,000 in gains ($500,000 for married couples filing jointly) from federal capital gains tax. Texas has no state income tax, so there is no state-level capital gains tax. Consult a tax advisor for your specific situation.</p></details></div>
+  <div class="faq-item"><details><summary>What is the typical Austin seller net proceeds on a $600,000 home?</summary><p>On a $600,000 sale with a 5.5 percent total commission ($33,000), 1.5 percent closing costs ($9,000), and a $350,000 mortgage payoff, estimated net proceeds would be around $208,000 before any repairs or concessions. The exact figure depends on your payoff amount and title company. Use the calculator above to run your own numbers.</p></details></div>
+  <div class="faq-item"><details><summary>How do I get an exact net sheet for my Austin home sale?</summary><p>Submit the contact form above. Shivraj will pull your specific property details, run the numbers with your title company's actual fee schedule, and return a line-by-line net sheet. It is free and comes with no obligation.</p></details></div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:0 1.5rem 4rem;">
+  <div style="background:#F4F0E9;border-radius:14px;padding:2.5rem;">
+    <h2 style="font-family:'GRG Serif', serif;font-size:1.5rem;font-weight:600;margin:0 0 1rem;">How This Calculator Works</h2>
+    <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">Net proceeds are your sale price minus every cost of selling: agent commission, seller closing costs, your remaining mortgage payoff, and any repairs or concessions. Each deduction is shown line by line in the breakdown so you can see exactly where the money goes.</p>
+    <p style="font-size:.9rem;color:#6b6560;line-height:1.8;margin-bottom:.75rem;">Texas seller closing costs cover the owner's title policy (required in Texas), escrow and recording fees, and prorated property taxes and HOA dues. The default of 1.5% is a typical estimate — your actual figure depends on your title company and closing date. Commission is negotiable and has been openly so since the 2024 NAR settlement.</p>
+    <p style="font-size:.9rem;color:#6b6560;line-height:1.8;">This is an estimate. Your actual mortgage payoff changes daily with accrued interest, and title company fee schedules vary. For an exact, line-by-line net sheet using real comps and your specific payoff, request one through the form above.</p>
   </div>
-</div>
+</section>
 
 <footer class="gh-footer">
   <div class="gh-foot-inner">
