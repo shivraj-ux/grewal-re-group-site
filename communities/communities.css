@@ -154,6 +154,7 @@ p { line-height: 1.7; margin: 0 0 1.25rem; }
 /* Detail page hero */
 .cm-detail-hero {
   background: var(--cream); padding: 5rem 0 2rem;
+  padding-top: calc(var(--gh-h, 82px) + 1.75rem);
   border-bottom: 1px solid var(--line);
 }
 .cm-detail-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }

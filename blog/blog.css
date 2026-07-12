@@ -160,6 +160,7 @@ p { line-height: 1.7; margin: 0 0 1.25rem; }
 /* ── ARTICLE HERO ─────────────────────────── */
 .article-hero {
   background: var(--cream); padding: 5rem 0 3rem;
+  padding-top: calc(var(--gh-h, 82px) + 1.75rem);
   border-bottom: 1px solid var(--line);
 }
 .article-hero-inner { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
