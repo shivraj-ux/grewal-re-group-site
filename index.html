@@ -387,6 +387,14 @@
     .hero-trust span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,247,242,0.82); margin-top: 0.25rem; }
     .hero-trust em { font-style: normal; opacity: 0.6; text-transform: none; letter-spacing: 0; }
     @media (max-width: 560px) { .hero-trust { gap: 0 1.4rem; } .hero-trust span { font-size: 0.62rem; } }
+    /* Below ~640px the h1's fluid size hits its 3.2rem floor, so a narrow
+       column wraps "Austin Luxury Real Estate, People First" onto 4 lines
+       instead of 2-3. Centered in 100vh, that pushes the first line up
+       under the fixed translucent header, where the blur makes it
+       unreadable. Reserve room for the header so centering starts below it. */
+    @media (max-width: 640px) {
+      .hero { padding-top: calc(var(--gh-h, 82px) + 2rem); }
+    }
     .gradient-text {
       display: block; margin-top: .5rem;
       background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
