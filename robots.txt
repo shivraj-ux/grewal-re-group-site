@@ -124,13 +124,10 @@ Disallow: /assets/guides/
 
 # ── Default policy: allow everything except /assets/guides/ ──
 # SOURCES.md and AGENTS.md are intentionally crawlable: they are agent resources.
-# CLAUDE.md and AUTOMATION.md are internal and must never be indexed.
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
-Disallow: /CLAUDE.md
-Disallow: /AUTOMATION.md
 
 # ── Sitemaps + AI entry point ────────────────────────────────
 Sitemap: https://grewalregroup.com/sitemap.xml
