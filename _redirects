@@ -10,12 +10,12 @@
 # rel="canonical">); 301 the extensionless form to it so both forms resolve
 # without serving duplicate 200 content at two URLs.
 /questions/                                               /questions/index.html                           200
-/questions/buying                                         /questions/buying.html                          301
-/questions/selling                                        /questions/selling.html                         301
-/questions/leasing                                        /questions/leasing.html                         301
-/questions/investing                                      /questions/investing.html                       301
-/questions/relocation                                     /questions/relocation.html                      301
-/questions/closing-process                                /questions/closing-process.html                 301
+/questions/buying                                         /questions/buying.html                          301!
+/questions/selling                                        /questions/selling.html                         301!
+/questions/leasing                                        /questions/leasing.html                         301!
+/questions/investing                                      /questions/investing.html                       301!
+/questions/relocation                                     /questions/relocation.html                      301!
+/questions/closing-process                                /questions/closing-process.html                 301!
 
 # Calculators — canonical URLs (200 rewrites for extensionless)
 /calculators/affordability-calculator                     /calculators/affordability-calculator.html      200
