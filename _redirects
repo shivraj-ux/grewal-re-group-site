@@ -6,14 +6,16 @@
 /CLAUDE.md                                                /  404!
 /AUTOMATION.md                                            /  404!
 
-# Questions — canonical URLs (200 rewrites for extensionless)
+# Questions — /questions/<name>.html is canonical (see each page's <link
+# rel="canonical">); 301 the extensionless form to it so both forms resolve
+# without serving duplicate 200 content at two URLs.
 /questions/                                               /questions/index.html                           200
-/questions/buying                                         /questions/buying.html                          200
-/questions/selling                                        /questions/selling.html                         200
-/questions/leasing                                        /questions/leasing.html                         200
-/questions/investing                                      /questions/investing.html                       200
-/questions/relocation                                     /questions/relocation.html                      200
-/questions/closing-process                                /questions/closing-process.html                 200
+/questions/buying                                         /questions/buying.html                          301!
+/questions/selling                                        /questions/selling.html                         301!
+/questions/leasing                                        /questions/leasing.html                         301!
+/questions/investing                                      /questions/investing.html                       301!
+/questions/relocation                                     /questions/relocation.html                      301!
+/questions/closing-process                                /questions/closing-process.html                 301!
 
 # Calculators — canonical URLs (200 rewrites for extensionless)
 /calculators/affordability-calculator                     /calculators/affordability-calculator.html      200
@@ -822,6 +824,8 @@
 /buy/                                                     /buy                                           301
 /sell.html                                                /sell                                          301!
 /sell/                                                    /sell                                          301
+/accessibility.html                                       /accessibility                                  301!
+/accessibility/                                           /accessibility                                  301
 /contact.html                                             /contact                                        301!
 /contact/                                                 /contact                                        301
 /faq.html                                                 /faq                                            301!
