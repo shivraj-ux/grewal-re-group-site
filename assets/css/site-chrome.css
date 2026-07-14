@@ -16,31 +16,53 @@
 
 .gh-toggle span{background:var(--gh-ink)!important}
 
-.gh-menu>li>a:not(.gh-cta),
-.gh-menu-link,
-.gh-sub-toggle{
+.gh-menu{gap:.6rem!important}
+.gh-menu a,.gh-sub-toggle{letter-spacing:.02em!important;font-size:.84rem!important}
+
+/* Plain links (Communities, Reviews, About) carry their own pill */
+.gh-menu>li>a:not(.gh-cta):not(.gh-menu-link){
   background:var(--gh-gold)!important;
   color:var(--gh-ink)!important;
-  border-radius:8px;
+  border-radius:9px;
   font-weight:700!important;
-  padding:.55rem 1rem;
+  padding:.7rem 1.15rem!important;
+  box-shadow:0 1px 2px rgba(23,23,23,.07);
   transition:background .18s ease,transform .18s ease;
 }
-.gh-scrolled .gh-menu>li>a:not(.gh-cta),
-.gh-scrolled .gh-menu-link,
-.gh-scrolled .gh-sub-toggle{color:var(--gh-ink)!important}
-.gh-menu>li>a:not(.gh-cta):hover,
-.gh-menu-link:hover,
-.gh-sub-toggle:hover{
+.gh-menu>li>a:not(.gh-cta):not(.gh-menu-link):hover{
   background:var(--gh-gold-dk)!important;
   color:#fff!important;
-  font-weight:700!important;
   transform:translateY(-2px);
 }
 
-.gh-has-sub{gap:2px}
-.gh-has-sub .gh-menu-link{border-radius:8px 0 0 8px;padding-right:.6rem}
-.gh-has-sub .gh-sub-toggle{border-radius:0 8px 8px 0;padding:.55rem .6rem;min-width:auto;border-left:1px solid rgba(23,23,23,.15)}
+/* Items with a dropdown: the pill lives on the <li> wrapper so the
+   label + caret read as one seamless button, not two glued pieces */
+.gh-has-sub{
+  background:var(--gh-gold);
+  border-radius:9px;
+  box-shadow:0 1px 2px rgba(23,23,23,.07);
+  overflow:hidden;
+  transition:background .18s ease,transform .18s ease;
+}
+.gh-has-sub:hover,.gh-has-sub:focus-within{
+  background:var(--gh-gold-dk);
+  transform:translateY(-2px);
+}
+.gh-has-sub .gh-menu-link,
+.gh-has-sub .gh-sub-toggle{
+  background:0 0!important;
+  color:var(--gh-ink)!important;
+  border-radius:0;
+  font-weight:700!important;
+  transform:none!important;
+}
+.gh-has-sub:hover .gh-menu-link,
+.gh-has-sub:hover .gh-sub-toggle,
+.gh-has-sub:focus-within .gh-menu-link,
+.gh-has-sub:focus-within .gh-sub-toggle{color:#fff!important}
+.gh-has-sub:has(.gh-menu-link) .gh-menu-link{padding:.7rem .3rem .7rem 1.15rem!important}
+.gh-has-sub:has(.gh-menu-link) .gh-sub-toggle{padding:.7rem 1.05rem .7rem .3rem!important;min-width:auto}
+.gh-has-sub:not(:has(.gh-menu-link)) .gh-sub-toggle{padding:.7rem 1.15rem!important;min-width:auto}
 
 .gh-cta{
   background:var(--gh-ink)!important;
@@ -84,9 +106,10 @@
   .gh-menu>li{border-bottom:none;margin-bottom:.6rem}
   .gh-menu a,.gh-sub-toggle{color:var(--gh-ink)!important;background:var(--gh-gold);border-radius:8px;padding:.9rem 1rem;font-weight:700!important}
   .gh-menu a:hover,.gh-sub-toggle:hover{color:#fff!important;background:var(--gh-gold-dk)}
-  .gh-has-sub{gap:.4rem}
-  .gh-has-sub .gh-menu-link{flex:1;border-radius:8px}
-  .gh-has-sub .gh-sub-toggle{width:52px;min-width:52px;border-radius:8px;justify-content:center}
+  .gh-has-sub{gap:.4rem;background:0 0!important;box-shadow:none!important;overflow:visible!important}
+  .gh-has-sub .gh-menu-link{flex:1;border-radius:8px!important;background:var(--gh-gold)!important;color:var(--gh-ink)!important;padding:.9rem 1rem!important}
+  .gh-has-sub .gh-sub-toggle{width:52px;min-width:52px;border-radius:8px!important;justify-content:center;background:var(--gh-gold)!important;color:var(--gh-ink)!important;padding:.9rem!important}
+  .gh-has-sub:hover,.gh-has-sub:focus-within{transform:none!important}
   .gh-sub{background:transparent!important;border:0!important;box-shadow:none!important;padding:.4rem 0 .2rem .25rem}
   .gh-sub a{background:#fff!important;border:1px solid var(--gh-line);border-radius:6px;margin:.3rem 0;padding:.8rem .9rem}
   .gh-sub a:hover{background:var(--gh-gold)!important;color:var(--gh-ink)!important}
