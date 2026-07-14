@@ -3,7 +3,7 @@
   "name": "grewal-re-group",
   "title": "Grewal RE Group MCP Server",
   "version": "1.0.0",
-  "description": "Verb-first MCP tools for Grewal RE Group, an Austin luxury real estate team led by Shivraj Grewal at Compass. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
+  "description": "Verb-first MCP tools for Grewal RE Group, an Austin, TX luxury real estate team led by Shivraj Grewal. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
   "vendor": {
     "name": "Grewal RE Group",
     "url": "https://grewalregroup.com",
@@ -38,6 +38,7 @@
     "agents": "/AGENTS.md",
     "openapi": "/openapi.json",
     "llms": "/llms.txt",
+    "llmsFull": "/llms-full.txt",
     "sources": "/SOURCES.md"
   }
 }
