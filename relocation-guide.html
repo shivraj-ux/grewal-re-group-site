@@ -445,16 +445,22 @@
         <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a> &middot;
         <button type="button" data-cookie-prefs class="gh-link-btn">Cookie preferences</button>
       </p>
+      <p class="gh-foot-fh"><svg class="gh-eho-icon" viewBox="0 0 40 40" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 10 8 20h4v11h16V20h4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="17" y="24" width="6" height="7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg> <span>Equal Housing Opportunity</span></p>
+      <p>Grewal RE Group is committed to the letter and spirit of the Fair Housing Act.</p>
     </div>
   </div>
 </footer>
 
 <!-- ── Download capture modal ── -->
+<!-- The PDF is gated: this form does a real Netlify Forms submission and the
+     browser navigates to /thank-you, which reveals the download link
+     only after that navigation actually happens. No PDF URL is hardcoded in
+     this page's markup or script. -->
 <div class="rg-modal" id="dl-modal" role="dialog" aria-modal="true" aria-labelledby="dl-title">
   <div class="rg-modal-card">
     <button type="button" class="rg-modal-close" data-modal-close aria-label="Close">&times;</button>
 
-    <form class="rg-form" id="pdf-form" name="relocation-guide-download" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="rg-form" id="pdf-form" name="relocation-guide-download" method="POST" action="/thank-you?guide=relocation-edition" data-netlify="true" netlify-honeypot="bot-field">
       <span class="rg-modal-eyebrow">Free Download</span>
       <h3 id="dl-title">Get the full guide</h3>
       <p class="sub">Tell us where to send The Relocation Edition and your download starts right away.</p>
@@ -477,46 +483,14 @@
       <button type="submit" class="rg-btn rg-btn-gold">Download the PDF</button>
       <p class="rg-form-fine">We use this only to send the guide and follow up. No spam. See our <a href="/privacy">privacy policy</a>.</p>
     </form>
-
-    <div class="rg-modal-success" id="pdf-success">
-      <div class="rg-check">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-      </div>
-      <h3>Your guide is ready</h3>
-      <p class="sub">Thanks. Your download should start automatically. If it doesn't, use the button below.</p>
-      <a href="/assets/guides/the-relocation-edition.pdf" download="Grewal-RE-Group-The-Relocation-Edition.pdf" class="rg-btn rg-btn-gold" id="pdf-download" style="justify-content:center;width:100%;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        Download the PDF
-      </a>
-    </div>
   </div>
 </div>
 
 <script>
   (function () {
     var modal = document.getElementById('dl-modal');
-    var form = document.getElementById('pdf-form');
-    var success = document.getElementById('pdf-success');
-    var PDF_URL = '/assets/guides/the-relocation-edition.pdf';
-    var unlocked = false;
-    try { unlocked = localStorage.getItem('rg_pdf_unlocked') === '1'; } catch (e) {}
 
-    function triggerDownload() {
-      var a = document.createElement('a');
-      a.href = PDF_URL;
-      a.setAttribute('download', 'Grewal-RE-Group-The-Relocation-Edition.pdf');
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    }
-    function showSuccess() { form.classList.add('hide'); success.classList.add('show'); }
     function openModal() {
-      // Already gave us their info before → straight to download.
-      if (unlocked) {
-        showSuccess();
-        modal.classList.add('open');
-        triggerDownload();
-        return;
-      }
-      form.classList.remove('hide'); success.classList.remove('show');
       modal.classList.add('open');
       setTimeout(function () { var n = document.getElementById('rg-name'); if (n) n.focus(); }, 60);
     }
@@ -532,28 +506,11 @@
     modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
-    form.addEventListener('submit', function (e) {
-      if (form['bot-field'] && form['bot-field'].value) return; // honeypot → let Netlify ignore
-      e.preventDefault();
-      // HTML5 required fields already block empty submits; double-check.
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-
-      var data = new URLSearchParams();
-      new FormData(form).forEach(function (v, k) { data.append(k, v); });
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data.toString()
-      }).then(function () { afterCapture(); }).catch(function () { afterCapture(); });
-
-      function afterCapture() {
-        try { localStorage.setItem('rg_pdf_unlocked', '1'); } catch (e) {}
-        unlocked = true;
-        showSuccess();
-        setTimeout(triggerDownload, 400);
-        try { if (window.gtag) gtag('event', 'generate_lead', { form: 'relocation-guide-download' }); } catch (e) {}
-      }
+    // Submission itself is a normal Netlify Forms POST (no JS interception) so
+    // the browser really navigates to the thank-you page's action URL.
+    var form = document.getElementById('pdf-form');
+    form.addEventListener('submit', function () {
+      try { if (window.gtag) gtag('event', 'generate_lead', { form: 'relocation-guide-download' }); } catch (e) {}
     });
   })();
 </script>
