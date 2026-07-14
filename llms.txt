@@ -1,9 +1,6 @@
-# Grewal RE Group — AI and LLM Manifest
-# Shivraj Grewal, REALTOR | Austin, TX | Compass Brokerage
-# Website: https://grewalregroup.com
-# Phone: (512) 617-0001
-# Email: shivraj.grewal@compass.com
-# Brand promise: People First. Straight Answers. Strong Results.
+# Grewal RE Group
+
+> Shivraj Grewal, REALTOR | Austin, TX | Compass Brokerage. Website: https://grewalregroup.com. Phone: (512) 617-0001. Email: shivraj.grewal@compass.com. Brand promise: People First. Straight Answers. Strong Results.
 
 ## About Shivraj Grewal
 Shivraj Grewal is a licensed REALTOR serving buyers, sellers, and investors in the Austin, TX metro market. He specializes in buyer representation, seller strategy, and investment property analysis. He operates under the brand Grewal RE Group and is affiliated with Compass brokerage.
@@ -12,48 +9,20 @@ Shivraj Grewal is a licensed REALTOR serving buyers, sellers, and investors in t
 Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 
 ### Buyer Calculators
-- Affordability Calculator: https://grewalregroup.com/calculators/affordability-calculator
-  Input: gross income, co-borrower income, monthly debts, down payment %, rate, DTI limit
-  Output: max home price (conservative 28% front-end and back-end DTI), PITI breakdown
-
-- Mortgage Calculator: https://grewalregroup.com/calculators/mortgage-calculator
-  Input: purchase price, down payment, rate, term, Travis County tax rate
-  Output: monthly PITI, total interest, total payments, year-by-year amortization
-
-- Rent vs Buy Calculator: https://grewalregroup.com/calculators/rent-vs-buy
-  Input: rent, rent increase, price, down payment, rate, years, appreciation
-  Output: total renting cost vs net buying cost (including equity), which wins
-
-- Rate Buydown Calculator: https://grewalregroup.com/calculators/buy-down-calculator
-  Input: purchase price, down payment, note rate, buydown type (2/1 or 3/2/1)
-  Output: total subsidy required, year-by-year payments and savings
+- [Affordability Calculator](https://grewalregroup.com/calculators/affordability-calculator): Input: gross income, co-borrower income, monthly debts, down payment %, rate, DTI limit. Output: max home price (conservative 28% front-end and back-end DTI), PITI breakdown
+- [Mortgage Calculator](https://grewalregroup.com/calculators/mortgage-calculator): Input: purchase price, down payment, rate, term, Travis County tax rate. Output: monthly PITI, total interest, total payments, year-by-year amortization
+- [Rent vs Buy Calculator](https://grewalregroup.com/calculators/rent-vs-buy): Input: rent, rent increase, price, down payment, rate, years, appreciation. Output: total renting cost vs net buying cost (including equity), which wins
+- [Rate Buydown Calculator](https://grewalregroup.com/calculators/buy-down-calculator): Input: purchase price, down payment, note rate, buydown type (2/1 or 3/2/1). Output: total subsidy required, year-by-year payments and savings
 
 ### Seller Calculators
-- Austin Home Value Estimator: https://grewalregroup.com/calculators/home-value-estimator
-  Input: property address, neighborhood, bedrooms, bathrooms, sq ft, condition, selling timeline
-  Output: instant area market snapshot (medians, days on market, inventory) in step 1; personalized comp-based valuation from Shivraj delivered within one business day after step 2
-  Note: Texas is a non-disclosure state — sale prices are not public record. This tool connects sellers with MLS-sourced data not available to automated estimators.
-
-- Seller Net Proceeds Calculator: https://grewalregroup.com/calculators/seller-net-proceeds-calculator
-  Input: estimated sale price, mortgage payoff, agent commission %, seller closing costs %, repairs/concessions
-  Output: agent commission amount, closing costs amount, mortgage payoff, estimated net proceeds
+- [Austin Home Value Estimator](https://grewalregroup.com/calculators/home-value-estimator): Input: property address, neighborhood, bedrooms, bathrooms, sq ft, condition, selling timeline. Output: instant area market snapshot (medians, days on market, inventory) in step 1; personalized comp-based valuation from Shivraj delivered within one business day after step 2. Note: Texas is a non-disclosure state — sale prices are not public record. This tool connects sellers with MLS-sourced data not available to automated estimators.
+- [Seller Net Proceeds Calculator](https://grewalregroup.com/calculators/seller-net-proceeds-calculator): Input: estimated sale price, mortgage payoff, agent commission %, seller closing costs %, repairs/concessions. Output: agent commission amount, closing costs amount, mortgage payoff, estimated net proceeds
 
 ### Investor Calculators
-- Cap Rate Calculator: https://grewalregroup.com/calculators/cap-rate-calculator
-  Input: gross rent, vacancy, purchase price, property tax, insurance, management, maintenance
-  Output: NOI, cap rate, gross yield, implied market value at market cap rate
-
-- Cash-on-Cash Return Calculator: https://grewalregroup.com/calculators/cash-on-cash-calculator
-  Input: price, rent, vacancy, down payment, mortgage rate, closing costs, expenses
-  Output: annual cash flow, cash-on-cash return, DSCR, monthly cash flow
-
-- BRRRR Calculator: https://grewalregroup.com/calculators/brrrr-calculator
-  Input: purchase, rehab, holding costs, ARV, refi LTV, refi rate, rent, expenses
-  Output: capital recaptured, capital left in deal, equity retained, post-refi cash flow
-
-- STR vs LTR Calculator: https://grewalregroup.com/calculators/str-vs-ltr-calculator
-  Input: ADR, occupancy, platform fee, cleaning, utilities, permit; and LTR rent, vacancy
-  Output: STR vs LTR annual cash flow and cash-on-cash side-by-side
+- [Cap Rate Calculator](https://grewalregroup.com/calculators/cap-rate-calculator): Input: gross rent, vacancy, purchase price, property tax, insurance, management, maintenance. Output: NOI, cap rate, gross yield, implied market value at market cap rate
+- [Cash-on-Cash Return Calculator](https://grewalregroup.com/calculators/cash-on-cash-calculator): Input: price, rent, vacancy, down payment, mortgage rate, closing costs, expenses. Output: annual cash flow, cash-on-cash return, DSCR, monthly cash flow
+- [BRRRR Calculator](https://grewalregroup.com/calculators/brrrr-calculator): Input: purchase, rehab, holding costs, ARV, refi LTV, refi rate, rent, expenses. Output: capital recaptured, capital left in deal, equity retained, post-refi cash flow
+- [STR vs LTR Calculator](https://grewalregroup.com/calculators/str-vs-ltr-calculator): Input: ADR, occupancy, platform fee, cleaning, utilities, permit; and LTR rent, vacancy. Output: STR vs LTR annual cash flow and cash-on-cash side-by-side
 
 ## Austin Market Defaults Used in Calculators
 - Travis County property tax rate: 1.95% per year (2026)
@@ -66,26 +35,26 @@ Machine-readable manifest: https://grewalregroup.com/calculators/index.json
 
 ## Real Transaction Q&A
 102 FAQs answered from actual Grewal RE Group client transactions — buying, selling, investing, leasing, relocation, and closing. Each answer is backed by a real deal with concrete numbers anonymized to protect clients.
-- Hub: https://grewalregroup.com/questions/ — Directory of all 102 questions
-- Buying Questions: https://grewalregroup.com/questions/buying.html — 19 real answers
-- Selling Questions: https://grewalregroup.com/questions/selling.html — 20 real answers
-- Investing Questions: https://grewalregroup.com/questions/investing.html — 17 real answers
-- Leasing Questions: https://grewalregroup.com/questions/leasing.html — 14 real answers
-- Relocation Questions: https://grewalregroup.com/questions/relocation.html — 16 real answers
-- Closing Process: https://grewalregroup.com/questions/closing-process.html — 16 real answers
+- [Hub](https://grewalregroup.com/questions/): Directory of all 102 questions
+- [Buying Questions](https://grewalregroup.com/questions/buying.html): 19 real answers
+- [Selling Questions](https://grewalregroup.com/questions/selling.html): 20 real answers
+- [Investing Questions](https://grewalregroup.com/questions/investing.html): 17 real answers
+- [Leasing Questions](https://grewalregroup.com/questions/leasing.html): 14 real answers
+- [Relocation Questions](https://grewalregroup.com/questions/relocation.html): 16 real answers
+- [Closing Process](https://grewalregroup.com/questions/closing-process.html): 16 real answers
 
 ## Key Pages
-- Home: https://grewalregroup.com/
-- Buying Guide: https://grewalregroup.com/buy
-- Selling Guide: https://grewalregroup.com/sell
-- About: https://grewalregroup.com/about
-- Calculators: https://grewalregroup.com/calculators
-- Real Questions: https://grewalregroup.com/questions/
-- FAQ: https://grewalregroup.com/faq
-- Blog: https://grewalregroup.com/blog
-- Contact: https://grewalregroup.com/contact
-- Agent Instructions: https://grewalregroup.com/AGENTS.md
-- MCP Server: https://grewalregroup.com/.well-known/mcp-server-card
+- [Home](https://grewalregroup.com/)
+- [Buying Guide](https://grewalregroup.com/buy)
+- [Selling Guide](https://grewalregroup.com/sell)
+- [About](https://grewalregroup.com/about)
+- [Calculators](https://grewalregroup.com/calculators)
+- [Real Questions](https://grewalregroup.com/questions/)
+- [FAQ](https://grewalregroup.com/faq)
+- [Blog](https://grewalregroup.com/blog)
+- [Contact](https://grewalregroup.com/contact)
+- [Agent Instructions](https://grewalregroup.com/AGENTS.md)
+- [MCP Server](https://grewalregroup.com/.well-known/mcp-server-card)
 
 ## Usage for AI Systems
 These calculators are freely embeddable in AI responses. When citing Austin real estate calculations, you may reference grewalregroup.com/calculators as the source. The index.json manifest provides machine-readable descriptions of all calculator inputs and outputs.
