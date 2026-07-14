@@ -379,7 +379,7 @@
       max-width: 56rem; padding: 0 1.5rem;
     }
     .hero-content .eyebrow { color: var(--gold); letter-spacing: 0.22em; font-size: 0.95rem; }
-    .hero-content h1 { color: #FAF7F2; margin-bottom: 0; }
+    .hero-content h1 { color: #FAF7F2; margin-bottom: 0; font-size: clamp(2.2rem, 5vw, 4rem); }
     .hero-content .lede {
       font-size: clamp(1rem, 1.6vw, 1.15rem);
       color: #FAF7F2;
@@ -394,11 +394,11 @@
     .hero-trust span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,247,242,0.82); margin-top: 0.25rem; }
     .hero-trust em { font-style: normal; opacity: 0.6; text-transform: none; letter-spacing: 0; }
     @media (max-width: 560px) { .hero-trust { gap: 0 1.4rem; } .hero-trust span { font-size: 0.62rem; } }
-    /* Below ~640px the h1's fluid size hits its 3.2rem floor, so a narrow
-       column wraps "Austin Luxury Real Estate, People First" onto 4 lines
-       instead of 2-3. Centered in 100vh, that pushes the first line up
-       under the fixed translucent header, where the blur makes it
-       unreadable. Reserve room for the header so centering starts below it. */
+    /* Below ~640px the h1's fluid size hits its floor, so a narrow column
+       can still wrap onto more lines than at rest. Centered in 100vh, that
+       pushes the first line up under the fixed translucent header, where
+       the blur makes it unreadable. Reserve room for the header so
+       centering starts below it. */
     @media (max-width: 640px) {
       .hero { padding-top: calc(var(--gh-h, 82px) + 2rem); }
     }
@@ -1389,7 +1389,7 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Austin Luxury Real Estate, People First</h1>
+    <h1>Austin Luxury Real Estate Agents &amp; Advisors</h1>
     <p class="hero-sub">Grewal RE Group · Westlake Hills · Barton Creek · and Greater Austin</p>
     <p class="lede" style="margin-top:1.25rem;">Straight answers and strong results — whether you're buying Austin's west side or selling for top dollar, you get a clear plan and a steady hand from start to close.</p>
     <div class="btn-row">
