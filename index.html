@@ -354,7 +354,7 @@
     /* ─── HERO ─── */
     .hero {
       position: relative; min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
+      display: flex; align-items: safe center; justify-content: center;
       overflow: hidden;
     }
     .hero-img {
@@ -394,12 +394,18 @@
     .hero-trust span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,247,242,0.82); margin-top: 0.25rem; }
     .hero-trust em { font-style: normal; opacity: 0.6; text-transform: none; letter-spacing: 0; }
     @media (max-width: 560px) { .hero-trust { gap: 0 1.4rem; } .hero-trust span { font-size: 0.62rem; } }
-    /* Below ~640px the h1's fluid size hits its floor, so a narrow column
-       can still wrap onto more lines than at rest. Centered in 100vh, that
-       pushes the first line up under the fixed translucent header, where
-       the blur makes it unreadable. Reserve room for the header so
-       centering starts below it. */
-    @media (max-width: 640px) {
+    /* Below ~640px wide, the h1's fluid size hits its floor, so a narrow
+       column can still wrap onto more lines than at rest. Below ~700px
+       tall (e.g. a 13" laptop with a short browser window), the content
+       can be taller than the viewport even at normal width. Either way,
+       centered in 100vh that pushes the first line up under the fixed
+       translucent header, where the blur makes it unreadable. Reserve
+       room for the header so centering starts below it on any screen
+       shape. `align-items: safe center` above is the primary guard
+       (falls back to top-alignment instead of overflowing upward); this
+       media query is the backstop for browsers without `safe center`
+       support. */
+    @media (max-width: 640px), (max-height: 700px) {
       .hero { padding-top: calc(var(--gh-h, 82px) + 2rem); }
     }
     .gradient-text {
