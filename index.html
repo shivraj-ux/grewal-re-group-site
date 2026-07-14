@@ -260,6 +260,13 @@
     .btn-ghost-gold:hover { background: var(--gold); color: #fff; }
     .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; }
 
+    /* Long single-line CTA labels (e.g. "Start Your Austin Relocation
+       Search") don't fit .btn's nowrap on narrow screens and bleed past
+       the container edge. Let this one wrap instead of overflowing. */
+    @media (max-width: 640px) {
+      .relocate-section .btn { white-space: normal; text-align: center; }
+    }
+
     /* Text-link with arrow */
     .text-link {
       display: inline-flex; align-items: center; gap: .55rem;
@@ -621,14 +628,23 @@
 
     @media (max-width: 900px) { .neighborhood-grid { grid-template-columns: 1fr; } }
 
-    /* ─── SERVICES SPLIT ─── */
+    /* ─── SERVICES (unified: Buying / Selling / Relocating / Advisory / New Construction) ─── */
     .services-split { background: var(--cream); }
-    .split-grid {
-      display: grid; grid-template-columns: 1fr 1px 1fr;
-      gap: 4rem; align-items: stretch;
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem; align-items: start;
     }
-    .split-col p { color: var(--muted); }
-    .split-divider { width: 1px; background: var(--gold); align-self: stretch; min-height: 200px; }
+    .service-card {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--line); overflow: hidden; background: #fff;
+      transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease, rotate .3s cubic-bezier(.22,1,.36,1);
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,.18); border-color: var(--gold); rotate: -1deg; }
+    .service-card-media { aspect-ratio: 16/9; background-size: cover; background-position: center; }
+    .service-card-body { padding: 1.75rem; }
+    .service-card-body h3 { font-size: 1.35rem; margin: 0 0 .5rem; }
+    .service-card-body > p { color: var(--muted); font-size: .92rem; margin: 0 0 1rem; }
+    .service-card-body .check-list { margin-bottom: 1.25rem; }
     .check-list { list-style: none; padding: 0; margin: 0 0 2rem; }
     .check-list li {
       padding: .75rem 0 .75rem 2rem;
@@ -640,34 +656,7 @@
       content: '✓'; position: absolute; left: 0; top: 50%;
       transform: translateY(-50%); color: var(--gold); font-weight: 700;
     }
-    @media (max-width: 900px) {
-      .split-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .split-divider { display: none; }
-    }
-
-    /* ─── SERVICES PHOTO TILES (Relocation/Advisory/New Construction) ─── */
-    .services-tiles {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    .service-tile {
-      position: relative; aspect-ratio: 4/3;
-      background-size: cover; background-position: center;
-      color: #fff; overflow: hidden;
-      border: 1px solid transparent;
-      transition: transform 0.4s, box-shadow 0.4s, border-color .3s ease, rotate .3s cubic-bezier(.22,1,.36,1);
-    }
-    .service-tile-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
-    }
-    .service-tile-text {
-      position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; z-index: 2;
-    }
-    .service-tile-text h3 { font-size: 1.4rem; color: #fff; margin: 0 0 .35rem; }
-    .service-tile-text p { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.5; }
-    .service-tile:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); border-color: var(--gold); rotate: -1deg; }
-    @media (max-width: 900px) { .services-tiles { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
 
     /* ─── MARKET REPORTS ─── */
     .reports-section { background: var(--cream-2); }
@@ -1277,7 +1266,7 @@
     .persona-section, .blog-section, .faq { background: var(--black); color: #fff; }
     .persona-section .eyebrow, .blog-section .eyebrow, .faq .eyebrow { color: var(--gold-light); }
     .persona-section .section-sub, .blog-section .section-sub, .faq .section-sub { color: rgba(255,255,255,.68); }
-    .persona-card, .listing-card, .blog-card, .service-tile, .concierge-card, .review-card,
+    .persona-card, .listing-card, .blog-card, .service-card, .concierge-card, .review-card,
     .cmodal-box, .btn, .btn-gold, .btn-ghost, .btn-ghost-gold, .nav-btn, .dot, .google-summary,
     .form-field input, .form-field select, .form-field textarea { border-radius: 0 !important; }
     .persona-card { background: #0d0c0a; border: 1px solid rgba(184,150,62,.3); color: #fff; transition: border-color .3s, transform .4s cubic-bezier(.22,1,.36,1), rotate .3s cubic-bezier(.22,1,.36,1); }
@@ -1324,7 +1313,7 @@
         <li><a href="/communities/">Communities</a></li>
         <li class="gh-has-sub">
           <a href="/buy" class="gh-menu-link">Buy</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false" aria-label="Toggle Buy submenu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
@@ -1338,7 +1327,7 @@
         </li>
         <li class="gh-has-sub">
           <a href="/sell" class="gh-menu-link">Sell</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false" aria-label="Toggle Sell submenu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
@@ -1351,7 +1340,7 @@
         </li>
         <li class="gh-has-sub">
           <a href="/calculators" class="gh-menu-link">Calculators</a>
-          <button class="gh-sub-toggle" type="button" aria-expanded="false">
+          <button class="gh-sub-toggle" type="button" aria-expanded="false" aria-label="Toggle Calculators submenu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="gh-sub">
@@ -1880,64 +1869,75 @@
 
 <!-- ═══ BUYER & SELLER SERVICES SPLIT ═══ -->
 <section class="section services-split" id="services">
-  <div class="container split-grid">
-    <div class="split-col">
-      <p class="eyebrow ink-gold">For Buyers</p>
-      <h2>Buying in Austin</h2>
-      <p>First-time, move-up, or luxury, we match you with the right home, neighborhood, and terms for your life. No pressure. Just clarity.</p>
-      <ul class="check-list">
-        <li>Discovery call &amp; financing coordination</li>
-        <li>Neighborhood comparison + tailored search</li>
-        <li>Offer strategy with comparable-sales data</li>
-        <li>Inspection guidance &amp; closing management</li>
-      </ul>
-      <a href="#contact" class="text-link">Start Your Buyer Journey
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-    <div class="split-divider" aria-hidden="true"></div>
-    <div class="split-col">
-      <p class="eyebrow ink-gold">For Sellers</p>
-      <h2>Selling Your Home</h2>
-      <p>Walk-through consultation, data-driven pricing, and white-glove marketing built around your net proceeds and timeline.</p>
-      <ul class="check-list">
-        <li>Data-driven pricing strategy</li>
-        <li>Preparation plan &amp; pro photography</li>
-        <li>Showing management with feedback</li>
-        <li>Negotiation &amp; contract-to-close coordination</li>
-      </ul>
-      <a href="/calculators/home-value-estimator" class="text-link">Get Your Home Valuation
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-      <a href="/calculators/seller-net-proceeds-calculator" class="text-link" style="margin-top:.5rem;">Calculate Your Net Proceeds
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
-
   <div class="container">
-    <div class="services-tiles">
-      <div class="service-tile" data-bg="assets/images/relocation">
-        <div class="service-tile-overlay"></div>
-        <div class="service-tile-text">
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-card-media" data-bg="assets/images/buying"></div>
+        <div class="service-card-body">
+          <p class="eyebrow ink-gold">For Buyers</p>
+          <h3>Buying in Austin</h3>
+          <p>First-time, move-up, or luxury, we match you with the right home, neighborhood, and terms for your life. No pressure. Just clarity.</p>
+          <ul class="check-list">
+            <li>Discovery call &amp; financing coordination</li>
+            <li>Neighborhood comparison + tailored search</li>
+            <li>Offer strategy with comparable-sales data</li>
+            <li>Inspection guidance &amp; closing management</li>
+          </ul>
+          <a href="#contact" class="text-link">Start Your Buyer Journey
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="service-card-media" data-bg="assets/images/selling"></div>
+        <div class="service-card-body">
+          <p class="eyebrow ink-gold">For Sellers</p>
+          <h3>Selling Your Home</h3>
+          <p>Walk-through consultation, data-driven pricing, and white-glove marketing built around your net proceeds and timeline.</p>
+          <ul class="check-list">
+            <li>Data-driven pricing strategy</li>
+            <li>Preparation plan &amp; pro photography</li>
+            <li>Showing management with feedback</li>
+            <li>Negotiation &amp; contract-to-close coordination</li>
+          </ul>
+          <a href="/calculators/home-value-estimator" class="text-link">Get Your Home Valuation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="/calculators/seller-net-proceeds-calculator" class="text-link" style="margin-top:.5rem;">Calculate Your Net Proceeds
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="service-card">
+        <div class="service-card-media" data-bg="assets/images/relocation"></div>
+        <div class="service-card-body">
           <h3>Relocation</h3>
           <p>Neighborhood guidance, virtual tours, and partner agents in your current city.</p>
+          <a href="/relocation-guide" class="text-link">Plan your move
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
-      </div>
-      <div class="service-tile" data-bg="assets/images/advisory">
-        <div class="service-tile-overlay"></div>
-        <div class="service-tile-text">
+      </article>
+      <article class="service-card">
+        <div class="service-card-media" data-bg="assets/images/advisory"></div>
+        <div class="service-card-body">
           <h3>Advisory</h3>
           <p>Investor analysis, portfolio review, and market positioning. Clear numbers, no speculation.</p>
+          <a href="#contact" class="text-link">Schedule a Strategy Call
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
-      </div>
-      <div class="service-tile" data-bg="assets/images/new-construction">
-        <div class="service-tile-overlay"></div>
-        <div class="service-tile-text">
+      </article>
+      <article class="service-card">
+        <div class="service-card-media" data-bg="assets/images/new-construction"></div>
+        <div class="service-card-body">
           <h3>New Construction</h3>
           <p>Builder representation, contract negotiation, upgrade guidance, lot through walk-through.</p>
+          <a href="#contact" class="text-link">Schedule a Strategy Call
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -2401,11 +2401,29 @@
         </ul>
       </nav>
     </div>
+    <nav class="gh-foot-social" aria-label="Social and review profiles">
+      <span class="gh-foot-social-label">Follow &amp; review us:</span>
+      <a href="https://www.instagram.com/grewalregroup/" target="_blank" rel="noopener noreferrer">Instagram</a> &middot;
+      <a href="https://www.facebook.com/Shivraj.Grewal.Realtor/" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+      <a href="https://x.com/ShivrajGrewal1" target="_blank" rel="noopener noreferrer">X</a> &middot;
+      <a href="https://www.youtube.com/@GrewalREGroup" target="_blank" rel="noopener noreferrer">YouTube</a> &middot;
+      <a href="https://www.tiktok.com/@grewalregroup" target="_blank" rel="noopener noreferrer">TikTok</a> &middot;
+      <a href="https://www.pinterest.com/grewalshivraj/" target="_blank" rel="noopener noreferrer">Pinterest</a> &middot;
+      <a href="https://www.threads.com/@grewalregroup" target="_blank" rel="noopener noreferrer">Threads</a> &middot;
+      <a href="https://www.linkedin.com/company/grewal-re-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot;
+      <a href="https://share.google/1pYwueIVdeVLAtANo" target="_blank" rel="noopener noreferrer">Google</a> &middot;
+      <a href="https://www.zillow.com/profile/Grewal%20RE%20Group" target="_blank" rel="noopener noreferrer">Zillow (Team)</a> &middot;
+      <a href="https://www.zillow.com/profile/Shivraj%20Grewal" target="_blank" rel="noopener noreferrer">Zillow (Shivraj)</a> &middot;
+      <a href="https://www.realtor.com/realestateagents/62691e42baa428baf4d88cda" target="_blank" rel="noopener noreferrer">Realtor.com</a> &middot;
+      <a href="https://www.alignable.com/rollingwood-tx/grewal-re-group" target="_blank" rel="noopener noreferrer">Alignable</a> &middot;
+      <a href="https://www.reddit.com/r/AustinREAdvisor/" target="_blank" rel="noopener noreferrer">Reddit</a>
+    </nav>
     <div class="gh-foot-legal">
       <p>&copy; 2026 Grewal RE Group &middot; Shivraj Grewal &middot; TREC #736060 &middot; Brokered by Compass RE Texas, LLC &middot; TREC Broker #9006927</p>
       <p>
         <a href="/privacy">Privacy</a> &middot;
         <a href="/terms">Terms</a> &middot;
+        <a href="/accessibility">Accessibility</a> &middot;
         <a href="/assets/legal/iabs.pdf" target="_blank" rel="noopener noreferrer">Information About Brokerage Services</a> &middot;
         <a href="/assets/legal/consumer-protection-notice.pdf" target="_blank" rel="noopener noreferrer">TREC Consumer Protection Notice</a> &middot;
         <button type="button" data-cookie-prefs class="gh-link-btn">Cookie preferences</button>
@@ -2678,7 +2696,7 @@
   }
 
   // Fade-up
-  const fadeEls = document.querySelectorAll('.section, .nbhd, .pillar, .faq-item, .service-tile, .report-card, .listing-card, .blog-card, .team-lead, .org-node');
+  const fadeEls = document.querySelectorAll('.section, .nbhd, .pillar, .faq-item, .service-card, .report-card, .listing-card, .blog-card, .team-lead, .org-node');
   fadeEls.forEach(el => el.classList.add('fade-up'));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
@@ -2695,35 +2713,37 @@
 <div id="contact-modal" class="cmodal-backdrop" aria-hidden="true">
   <div class="cmodal-box" role="dialog" aria-modal="true" aria-label="Contact Grewal RE Group">
     <button class="cmodal-close" aria-label="Close dialog">&#x2715;</button>
-    <p class="cmodal-eyebrow">Get in Touch</p>
-    <h2 class="cmodal-title">Let's Talk Austin Real Estate</h2>
-    <p class="cmodal-sub">Tell us what you're looking for. We'll get back to you the same day.</p>
-    <form class="cmodal-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;"><input name="bot-field"></p>
-      <input type="text" name="name" placeholder="Full Name" required autocomplete="name" aria-label="Full Name">
-      <div class="cmodal-row">
-        <input type="email" name="email" placeholder="Email Address" required autocomplete="email" aria-label="Email Address">
-        <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" aria-label="Phone Number">
+    <div class="cmodal-scroll">
+      <p class="cmodal-eyebrow">Get in Touch</p>
+      <h2 class="cmodal-title">Let's Talk Austin Real Estate</h2>
+      <p class="cmodal-sub">Tell us what you're looking for. We'll get back to you the same day.</p>
+      <form class="cmodal-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><input name="bot-field"></p>
+        <input type="text" name="name" placeholder="Full Name" required autocomplete="name" aria-label="Full Name">
+        <div class="cmodal-row">
+          <input type="email" name="email" placeholder="Email Address" required autocomplete="email" aria-label="Email Address">
+          <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" aria-label="Phone Number">
+        </div>
+        <textarea name="message" placeholder="What are you looking for? Buying, selling, or just exploring. (optional)" aria-label="What are you looking for?"></textarea>
+        <label class="cmodal-consent-label">
+          <input type="checkbox" name="consent" value="agreed" required>
+          <span class="cmodal-consent-text">By providing Grewal RE Group your contact information, you acknowledge and agree to our <a href="privacy" target="_blank">Privacy Policy</a> and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent is not necessary for purchasing any products or services. To opt out you can reply "STOP" at any time or click the unsubscribe link in the emails. Reply "HELP" for Help. Message frequency varies. Message and data rates may apply. <a href="privacy" target="_blank">Privacy Policy</a> &amp; <a href="terms" target="_blank">Terms of Service</a>.</span>
+        </label>
+        <button type="submit" class="cmodal-submit">Send Message</button>
+      </form>
+      <div class="cmodal-success">
+        <div class="cmodal-success-icon">&#10003;</div>
+        <h3>Message Received</h3>
+        <p>Shivraj will be in touch the same day.</p>
       </div>
-      <textarea name="message" placeholder="What are you looking for? Buying, selling, or just exploring. (optional)" aria-label="What are you looking for?"></textarea>
-      <label class="cmodal-consent-label">
-        <input type="checkbox" name="consent" value="agreed" required>
-        <span class="cmodal-consent-text">By providing Grewal RE Group your contact information, you acknowledge and agree to our <a href="privacy" target="_blank">Privacy Policy</a> and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent is not necessary for purchasing any products or services. To opt out you can reply "STOP" at any time or click the unsubscribe link in the emails. Reply "HELP" for Help. Message frequency varies. Message and data rates may apply. <a href="privacy" target="_blank">Privacy Policy</a> &amp; <a href="terms" target="_blank">Terms of Service</a>.</span>
-      </label>
-      <button type="submit" class="cmodal-submit">Send Message</button>
-    </form>
-    <div class="cmodal-success">
-      <div class="cmodal-success-icon">&#10003;</div>
-      <h3>Message Received</h3>
-      <p>Shivraj will be in touch the same day.</p>
     </div>
   </div>
 </div>
 
 <style>
 /* ── Contact Modal (homepage inline copy of blog.css modal block) ── */
-.cmodal-backdrop{position:fixed;inset:0;z-index:9000;background:rgba(10,10,10,.5);backdrop-filter:blur(12px) saturate(150%);-webkit-backdrop-filter:blur(12px) saturate(150%);display:flex;align-items:center;justify-content:center;padding:1.25rem;opacity:0;pointer-events:none;transition:opacity .28s ease}.cmodal-backdrop.open{opacity:1;pointer-events:auto}.cmodal-box{background:rgba(250,247,242,.93);backdrop-filter:blur(48px) saturate(200%);-webkit-backdrop-filter:blur(48px) saturate(200%);border-radius:24px;border:1px solid rgba(255,255,255,.65);box-shadow:0 32px 80px rgba(0,0,0,.22),0 0 0 1px rgba(184,150,62,.09),inset 0 1px 0 rgba(255,255,255,.8);width:100%;max-width:500px;max-height:92vh;overflow-y:auto;padding:2.25rem 2.25rem 2rem;transform:scale(.93) translateY(28px);transition:transform .42s cubic-bezier(.34,1.56,.64,1);position:relative}.cmodal-backdrop.open .cmodal-box{transform:scale(1) translateY(0)}.cmodal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.07);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#555;line-height:1;transition:background .18s,color .18s}.cmodal-close:hover{background:rgba(0,0,0,.14);color:#000}.cmodal-eyebrow{font-family:'GRG Sans', sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .6rem}.cmodal-title{font-family:'GRG Serif', Georgia, serif;font-size:clamp(1.5rem,3vw,1.9rem);font-weight:700;color:var(--ink);margin:0 0 .4rem;line-height:1.1}.cmodal-sub{font-size:.85rem;color:var(--muted);margin:0 0 1.6rem;line-height:1.55}.cmodal-form{display:flex;flex-direction:column;gap:.75rem}.cmodal-form input[type=text],.cmodal-form input[type=email],.cmodal-form input[type=tel],.cmodal-form textarea{width:100%;padding:.8rem 1rem;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;background:rgba(255,255,255,.75);font-family:'GRG Sans', sans-serif;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .18s,box-shadow .18s;-webkit-appearance:none}.cmodal-form input:focus,.cmodal-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3.5px rgba(184,150,62,.14);background:#fff}.cmodal-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.cmodal-form textarea{resize:none;min-height:72px}.cmodal-consent-label{display:flex;gap:.7rem;align-items:flex-start;padding:.9rem 1rem;border-radius:14px;background:rgba(184,150,62,.06);border:1px solid rgba(184,150,62,.18);cursor:pointer;margin-top:.15rem}.cmodal-consent-label input[type=checkbox]{width:17px;height:17px;min-width:17px;min-height:17px;border-radius:5px;margin-top:2px;accent-color:var(--gold);cursor:pointer;flex-shrink:0}.cmodal-consent-text{font-size:0.75rem;color:#555;line-height:1.55}.cmodal-consent-text a{color:var(--gold);text-decoration:underline}.cmodal-submit{width:100%;padding:.95rem 1rem;background:var(--gold);color:#fff;border:none;border-radius:14px;font-family:'GRG Sans', sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;margin-top:.25rem}.cmodal-submit:hover{background:#9a7c33;transform:translateY(-1px);box-shadow:0 8px 24px rgba(184,150,62,.32)}.cmodal-submit:active{transform:translateY(0);box-shadow:none}.cmodal-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}.cmodal-success{text-align:center;padding:1.5rem 0 .5rem;display:none}.cmodal-success.visible{display:block}.cmodal-success-icon{width:56px;height:56px;border-radius:50%;background:rgba(184,150,62,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem}.cmodal-success h3{font-family:'GRG Serif', serif;font-size:1.5rem;margin:0 0 .4rem}.cmodal-success p{color:var(--muted);font-size:.88rem;margin:0}@media(max-width:480px){.cmodal-box{padding:1.75rem 1.25rem 1.5rem;border-radius:20px}.cmodal-row{grid-template-columns:1fr}.cmodal-title{font-size:1.5rem}}
+.cmodal-backdrop{position:fixed;inset:0;z-index:9600;background:rgba(10,10,10,.5);backdrop-filter:blur(12px) saturate(150%);-webkit-backdrop-filter:blur(12px) saturate(150%);display:flex;align-items:center;justify-content:center;padding:1.25rem;opacity:0;pointer-events:none;transition:opacity .28s ease}.cmodal-backdrop.open{opacity:1;pointer-events:auto}.cmodal-box{background:rgba(250,247,242,.93);backdrop-filter:blur(48px) saturate(200%);-webkit-backdrop-filter:blur(48px) saturate(200%);border-radius:24px;border:1px solid rgba(255,255,255,.65);box-shadow:0 32px 80px rgba(0,0,0,.22),0 0 0 1px rgba(184,150,62,.09),inset 0 1px 0 rgba(255,255,255,.8);width:100%;max-width:500px;max-height:92vh;display:flex;flex-direction:column;transform:scale(.93) translateY(28px);transition:transform .42s cubic-bezier(.34,1.56,.64,1);position:relative}.cmodal-backdrop.open .cmodal-box{transform:scale(1) translateY(0)}.cmodal-scroll{overflow-y:auto;min-height:0;padding:2.25rem 2.25rem 2rem}.cmodal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.07);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#555;line-height:1;transition:background .18s,color .18s;z-index:1}.cmodal-close:hover{background:rgba(0,0,0,.14);color:#000}.cmodal-eyebrow{font-family:'GRG Sans', sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .6rem}.cmodal-title{font-family:'GRG Serif', Georgia, serif;font-size:clamp(1.5rem,3vw,1.9rem);font-weight:700;color:var(--ink);margin:0 0 .4rem;line-height:1.1}.cmodal-sub{font-size:.85rem;color:var(--muted);margin:0 0 1.6rem;line-height:1.55}.cmodal-form{display:flex;flex-direction:column;gap:.75rem}.cmodal-form input[type=text],.cmodal-form input[type=email],.cmodal-form input[type=tel],.cmodal-form textarea{width:100%;padding:.8rem 1rem;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;background:rgba(255,255,255,.75);font-family:'GRG Sans', sans-serif;font-size:.88rem;color:var(--ink);outline:none;transition:border-color .18s,box-shadow .18s;-webkit-appearance:none}.cmodal-form input:focus,.cmodal-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3.5px rgba(184,150,62,.14);background:#fff}.cmodal-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.cmodal-form textarea{resize:none;min-height:72px}.cmodal-consent-label{display:flex;gap:.7rem;align-items:flex-start;padding:.9rem 1rem;border-radius:14px;background:rgba(184,150,62,.06);border:1px solid rgba(184,150,62,.18);cursor:pointer;margin-top:.15rem}.cmodal-consent-label input[type=checkbox]{width:17px;height:17px;min-width:17px;min-height:17px;border-radius:5px;margin-top:2px;accent-color:var(--gold);cursor:pointer;flex-shrink:0}.cmodal-consent-text{font-size:0.75rem;color:#555;line-height:1.55}.cmodal-consent-text a{color:var(--gold);text-decoration:underline}.cmodal-submit{width:100%;padding:.95rem 1rem;background:var(--gold);color:#fff;border:none;border-radius:14px;font-family:'GRG Sans', sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;margin-top:.25rem}.cmodal-submit:hover{background:#9a7c33;transform:translateY(-1px);box-shadow:0 8px 24px rgba(184,150,62,.32)}.cmodal-submit:active{transform:translateY(0);box-shadow:none}.cmodal-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}.cmodal-success{text-align:center;padding:1.5rem 0 .5rem;display:none}.cmodal-success.visible{display:block}.cmodal-success-icon{width:56px;height:56px;border-radius:50%;background:rgba(184,150,62,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem}.cmodal-success h3{font-family:'GRG Serif', serif;font-size:1.5rem;margin:0 0 .4rem}.cmodal-success p{color:var(--muted);font-size:.88rem;margin:0}@media(max-width:480px){.cmodal-box{border-radius:20px}.cmodal-scroll{padding:1.75rem 1.25rem 1.5rem}.cmodal-row{grid-template-columns:1fr}.cmodal-title{font-size:1.5rem}}
 </style>
 
 <script>
