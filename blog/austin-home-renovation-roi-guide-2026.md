@@ -148,7 +148,7 @@ CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
 119 Google reviews · 5.0 stars · 100+ transactions · $100M+ volume
 
-Shivraj Grewal is Austin's trusted luxury real estate advisor and founder of Grewal RE Group at Compass. With 100+ transactions and $100M+ in closed volume across Austin's top neighborhoods, Shivraj provides sellers with a data-driven pre-listing strategy that maximizes net proceeds. His renovation consultation process — including neighborhood comp analysis and a detailed net proceeds model — is available to every seller at no charge before listing.
+Shivraj Grewal is Austin's trusted luxury real estate advisor and founder of Grewal RE Group. With 100+ transactions and $100M+ in closed volume across Austin's top neighborhoods, Shivraj provides sellers with a data-driven pre-listing strategy that maximizes net proceeds. His renovation consultation process — including neighborhood comp analysis and a detailed net proceeds model — is available to every seller at no charge before listing.
 
 [(512) 617-0001](tel:+15126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com)
 

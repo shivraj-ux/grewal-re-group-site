@@ -108,7 +108,7 @@ Austin has posted stronger percentage population growth, approximately 18% over 
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas specializing in Austin's most sought-after neighborhoods and the broader Central Texas market. With 100+ transactions and $100M+ in volume, he brings deep market knowledge and white-glove service to every client. Rated 5.0 stars across 119 Google reviews.
+Shivraj Grewal is a luxury real estate advisor specializing in Austin's most sought-after neighborhoods and the broader Central Texas market. With 100+ transactions and $100M+ in volume, he brings deep market knowledge and white-glove service to every client. Rated 5.0 stars across 119 Google reviews.
 
 [(512) 617-0001](tel:5126170001) [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com) ⭐ 5.0 · 119 Reviews · 100+ Transactions · $100M+ Volume
 

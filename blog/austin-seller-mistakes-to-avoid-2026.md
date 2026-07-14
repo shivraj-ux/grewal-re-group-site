@@ -140,7 +140,7 @@ CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
 119 Google reviews · 5.0 stars · 100+ transactions · $100M+ volume
 
-Shivraj Grewal is Austin's trusted luxury real estate advisor and founder of Grewal RE Group at Compass. Specializing in Austin's most competitive neighborhoods — from Tarrytown and Westlake Hills to Barton Creek and the Domain corridor — Shivraj brings data-driven strategy and white-glove service to every listing and buyer representation engagement.
+Shivraj Grewal is Austin's trusted luxury real estate advisor and founder of Grewal RE Group. Specializing in Austin's most competitive neighborhoods — from Tarrytown and Westlake Hills to Barton Creek and the Domain corridor — Shivraj brings data-driven strategy and white-glove service to every listing and buyer representation engagement.
 
 [(512) 617-0001](tel:+15126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com)
 

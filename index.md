@@ -1,6 +1,6 @@
 # Grewal RE Group
 
-> Austin's luxury real estate team led by **Shivraj Grewal** at Compass.
+> Austin's luxury real estate team led by **Shivraj Grewal**.
 > People First. Straight Answers. Strong Results.
 > 100+ closed transactions · $100M+ career volume · 149 five-star reviews (across two Google Business Profiles, Zillow, and Realtor.com).
 

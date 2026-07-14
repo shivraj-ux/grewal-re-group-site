@@ -187,13 +187,13 @@ A well-prepared Hill Country buyer in 2026 should: (1) engage a licensed home in
 
 > "The Hill Country buyer who invests in due diligence before closing is the investor who doesn't end up paying twice, once for the property and once for the problems they didn't discover."
 
-For buyers working with Austin-based agents, the Hill Country's distance from the city (45 minutes to 2+ hours) and its distinct regulatory, infrastructure, and market dynamics make local knowledge an essential asset. Shivraj Grewal at Compass RE Texas brings both Austin market expertise and deep familiarity with the Hill Country corridor, from Dripping Springs and Wimberley to the Fredericksburg wine country and Highland Lakes.
+For buyers working with Austin-based agents, the Hill Country's distance from the city (45 minutes to 2+ hours) and its distinct regulatory, infrastructure, and market dynamics make local knowledge an essential asset. Shivraj Grewal brings both Austin market expertise and deep familiarity with the Hill Country corridor, from Dripping Springs and Wimberley to the Fredericksburg wine country and Highland Lakes.
 
 #### Shivraj Grewal
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate specialist at Compass RE Texas serving Austin, the Hill Country corridor, and surrounding markets. He guides buyers and sellers through complex transactions, from urban Austin luxury to Hill Country acreage, with precision, transparency, and deep market expertise.
+Shivraj Grewal is a luxury real estate specialist serving Austin, the Hill Country corridor, and surrounding markets. He guides buyers and sellers through complex transactions, from urban Austin luxury to Hill Country acreage, with precision, transparency, and deep market expertise.
 
 100+ Transactions
 

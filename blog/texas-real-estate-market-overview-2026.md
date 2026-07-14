@@ -158,7 +158,7 @@ Whether you are a first-time buyer navigating Austin's competitive price points,
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate specialist at Compass RE Texas serving Austin and surrounding markets. With deep expertise in the Austin luxury segment and statewide market dynamics, he guides buyers and sellers through complex transactions with precision and transparency.
+Shivraj Grewal is a luxury real estate specialist serving Austin and surrounding markets. With deep expertise in the Austin luxury segment and statewide market dynamics, he guides buyers and sellers through complex transactions with precision and transparency.
 
 100+ Transactions
 

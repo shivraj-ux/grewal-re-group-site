@@ -162,7 +162,7 @@ Statistics and market figures represent best available data as of Q1 2026 and ar
 
 Founder, Grewal RE Group · Compass RE Texas · TREC #736060 · CLHMS Guild · CNE
 
-Shivraj Grewal is the founder of Grewal RE Group at Compass RE Texas, serving buyers and sellers across the Austin MSA. With 100+ closed transactions and $100M+ in career volume, he brings data-driven analysis and straight answers to every buyer conversation. 119 Google reviews at 5.0 stars. If you have questions about whether now is the right time for your specific situation, call directly.
+Shivraj Grewal is the founder of Grewal RE Group, serving buyers and sellers across the Austin MSA. With 100+ closed transactions and $100M+ in career volume, he brings data-driven analysis and straight answers to every buyer conversation. 119 Google reviews at 5.0 stars. If you have questions about whether now is the right time for your specific situation, call directly.
 
 [(512) 617-0001](tel:+15126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com) · [shivraj@grewalregroup.com](mailto:shivraj@grewalregroup.com)
 

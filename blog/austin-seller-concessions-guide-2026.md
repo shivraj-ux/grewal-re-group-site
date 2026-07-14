@@ -146,7 +146,7 @@ Offer concessions when your home is priced at market and buyers need help with c
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas, specializing in Austin’s premium residential market. With 100+ closed transactions, $100M+ in volume, and 119 Google reviews at 5.0 stars, he brings data-driven strategy and deep negotiation experience to every Austin seller engagement.
+Shivraj Grewal is a luxury real estate advisor, specializing in Austin’s premium residential market. With 100+ closed transactions, $100M+ in volume, and 119 Google reviews at 5.0 stars, he brings data-driven strategy and deep negotiation experience to every Austin seller engagement.
 
 [(512) 617-0001](tel:+15126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com)
 

@@ -205,7 +205,7 @@ Beyond a standard home inspection, lakefront buyers should commission: (1) dock 
 
 ### Shivraj Grewal
 
-Luxury waterfront and lake home specialist serving the Austin, Lake Travis, Lake Austin, and Highland Lakes markets. Founder of Grewal RE Group at Compass RE Texas.
+Luxury waterfront and lake home specialist serving the Austin, Lake Travis, Lake Austin, and Highland Lakes markets. Founder of Grewal RE Group.
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas · (512) 617-0001
 

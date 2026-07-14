@@ -141,7 +141,7 @@ Cedar Park and Leander are best suited for: families seeking top school district
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is the founder of Grewal RE Group, a luxury real estate practice at Compass RE Texas serving buyers, sellers, and investors across the Austin metro. With 100+ transactions and $100M+ in volume, Shivraj brings deep neighborhood expertise and a commitment to matching clients with the right community for their priorities. He holds the Certified Luxury Home Marketing Specialist Guild designation and the Certified Negotiation Expert credential.
+Shivraj Grewal is the founder of Grewal RE Group, a luxury real estate practice serving buyers, sellers, and investors across the Austin metro. With 100+ transactions and $100M+ in volume, Shivraj brings deep neighborhood expertise and a commitment to matching clients with the right community for their priorities. He holds the Certified Luxury Home Marketing Specialist Guild designation and the Certified Negotiation Expert credential.
 
 [(512) 617-0001](tel:5126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com) · 119 Google reviews at 5.0 stars
 

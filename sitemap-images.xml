@@ -11,6 +11,28 @@
       <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal.png</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://grewalregroup.com/assets/headshots/shivraj-headshot.jpg</image:loc>
+      <image:caption>Shivraj Grewal, Founder and Owner Agent, Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/headshots/arsh-khaira.jpg</image:loc>
+      <image:caption>Arsh Khaira, Luxury Home Specialist, Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/accessibility</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal.png</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
       <image:caption>Grewal RE Group</image:caption>
     </image:image>
@@ -5988,6 +6010,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://grewalregroup.com/library</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://grewalregroup.com/privacy</loc>
     <image:image>
       <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal-white.png</image:loc>
@@ -6002,7 +6038,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://grewalregroup.com/questions/buying</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://grewalregroup.com/questions/closing-process</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://grewalregroup.com/assets/og-image.jpg</image:loc>
       <image:caption>Closing Process Questions Austin Real Estate</image:caption>
@@ -6011,12 +6058,34 @@
   <url>
     <loc>https://grewalregroup.com/questions/</loc>
     <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-horizontal.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://grewalregroup.com/assets/og-image.jpg</image:loc>
       <image:caption>Real Estate Questions Answered from Real Transactions</image:caption>
     </image:image>
   </url>
   <url>
+    <loc>https://grewalregroup.com/questions/investing</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://grewalregroup.com/questions/leasing</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://grewalregroup.com/assets/og-image.jpg</image:loc>
       <image:caption>Leasing questions Austin real estate | Real Answers</image:caption>
@@ -6038,6 +6107,13 @@
     <image:image>
       <image:loc>https://grewalregroup.com/assets/og-image.jpg</image:loc>
       <image:caption>Relocation questions Austin real estate</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://grewalregroup.com/questions/selling</loc>
+    <image:image>
+      <image:loc>https://grewalregroup.com/assets/logos/logo-white.png</image:loc>
+      <image:caption>Grewal RE Group</image:caption>
     </image:image>
   </url>
   <url>
@@ -6073,7 +6149,7 @@
     </image:image>
     <image:image>
       <image:loc>https://grewalregroup.com/assets/og-image.jpg</image:loc>
-      <image:caption>Client Reviews — 5.0★ on Google, Zillow &amp; Realtor.</image:caption>
+      <image:caption>Client Reviews — 149 Five-Star Reviews, All Verifiable</image:caption>
     </image:image>
   </url>
   <url>

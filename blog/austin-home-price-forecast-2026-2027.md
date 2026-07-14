@@ -237,7 +237,7 @@ Buyers who can qualify at current rates and plan to hold for 5+ years are genera
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate specialist at Compass RE Texas, serving Austin buyers and sellers with a client-first approach grounded in data, discretion, and deep local expertise. With over 100+ transactions and $100M+ in transaction volume, Shivraj brings institutional-quality market analysis to every client engagement.
+Shivraj Grewal is a luxury real estate specialist, serving Austin buyers and sellers with a client-first approach grounded in data, discretion, and deep local expertise. With over 100+ transactions and $100M+ in transaction volume, Shivraj brings institutional-quality market analysis to every client engagement.
 
 119 Google reviews · 5.0 stars | (512) 617-0001 | [grewalregroup.com](https://grewalregroup.com)
 

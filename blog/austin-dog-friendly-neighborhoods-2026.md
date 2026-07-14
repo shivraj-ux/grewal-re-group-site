@@ -118,7 +118,7 @@ Shivraj Grewal
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas · (512) 617-0001
 
-Shivraj Grewal is the founder of Grewal RE Group and a luxury real estate advisor at Compass RE Texas in Austin. With 100+ transactions and $100M+ in volume across Central Austin, and rated 5.0 stars across 119 Google reviews, Shivraj specializes in helping buyers find homes that match every aspect of their lifestyle — including their dogs’ requirements.
+Shivraj Grewal is the founder of Grewal RE Group and a luxury real estate advisor in Austin. With 100+ transactions and $100M+ in volume across Central Austin, and rated 5.0 stars across 119 Google reviews, Shivraj specializes in helping buyers find homes that match every aspect of their lifestyle — including their dogs’ requirements.
 
 ### Related Austin Neighborhood Guides
 

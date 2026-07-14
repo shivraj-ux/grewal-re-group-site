@@ -256,7 +256,7 @@ Shivraj Grewal
 
 Luxury Real Estate Agent · Compass · Austin, TX
 
-Shivraj Grewal is the founder of Grewal RE Group at Compass, specializing in Austin's most sought-after central neighborhoods including Tarrytown, Rosedale, Clarksville, and West Lake Hills. He brings deep market expertise, off-market relationships, and a meticulous buyer-first approach to Austin's most competitive luxury transactions.
+Shivraj Grewal is the founder of Grewal RE Group, specializing in Austin's most sought-after central neighborhoods including Tarrytown, Rosedale, Clarksville, and West Lake Hills. He brings deep market expertise, off-market relationships, and a meticulous buyer-first approach to Austin's most competitive luxury transactions.
 
 **119** Google reviews at 5.0 stars
 
