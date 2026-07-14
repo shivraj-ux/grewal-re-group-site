@@ -11,15 +11,19 @@
 # deploy has actually gone live, not before.
 #
 # Usage:
-#   ./submit-indexnow.sh https://www.grewalregroup.com/blog/some-post
-#   ./submit-indexnow.sh https://www.grewalregroup.com/buy https://www.grewalregroup.com/sell
+#   ./submit-indexnow.sh https://grewalregroup.com/blog/some-post
+#   ./submit-indexnow.sh https://grewalregroup.com/buy https://grewalregroup.com/sell
 #   ./submit-indexnow.sh -f urls.txt      # one URL per line
+#
+# NOTE: www.grewalregroup.com 301-redirects to the bare apex grewalregroup.com
+# (confirmed 2026-07-14) — that's the canonical host used in this site's
+# sitemap.xml and canonical tags. Submit apex URLs, not www ones.
 #
 set -euo pipefail
 
-HOST="www.grewalregroup.com"
+HOST="grewalregroup.com"
 KEY="e6de7aae7f18449186579a0b292e63ee"
-KEY_LOCATION="https://www.grewalregroup.com/e6de7aae7f18449186579a0b292e63ee.txt"
+KEY_LOCATION="https://grewalregroup.com/e6de7aae7f18449186579a0b292e63ee.txt"
 ENDPOINT="https://api.indexnow.org/IndexNow"
 
 usage() {
