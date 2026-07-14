@@ -360,7 +360,7 @@ Shivraj Grewal
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate specialist at Compass RE Texas serving Austin and surrounding communities. He holds the Certified Luxury Home Marketing Specialist (CLHMS) Guild designation and the Certified Negotiation Expert (CNE) credential. Shivraj has guided buyers and sellers through Austin's new construction market and resale markets, providing data-driven analysis and expert representation at every step.
+Shivraj Grewal is a luxury real estate specialist serving Austin and surrounding communities. He holds the Certified Luxury Home Marketing Specialist (CLHMS) Guild designation and the Certified Negotiation Expert (CNE) credential. Shivraj has guided buyers and sellers through Austin's new construction market and resale markets, providing data-driven analysis and expert representation at every step.
 
 100+ Transactions
 

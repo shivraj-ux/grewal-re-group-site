@@ -342,7 +342,7 @@ CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
 **100+** transactions **$100M+** volume **119 Google reviews** at 5.0 stars (512) 617-0001
 
-Shivraj Grewal is the founder of Grewal RE Group at Compass RE Texas, specializing in luxury residential real estate across Austin, Hays County, and the surrounding Hill Country. With deep expertise in property tax strategy, investment analysis, and buyer representation, he guides clients through the financial complexities of Texas real estate ownership.
+Shivraj Grewal is the founder of Grewal RE Group, specializing in luxury residential real estate across Austin, Hays County, and the surrounding Hill Country. With deep expertise in property tax strategy, investment analysis, and buyer representation, he guides clients through the financial complexities of Texas real estate ownership.
 
 ## Get a Property-Specific Tax Estimate Before You Buy
 

@@ -126,7 +126,7 @@ Commission is always negotiable in Texas real estate. Post-NAR settlement, buyer
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas, specializing in Austin’s premium residential market. With 100+ closed transactions, $100M+ in volume, and 119 Google reviews at 5.0 stars, he brings unmatched local expertise to Austin home sellers and buyers.
+Shivraj Grewal is a luxury real estate advisor, specializing in Austin’s premium residential market. With 100+ closed transactions, $100M+ in volume, and 119 Google reviews at 5.0 stars, he brings unmatched local expertise to Austin home sellers and buyers.
 
 [(512) 617-0001](tel:+15126170001) · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com)
 

@@ -1,136 +1,315 @@
 # Grewal RE Group — robots.txt
-# Last updated: 2026-06-09
+# Last updated: 2026-07-11
 # Allows search engines and AI crawlers full access to public content,
 # except /assets/guides/ (gated lead-asset PDFs, disallowed per group below).
 #
-# Content Signals Policy (machine-readable AI usage policy):
+# Content Signals Policy (machine-readable AI usage policy — Cloudflare's
+# Content Signals convention, https://contentsignals.org/):
 #   search    = listing this site in a search engine
 #   ai-input  = using this content to answer a user's query (AI search / RAG)
 #   ai-train  = using this content to train an AI/ML model
 # Our policy: be found and cited by AI (search + ai-input = yes); do not consent
-# to training models on our content (ai-train = no). See the User-agent: * group.
+# to training models on our content (ai-train = no). Declared per bot below
+# (not just implied by crawl access) AND as a Content-Signal HTTP response
+# header on every response (see netlify.toml) so the policy is legible both
+# ways per the spec.
 
 # ── Standard search engines ──────────────────────────────────
 User-agent: Googlebot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Googlebot-Image
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Bingbot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: DuckDuckBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Applebot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: YandexBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Slurp
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
-# ── AI crawlers (explicitly allowed) ─────────────────────────
-# We want LLMs and AI search products to index this site.
+# ── AI crawlers (explicitly allowed, one block per agent) ────
+# We want LLMs and AI search products to index and cite this site. Each bot
+# gets its own explicit block (no reliance on a single wildcard rule) so
+# access and the Content-Signal policy are unambiguous per agent.
 
 User-agent: GPTBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: ChatGPT-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: ClaudeBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Claude-Web
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: anthropic-ai
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: PerplexityBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Perplexity-User
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Google-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: cohere-ai
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Bytespider
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Amazonbot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Meta-ExternalAgent
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Meta-ExternalFetcher
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Diffbot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: ImagesiftBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: FacebookBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: Twitterbot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 User-agent: LinkedInBot
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 # ── Default policy: allow everything except /assets/guides/ ──
 # SOURCES.md and AGENTS.md are intentionally crawlable: they are agent resources.
+# CLAUDE.md, AUTOMATION.md, and the internal editorial/handoff docs below are
+# internal and must never be indexed.
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /assets/guides/
+Disallow: /CLAUDE.md
+Disallow: /AUTOMATION.md
+Disallow: /CONTENT-STYLE.md
+Disallow: /NAP-AUDIT.md
+Disallow: /WIKIDATA-DRAFT.md
 
 # ── Sitemaps + AI entry point ────────────────────────────────
+Sitemap: https://grewalregroup.com/sitemap-index.xml
 Sitemap: https://grewalregroup.com/sitemap.xml
+Sitemap: https://grewalregroup.com/sitemap-images.xml
 
-# AI agents: machine-readable summary at /llms.txt
-# Reference: https://llmstxt.org/
+# AI agents: machine-readable summary at /llms.txt (full detail at
+# /llms-full.txt) and an MCP server at /mcp (discovery card at
+# /.well-known/mcp-server-card.json).
+# References: https://llmstxt.org/  https://contentsignals.org/

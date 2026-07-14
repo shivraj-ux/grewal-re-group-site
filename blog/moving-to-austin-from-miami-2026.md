@@ -140,7 +140,7 @@ With 100+ transactions and $100M+ in volume across the Austin metro, Grewal RE G
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas based in Austin. With 100+ transactions and $100M+ in volume across the greater Austin metro, he specializes in relocation buyers, luxury homes, and complex transactions. Rated 5.0 stars across 119 Google reviews.
+Shivraj Grewal is a luxury real estate advisor based in Austin. With 100+ transactions and $100M+ in volume across the greater Austin metro, he specializes in relocation buyers, luxury homes, and complex transactions. Rated 5.0 stars across 119 Google reviews.
 
 [(512) 617-0001](tel:5126170001) · [grewalregroup.com](https://grewalregroup.com)
 

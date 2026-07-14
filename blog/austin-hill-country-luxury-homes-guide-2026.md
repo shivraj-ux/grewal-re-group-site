@@ -244,7 +244,7 @@ Off-market Hill Country estate access requires relationship-driven representatio
 
 CLHMS Guild | CNE | TREC #736060 | Compass RE Texas
 
-Austin luxury real estate specialist with **100+ transactions** and **$100M+ in closed volume**. Rated **5.0 stars across 119 Google reviews**. Serving Westlake Hills, Barton Creek, Dripping Springs, Wimberley, and the greater Hill Country luxury market from his Austin office at Compass RE Texas.
+Austin luxury real estate specialist with **100+ transactions** and **$100M+ in closed volume**. Rated **5.0 stars across 119 Google reviews**. Serving Westlake Hills, Barton Creek, Dripping Springs, Wimberley, and the greater Hill Country luxury market from his Austin office.
 
 [(512) 617-0001](tel:5126170001) | [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com) | [grewalregroup.com](https://grewalregroup.com)
 

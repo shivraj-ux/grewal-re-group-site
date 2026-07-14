@@ -66,11 +66,25 @@
         "responses": { "200": { "description": "LLM summary", "content": { "text/plain": {} } } }
       }
     },
+    "/llms-full.txt": {
+      "get": {
+        "operationId": "getLlmsFullTxt",
+        "summary": "Expanded manifest: every blog post, every community page, and the full MCP tool list, categorized.",
+        "responses": { "200": { "description": "Full LLM manifest", "content": { "text/plain": {} } } }
+      }
+    },
     "/sitemap.xml": {
       "get": {
         "operationId": "getSitemap",
         "summary": "Full URL sitemap.",
         "responses": { "200": { "description": "Sitemap", "content": { "application/xml": {} } } }
+      }
+    },
+    "/sitemap-images.xml": {
+      "get": {
+        "operationId": "getImageSitemap",
+        "summary": "Image sitemap extension: every self-hosted image on the site, grouped by the page it appears on.",
+        "responses": { "200": { "description": "Image sitemap", "content": { "application/xml": {} } } }
       }
     }
   }

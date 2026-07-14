@@ -309,7 +309,7 @@ With 100+ transactions and $100M+ in volume closed across Austin's diverse neigh
 
 CLHMS Guild · CNE · TREC #736060
 
-Luxury real estate agent and founder of Grewal RE Group at Compass RE Texas. With deep roots across all Austin neighborhoods, from Colony Park to Westlake, Shivraj brings the same rigor and advocacy to every price point.
+Luxury real estate agent and founder of Grewal RE Group. With deep roots across all Austin neighborhoods, from Colony Park to Westlake, Shivraj brings the same rigor and advocacy to every price point.
 
 (512) 617-0001 · [shivraj.grewal@compass.com](mailto:shivraj.grewal@compass.com) · Compass RE Texas
 

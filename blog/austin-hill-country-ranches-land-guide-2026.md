@@ -254,7 +254,7 @@ Blanco County offers the strongest combination of Hill Country character, water 
 
 ### Shivraj Grewal
 
-Luxury ranch and land specialist serving the Austin metro, Texas Hill Country, and Highland Lakes markets. Founder of Grewal RE Group at Compass RE Texas. CLHMS Guild designee and Certified Negotiation Expert.
+Luxury ranch and land specialist serving the Austin metro, Texas Hill Country, and Highland Lakes markets. Founder of Grewal RE Group. CLHMS Guild designee and Certified Negotiation Expert.
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas · (512) 617-0001
 

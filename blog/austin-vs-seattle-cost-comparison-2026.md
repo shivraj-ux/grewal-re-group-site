@@ -276,7 +276,7 @@ With 100+ transactions, $100M+ in volume, and 119 Google reviews at 5.0 stars, S
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
-Shivraj Grewal is a luxury real estate specialist and the founder of Grewal RE Group at Compass RE Texas, serving Austin and the surrounding Hill Country. He specializes in high-net-worth relocation, luxury residential transactions, and investment acquisitions across Central Texas.
+Shivraj Grewal is a luxury real estate specialist and the founder of Grewal RE Group, serving Austin and the surrounding Hill Country. He specializes in high-net-worth relocation, luxury residential transactions, and investment acquisitions across Central Texas.
 
 100+ Transactions
 

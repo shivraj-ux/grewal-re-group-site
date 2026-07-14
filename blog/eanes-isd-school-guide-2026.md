@@ -450,7 +450,7 @@ CLHMS Guild · CNE · TREC #736060 · Compass RE Texas
 
 **100+** transactions **$100M+** volume **119 Google reviews** at 5.0 stars (512) 617-0001
 
-Shivraj Grewal is the founder of Grewal RE Group at Compass RE Texas, specializing in luxury residential real estate across West Austin, Eanes ISD neighborhoods, and the greater Austin metro. With deep expertise in school-boundary analysis, luxury buyer representation, and West Austin market dynamics, he helps families find the right home in the right district, and understand exactly what they're buying.
+Shivraj Grewal is the founder of Grewal RE Group, specializing in luxury residential real estate across West Austin, Eanes ISD neighborhoods, and the greater Austin metro. With deep expertise in school-boundary analysis, luxury buyer representation, and West Austin market dynamics, he helps families find the right home in the right district, and understand exactly what they're buying.
 
 ## Find Your Eanes ISD Home, With a Verified School Assignment
 

@@ -146,7 +146,7 @@ Key indicators of undervaluation in the Austin market include: cap rates above 5
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas · (512) 617-0001
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas serving buyers and investors throughout the Austin metro. With 100+ transactions closed and $100M+ in career volume, he brings institutional-level market analysis to individual clients. Recognized with 119 Google reviews at 5.0 stars, Shivraj specializes in representing investors navigating Austin’s market cycles with data-driven strategy.
+Shivraj Grewal is a luxury real estate advisor serving buyers and investors throughout the Austin metro. With 100+ transactions closed and $100M+ in career volume, he brings institutional-level market analysis to individual clients. Recognized with 119 Google reviews at 5.0 stars, Shivraj specializes in representing investors navigating Austin’s market cycles with data-driven strategy.
 
 ### Related Articles
 

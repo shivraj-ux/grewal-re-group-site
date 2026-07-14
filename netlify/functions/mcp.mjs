@@ -274,7 +274,7 @@ function buildCard(site) {
     title: "Grewal RE Group MCP Server",
     version: "1.0.0",
     description:
-      "Verb-first MCP tools for Grewal RE Group, an Austin luxury real estate team led by Shivraj Grewal at Compass. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
+      "Verb-first MCP tools for Grewal RE Group, an Austin, TX luxury real estate team led by Shivraj Grewal. Read the agent profile, covered communities, services, live market reports, and the relocation guide, and submit a consultation request.",
     vendor: { name: "Grewal RE Group", url: site, contact: "shivraj.grewal@compass.com" },
     transport: { type: "http", protocol: "json-rpc-2.0", url: `${site}/mcp` },
     authentication: {
@@ -287,6 +287,7 @@ function buildCard(site) {
       agents: `${site}/AGENTS.md`,
       openapi: `${site}/openapi.json`,
       llms: `${site}/llms.txt`,
+      llmsFull: `${site}/llms-full.txt`,
       sources: `${site}/SOURCES.md`,
     },
   };

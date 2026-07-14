@@ -148,7 +148,7 @@ Historically, Austin single-family homes have appreciated meaningfully faster th
 
 CLHMS Guild · CNE · TREC #736060 · Compass RE Texas · (512) 617-0001
 
-Shivraj Grewal is a luxury real estate advisor at Compass RE Texas specializing in investment property acquisition, portfolio strategy, and high-value residential transactions across the Austin metro. With 100+ transactions closed and $100M+ in career volume, Shivraj is recognized by 119 Google reviews at 5.0 stars for delivering results-driven guidance that helps investors make confident, data-backed decisions in a complex market.
+Shivraj Grewal is a luxury real estate advisor specializing in investment property acquisition, portfolio strategy, and high-value residential transactions across the Austin metro. With 100+ transactions closed and $100M+ in career volume, Shivraj is recognized by 119 Google reviews at 5.0 stars for delivering results-driven guidance that helps investors make confident, data-backed decisions in a complex market.
 
 ### Related Articles
 

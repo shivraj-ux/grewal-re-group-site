@@ -5,6 +5,9 @@
 # file-system match and apply the redirect regardless.
 /CLAUDE.md                                                /  404!
 /AUTOMATION.md                                            /  404!
+/CONTENT-STYLE.md                                         /  404!
+/NAP-AUDIT.md                                              /  404!
+/WIKIDATA-DRAFT.md                                        /  404!
 
 # Questions — /questions/<name>.html is canonical (see each page's <link
 # rel="canonical">); 301 the extensionless form to it so both forms resolve
